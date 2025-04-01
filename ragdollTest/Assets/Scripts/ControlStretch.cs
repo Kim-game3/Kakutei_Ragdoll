@@ -9,7 +9,7 @@ public class ControlStretch : MonoBehaviour
     [Header("伸ばす操作のボタン")]
     [SerializeField] KeyCode _keyCode_Stretch;
     [Header("どれを伸ばすか")]
-    [SerializeField] StretchBodyPart_RigidRot _stretchBody;
+    [SerializeField] StretchBodyPart_ForwardWaist_Rigidbody _stretchBody;
 
     void Update()
     {
@@ -18,6 +18,6 @@ public class ControlStretch : MonoBehaviour
 
     void ApplyControl_Stretch()//操作の適用
     {
-        _stretchBody.Stretching = Input.GetKey(_keyCode_Stretch);
+        _stretchBody.enabled = Input.GetKey(_keyCode_Stretch);
     }
 }
