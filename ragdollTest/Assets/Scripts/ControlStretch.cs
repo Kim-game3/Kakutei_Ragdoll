@@ -9,7 +9,7 @@ public class ControlStretch : MonoBehaviour
     [Header("L‚Î‚·‘€ì‚Ìƒ{ƒ^ƒ“")]
     [SerializeField] KeyCode _keyCode_Stretch;
     [Header("‚Ç‚ê‚ğL‚Î‚·‚©")]
-    [SerializeField] StretchBodyPart_ForwardWaist_Rigidbody _stretchBody;
+    [SerializeField] StretchBodyPart_ForwardWaist_AddForce _stretchBody;
 
     void Update()
     {
