@@ -18,6 +18,9 @@ public class ControlStretch : MonoBehaviour
 
     void ApplyControl_Stretch()//‘€ì‚Ì“K—p
     {
-        _stretchBody.enabled = Input.GetKey(_keyCode_Stretch);
+        if(Input.GetKeyDown(_keyCode_Stretch))
+        {
+            _stretchBody.Move();
+        }
     }
 }

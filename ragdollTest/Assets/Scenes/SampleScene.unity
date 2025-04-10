@@ -245,7 +245,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14918353}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c913ef1a2da0d2e4eaa1a7ff33d54e14, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -935,7 +935,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276373539}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 8
   m_Drag: 0.3
   m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 988146402}
   _pos_Stretched_Transform: {fileID: 1410068400}
-  _stretchPower: 300
+  _stretchPower: 75
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1624,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276373536}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 8
   m_Drag: 0.3
   m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1973,7 +1973,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276373528}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 8
   m_Drag: 0.3
   m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 276373546}
   _pos_Stretched_Transform: {fileID: 1134463262}
-  _stretchPower: 300
+  _stretchPower: 75
 --- !u!1 &1410068399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2355,7 +2355,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276373532}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 8
   m_Drag: 0.3
   m_AngularDrag: 0.3
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 1579897461}
   _pos_Stretched_Transform: {fileID: 1390244052}
-  _stretchPower: 300
+  _stretchPower: 75
 --- !u!1 &1754671212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 1225240968}
   _pos_Stretched_Transform: {fileID: 1501346747}
-  _stretchPower: 300
+  _stretchPower: 75
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

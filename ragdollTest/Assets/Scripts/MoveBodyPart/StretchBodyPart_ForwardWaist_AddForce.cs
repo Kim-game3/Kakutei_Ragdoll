@@ -13,18 +13,13 @@ public class StretchBodyPart_ForwardWaist_AddForce : MonoBehaviour
     [Header("伸ばす時にかける力")]
     [SerializeField] float _stretchPower;
 
-    private void FixedUpdate()
-    {
-        MovePart();
-    }
-
-    void MovePart()
+    public void Move()
     {
         Vector3 moveDirection = (_pos_Stretched_Transform.position - _movePart.position).normalized;//パーツの位置から動かす目標位置までの単位ベクトル(方向)
 
         Vector3 moveVec = moveDirection * _stretchPower;
 
-        _movePart.AddForce(moveVec,ForceMode.Force);
+        _movePart.AddForce(moveVec, ForceMode.Impulse);
 
         Debug.Log("押してます");
     }
