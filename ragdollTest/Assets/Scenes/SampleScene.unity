@@ -324,6 +324,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &198361666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198361667}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198361667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198361666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2362742, y: 1.7664071, z: -0.7427277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1530644321}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &230089235
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1190,7 +1222,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 579667449}
-  - component: {fileID: 579667450}
   - component: {fileID: 579667451}
   m_Layer: 0
   m_Name: RightFoot
@@ -1214,20 +1245,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1980951485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &579667450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579667448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 120
-  _stretchBody: {fileID: 579667451}
 --- !u!114 &579667451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2293,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404012817}
-  - component: {fileID: 1404012818}
   - component: {fileID: 1404012819}
   m_Layer: 0
   m_Name: LeftFoot
@@ -2300,20 +2316,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1980951485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1404012818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404012816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 122
-  _stretchBody: {fileID: 1404012819}
 --- !u!114 &1404012819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,7 +2371,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1410414172}
-  - component: {fileID: 1410414174}
   - component: {fileID: 1410414173}
   m_Layer: 0
   m_Name: HeadToLeft
@@ -2408,20 +2409,6 @@ MonoBehaviour:
   _movePart: {fileID: 230089237}
   _pos_Stretched_Transform: {fileID: 1839728756}
   _stretchPower: 40
---- !u!114 &1410414174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1410414171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 113
-  _stretchBody: {fileID: 1410414173}
 --- !u!1 &1478996989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +2472,232 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1754671213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1530644320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530644321}
+  - component: {fileID: 1530644322}
+  m_Layer: 0
+  m_Name: ControllerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530644321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 198361667}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530644322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 7c8d989854453cd4f8b4114faffa9ea7, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1746360506}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0ca50198-7869-4193-9625-7dfcd5c8333a
+    m_ActionName: Game/StretchLeftArm[/Keyboard/a]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2050235383}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ea0c7cc6-6b15-43f9-940d-734021ca0657
+    m_ActionName: Game/StretchRightArm[/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1404012819}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9fc15191-9e02-4c33-9fd1-77f0e0209818
+    m_ActionName: Game/StretchLeftLeg[/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 579667451}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4f4d97f1-ecf5-4d68-a7bd-b9db8cf60703
+    m_ActionName: Game/StretchRightLeg[/Keyboard/x]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1410414173}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a6f0100f-a948-4c4e-b37d-aaa0c1bf905c
+    m_ActionName: Game/MoveHeadToLeft[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935460229}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: f40eea17-99b9-40a3-8b10-a8b062c5023b
+    m_ActionName: Game/MoveHeadToRight[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1845234307}
+        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
+        m_MethodName: Stretch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 733451ec-3af6-47f3-a8c7-4ff304828cde
+    m_ActionName: Game/MoveWaistToForward[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3532005e-c0c3-4272-8dd9-2a341da89201
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2b52aeea-cb79-4190-99a1-13acbb4886b3
+    m_ActionName: Player/Look[/Mouse/delta,/Pen/delta]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97c97119-fb1c-4423-8c22-1a1a5a0b3431
+    m_ActionName: Player/Fire[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d56ee1cd-a68d-4d0b-b71a-f019b8e5b56a
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b78e188-38d2-4567-806d-9227aa6083e2
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e27c0094-ef32-4fe2-89bf-720916545a01
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9ec5e50f-673a-43aa-9de8-112fa29c1abf
+    m_ActionName: UI/Point[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9d0eb4b6-de35-4596-a057-02ec15aa007c
+    m_ActionName: UI/Click[/Mouse/leftButton,/Pen/tip]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53e0857b-a835-4b5b-b45b-dc7f77b9d7bc
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fc9a55f7-75b0-40b3-90fb-7b76e032cb2e
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57c0f76c-1da0-441b-94c2-df0868b16be0
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fd2c403b-c2e4-41c7-a3b0-d7333a556c0b
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 47ac55d9-b105-4015-8c4d-cfc5f8b4440a
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Game
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!65 &1579897459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2588,7 +2801,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746360504}
-  - component: {fileID: 1746360505}
   - component: {fileID: 1746360506}
   m_Layer: 0
   m_Name: LeftHand
@@ -2612,20 +2824,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1980951485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1746360505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746360503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 97
-  _stretchBody: {fileID: 1746360506}
 --- !u!114 &1746360506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,7 +2917,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1845234306}
-  - component: {fileID: 1845234308}
   - component: {fileID: 1845234307}
   m_Layer: 0
   m_Name: WaistToForward
@@ -2758,20 +2955,6 @@ MonoBehaviour:
   _movePart: {fileID: 276373543}
   _pos_Stretched_Transform: {fileID: 2130277088}
   _stretchPower: 60
---- !u!114 &1845234308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845234305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 115
-  _stretchBody: {fileID: 1845234307}
 --- !u!54 &1918214138
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2877,7 +3060,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1935460228}
-  - component: {fileID: 1935460230}
   - component: {fileID: 1935460229}
   m_Layer: 0
   m_Name: HeadToRight
@@ -2916,20 +3098,6 @@ MonoBehaviour:
   _movePart: {fileID: 230089237}
   _pos_Stretched_Transform: {fileID: 1052980535}
   _stretchPower: 40
---- !u!114 &1935460230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935460227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 101
-  _stretchBody: {fileID: 1935460229}
 --- !u!1 &1955232466
 GameObject:
   m_ObjectHideFlags: 3
@@ -3166,7 +3334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2050235381}
-  - component: {fileID: 2050235382}
   - component: {fileID: 2050235383}
   m_Layer: 0
   m_Name: RightHand
@@ -3190,20 +3357,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1980951485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050235382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050235380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af6c889e94f2ecd4f95a4310a19f4229, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _keyCode_Stretch: 100
-  _stretchBody: {fileID: 2050235383}
 --- !u!114 &2050235383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3259,3 +3412,4 @@ SceneRoots:
   - {fileID: 14918357}
   - {fileID: 516099266}
   - {fileID: 348643386}
+  - {fileID: 198361667}
