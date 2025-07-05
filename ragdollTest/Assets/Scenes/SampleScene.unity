@@ -192,22 +192,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -30
+    limit: -135
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 100
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 100
+    limit: 90
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 45
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -501,22 +501,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -45
+    limit: -0.6795578
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 20
+    limit: 127.40613
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 20
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 90
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_MinimumDistanceFromTarget: 3
+  m_MinimumDistanceFromTarget: 2
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
@@ -1343,22 +1343,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -30
+    limit: -20
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 100
+    limit: 135
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 100
+    limit: 90
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 45
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 988146402}
   _pos_Stretched_Transform: {fileID: 1410068400}
-  _stretchPower: 80
+  _stretchPower: 120
 --- !u!1 &610751542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,22 +2036,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -120
+    limit: -160
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 0
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 10
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 90
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -2820,11 +2820,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -90
+    limit: -30
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 90
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -2835,7 +2835,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 45
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -3048,22 +3048,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: 0
+    limit: -20
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 120
+    limit: 160
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 10
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 90
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -3157,7 +3157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 276373546}
   _pos_Stretched_Transform: {fileID: 1134463262}
-  _stretchPower: 80
+  _stretchPower: 120
 --- !u!1 &1410068399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3533,11 +3533,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -90
+    limit: -30
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 90
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -3548,7 +3548,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 45
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 1579897461}
   _pos_Stretched_Transform: {fileID: 1390244052}
-  _stretchPower: 80
+  _stretchPower: 120
 --- !u!1 &1754671212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,7 +4432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 1225240968}
   _pos_Stretched_Transform: {fileID: 1501346747}
-  _stretchPower: 80
+  _stretchPower: 120
 --- !u!1 &2130277087
 GameObject:
   m_ObjectHideFlags: 0
