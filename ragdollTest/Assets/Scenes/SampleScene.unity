@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7431679013319473830, guid: f2cb028202710d94a97fd1d468af0afe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7708949342140588774, guid: f2cb028202710d94a97fd1d468af0afe, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -1032,27 +1036,27 @@ CharacterJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.000000014901161, y: -0.3789067, z: -0.06921175}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -70
+    limit: -20
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 10
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 45
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -1786,22 +1790,22 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -10
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 120
+    limit: 45
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 90
+    limit: 50
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 70
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -2326,27 +2330,27 @@ CharacterJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.000000014901161, y: 0.37890697, z: 0.0692118}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: -1.2246469e-16, z: -1}
+  m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -70
+    limit: -20
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 70
+    limit: 10
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 45
+    limit: 20
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -2449,12 +2453,12 @@ CharacterJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.000000014901161, y: -0.38993803, z: -0.005082463}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: 0, z: 1}
+  m_SwingAxis: {x: 0, y: -1, z: 0}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -120
+    limit: -150
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
@@ -2469,7 +2473,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -2608,12 +2612,12 @@ CharacterJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.000000014901161, y: 0.389938, z: 0.005082422}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: -1.2246469e-16, z: -1}
+  m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -120
+    limit: -150
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
@@ -2628,7 +2632,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -3231,7 +3235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 230089237}
   _pos_Stretched_Transform: {fileID: 1839728756}
-  _stretchPower: 45
+  _stretchPower: 80
 --- !u!1 &1478996989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,51 +3421,15 @@ MonoBehaviour:
     m_ActionId: 4f4d97f1-ecf5-4d68-a7bd-b9db8cf60703
     m_ActionName: Game/StretchRightLeg[/Keyboard/x]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1410414173}
-        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
-        m_MethodName: Stretch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: a6f0100f-a948-4c4e-b37d-aaa0c1bf905c
     m_ActionName: Game/MoveHeadToLeft[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1935460229}
-        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
-        m_MethodName: Stretch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: f40eea17-99b9-40a3-8b10-a8b062c5023b
     m_ActionName: Game/MoveHeadToRight[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1845234307}
-        m_TargetAssemblyTypeName: StretchBodyPart_ForwardWaist_AddForce, Assembly-CSharp
-        m_MethodName: Stretch
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 733451ec-3af6-47f3-a8c7-4ff304828cde
     m_ActionName: Game/MoveWaistToForward[/Keyboard/w]
   - m_PersistentCalls:
@@ -3991,7 +3959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 276373543}
   _pos_Stretched_Transform: {fileID: 2130277088}
-  _stretchPower: 65
+  _stretchPower: 80
 --- !u!54 &1918214138
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4056,27 +4024,27 @@ CharacterJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.081391215, y: -0.03126371, z: -0.007802777}
   serializedVersion: 2
-  m_SwingAxis: {x: 0, y: -1.2246469e-16, z: -1}
+  m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -10
+    limit: 0
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 120
+    limit: 45
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 90
+    limit: 50
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 20
+    limit: 70
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 1
@@ -4134,7 +4102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movePart: {fileID: 230089237}
   _pos_Stretched_Transform: {fileID: 1052980535}
-  _stretchPower: 45
+  _stretchPower: 80
 --- !u!1 &1955232466
 GameObject:
   m_ObjectHideFlags: 3
@@ -4239,8 +4207,8 @@ MonoBehaviour:
   m_RecenterTarget: 0
   m_VerticalAxis:
     Value: 18.61
-    m_SpeedMode: 1
-    m_MaxSpeed: 1
+    m_SpeedMode: 0
+    m_MaxSpeed: 100
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
@@ -4263,8 +4231,8 @@ MonoBehaviour:
     m_LegacyVelocityFilterStrength: -1
   m_HorizontalAxis:
     Value: 0
-    m_SpeedMode: 1
-    m_MaxSpeed: 1
+    m_SpeedMode: 0
+    m_MaxSpeed: 100
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
