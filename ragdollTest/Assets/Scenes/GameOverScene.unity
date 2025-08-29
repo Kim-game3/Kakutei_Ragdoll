@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3ee4d96082f844e8fe1d09e0b6ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene:
+  _targetScene:
     sceneAsset: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
     scenePath: Assets/Scenes/GameScene.unity
 --- !u!1 &1822523798

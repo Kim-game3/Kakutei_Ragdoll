@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] SceneReference targetScene;
+    [SerializeField] SceneReference _targetScene;
 
     public void Change()//シーンを即チェンジ
     {
-        if (!string.IsNullOrEmpty(targetScene.ScenePath))
+        if (!string.IsNullOrEmpty(_targetScene.ScenePath))
         {
-            SceneManager.LoadScene(targetScene.ScenePath);
+            SceneManager.LoadScene(_targetScene.ScenePath);
         }
         else
         {
@@ -23,7 +23,7 @@ public class ChangeScene : MonoBehaviour
 
     public void ChangeAsync()//シーンを非同期でチェンジ
     {
-        if (!string.IsNullOrEmpty(targetScene.ScenePath))
+        if (!string.IsNullOrEmpty(_targetScene.ScenePath))
         {
             StartCoroutine(LoadSceneCoroutine());
         }
@@ -36,7 +36,7 @@ public class ChangeScene : MonoBehaviour
     private IEnumerator LoadSceneCoroutine()
     {
         // 非同期でシーンを読み込み開始
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(targetScene.ScenePath);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_targetScene.ScenePath);
 
         // 読み込み完了まで待機
         while (!asyncLoad.isDone)

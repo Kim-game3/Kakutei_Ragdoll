@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //作成者:杉山
 //ゲーム終了判定
@@ -11,6 +12,10 @@ public class JudgeGameSet : MonoBehaviour
 {
     [Tooltip("ゲームクリア判定")] [SerializeField] JudgeGameClear _judgeGameClear;
     [Tooltip("ゲームオーバー判定")] [SerializeField] JudgeGameOver _judgeGameOver;
+
+    //(仮のプログラム)
+    [SerializeField] SceneReference _gameOverScene;
+    [SerializeField] SceneReference _gameClearScene;
 
     //public
 
@@ -32,6 +37,8 @@ public class JudgeGameSet : MonoBehaviour
         if (_judgeGameOver.JudgedGameOver) return;
 
         GameClearEvent?.Invoke();
+
+        SceneManager.LoadScene(_gameClearScene.ScenePath);//(仮)
     }
 
     void GameOver()
@@ -40,5 +47,7 @@ public class JudgeGameSet : MonoBehaviour
         if (_judgeGameClear.JudgedGameClear) return;
 
         GameOverEvent?.Invoke();
+
+        SceneManager.LoadScene(_gameOverScene.ScenePath);//(仮)
     }
 }
