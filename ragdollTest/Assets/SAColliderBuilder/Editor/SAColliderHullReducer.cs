@@ -20,9 +20,9 @@ subject to the following restrictions:
  * BulletXNA for Unity modified for SABoneCollider
  * Copyright (c) 2014 Stereoarts Nora
 
- - Change namespace BulletXNA.LinearMath to SAColliderHullReducer
- - Change IndexedVector3 to UnityEngine.Vector3
- - Change IndexedVector4 to UnityEngine.Vector4
+ - ChangeAsync namespace BulletXNA.LinearMath to SAColliderHullReducer
+ - ChangeAsync IndexedVector3 to UnityEngine.Vector3
+ - ChangeAsync IndexedVector4 to UnityEngine.Vector4
 */
 
 using System;
