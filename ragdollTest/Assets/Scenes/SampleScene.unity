@@ -12239,6 +12239,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1438583199}
+  - component: {fileID: 1438583201}
+  - component: {fileID: 1438583200}
   m_Layer: 0
   m_Name: TimerManager
   m_TagString: Untagged
@@ -12261,6 +12263,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 198361667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1438583200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438583198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fa2f4c509535a43be5108592f9eb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timer: {fileID: 1438583201}
+  _timerText: {fileID: 936816615}
+--- !u!114 &1438583201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438583198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35b6b89419d95a48a0663009f8bf4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _duration: 240
+  _startOnAwake: 1
 --- !u!1 &1469938114
 GameObject:
   m_ObjectHideFlags: 0
@@ -20047,7 +20077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 60
+  _power: 90
   _up: 2
   _baseDirection: {fileID: 963194228}
 --- !u!114 &1980951487
