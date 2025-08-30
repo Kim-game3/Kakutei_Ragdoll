@@ -18,6 +18,11 @@ public class StopMovePartRotate : MonoBehaviour
         StopRotate();
     }
 
+    //private void OnValidate()
+    //{
+    //    StopRotate();
+    //}
+
     void StopRotate()//身体のパーツを回転しにくくする
     {
         for (int i = 0; i < _bodyPartRbs.Length; i++)

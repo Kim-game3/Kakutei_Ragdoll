@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//作成者:杉山
+//身体に力をかけて移動させるコンポ―ネント
+
 public class Move_ForceBody : MonoBehaviour
 {
-    [SerializeField] Rigidbody _body;
-    [SerializeField] float _power;
-    [SerializeField] float _up;
-    [SerializeField] Transform _baseDirection;//これのz方向が前とする
+    [Tooltip("動かすキャラの身体のパーツ")] [SerializeField] Rigidbody _body;
+    [Tooltip("かける力")] [SerializeField] float _power;
+    [Tooltip("上の方にかけられる力")] [SerializeField] float _up;
+    [Tooltip("このオブジェクトの前方向に力が加えられる")] [SerializeField] Transform _baseDirection;//これのz方向が前とする
     bool _shouldJump=false;
 
     public void Input_Move(InputAction.CallbackContext context)
@@ -31,7 +34,6 @@ public class Move_ForceBody : MonoBehaviour
     private void Move(Vector2 input)
     {
         Vector3 inputVec_3D = new Vector3(input.x, 0, input.y);
-
 
         //入力ベクトルをベースの方向(y方向は無視、z方向のみ)に向ける
         Vector3 forwardDirection = _baseDirection.forward;
