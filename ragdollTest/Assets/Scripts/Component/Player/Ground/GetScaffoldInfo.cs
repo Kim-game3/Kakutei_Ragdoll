@@ -13,7 +13,8 @@ public class GetScaffoldInfo : MonoBehaviour
     float _distance;
     [CustomLabel("”¼Œa")] [SerializeField]
     float _radius;
-    [SerializeField] JudgeIsGround _judgeIsGround;
+    [SerializeField] 
+    JudgeIsGround _judgeIsGround;//Ú’nó‹µ‚Ìæ“¾—p
 
     RaycastHit _scaffoldInfo;
     bool _successToGet = false;//æ“¾‚É¬Œ÷‚µ‚½‚©

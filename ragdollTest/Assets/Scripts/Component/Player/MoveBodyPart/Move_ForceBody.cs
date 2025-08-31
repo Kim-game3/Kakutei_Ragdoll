@@ -8,10 +8,18 @@ using UnityEngine.InputSystem;
 
 public class Move_ForceBody : MonoBehaviour
 {
-    [Tooltip("動かすキャラの身体のパーツ")] [SerializeField] Rigidbody _body;
-    [Tooltip("かける力")] [SerializeField] float _power;
-    [Tooltip("上の方にかけられる力")] [SerializeField] float _up;
-    [Tooltip("このオブジェクトの前方向に力が加えられる")] [SerializeField] Transform _baseDirection;//これのz方向が前とする
+    [CustomLabel("動かすキャラの身体のパーツ")] [SerializeField]
+    Rigidbody _body;
+    [CustomLabel("かける力")] [SerializeField]
+    float _power;
+    [CustomLabel("上の方にかける力")] [SerializeField]
+    float _up;
+    [Tooltip("このオブジェクトの前方向に力が加えられる")][CustomLabel("基準の方向")] [SerializeField]
+    Transform _baseDirection;//このオブジェクトの地面に平行な+Z方向を前とする
+
+    [SerializeField] FollowVectorToScaffold _followVectorToScaffold;
+    [SerializeField] bool _activate_Follow;
+
     bool _shouldJump=false;
 
     public void Input_Move(InputAction.CallbackContext context)
@@ -42,7 +50,10 @@ public class Move_ForceBody : MonoBehaviour
         Quaternion lookForward = Quaternion.LookRotation(forwardDirection);
 
         Vector3 forceDirection = lookForward * inputVec_3D;
-        if(_shouldJump) forceDirection.y = _up;
+
+        if(_activate_Follow) forceDirection = _followVectorToScaffold.Follow(forceDirection);//力をかける方向を足場の角度に沿わせる
+
+        if(_shouldJump) forceDirection.y += _up;
 
         _body.AddForce(forceDirection*_power,ForceMode.VelocityChange);
     }
