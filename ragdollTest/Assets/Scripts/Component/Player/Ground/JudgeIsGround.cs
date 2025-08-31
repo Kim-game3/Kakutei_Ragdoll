@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,13 +21,17 @@ public class JudgeIsGround : MonoBehaviour
     [CustomLabel("足場のレイヤー")] [SerializeField]
     LayerMask _scaffoldLayer;
 
-    bool _isGround;
+    bool _isGround=true;//接地状況
+    bool _isGroundBeforeFrame=true;//前フレームの接地状況
 
     public bool IsGround { get { return _isGround; } }//接地しているか
     public Transform Center { get { return _center; } }//中心点
     public float Radius { get { return _radius; } }//円の半径
     public float Distance { get { return _distance; } }//下に飛ばす距離
     public LayerMask ScaffoldLayer { get { return _scaffoldLayer; } }//足場のレイヤー
+
+    public event Action OnEnter;//接地した瞬間に呼ばれる
+    public event Action OnExit;//地面から離れた瞬間に呼ばれる
 
     //private
 
@@ -59,8 +64,18 @@ public class JudgeIsGround : MonoBehaviour
         return true;
     }
 
+    void CheckChange_IsGround()//接地状況の変化を見る
+    {
+        if (!_isGroundBeforeFrame && _isGround) OnEnter?.Invoke();//接地した瞬間
+
+        if (_isGroundBeforeFrame && !_isGround) OnExit?.Invoke();//地面から離れた瞬間
+
+        _isGroundBeforeFrame = _isGround;//前フレームの接地状況の更新
+    }
+
     private void Update()
     {
         UpdateIsGround();
+        CheckChange_IsGround();
     }
 }
