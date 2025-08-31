@@ -9703,6 +9703,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1150855165}
+  - {fileID: 1557085563}
   - {fileID: 1770115666}
   - {fileID: 1469938115}
   m_Father: {fileID: 0}
@@ -10642,7 +10643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9f364437afe7747919f5e302ffdc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 2
+  _distance: 3
   _radius: 0.2
   _judgeIsGround: {fileID: 899190849}
 --- !u!4 &904809007 stripped
@@ -13144,8 +13145,8 @@ MonoBehaviour:
     m_ActionName: Game/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1980951486}
-        m_TargetAssemblyTypeName: Move_ForceBody, Assembly-CSharp
+      - m_Target: {fileID: 1980951488}
+        m_TargetAssemblyTypeName: Jump_ForceBody, Assembly-CSharp
         m_MethodName: Input_Jump
         m_Mode: 0
         m_Arguments:
@@ -13516,6 +13517,111 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1557085562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557085563}
+  - component: {fileID: 1557085566}
+  - component: {fileID: 1557085565}
+  - component: {fileID: 1557085564}
+  m_Layer: 3
+  m_Name: Slope
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557085563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557085562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.26387298, w: 0.96455747}
+  m_LocalPosition: {x: 13.92, y: 2.86, z: -4.63}
+  m_LocalScale: {x: 10, y: 0.1, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 798748109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30.6}
+--- !u!65 &1557085564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557085562}
+  m_Material: {fileID: 13400000, guid: c913ef1a2da0d2e4eaa1a7ff33d54e14, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1557085565
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557085562}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1557085566
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557085562}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &1579897459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20401,6 +20507,7 @@ GameObject:
   - component: {fileID: 1980951485}
   - component: {fileID: 1980951486}
   - component: {fileID: 1980951487}
+  - component: {fileID: 1980951488}
   m_Layer: 7
   m_Name: MoveBody
   m_TagString: Untagged
@@ -20436,9 +20543,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 90
-  _up: 2
+  _power: 80
   _baseDirection: {fileID: 963194228}
+  _jump: {fileID: 1980951488}
+  _followVectorToScaffold:
+    _getScaffoldInfo: {fileID: 899190850}
 --- !u!114 &1980951487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20467,7 +20576,21 @@ MonoBehaviour:
   - {fileID: 552141503}
   - {fileID: 1324591033}
   - {fileID: 1225240968}
-  _rotationalInertia: 35
+  _rotationalInertia: 70
+--- !u!114 &1980951488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980951484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a168d0627a32754449024d8e33652b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _power: 200
+  _judgeIsGround: {fileID: 899190849}
 --- !u!1 &1982476016
 GameObject:
   m_ObjectHideFlags: 0

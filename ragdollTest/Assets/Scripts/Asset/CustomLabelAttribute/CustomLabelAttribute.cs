@@ -34,6 +34,8 @@ public class CustomLabelAttributeDrawer : PropertyDrawer
     //エディタ上でカスタムプロパティを描画
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
+        if (property == null) return;
+
         //カスタムアトリビュートをCustomLabelAttributeとして取得
         CustomLabelAttribute newLabel = attribute as CustomLabelAttribute;
         //カスタムアトリビュートのラベルをプロパティのラベルに設定

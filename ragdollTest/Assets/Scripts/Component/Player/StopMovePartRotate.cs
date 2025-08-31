@@ -32,10 +32,10 @@ public class StopMovePartRotate : MonoBehaviour
         StopRotate();
     }
 
-    private void OnValidate()
-    {
-        StopRotate();
-    }
+    //private void OnValidate()
+    //{
+    //    StopRotate();
+    //}
 
     void StopRotate()//身体のパーツを回転しにくくする
     {
