@@ -23,10 +23,10 @@ public class JudgeIsGround : MonoBehaviour
     bool _isGround;
 
     public bool IsGround { get { return _isGround; } }//接地しているか
-    //中心点
+    public Transform Center { get { return _center; } }//中心点
     public float Radius { get { return _radius; } }//円の半径
     public float Distance { get { return _distance; } }//下に飛ばす距離
-    //足場のレイヤー
+    public LayerMask ScaffoldLayer { get { return _scaffoldLayer; } }//足場のレイヤー
 
     //private
 
