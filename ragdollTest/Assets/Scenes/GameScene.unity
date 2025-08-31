@@ -20649,7 +20649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 80
+  _power: 70
   _baseDirection: {fileID: 963194228}
   _jump: {fileID: 1980951488}
   _followVectorToScaffold:
@@ -20682,7 +20682,7 @@ MonoBehaviour:
   - {fileID: 552141503}
   - {fileID: 1324591033}
   - {fileID: 1225240968}
-  _rotationalInertia: 70
+  _rotationalInertia: 80
 --- !u!114 &1980951488
 MonoBehaviour:
   m_ObjectHideFlags: 0

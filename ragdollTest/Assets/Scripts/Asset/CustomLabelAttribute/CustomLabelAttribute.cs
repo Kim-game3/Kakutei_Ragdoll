@@ -47,6 +47,7 @@ public class CustomLabelAttributeDrawer : PropertyDrawer
     //エディタ上でプロパティの高さを取得
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
+        if (property == null) return 0;
         //プロパティの高さを取得
         return EditorGUI.GetPropertyHeight(property, true);
     }
