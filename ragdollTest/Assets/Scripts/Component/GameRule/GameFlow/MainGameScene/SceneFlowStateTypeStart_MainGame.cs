@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//ゲームの開始ステート
+//シーンの流れ(メインゲームシーン)の開始ステート
 
-public class MainGameStateTypeStart : MainGameStateTypeBase
+public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 {
     public override void OnEnter() { }
     public override void OnUpdate() { }
-
     public override void OnExit() { }
 }

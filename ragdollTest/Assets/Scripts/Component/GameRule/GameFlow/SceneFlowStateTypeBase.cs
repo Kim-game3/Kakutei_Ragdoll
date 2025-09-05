@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//ゲームの状態クラス(ベース)
+//シーンの流れの状態クラス(ベース)
 
-public abstract class MainGameStateTypeBase : MonoBehaviour
+public abstract class SceneFlowStateTypeBase : MonoBehaviour
 {
     /// <summary>
     /// OnUpdateかOnEnter中で_finishedをtrueにすれば、次のステートに移る

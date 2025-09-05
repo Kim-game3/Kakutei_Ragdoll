@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//ゲームの(遷移)状態
+//メインゲームシーンの(遷移)状態
 
-public enum EMainGameState
+public enum EMainGameSceneState
 {
     Start,//開始演出
     Playing,//ゲーム中
