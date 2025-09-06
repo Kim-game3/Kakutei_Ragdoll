@@ -80,16 +80,16 @@ public class MainGameSceneFlow : MonoBehaviour
         switch(state)
         {
             case EMainGameSceneState.Start:
-            ChangeState(_playing);
-            break;
+                ChangeState(_playing);
+                break;
 
             case EMainGameSceneState.Playing:
-            ChangeState(_end);
-            break;
+                ChangeState(_end);
+                break;
 
             case EMainGameSceneState.End:
-            ChangeState(null);
-            return false;
+                ChangeState(null);
+                return false;
         }
 
         return true;
