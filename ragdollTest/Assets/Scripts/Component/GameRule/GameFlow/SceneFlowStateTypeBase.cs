@@ -14,8 +14,21 @@ public abstract class SceneFlowStateTypeBase : MonoBehaviour
 
     public bool Finished { get { return _finished; } }//ステートが終わったか
 
+    /// <summary>
+    ///ステートの開始処理
+    ///そのステートになった時、一回だけ呼ばれる
+    /// </summary>
+    public abstract void OnEnter();
 
-    public abstract void OnEnter();//ステートの開始処理
-    public abstract void OnUpdate();//ステートの毎フレーム処理
-    public abstract void OnExit();//ステートの終了処理
+    /// <summary>
+    ///ステートの毎フレーム処理
+    ///そのステート中、毎フレーム呼ばれる
+    /// </summary>
+    public abstract void OnUpdate();
+
+    /// <summary>
+    ///ステートの終了処理
+    ///そのステートから抜け出す時、一回だけ呼ばれる
+    /// </summary>
+    public abstract void OnExit();
 }

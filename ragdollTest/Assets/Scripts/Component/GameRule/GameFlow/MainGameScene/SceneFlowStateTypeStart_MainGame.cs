@@ -7,7 +7,16 @@ using UnityEngine;
 
 public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 {
-    public override void OnEnter() { }
+    [CustomLabel("制限時間用のタイマー")] [SerializeField]
+    Timer _gameTimer;
+
+    public override void OnEnter() 
+    {
+        _finished = true;//とりあえず開始の演出は無しで
+    }
     public override void OnUpdate() { }
-    public override void OnExit() { }
+    public override void OnExit() 
+    {
+        _gameTimer.TimerStart();
+    }
 }
