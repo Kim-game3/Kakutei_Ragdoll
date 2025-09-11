@@ -17,15 +17,6 @@ public class MainGameSceneFlow : MonoBehaviour
     SceneFlowStateTypeBase _currentState;//現在のステート
     Dictionary<SceneFlowStateTypeBase, EMainGameSceneState> _stateDic;
 
-    bool _isRunning=false;
-
-
-    public void StartGame()//ゲーム開始
-    {
-        StartCoroutine(GameFlow());
-    }
-
-
     //private
     private void Awake()
     {
@@ -39,18 +30,16 @@ public class MainGameSceneFlow : MonoBehaviour
 
     void Start()
     {
-        if(_playOnAwake) StartGame();
+        StartCoroutine(GameFlow());
     }
 
     IEnumerator GameFlow()
     {
-        if(_isRunning) yield break;
-        _isRunning = true;
-
         //最初のステートを設定
         ChangeState(_start);
 
         bool shouldContinue;//続けるか
+
 
         do
         {
@@ -61,8 +50,6 @@ public class MainGameSceneFlow : MonoBehaviour
             shouldContinue = SelectNextState();//ステートの変更処理
 
         } while (shouldContinue);
-
-        _isRunning = false;
     }
 
 
