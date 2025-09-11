@@ -10,14 +10,23 @@ public class Move_ForceBody : MonoBehaviour
 {
     [CustomLabel("動かすキャラの身体のパーツ")] [SerializeField]
     Rigidbody _body;
+
     [CustomLabel("かける力")] [SerializeField]
     float _power;
+
     [Tooltip("このオブジェクトの前方向に力が加えられる")] [CustomLabel("基準の方向")] [SerializeField]//このオブジェクトの地面に平行な+Z方向を前とする
     Transform _baseDirection;
+
     [Tooltip("ジャンプ機能")] [SerializeField]
     Jump_ForceBody _jump;
+
     [Tooltip("かける力を足場の角度に沿わせる設定")] [SerializeField]
     FollowVectorToScaffold _followVectorToScaffold;
+
+    [Header("試験的機能")]
+
+    [CustomLabel("上げる角度")] [SerializeField] 
+    float _upAngle;
 
     public void Input_Move(InputAction.CallbackContext context)
     {
@@ -46,7 +55,12 @@ public class Move_ForceBody : MonoBehaviour
 
         Vector3 force = forceDirection * _power;
 
-        if(_jump!=null) force += _jump.JumpPower();
+        //試験機能(力をかける角度を少し上向きにする)
+        Vector3 axis=Quaternion.LookRotation(force)*Vector3.left;
+        force = Quaternion.AngleAxis(_upAngle,axis) * force;
+        //
+
+        if (_jump != null) force += _jump.JumpPower();
 
         _body.AddForce(force,ForceMode.VelocityChange);
     }
