@@ -6411,7 +6411,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.3
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -11580,7 +11580,7 @@ CharacterJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_EnableProjection: 0
+  m_EnableProjection: 1
   m_ProjectionDistance: 0.3
   m_ProjectionAngle: 180
   m_BreakForce: Infinity
@@ -21381,11 +21381,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 40
+  _power: 28
   _baseDirection: {fileID: 963194228}
   _jump: {fileID: 1980951488}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 899190850}
+  _upAngle: 25
 --- !u!114 &1980951488
 MonoBehaviour:
   m_ObjectHideFlags: 0
