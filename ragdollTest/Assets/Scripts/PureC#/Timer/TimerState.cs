@@ -9,5 +9,8 @@ public enum TimerState
 {
     Off,//動いていない
     On,//動いている
-    Pause,//一時停止中
+    Stop,//一時停止中
+    TimeUp,//タイムアップ
+
+    Length//長さ(これ以降に要素を追加しないこと)
 }

@@ -4,36 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//タイマー
+//タイマー機能
 
 public class Timer : MonoBehaviour
 {
     [Tooltip("計る時間")] [SerializeField] float _duration;
     [Tooltip("開始時にタイマーを開始するか")] [SerializeField] bool _startOnAwake;
     float _remainingTime;//残り時間
-    TimerState _state = TimerState.Off; //タイマーの状態
+    TimerState _state = TimerState.Off;//タイマーの状態
 
     //public
 
-    public event Action TimeUpEvent;//タイマーが0になった時に呼ばれるイベント
-    public event Action TimerStartEvent;//タイマーが開始された時に呼ばれるイベント
-    public event Action PauseEvent;//タイマーが一時停止になった時に呼ばれるイベント
-    public event Action ResumeEvent;//タイマーが再開した時に呼ばれるイベント
-
-    //タイマーを最初から開始する
-    public void TimerStart()
-    {
-        //既にオンになってたら警告だけして何もしない
-        if(_state==TimerState.On)
-        {
-            Debug.Log("既にタイマーを開始しています！");
-            return;
-        }
-
-        _state= TimerState.On;
-        TimerStartEvent?.Invoke();
-        _remainingTime = _duration;
-    }
+    public event Action ResetEvent;//タイマーのリセット時
+    public event Action TimeUpEvent;//残り時間が0になった時
+    public event Action StartEvent;//タイマーが開始された時
+    public event Action PauseEvent;//タイマーの一時停止時
+    public event Action ResumeEvent;//タイマーが再開した時
 
     public float RemainingTime { get { return _remainingTime; } }//タイマーの残り時間を返す
 
@@ -45,38 +31,48 @@ public class Timer : MonoBehaviour
         set { _remainingTime = value; }
     }
 
-    
-    public bool SwitchPauseResume() //タイマーの一時停止・再開の切り替え
+    public void ResetTimer()//タイマーの状態をリセット
     {
-        //そもそも動いていなかったら警告してfalseを返す
-        if(_state==TimerState.Off)
-        {
-            Debug.Log("タイマーが動いてません！");
-            return false;
-        }
+        _state=TimerState.Off;
+        _remainingTime=_duration;
+        ResetEvent?.Invoke();
+    }
 
-        //タイマーが動いている状態であったら一時停止にする
-        else if(_state==TimerState.On)
+    public void SwitchStartStop()//タイマー開始、タイマーの停止、タイマーの再開操作が出来る
+    {
+        switch(_state)
         {
-            _state = TimerState.Pause;
-            PauseEvent?.Invoke();
-            return true;
-        }
+            case TimerState.Off://オフ→オン
+                _state=TimerState.On;
+                _remainingTime = _duration;
+                StartEvent?.Invoke();
+                break;
 
-        //タイマーが一時停止状態であったら再開する
-        else
-        {
-            _state= TimerState.On;
-            ResumeEvent?.Invoke();
-            return true;
+            case TimerState.On://オン→一時停止
+                _state=TimerState.Stop;
+                PauseEvent?.Invoke();
+                break;
+
+            case TimerState.Stop://一時停止→オン
+                _state = TimerState.On;
+                ResumeEvent?.Invoke();
+                break;
+
+            default:
+                Debug.Log("タイマーの状態の切り替えに失敗しました！");
+                break;
         }
     }
+
+    
 
     //private
 
     private void Start()
     {
-        if (_startOnAwake) TimerStart();
+        ResetTimer();//タイマーの状態をリセット
+        
+        if (_startOnAwake) SwitchStartStop();//オンの状態になる
     }
 
     private void Update()
@@ -92,11 +88,10 @@ public class Timer : MonoBehaviour
 
         bool timeUp=_remainingTime < 0;//時間切れになった
 
-        if(timeUp)
-        {
-            //時間切れになった時の処理
-            _state = TimerState.Off;
-            TimeUpEvent?.Invoke();
-        }
+        if (!timeUp) return;
+
+        //時間切れになった時の処理
+        _state = TimerState.TimeUp;
+        TimeUpEvent?.Invoke();
     }
 }

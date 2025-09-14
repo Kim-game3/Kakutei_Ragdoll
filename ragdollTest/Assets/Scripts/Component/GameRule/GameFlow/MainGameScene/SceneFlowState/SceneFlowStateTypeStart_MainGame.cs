@@ -31,7 +31,7 @@ public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
     public override void OnUpdate() { }
     public override void OnExit() 
     {
-        _gameTimer.TimerStart();
+        _gameTimer.SwitchStartStop();
     }
 
     IEnumerator Wait_FinishStartEvent()//開始演出が終わるまで待つ
