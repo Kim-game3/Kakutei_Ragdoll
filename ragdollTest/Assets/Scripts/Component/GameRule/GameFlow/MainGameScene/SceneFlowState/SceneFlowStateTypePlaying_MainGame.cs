@@ -22,7 +22,7 @@ public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
     {
         _finished = false;
         _playerInput.SwitchCurrentActionMap(PlayerInput_ActionMapName.Controllable);//プレイヤーを操作可能にする
-        //タイマー開始
+        _gameTimer.SwitchStartStop();//タイマー開始
     }
     public override void OnUpdate()
     {
@@ -35,6 +35,6 @@ public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
     public override void OnExit()
     {
         _playerInput.SwitchCurrentActionMap(PlayerInput_ActionMapName.UnControllable);//プレイヤーを操作不可能にする
-        //タイマーストップ
+        _gameTimer.SwitchStartStop();//タイマーストップ
     }
 }
