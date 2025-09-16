@@ -10182,7 +10182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d071d5152c8ff524f9a08d63be242c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameTimer: {fileID: 1438583201}
   _playableDirector: {fileID: 732789967}
   _playerInput: {fileID: 1530644322}
   _waitDuration: 4
@@ -13084,6 +13083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 1530644322}
   _judgeGameSet: {fileID: 98096576}
+  _gameTimer: {fileID: 1438583201}
 --- !u!54 &1324591033
 Rigidbody:
   m_ObjectHideFlags: 0
