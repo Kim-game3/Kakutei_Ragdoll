@@ -15,84 +15,38 @@ public class MainGameSceneFlow : MonoBehaviour
     [Tooltip("終了処理のステート")] [SerializeField] SceneFlowStateTypeEnd_MainGame _end;
 
     SceneFlowStateTypeBase _currentState;//現在のステート
-    Dictionary<SceneFlowStateTypeBase, EMainGameSceneState> _stateDic;
 
-    bool _isRunning=false;
+    //private
 
-
-    public void StartGame()//ゲーム開始
+    void Start()
     {
         StartCoroutine(GameFlow());
     }
 
-
-    //private
-    private void Awake()
-    {
-        _stateDic = new Dictionary<SceneFlowStateTypeBase, EMainGameSceneState>()
-        {
-            {_start,EMainGameSceneState.Start },
-            {_playing,EMainGameSceneState.Playing},
-            {_end,EMainGameSceneState.End }
-        };
-    }
-
-    void Start()
-    {
-        if(_playOnAwake) StartGame();
-    }
-
     IEnumerator GameFlow()
     {
-        if(_isRunning) yield break;
-        _isRunning = true;
-
-        //最初のステートを設定
+        //開始ステート
         ChangeState(_start);
+        yield return CurrentStateUpdate();
 
-        bool shouldContinue;//続けるか
+        //プレイ中ステート
+        ChangeState(_playing);
+        yield return CurrentStateUpdate();
 
-        do
-        {
-            yield return null;
+        //終了ステート
+        ChangeState(_end);
+        yield return CurrentStateUpdate();
 
-            _currentState.OnUpdate();
-
-            shouldContinue = SelectNextState();//ステートの変更処理
-
-        } while (shouldContinue);
-
-        _isRunning = false;
+        ChangeState(null);//終了にこれをしないと最後のステートのOnExitが呼ばれない
     }
 
-
-    bool SelectNextState()//ステート終了時、次のステートを選ぶ(終える際はfalseを返す)
+    IEnumerator CurrentStateUpdate()//現在のステートの更新処理
     {
-        if (!_currentState.Finished) return true;
-
-        if(!_stateDic.TryGetValue(_currentState,out EMainGameSceneState state))
+        while(!_currentState.Finished)
         {
-            Debug.Log("ステートの取得に失敗しました");
-            return false;
+            yield return null;
+            if (_currentState!=null) _currentState.OnUpdate();
         }
-
-        //次のステートを選ぶ
-        switch(state)
-        {
-            case EMainGameSceneState.Start:
-                ChangeState(_playing);
-                break;
-
-            case EMainGameSceneState.Playing:
-                ChangeState(_end);
-                break;
-
-            case EMainGameSceneState.End:
-                ChangeState(null);
-                return false;
-        }
-
-        return true;
     }
 
 

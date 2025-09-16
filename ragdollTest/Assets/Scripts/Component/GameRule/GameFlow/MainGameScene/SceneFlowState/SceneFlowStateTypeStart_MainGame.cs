@@ -9,9 +9,6 @@ using UnityEngine.InputSystem;
 
 public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 {
-    [CustomLabel("制限時間用のタイマー")] [SerializeField]
-    Timer _gameTimer;
-
     [CustomLabel("最初の方に再生するタイムライン")] [SerializeField]
     PlayableDirector _playableDirector;
 
@@ -31,7 +28,7 @@ public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
     public override void OnUpdate() { }
     public override void OnExit() 
     {
-        _gameTimer.TimerStart();
+
     }
 
     IEnumerator Wait_FinishStartEvent()//開始演出が終わるまで待つ
