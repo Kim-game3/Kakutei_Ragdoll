@@ -12039,7 +12039,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150855164}
-  m_Material: {fileID: 13400000, guid: c4e8f5a58532030429f37edc3a790ead, type: 2}
+  m_Material: {fileID: 13400000, guid: c913ef1a2da0d2e4eaa1a7ff33d54e14, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -21346,6 +21346,7 @@ GameObject:
   - component: {fileID: 1980951486}
   - component: {fileID: 1980951488}
   - component: {fileID: 1980951489}
+  - component: {fileID: 1980951490}
   m_Layer: 7
   m_Name: MoveBody
   m_TagString: Untagged
@@ -21381,12 +21382,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 8
+  _power: 20
   _baseDirection: {fileID: 963194228}
-  _jump: {fileID: 1980951488}
+  _judgeIsValidSpeed:
+    _showDebug_Speed: 1
+    _maxSpeed: 4
+    _judgeIsGround: {fileID: 899190849}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 899190850}
-  _upPower: 32
 --- !u!114 &1980951488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21401,6 +21404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _power: 200
   _judgeIsGround: {fileID: 899190849}
+  _moveForceBody: {fileID: 1980951486}
 --- !u!114 &1980951489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21433,6 +21437,21 @@ MonoBehaviour:
     _rotationalInertia: 80
   _solverIterarions:
     _count: 15
+--- !u!114 &1980951490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980951484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a58b7e1c6088e4abe2a8b32fa657fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minForce: 20
+  _gapForce: 200
+  _move_ForceBody: {fileID: 1980951486}
 --- !u!1 &1982476016
 GameObject:
   m_ObjectHideFlags: 0
