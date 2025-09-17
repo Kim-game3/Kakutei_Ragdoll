@@ -21381,12 +21381,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 276373543}
-  _power: 35
+  _power: 8
   _baseDirection: {fileID: 963194228}
   _jump: {fileID: 1980951488}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 899190850}
-  _upAngle: 28
+  _upPower: 32
 --- !u!114 &1980951488
 MonoBehaviour:
   m_ObjectHideFlags: 0
