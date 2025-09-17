@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,16 +18,12 @@ public class Move_ForceBody : MonoBehaviour
     [Tooltip("このオブジェクトの前方向に力が加えられる")] [CustomLabel("基準の方向")] [SerializeField]//このオブジェクトの地面に平行な+Z方向を前とする
     Transform _baseDirection;
 
-    [Tooltip("ジャンプ機能")] [SerializeField]
-    Jump_ForceBody _jump;
-
     [Tooltip("かける力を足場の角度に沿わせる設定")] [SerializeField]
     FollowVectorToScaffold _followVectorToScaffold;
 
-    [Header("試験的機能")]
-
-    [CustomLabel("上方向にかける力")] [SerializeField]
-    float _upPower;
+    //移動時に呼ばれる(Vector2は入力ベクトルが入る)
+    public event Action OnMove;
+    public event Action<Vector2> OnMove_Vec;
 
     public void Input_Move(InputAction.CallbackContext context)
     {
@@ -41,6 +38,9 @@ public class Move_ForceBody : MonoBehaviour
 
     private void Move(Vector2 input)
     {
+        OnMove?.Invoke();
+        OnMove_Vec?.Invoke(input);
+
         Vector3 inputVec_3D = new Vector3(input.x, 0, input.y);
 
         //入力ベクトルをベースの方向(y方向は無視、z方向のみ)に向ける
@@ -53,13 +53,7 @@ public class Move_ForceBody : MonoBehaviour
 
         Vector3 force = forceDirection * _power;
 
-        //試験機能(少し上にも力をかけるようにする)
-        force += Vector3.up * _upPower;
-        //
-
         force = _followVectorToScaffold.Follow(force);//力をかける方向を足場の角度に沿わせる
-
-        if (_jump != null) force += _jump.JumpPower();//削除予定
 
         _body.AddForce(force,ForceMode.VelocityChange);
     }
