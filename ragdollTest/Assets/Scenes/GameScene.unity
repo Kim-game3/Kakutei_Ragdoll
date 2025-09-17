@@ -21383,6 +21383,10 @@ MonoBehaviour:
   _body: {fileID: 276373543}
   _power: 14
   _baseDirection: {fileID: 963194228}
+  _judgeIsValidSpeed:
+    _showDebug_Speed: 1
+    _maxSpeed: 4
+    _judgeIsGround: {fileID: 899190849}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 899190850}
 --- !u!114 &1980951488

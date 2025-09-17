@@ -18,6 +18,9 @@ public class Move_ForceBody : MonoBehaviour
     [Tooltip("このオブジェクトの前方向に力が加えられる")] [CustomLabel("基準の方向")] [SerializeField]//このオブジェクトの地面に平行な+Z方向を前とする
     Transform _baseDirection;
 
+    [CustomLabel("速度制限機能")] [SerializeField]
+    JudgeIsValidSpeed _judgeIsValidSpeed;
+
     [Tooltip("かける力を足場の角度に沿わせる設定")] [SerializeField]
     FollowVectorToScaffold _followVectorToScaffold;
 
@@ -36,10 +39,15 @@ public class Move_ForceBody : MonoBehaviour
         Move(getVec);
     }
 
+
+    //private
+
     private void Move(Vector2 input)
     {
         OnMove?.Invoke();
         OnMove_Vec?.Invoke(input);
+
+        if (!_judgeIsValidSpeed.IsValidSpeed()) return;//速度が一定以上超えてたらこれ以上加速させない
 
         Vector3 inputVec_3D = new Vector3(input.x, 0, input.y);
 
@@ -56,5 +64,10 @@ public class Move_ForceBody : MonoBehaviour
         force = _followVectorToScaffold.Follow(force);//力をかける方向を足場の角度に沿わせる
 
         _body.AddForce(force,ForceMode.VelocityChange);
+    }
+
+    private void Awake()
+    {
+        _judgeIsValidSpeed.Init(_body);
     }
 }
