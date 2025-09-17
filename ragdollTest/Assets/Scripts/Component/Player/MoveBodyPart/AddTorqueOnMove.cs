@@ -7,14 +7,20 @@ using UnityEngine;
 
 public class AddTorqueOnMove : MonoBehaviour
 {
-    [CustomLabel("かける力の大きさ")] [SerializeField]
-    float _force;
+    [Header("説明:範囲内のランダムな力の大きさで動かしてます")]
+
+    [CustomLabel("かける最小の力の大きさ")] [SerializeField]
+    float _minForce;
+
+    [CustomLabel("かける力の大きさの差")] [SerializeField]
+    float _gapForce;
 
     [Tooltip("移動機能")] [SerializeField]
     Move_ForceBody _move_ForceBody;
 
     Rigidbody _body;//動かす部位のRigidbody
 
+    const float _rightAngle = 90;//直角の角度
     //private
 
     private void Awake()
@@ -25,12 +31,15 @@ public class AddTorqueOnMove : MonoBehaviour
 
     void AddTorqueToBody(Vector3 forceDirection)
     {
-        Quaternion axisRot= Quaternion.AngleAxis(90,Vector3.up);
+        //軸の方向を求める
+        Quaternion axisRot= Quaternion.AngleAxis(_rightAngle,Vector3.up);
         Vector3 axis = axisRot * forceDirection;
 
-        Debug.DrawLine(_body.transform.position, _body.transform.position + axis, Color.green,5f);
+        //かける力の大きさを求める
+        float maxForce = _minForce + _gapForce;
+        float force = Random.Range(_minForce, maxForce);
 
-        _body.AddTorque(axis*_force,ForceMode.VelocityChange);
+        _body.AddTorque(axis*force,ForceMode.VelocityChange);
     }
 
 }
