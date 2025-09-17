@@ -21346,6 +21346,7 @@ GameObject:
   - component: {fileID: 1980951486}
   - component: {fileID: 1980951488}
   - component: {fileID: 1980951489}
+  - component: {fileID: 1980951490}
   m_Layer: 7
   m_Name: MoveBody
   m_TagString: Untagged
@@ -21402,7 +21403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _power: 200
-  _body: {fileID: 276373543}
   _judgeIsGround: {fileID: 899190849}
   _moveForceBody: {fileID: 1980951486}
 --- !u!114 &1980951489
@@ -21437,6 +21437,20 @@ MonoBehaviour:
     _rotationalInertia: 80
   _solverIterarions:
     _count: 15
+--- !u!114 &1980951490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980951484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a58b7e1c6088e4abe2a8b32fa657fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _force: 50
+  _move_ForceBody: {fileID: 1980951486}
 --- !u!1 &1982476016
 GameObject:
   m_ObjectHideFlags: 0

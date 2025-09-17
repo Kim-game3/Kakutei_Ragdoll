@@ -11,8 +11,7 @@ public class Jump_ForceBody : MonoBehaviour
     [CustomLabel("è„ï˚å¸Ç…Ç©ÇØÇÈóÕ")] [SerializeField]
     float _power;
 
-    [Tooltip("ìÆÇ©Ç∑ïîà ÇÃRigidbody")] [SerializeField]
-    Rigidbody _body;
+    Rigidbody _body;//ìÆÇ©Ç∑ïîà ÇÃRigidbody
 
     [Tooltip("ê⁄ínîªíË")] [SerializeField]
     JudgeIsGround _judgeIsGround;
@@ -22,18 +21,21 @@ public class Jump_ForceBody : MonoBehaviour
 
     bool _inputting = false;
 
-    private void Awake()
-    {
-        _moveForceBody.OnMove += Jump;
-    }
-
     public void Input_Jump(InputAction.CallbackContext context)
     {
         if (context.performed) _inputting = true;
         if (context.canceled) _inputting = false;
     }
 
-    public void Jump()
+    //private
+
+    private void Awake()
+    {
+        _moveForceBody.OnMove += Jump;
+        _body=_moveForceBody.Body;
+    }
+
+    void Jump()
     {
         bool shouldJump = _inputting && _judgeIsGround.IsGround;
 

@@ -24,11 +24,13 @@ public class Move_ForceBody : MonoBehaviour
     [Tooltip("かける力を足場の角度に沿わせる設定")] [SerializeField]
     FollowVectorToScaffold _followVectorToScaffold;
 
-    //移動時に呼ばれる(Vector2は入力ベクトルが入る)
+    //移動時に呼ばれる(Vector3は加速方向が入る)
     public event Action OnMove;
-    public event Action<Vector2> OnMove_Vec;
+    public event Action<Vector3> OnMove_Vec;//引数に加速方向の3Dベクトルが入る
 
-    public void Input_Move(InputAction.CallbackContext context)
+    public Rigidbody Body { get { return _body; } }//動かす身体のパーツ
+
+    public void Input_Move(InputAction.CallbackContext context)//移動入力
     {
         if (!context.performed) return;
 
@@ -45,11 +47,14 @@ public class Move_ForceBody : MonoBehaviour
     private void Move(Vector2 input)
     {
         OnMove?.Invoke();
-        OnMove_Vec?.Invoke(input);
 
-        if (!_judgeIsValidSpeed.IsValidSpeed()) return;//速度が一定以上超えてたらこれ以上加速させない
+        if (!_judgeIsValidSpeed.IsValidSpeed())//速度が一定以上超えてたらこれ以上加速させない
+        {
+            OnMove_Vec?.Invoke(Vector3.zero);
+            return;
+        }
 
-        Vector3 inputVec_3D = new Vector3(input.x, 0, input.y);
+        Vector3 inputVec_3D = new Vector3(input.x, 0, input.y).normalized;
 
         //入力ベクトルをベースの方向(y方向は無視、z方向のみ)に向ける
         Vector3 forwardDirection = _baseDirection.forward;
@@ -64,6 +69,8 @@ public class Move_ForceBody : MonoBehaviour
         force = _followVectorToScaffold.Follow(force);//力をかける方向を足場の角度に沿わせる
 
         _body.AddForce(force,ForceMode.VelocityChange);
+
+        OnMove_Vec?.Invoke(forceDirection);
     }
 
     private void Awake()
