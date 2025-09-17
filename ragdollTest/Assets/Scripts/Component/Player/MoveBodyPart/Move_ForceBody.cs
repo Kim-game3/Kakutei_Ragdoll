@@ -25,8 +25,8 @@ public class Move_ForceBody : MonoBehaviour
 
     [Header("試験的機能")]
 
-    [CustomLabel("上げる角度")] [SerializeField] 
-    float _upAngle;
+    [CustomLabel("上方向にかける力")] [SerializeField]
+    float _upPower;
 
     public void Input_Move(InputAction.CallbackContext context)
     {
@@ -51,16 +51,15 @@ public class Move_ForceBody : MonoBehaviour
 
         Vector3 forceDirection = lookForward * inputVec_3D;
 
-        forceDirection = _followVectorToScaffold.Follow(forceDirection);//力をかける方向を足場の角度に沿わせる
-
         Vector3 force = forceDirection * _power;
 
-        //試験機能(力をかける角度を少し上向きにする)
-        Vector3 axis=Quaternion.LookRotation(force)*Vector3.left;
-        force = Quaternion.AngleAxis(_upAngle,axis) * force;
+        //試験機能(少し上にも力をかけるようにする)
+        force += Vector3.up * _upPower;
         //
 
-        if (_jump != null) force += _jump.JumpPower();
+        force = _followVectorToScaffold.Follow(force);//力をかける方向を足場の角度に沿わせる
+
+        if (_jump != null) force += _jump.JumpPower();//削除予定
 
         _body.AddForce(force,ForceMode.VelocityChange);
     }
