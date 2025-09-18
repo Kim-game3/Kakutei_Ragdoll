@@ -231,6 +231,72 @@
                     "action": "Up",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a44eede2-d4c7-4d67-a395-4ed23fa1ab52",
+                    "path": "<HID::JC-U3613M - DirectXInput Mode>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "JoystickButton",
+                    "id": "f5ef5c2f-21ad-43d6-a292-537ec010846b",
+                    "path": "2DVector(mode=1)",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b334918c-b046-480b-93cb-5e14fdac2da9",
+                    "path": "<HID::JC-U3613M - DirectXInput Mode>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f6e66f8b-6196-4d57-bb07-9a6bbb393363",
+                    "path": "<HID::JC-U3613M - DirectXInput Mode>/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7003561d-6f4e-4eec-badb-57e9bd537a26",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9c19d015-e3fe-402d-8ec2-62992cd9aa14",
+                    "path": "<HID::JC-U3613M - DirectXInput Mode>/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

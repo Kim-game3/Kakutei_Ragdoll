@@ -56,6 +56,16 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
         //クリアかゲームオーバーによって遷移するシーンを変更
         bool isClear = (_judgeGameSet.GameState == EGameState.Clear);
         string nextScenePath = isClear ? _gameClearScene.ScenePath : _gameOverScene.ScenePath;
+        
+        //if(isClear)
+        //{
+        //    SceneManager.LoadScene("ClearScene");
+        //}
+        //else
+        //{
+        //    SceneManager.LoadScene("GameOverScene");
+        //}
+
         SceneManager.LoadScene(nextScenePath);
     }
 }

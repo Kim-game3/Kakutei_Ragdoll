@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,6 +24,19 @@ public class Move_ForceBody : MonoBehaviour
 
     [Tooltip("かける力を足場の角度に沿わせる設定")] [SerializeField]
     FollowVectorToScaffold _followVectorToScaffold;
+
+
+    [CustomLabel("現在のプレイヤーの速度をデバッグ表示するか")]
+    [SerializeField]
+    bool _showDebug_Speed;
+
+    [CustomLabel("最大移動速度")]
+    [SerializeField]
+    float _maxSpeed;
+
+    [Tooltip("接地判定")]
+    [SerializeField]
+    JudgeIsGround _judgeIsGround;
 
     //移動時に呼ばれる(Vector3は加速方向が入る)
     public event Action OnMove;
@@ -48,11 +62,11 @@ public class Move_ForceBody : MonoBehaviour
     {
         OnMove?.Invoke();
 
-        if (!_judgeIsValidSpeed.IsValidSpeed())//速度が一定以上超えてたらこれ以上加速させない
-        {
-            OnMove_Vec?.Invoke(Vector3.zero);
-            return;
-        }
+        //if (!_judgeIsValidSpeed.IsValidSpeed())//速度が一定以上超えてたらこれ以上加速させない
+        //{
+        //    OnMove_Vec?.Invoke(Vector3.zero);
+        //    return;
+        //}
 
         Vector3 inputVec_3D = new Vector3(input.x, 0, input.y).normalized;
 
@@ -71,6 +85,43 @@ public class Move_ForceBody : MonoBehaviour
         _body.AddForce(force,ForceMode.VelocityChange);
 
         OnMove_Vec?.Invoke(forceDirection);
+
+        Debug.Log("動いてるよ");
+    }
+
+    private void FixedUpdate()
+    {
+        LimitSpeed();
+    }
+
+    void LimitSpeed()
+    {
+        Vector3 velocity = _body.velocity;
+
+        if (_judgeIsGround.IsGround)
+        {
+            if (_showDebug_Speed) Debug.Log(velocity.magnitude);//速度のデバッグ表示
+
+            if(velocity.magnitude > _maxSpeed)
+            {
+                Debug.Log("制限中");
+                velocity=velocity.normalized*_maxSpeed;
+                _body.velocity=velocity;
+            }
+        }
+        else
+        {
+            velocity.y = 0;
+            if (_showDebug_Speed) Debug.Log(velocity.magnitude);//速度のデバッグ表示
+
+            if(velocity.magnitude > _maxSpeed)
+            {
+                Debug.Log("制限中");
+                velocity = velocity.normalized*_maxSpeed;
+                velocity.y = _body.velocity.y;
+                _body.velocity=velocity;
+            }
+        }
     }
 
     private void Awake()
