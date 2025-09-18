@@ -1,21 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*çÏê¨é“Å@ñÿë∫*/
 public class MainGameRestart : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
-    private Vector3 initialposition;
+    [SerializeField] private Transform Restartpoint;
 
-
-    private void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        initialposition = Player.transform.position;
+        if(other.CompareTag("Player"))
+        {
+
+        }
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        Player.transform.position = initialposition;
-    }
 }
