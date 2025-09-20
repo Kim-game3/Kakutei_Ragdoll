@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 6019852611340923293}
   - component: {fileID: 2793759609883740784}
   - component: {fileID: 3133349757949135851}
+  - component: {fileID: 85668351706650554}
   m_Layer: 7
   m_Name: MoveBody
   m_TagString: Untagged
@@ -230,10 +231,6 @@ MonoBehaviour:
   _body: {fileID: 2816732573931072731}
   _power: 20
   _baseDirection: {fileID: 0}
-  _judgeIsValidSpeed:
-    _showDebug_Speed: 1
-    _maxSpeed: 4
-    _judgeIsGround: {fileID: 8450295637375364907}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 2731605264711589415}
 --- !u!114 &6019852611340923293
@@ -297,6 +294,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minForce: 60
   _gapForce: 300
+  _move_ForceBody: {fileID: 7340308893461383714}
+--- !u!114 &85668351706650554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342134571482737052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cccdd062a95e2441a0ecb78680afc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebug_Speed: 1
+  _maxSpeed: 1
+  _judgeIsGround: {fileID: 8450295637375364907}
   _move_ForceBody: {fileID: 7340308893461383714}
 --- !u!1 &8016520330604230791
 GameObject:
