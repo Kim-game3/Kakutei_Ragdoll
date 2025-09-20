@@ -4,10 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RestartManager : MonoBehaviour
+public partial class RestartManager : MonoBehaviour
 {
-    [SerializeField] PlayerInput _playerInput;
-    [SerializeField] CinemachineVirtualCamera _gameCamera;
+    // --- リスタートの設定関係 --- //
+    [CustomLabel("リスタート地点&方向")] [Tooltip("明転終了後、プレイヤーがこの地点に出現＆この方向に向かって投げ飛ばされる")] [SerializeField]
+    Transform _restartPoint;
+
+
+
+    [SerializeField] 
+    PlayerInput _playerInput;
+
+    [SerializeField] 
+    CinemachineVirtualCamera _gameCamera;
 
     const string _tagName_Player = "Player";
 
@@ -63,6 +72,11 @@ public class RestartManager : MonoBehaviour
 
         //明転が終わった直後
 
+        //明転が終わってから数秒後
+        //ChangeGameCameraTarget(_gameCameraFollow, _gameCameraLookAt);
+
+        //さらに数秒後
+        //_playerInput.SwitchCurrentActionMap();//操作不可能にする
         _isRestarting = false;
 
 
