@@ -18,7 +18,6 @@ public class JudgeGameSet : MonoBehaviour
     // --- クリア判定用に必要 --- //
     const string _tagName_Player = "Player";
 
-
     //クリア・ゲームオーバーかの取得
     EGameState _gameState=EGameState.Playing;
 

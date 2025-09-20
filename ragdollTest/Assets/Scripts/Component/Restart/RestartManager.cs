@@ -1,19 +1,37 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RestartManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] PlayerInput _playerInput;
+    [SerializeField] CinemachineVirtualCamera _gameCamera;
+
+    const string _tagName_Player = "Player";
+
+    //プレイヤーが操作するカメラの追従対象
+    Transform _gameCameraFollow;
+    Transform _gameCameraLookAt;
+
+    bool _isRestarting = false;//リスタート中か
+
+    public bool IsRestarting { get { return _isRestarting; } }
+
+    private void Awake()
     {
-        
+        _gameCameraFollow = _gameCamera.Follow;
+        _gameCameraLookAt = _gameCamera.LookAt;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (!other.CompareTag(_tagName_Player)) return;
+
+        if (_isRestarting) return;
+
+        StartCoroutine(OnRestart());
     }
 
     IEnumerator OnRestart()
@@ -36,7 +54,24 @@ public class RestartManager : MonoBehaviour
         //操作可能に
         //リスポーン中をオフに
 
+        //落ちた瞬間
+        _isRestarting=true;
+        //_playerInput.SwitchCurrentActionMap();//操作不可能にする
+        //ChangeGameCameraTarget(null, null);//カメラの追跡をやめる
+
+        //明転まで待つ
+
+        //明転が終わった直後
+
+        _isRestarting = false;
+
 
         yield return null;
+    }
+
+    void ChangeGameCameraTarget(Transform newFollow,Transform newLookAt)
+    {
+        _gameCamera.Follow=newFollow;
+        _gameCameraLookAt=newLookAt;
     }
 }
