@@ -1,10 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public partial class RestartManager : MonoBehaviour
 {
     // --- リスタートの設定関係 --- //
+    [CustomLabel("リスタート時に再生するタイムライン")] [SerializeField]
+    PlayableDirector _restartTimeLine;
 
     [SerializeField]//リスタート時のプレイヤーを初期地点に戻す関係の処理をまとめたもの
     PlayerPosControl _playerPosControl;
@@ -57,6 +60,7 @@ public partial class RestartManager : MonoBehaviour
         _isRestarting=true;
         _inputControl.SetControllable(false);//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
+        _restartTimeLine.Play();//タイムラインを再生
 
         //明転まで待つ
 
