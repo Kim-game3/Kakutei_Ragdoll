@@ -1,6 +1,4 @@
-using Cinemachine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,15 +8,11 @@ public partial class RestartManager : MonoBehaviour
     [CustomLabel("リスタート地点&方向")] [Tooltip("明転終了後、プレイヤーがこの地点に出現＆この方向に向かって投げ飛ばされる")] [SerializeField]
     Transform _restartPoint;
 
+    [CustomLabel("リスタート時のカメラ関係")] [SerializeField]
+    CameraControl _cameraControl;
 
-
-    [CustomLabel("リスタート時のカメラの切り替え関係")] [SerializeField]
-    ChangeCamera _changeCamera;
-
-    [SerializeField] 
-    PlayerInput _playerInput;
-
-    const string _tagName_Player = "Player";
+    [CustomLabel("リスタート時の入力関係")] [SerializeField]
+    InputControl _inputControl;
 
     bool _isRestarting = false;//リスタート中か
 
@@ -26,12 +20,12 @@ public partial class RestartManager : MonoBehaviour
 
     private void Awake()
     {
-        _changeCamera.Init();
+        _cameraControl.Init();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag(_tagName_Player)) return;
+        if (!other.CompareTag(ObjectTagNameDictionary.Player)) return;
 
         if (_isRestarting) return;
 
@@ -60,20 +54,20 @@ public partial class RestartManager : MonoBehaviour
 
         //落ちた瞬間
         _isRestarting=true;
-        //_playerInput.SwitchCurrentActionMap();//操作不可能にする
-        _changeCamera.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
+        _inputControl.SetControllable(false);//操作不可能にする
+        _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
 
         //明転まで待つ
 
         //明転が終わった直後
-        _changeCamera.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
+        _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
 
         //明転が終わってから数秒後
-        _changeCamera.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
-        _changeCamera.SwitchRestartPointCamera(false);//プレイカメラに戻す
+        _cameraControl.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
+        _cameraControl.SwitchRestartPointCamera(false);//プレイカメラに戻す
 
         //さらに数秒後
-        //_playerInput.SwitchCurrentActionMap();//操作不可能にする
+        _inputControl.SetControllable(true);//操作可能にする
         _isRestarting = false;
 
 

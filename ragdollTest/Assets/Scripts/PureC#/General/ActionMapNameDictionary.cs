@@ -5,7 +5,7 @@ using UnityEngine;
 //作成者:杉山
 //PlayerInputのアクションマップ名をどこからでも取得出来るようにしたもの
 
-public class PlayerInput_ActionMapName
+public class ActionMapNameDictionary
 {
     /// <summary>
     ///ゲームシーンのプレイヤー操作が可能な状態のActionMap名

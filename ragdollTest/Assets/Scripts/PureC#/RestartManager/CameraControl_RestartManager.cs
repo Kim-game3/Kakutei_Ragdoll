@@ -1,16 +1,13 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 //作成者:杉山
-//リスタートに必要なゲームカメラ関係の処理
+//リスタート時のカメラ関係の処理
 
 public partial class RestartManager
 {
     [System.Serializable]
-    class ChangeCamera
+    class CameraControl
     {
         [CustomLabel("ゲーム中に操作するカメラ")] [SerializeField]
         CinemachineVirtualCamera _playCamera;

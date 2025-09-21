@@ -22,7 +22,7 @@ public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
     {
         _finished = false;
         _playableDirector.Play();//タイムラインを再生
-        _playerInput.SwitchCurrentActionMap(PlayerInput_ActionMapName.UnControllable);//操作不可能にする
+        _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.UnControllable);//操作不可能にする
         StartCoroutine(Wait_FinishStartEvent());
     }
     public override void OnUpdate() { }
