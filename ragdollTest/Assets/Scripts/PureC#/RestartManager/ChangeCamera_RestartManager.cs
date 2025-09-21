@@ -19,15 +19,28 @@ public partial class RestartManager
         CinemachineVirtualCamera _restartPointCamera;
 
         //プレイヤーが操作するカメラの追従対象
-        Transform _gameCameraFollow;
-        Transform _gameCameraLookAt;
+        Transform _playCameraFollow;
+        Transform _playCameraLookAt;
 
-        //初期化
+        public void Init()//初期化
+        {
+            _playCameraFollow=_playCamera.Follow;
+            _playCameraLookAt=_playCamera.LookAt;
+        }
 
-        //ゲームカメラがプレイヤーを追従しないようにする
+        public void ChangeFollow_PlayCamera(bool followPlayer)//プレイヤーが操作するカメラの追従設定の変更、followPlayerはプレイヤーを追従するか
+        {
+            Transform newFollow=followPlayer? _playCameraFollow: null;
+            Transform newLookAt=followPlayer? _playCameraLookAt: null;
 
-        //ゲームカメラがプレイヤーを追従するようにする
+            _playCamera.Follow=newFollow;
+            _playCameraLookAt=newLookAt;
+        }
 
-        //リスタート地点のカメラを
+        public void SwitchRestartPointCamera(bool activeRestart)//リスタートカメラとプレイカメラの切り替え、activeRestartはリスタートカメラに切り替えるか
+        {
+            _restartPointCamera.enabled=activeRestart;
+            _playCamera.enabled=!activeRestart;
+        }
     }
 }

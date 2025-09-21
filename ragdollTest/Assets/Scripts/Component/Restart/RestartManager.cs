@@ -12,17 +12,13 @@ public partial class RestartManager : MonoBehaviour
 
 
 
+    [CustomLabel("リスタート時のカメラの切り替え関係")] [SerializeField]
+    ChangeCamera _changeCamera;
+
     [SerializeField] 
     PlayerInput _playerInput;
 
-    [SerializeField] 
-    CinemachineVirtualCamera _gameCamera;
-
     const string _tagName_Player = "Player";
-
-    //プレイヤーが操作するカメラの追従対象
-    Transform _gameCameraFollow;
-    Transform _gameCameraLookAt;
 
     bool _isRestarting = false;//リスタート中か
 
@@ -30,8 +26,7 @@ public partial class RestartManager : MonoBehaviour
 
     private void Awake()
     {
-        _gameCameraFollow = _gameCamera.Follow;
-        _gameCameraLookAt = _gameCamera.LookAt;
+        _changeCamera.Init();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,14 +61,16 @@ public partial class RestartManager : MonoBehaviour
         //落ちた瞬間
         _isRestarting=true;
         //_playerInput.SwitchCurrentActionMap();//操作不可能にする
-        //ChangeGameCameraTarget(null, null);//カメラの追跡をやめる
+        _changeCamera.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
 
         //明転まで待つ
 
         //明転が終わった直後
+        _changeCamera.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
 
         //明転が終わってから数秒後
-        //ChangeGameCameraTarget(_gameCameraFollow, _gameCameraLookAt);
+        _changeCamera.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
+        _changeCamera.SwitchRestartPointCamera(false);//プレイカメラに戻す
 
         //さらに数秒後
         //_playerInput.SwitchCurrentActionMap();//操作不可能にする
@@ -81,11 +78,5 @@ public partial class RestartManager : MonoBehaviour
 
 
         yield return null;
-    }
-
-    void ChangeGameCameraTarget(Transform newFollow,Transform newLookAt)
-    {
-        _gameCamera.Follow=newFollow;
-        _gameCameraLookAt=newLookAt;
     }
 }
