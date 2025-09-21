@@ -38,34 +38,16 @@ public partial class RestartManager : MonoBehaviour
 
     IEnumerator OnRestart()
     {
-        //☆落ちた瞬間
-        //リスポーン中をオンにする
-        //カメラの追跡をやめる(FollowとLookAtをnullにする)
-        //操作を出来なくする
-        //☆シャチがザパっと出てくる
-        //☆暗転
-        //☆明転
-        //プレイヤーを海の中のリスポーン地点に戻す
-        //特定の方向に力をかける
-        //リスポーン地点用のカメラをオンにする
-        //カメラの追跡(FollowとLookAtにプレイヤーを入れる)
-        //☆シャチが一瞬顔を出して海に戻る
-        //☆(数s後)
-        //カメラの追跡をオンにする
-        //☆(数秒後)
-        //操作可能に
-        //リスポーン中をオフに
-
         //落ちた瞬間
         _isRestarting=true;
         _inputControl.SetControllable(false);//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
         _restartTimeLine.Play();//タイムラインを再生
 
-        //明転まで待つ
-
-        //明転が終わった直後
+        //この辺りで完全に暗転
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
+
+        //この辺りで完全に明転
         _playerPosControl.BackToRestartPoint();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
 
         //明転が終わってから数秒後
