@@ -5,13 +5,14 @@ using UnityEngine.InputSystem;
 public partial class RestartManager : MonoBehaviour
 {
     // --- リスタートの設定関係 --- //
-    [CustomLabel("リスタート地点&方向")] [Tooltip("明転終了後、プレイヤーがこの地点に出現＆この方向に向かって投げ飛ばされる")] [SerializeField]
-    Transform _restartPoint;
 
-    [CustomLabel("リスタート時のカメラ関係")] [SerializeField]
+    [SerializeField]//リスタート時のプレイヤーを初期地点に戻す関係の処理をまとめたもの
+    PlayerPosControl _playerPosControl;
+
+    [SerializeField]//リスタート時のカメラ関係の処理をまとめたもの
     CameraControl _cameraControl;
 
-    [CustomLabel("リスタート時の入力関係")] [SerializeField]
+    [SerializeField]//リスタート時の入力関係の処理をまとめたもの
     InputControl _inputControl;
 
     bool _isRestarting = false;//リスタート中か
@@ -61,6 +62,7 @@ public partial class RestartManager : MonoBehaviour
 
         //明転が終わった直後
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
+        _playerPosControl.BackToRestartPoint();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
 
         //明転が終わってから数秒後
         _cameraControl.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
