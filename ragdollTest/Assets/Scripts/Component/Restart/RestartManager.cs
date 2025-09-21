@@ -3,9 +3,17 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 
+//作成者:杉山
+//リスタート処理
+
 public partial class RestartManager : MonoBehaviour
 {
-    // --- リスタートの設定関係 --- //
+    [Tooltip("明転してから何秒後にカメラがプレイヤーをまた追跡するようになるか")] [SerializeField]
+    float _waitDuration_FromFinishFadeIn;
+
+    [Tooltip("カメラがプレイヤーを追従するようになってから何秒後に操作が可能になるようにするか")] [SerializeField]
+    float _waitDuration_FromCameraFollowPlayer;
+
     [CustomLabel("リスタート時に再生するタイムライン")] [SerializeField]
     PlayableDirector _restartTimeLine;
 
@@ -19,9 +27,22 @@ public partial class RestartManager : MonoBehaviour
     InputControl _inputControl;
 
     bool _isRestarting = false;//リスタート中か
+    bool _finishedFadeOut = true;//フェードアウトが終わったか
+    bool _finishedFadeIn = true;//フェードインが終わったか
 
     public bool IsRestarting { get { return _isRestarting; } }
 
+    public void SetFinish_FadeOut()
+    {
+        _finishedFadeOut = true;
+    }
+
+    public void SetFinish_FadeIn()
+    {
+        _finishedFadeIn=true;
+    }
+
+    //private
     private void Awake()
     {
         _cameraControl.Init();
@@ -40,25 +61,28 @@ public partial class RestartManager : MonoBehaviour
     {
         //落ちた瞬間
         _isRestarting=true;
+        _finishedFadeOut=false;
+        _finishedFadeIn=false;
         _inputControl.SetControllable(false);//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
         _restartTimeLine.Play();//タイムラインを再生
 
-        //この辺りで完全に暗転
+
+        yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
 
-        //この辺りで完全に明転
+
+        yield return new WaitUntil(() => _finishedFadeIn);//完全に明転するまで待つ
         _playerPosControl.BackToRestartPoint();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
 
-        //明転が終わってから数秒後
+
+        yield return new WaitForSeconds(_waitDuration_FromFinishFadeIn);//完全に明転してから数秒待つ
         _cameraControl.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
         _cameraControl.SwitchRestartPointCamera(false);//プレイカメラに戻す
 
-        //さらに数秒後
+
+        yield return new WaitForSeconds(_waitDuration_FromCameraFollowPlayer);//さらに数秒待つ
         _inputControl.SetControllable(true);//操作可能にする
         _isRestarting = false;
-
-
-        yield return null;
     }
 }
