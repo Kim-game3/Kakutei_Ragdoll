@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5084333636479884938}
   - component: {fileID: 776597720754566213}
   - component: {fileID: 2891695526022495855}
+  - component: {fileID: 1488310339657490524}
   m_Layer: 0
   m_Name: RestartEvent
   m_TagString: Untagged
@@ -85,6 +86,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 6516134902507299799, guid: b230dc792ace2e54096c231aea5d26df, type: 2}
     value: {fileID: 2891695526022495855}
+  - key: {fileID: -8129582930407070685, guid: b230dc792ace2e54096c231aea5d26df, type: 2}
+    value: {fileID: 1488310339657490524}
   m_ExposedReferences:
     m_References: []
 --- !u!82 &2891695526022495855
@@ -183,6 +186,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1488310339657490524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033320872276064935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 36b7691214e91824f88c23516864f851, type: 2}
+    - {fileID: 11400000, guid: 2b1545b82d401654b80f02b97e3faa34, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls: []
+    - m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &7862174296606683614
 GameObject:
   m_ObjectHideFlags: 0
