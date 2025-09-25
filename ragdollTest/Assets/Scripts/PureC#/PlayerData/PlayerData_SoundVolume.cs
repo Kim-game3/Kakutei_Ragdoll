@@ -19,22 +19,14 @@ public partial class PlayerDataManager
 
     public static bool HaveSetSoundVolume(ESoundType soundType)//一度でも書き換えがあったか
     {
-        if (!_soundTypeNameDic.TryGetValue(soundType, out var volumeName))
-        {
-            Debug.Log("音量データの取得に失敗");
-            return false;
-        }
+        if (!IsValidSoundType(soundType, out var volumeName)) return false;
 
         return PlayerPrefs.HasKey(volumeName);
     }
 
     public static float GetSoundVolume(ESoundType soundType)//音量データの取得
     {
-        if(!_soundTypeNameDic.TryGetValue(soundType, out var volumeName))
-        {
-            Debug.Log("音量データの取得に失敗");
-            return _errorVolume;
-        }
+        if (!IsValidSoundType(soundType, out var volumeName)) return _errorVolume;
 
         float ret = PlayerPrefs.GetFloat(volumeName);
 
@@ -43,13 +35,20 @@ public partial class PlayerDataManager
 
     public static void SetSoundVolume(ESoundType soundType,float volume)//音量データの書き換え
     {
-        if (!_soundTypeNameDic.TryGetValue(soundType, out var volumeName))
-        {
-            Debug.Log("存在しない音量データです");
-            return;
-        }
+        if (!IsValidSoundType(soundType, out var volumeName)) return;   
 
         PlayerPrefs.SetFloat(volumeName, volume);
+    }
+
+    static bool IsValidSoundType(ESoundType soundType, out string volumeName)//存在する音の種類か見る(なかったら警告)
+    {
+        if (!_soundTypeNameDic.TryGetValue(soundType,out volumeName))
+        {
+            Debug.Log("処理に失敗");
+            return false;
+        }
+
+        return true;
     }
 
     
