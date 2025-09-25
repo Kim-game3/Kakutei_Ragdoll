@@ -16,8 +16,7 @@ public class JudgeGameSet : MonoBehaviour
     Timer _gameTimer;
 
     // --- クリア判定用に必要 --- //
-    const string _tagName_JudgeGameClear = "Clear";
-
+    const string _tagName_Player = "Player";
 
     //クリア・ゲームオーバーかの取得
     EGameState _gameState=EGameState.Playing;
@@ -51,7 +50,7 @@ public class JudgeGameSet : MonoBehaviour
     private void OnTriggerEnter(Collider other)//ちょっと変えるかも
     {
         //クリア条件
-        if (!other.CompareTag(_tagName_JudgeGameClear)) return;
+        if (!other.CompareTag(_tagName_Player)) return;
 
         SwitchState(EGameState.Clear);
     }

@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 6019852611340923293}
   - component: {fileID: 2793759609883740784}
   - component: {fileID: 3133349757949135851}
+  - component: {fileID: 85668351706650554}
   m_Layer: 7
   m_Name: MoveBody
   m_TagString: Untagged
@@ -230,10 +231,6 @@ MonoBehaviour:
   _body: {fileID: 2816732573931072731}
   _power: 20
   _baseDirection: {fileID: 0}
-  _judgeIsValidSpeed:
-    _showDebug_Speed: 1
-    _maxSpeed: 4
-    _judgeIsGround: {fileID: 8450295637375364907}
   _followVectorToScaffold:
     _getScaffoldInfo: {fileID: 2731605264711589415}
 --- !u!114 &6019852611340923293
@@ -298,6 +295,22 @@ MonoBehaviour:
   _minForce: 60
   _gapForce: 300
   _move_ForceBody: {fileID: 7340308893461383714}
+--- !u!114 &85668351706650554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342134571482737052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cccdd062a95e2441a0ecb78680afc60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebug_Speed: 1
+  _maxSpeed: 1
+  _judgeIsGround: {fileID: 8450295637375364907}
+  _move_ForceBody: {fileID: 7340308893461383714}
 --- !u!1 &8016520330604230791
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,8 +355,8 @@ GameObject:
   - component: {fileID: 4642311134313234449}
   - component: {fileID: 1216005993848046278}
   m_Layer: 7
-  m_Name: ClearCollider
-  m_TagString: Clear
+  m_Name: PlayerCollider
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,8 +395,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.11
-  m_Height: 1
+  m_Radius: 0.34
+  m_Height: 0.9
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1216005993848046278
