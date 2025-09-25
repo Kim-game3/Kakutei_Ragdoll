@@ -18,11 +18,37 @@ public partial class RestartManager
         //プレイヤーが操作するカメラの追従対象
         Transform _playCameraFollow;
         Transform _playCameraLookAt;
+        
+        //操作カメラのPOV
+        CinemachinePOV _pov;
+
+        //プレイヤーが操作するカメラの初期向き
+        float _defaultVerticalValue_PlayCamera;
+        float _defaultHorizontalValue_PlayCamera;
 
         public void Init()//初期化
         {
+            //操作カメラの初期追従対象を記憶
             _playCameraFollow=_playCamera.Follow;
             _playCameraLookAt=_playCamera.LookAt;
+
+            //操作カメラの初期向きを記憶
+            _pov = _playCamera.GetCinemachineComponent<CinemachinePOV>();
+
+            if (_pov == null)
+            {
+                Debug.Log("プレイヤーのカメラのAimがPOVに設定されていません！");
+                return;
+            }
+
+            _defaultVerticalValue_PlayCamera = _pov.m_VerticalAxis.Value;
+            _defaultHorizontalValue_PlayCamera = _pov.m_HorizontalAxis.Value;
+        }
+
+        public void SetDefault_PlayeCamera()//プレイヤーが操作するカメラを初期の向きに戻す
+        {
+            _pov.m_VerticalAxis.Value = _defaultVerticalValue_PlayCamera;
+            _pov.m_HorizontalAxis.Value = _defaultHorizontalValue_PlayCamera;
         }
 
         public void ChangeFollow_PlayCamera(bool followPlayer)//プレイヤーが操作するカメラの追従設定の変更、followPlayerはプレイヤーを追従するか
@@ -31,7 +57,7 @@ public partial class RestartManager
             Transform newLookAt=followPlayer? _playCameraLookAt: null;
 
             _playCamera.Follow=newFollow;
-            _playCameraLookAt=newLookAt;
+            _playCamera.LookAt=newLookAt;
         }
 
         public void SwitchRestartPointCamera(bool activeRestart)//リスタートカメラとプレイカメラの切り替え、activeRestartはリスタートカメラに切り替えるか

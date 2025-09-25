@@ -3024,7 +3024,7 @@ GameObject:
   - component: {fileID: 348643387}
   - component: {fileID: 348643388}
   m_Layer: 0
-  m_Name: GameCamera
+  m_Name: PlayCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3078,7 +3078,7 @@ Transform:
   m_GameObject: {fileID: 348643384}
   serializedVersion: 2
   m_LocalRotation: {x: 0.16168995, y: -0, z: -0, w: 0.9868416}
-  m_LocalPosition: {x: 1.2365141, y: 9.384602, z: -20.256723}
+  m_LocalPosition: {x: 1.2365141, y: 9.202943, z: -20.317894}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.43
+  m_CameraRadius: 0.39
   m_Strategy: 1
   m_MaximumEffort: 4
   m_SmoothingTime: 0.169
@@ -3842,7 +3842,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.16168995, y: 0, z: 0, w: 0.9868416}
-  m_LocalPosition: {x: 5.86, y: 2.124494, z: -11.231405}
+  m_LocalPosition: {x: 5.86, y: 1.942836, z: -11.292576}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5917,10 +5917,10 @@ MonoBehaviour:
   m_ZDamping: 0.2
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.45
   m_CameraDistance: 3.32
-  m_DeadZoneWidth: 0.13
-  m_DeadZoneHeight: 0.13
+  m_DeadZoneWidth: 0.03
+  m_DeadZoneHeight: 0.16
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.255
