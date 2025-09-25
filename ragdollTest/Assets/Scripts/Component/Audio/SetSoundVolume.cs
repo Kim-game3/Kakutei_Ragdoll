@@ -11,8 +11,7 @@ public class SetSoundVolume : MonoBehaviour
 {
     [SerializeField] AudioMixer _audioMixer;
 
-    [SerializeField] [Tooltip("‰Šú‰¹—Ê")]
-    float _defaultVolume;
+    [SerializeField] SoundConfigs _soundConfigs;
 
     private void Start()
     {
@@ -25,7 +24,7 @@ public class SetSoundVolume : MonoBehaviour
 
             bool haveSet = PlayerDataManager.HaveSetSoundVolume(type);//‰¹—Ê‚ğ•ÏX‚µ‚½‚±‚Æ‚ª‚ ‚é‚©
 
-            float volume = haveSet ? PlayerDataManager.GetSoundVolume(type) : _defaultVolume;
+            float volume = haveSet ? PlayerDataManager.GetSoundVolume(type) : _soundConfigs.DefaultVolume(type);
 
             _audioMixer.SetFloat(soundName,volume);
         }
