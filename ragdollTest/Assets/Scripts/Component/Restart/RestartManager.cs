@@ -17,6 +17,9 @@ public partial class RestartManager : MonoBehaviour
     [CustomLabel("リスタート時に再生するタイムライン")] [SerializeField]
     PlayableDirector _restartTimeLine;
 
+    [SerializeField] [Tooltip("リスタートゾーンのトリガー")]
+    OnTriggerDetect _restartZoneTrigger;
+
     [SerializeField]//リスタート時のプレイヤーを初期地点に戻す関係の処理をまとめたもの
     PlayerPosControl _playerPosControl;
 
@@ -46,9 +49,10 @@ public partial class RestartManager : MonoBehaviour
     private void Awake()
     {
         _cameraControl.Init();
+        _restartZoneTrigger.OnEnter += OnHit_RestartTrigger;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnHit_RestartTrigger(Collider other)
     {
         if (!other.CompareTag(ObjectTagNameDictionary.Player)) return;
 
