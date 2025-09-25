@@ -8,9 +8,8 @@ using UnityEngine.InputSystem;
 
 public class PauseManager : MonoBehaviour
 {
-    //
+    //内部処理
     //UI
-    //音量設定
 
     [CustomLabel("ポーズメニュー")] [SerializeField]
     GameObject _pauseMenu;
@@ -44,6 +43,8 @@ public class PauseManager : MonoBehaviour
     {
         _isPausing = !_isPausing;
 
+
+        //ここから先はクラス化
         _pauseMenu.SetActive(_isPausing);
 
         Time.timeScale = _isPausing ? _pauseTimeScale : _defaultTimeScale;
