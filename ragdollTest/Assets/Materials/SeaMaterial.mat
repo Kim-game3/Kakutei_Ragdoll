@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StylizedWaterMaterial
+  m_Name: SeaMaterial
   m_Shader: {fileID: -6465566751694194690, guid: f5adc5c4926cc424f9652a4616ee5795, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -136,7 +136,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepWaterColor: {r: 0.21266633, g: 0.46279463, b: 0.94716984, a: 0.36862746}
+    - _DeepWaterColor: {r: 0.15686274, g: 0.58431375, b: 0.8039216, a: 0.8745098}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 0.69411767, g: 0.9621388, b: 1, a: 0.5921569}
     - _ShallowWaterColor: {r: 0.47358483, g: 0.9366914, b: 1, a: 0.2627451}
