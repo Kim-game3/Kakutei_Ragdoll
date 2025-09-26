@@ -19,7 +19,7 @@ public class ChangeSoundVolume_Slider : MonoBehaviour
 
     [SerializeField] SoundConfigs _soundConfigs;
 
-    private void Change(float value)
+    public void Change(float value)
     {
         string soundName = AudioMixerName.SoundName(_soundType);
 
