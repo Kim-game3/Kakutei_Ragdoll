@@ -36,7 +36,7 @@ public partial class OptionManager : MonoBehaviour
 
     private void Awake()
     {
-        _uiProcess.Awake(_closeOptionButton);
+        _uiProcess.Awake(_openOptionButton,_closeOptionButton);
 
         _openOptionButton.onClick.AddListener(OnOpen);
         _closeOptionButton.onClick.AddListener(OnClose);

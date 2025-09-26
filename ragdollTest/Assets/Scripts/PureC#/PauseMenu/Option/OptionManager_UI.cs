@@ -18,13 +18,12 @@ public partial class OptionManager
         [CustomLabel("オプションメニュー")] [SerializeField]
         GameObject _optionMenu;
 
-        [Tooltip("オプションメニューを閉じた後に選択状態にするボタン")] [SerializeField]
-        Button _selectButton_AfterClose;
-
+        Button _openButton;//オプションメニューを開くボタン
         Button _closeButton;//オプションメニューを閉じるボタン
 
-        public void Awake(Button closeButton)//closeButton=閉じるボタン
+        public void Awake(Button openButton,Button closeButton)//closeButton=閉じるボタン
         {
+            _openButton = openButton;
             _closeButton = closeButton;
         }
 
@@ -42,7 +41,7 @@ public partial class OptionManager
         public void OnClose()
         {
             _optionMenu.SetActive(false);
-            _eventSystem?.SetSelectedGameObject(_selectButton_AfterClose.gameObject);
+            _eventSystem?.SetSelectedGameObject(_openButton.gameObject);//選択ボタンを開くボタンに設定
         }
 
         public void OnDisable()
