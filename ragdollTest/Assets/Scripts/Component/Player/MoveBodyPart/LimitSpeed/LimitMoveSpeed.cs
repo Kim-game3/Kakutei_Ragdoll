@@ -33,7 +33,6 @@ public class LimitMoveSpeed : MonoBehaviour
 
         if (velocity.magnitude > _maxSpeed)
         {
-            Debug.Log("êßå¿íÜ");
             velocity = velocity.normalized * _maxSpeed;
             if(!isGround) velocity.y=_body.velocity.y;
             _body.velocity = velocity;

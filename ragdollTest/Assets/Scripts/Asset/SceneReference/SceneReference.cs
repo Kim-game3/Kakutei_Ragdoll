@@ -220,9 +220,14 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
     /// </summary>
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
+        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        {
+            return EditorGUIUtility.singleLineHeight;
+        }
+
         int lines = 2;
         SerializedProperty sceneAssetProperty = GetSceneAssetProperty(property);
-        if (sceneAssetProperty.objectReferenceValue == null)
+        if (sceneAssetProperty == null || sceneAssetProperty.objectReferenceValue == null)
             lines = 1;
 
         return boxPadding.vertical + lineHeight * lines + padSize * (lines - 1) + footerHeight;
