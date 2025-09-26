@@ -45,7 +45,9 @@ public class CustomLabelAttributeDrawer : PropertyDrawer
         //カスタムアトリビュートのラベルをプロパティのラベルに設定
         if (newLabel != null) label = newLabel.Label;
         //エディタ上にプロパティを描画
+        EditorGUI.BeginProperty(position, label, property);
         EditorGUI.PropertyField(position, property, label, true);
+        EditorGUI.EndProperty();
     }
 
     //エディタ上でプロパティの高さを取得
@@ -54,7 +56,7 @@ public class CustomLabelAttributeDrawer : PropertyDrawer
         if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
         {
             Debug.Log("デバッグ");
-            return 0;
+            return EditorGUIUtility.singleLineHeight;
         }
 
         //プロパティの高さを取得
