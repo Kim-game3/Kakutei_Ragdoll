@@ -17,18 +17,17 @@ public partial class PlayerDataManager
 
     const float _errorVolume = 0f;//エラー時にとりあえず返す音量の値
 
-    public static bool HaveSetSoundVolume(ESoundType soundType)//一度でも書き換えがあったか
+    public static SoundVolumeData GetSoundVolume(ESoundType soundType)//音量データの取得(一度も書き換えたことがない場合はnullを返す)
     {
-        if (!IsValidSoundType(soundType, out var volumeName)) return false;
+        if (!IsValidSoundType(soundType, out var volumeName)) return null;
 
-        return PlayerPrefs.HasKey(volumeName);
-    }
+        SoundVolumeData ret=null;
 
-    public static float GetSoundVolume(ESoundType soundType)//音量データの取得
-    {
-        if (!IsValidSoundType(soundType, out var volumeName)) return _errorVolume;
-
-        float ret = PlayerPrefs.GetFloat(volumeName);
+        if(PlayerPrefs.HasKey(volumeName))
+        {
+            float volume = PlayerPrefs.GetFloat(volumeName); ;
+            ret = new SoundVolumeData(volume);
+        }
 
         return ret;
     }

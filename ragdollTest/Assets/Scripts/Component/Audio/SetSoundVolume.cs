@@ -22,9 +22,9 @@ public class SetSoundVolume : MonoBehaviour
 
             string soundName=AudioMixerName.SoundName(type);
 
-            bool haveSet = PlayerDataManager.HaveSetSoundVolume(type);//音量を変更したことがあるか
+            SoundVolumeData volumeData = PlayerDataManager.GetSoundVolume(type);//音量データの取得
 
-            float volume = haveSet ? PlayerDataManager.GetSoundVolume(type) : _soundConfigs.DefaultVolume(type);
+            float volume = (volumeData != null) ? volumeData.Value : _soundConfigs.DefaultVolume(type);
 
             _audioMixer.SetFloat(soundName,volume);
         }

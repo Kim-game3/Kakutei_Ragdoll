@@ -39,5 +39,10 @@ public class ChangeSoundVolume_Slider : MonoBehaviour
         //スライダーの最大値と最小値を設定
         _slider.maxValue = _soundConfigs.MaxVolume(_soundType);
         _slider.minValue= _soundConfigs.MinVolume(_soundType);
+
+        //スライダーの現在の値を設定
+        string soundName = AudioMixerName.SoundName(_soundType);
+        _audioMixer.GetFloat(soundName,out var value);
+        _slider.value = value;
     }
 }

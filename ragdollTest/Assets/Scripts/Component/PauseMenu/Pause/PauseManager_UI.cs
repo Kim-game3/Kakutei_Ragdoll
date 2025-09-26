@@ -22,6 +22,8 @@ public partial class PauseManager
         [CustomLabel("ポーズメニュー")] [SerializeField]
         GameObject _pauseMenu;
 
+        
+
         Button _resumeButton;
 
         public void OnAwake(Button resumeButton)//resumeButton=ゲーム再開ボタン

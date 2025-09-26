@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: _uiProcess._pauseMenu
       value: 
       objectReference: {fileID: 409423835}
+    - target: {fileID: 7508212423361458050, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
+      propertyPath: _uiProcess._eventSystem
+      value: 
+      objectReference: {fileID: 1965148709}
     - target: {fileID: 7821388371662977215, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
       propertyPath: m_Name
       value: PauseMenuManager
