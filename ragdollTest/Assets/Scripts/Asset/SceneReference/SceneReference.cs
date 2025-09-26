@@ -227,7 +227,7 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
 
         int lines = 2;
         SerializedProperty sceneAssetProperty = GetSceneAssetProperty(property);
-        if (sceneAssetProperty.objectReferenceValue == null)
+        if (sceneAssetProperty == null || sceneAssetProperty.objectReferenceValue == null)
             lines = 1;
 
         return boxPadding.vertical + lineHeight * lines + padSize * (lines - 1) + footerHeight;
