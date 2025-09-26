@@ -4248,10 +4248,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadePanel
       objectReference: {fileID: 0}
-    - target: {fileID: 5868508515904202221, guid: c0e28de2a98950f4995b8df5363eccce, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5481,10 +5477,6 @@ PrefabInstance:
     - target: {fileID: 1239346479301241860, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1239346479301241860, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8875209066792651983, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: m_Pivot.x
