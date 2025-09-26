@@ -59,7 +59,7 @@ public class SoundConfigs : ScriptableObject
         return true;
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         _soundVolumeConfigsDic 
             = new Dictionary<ESoundType, A_SoundVolumeConfig>() {

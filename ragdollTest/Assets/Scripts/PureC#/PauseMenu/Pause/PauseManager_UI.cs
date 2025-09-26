@@ -26,12 +26,12 @@ public partial class PauseManager
 
         Button _resumeButton;
 
-        public void OnAwake(Button resumeButton)//resumeButton=ゲーム再開ボタン
+        public void Awake(Button resumeButton)//resumeButton=ゲーム再開ボタン
         {
             _resumeButton = resumeButton;
         }
 
-        public void OnStrat()
+        public void Strat()
         {
             //ゲーム開始時にポーズメニューが表示されてたり、ゲーム中のUIが出てこないということがないようにする
             if(!_inGameUI.activeSelf) _inGameUI.SetActive(true);

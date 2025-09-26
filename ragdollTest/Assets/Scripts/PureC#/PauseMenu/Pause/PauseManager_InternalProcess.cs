@@ -13,7 +13,7 @@ public partial class PauseManager
         const float _defaultTimeScale = 1;//等速
         const float _pauseTimeScale = 0;//ポーズ時の時間の速度
 
-        public void OnStart()
+        public void Start()
         {
             //ゲーム開始時に時間が止まることがないようにする
             Time.timeScale = _defaultTimeScale;

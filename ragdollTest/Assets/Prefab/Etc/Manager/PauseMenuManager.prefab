@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7227472734573776315}
+  - component: {fileID: 6926721956898730716}
+  - component: {fileID: 7715969948521827550}
+  - component: {fileID: 7722057391470716513}
+  - component: {fileID: 4078709255304891815}
   m_Layer: 0
   m_Name: Option
   m_TagString: Untagged
@@ -31,6 +35,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8783394797613734802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6926721956898730716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a540ab6295d23054498a6838b4a5dcde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _openOptionButton: {fileID: 0}
+  _closeOptionButton: {fileID: 0}
+  _uiProcess:
+    _eventSystem: {fileID: 0}
+    _optionMenu: {fileID: 0}
+--- !u!114 &7715969948521827550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d979412c008a84544970b6a292292e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundType: 0
+  _slider: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
+  _soundConfigs: {fileID: 11400000, guid: 118fe41b20d5d08419b555785f62db7a, type: 2}
+--- !u!114 &7722057391470716513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d979412c008a84544970b6a292292e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundType: 2
+  _slider: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
+  _soundConfigs: {fileID: 11400000, guid: 118fe41b20d5d08419b555785f62db7a, type: 2}
+--- !u!114 &4078709255304891815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d979412c008a84544970b6a292292e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundType: 1
+  _slider: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
+  _soundConfigs: {fileID: 11400000, guid: 118fe41b20d5d08419b555785f62db7a, type: 2}
 --- !u!1 &1213965880369365237
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resumeButton: {fileID: 0}
   _uiProcess:
+    _eventSystem: {fileID: 0}
     _inGameUI: {fileID: 0}
     _pauseMenu: {fileID: 0}
 --- !u!1 &7821388371662977215

@@ -39,13 +39,13 @@ public partial class PauseManager : MonoBehaviour
     {
         _resumeButton.onClick.AddListener(SwitchPause);
 
-        _uiProcess.OnAwake(_resumeButton);
+        _uiProcess.Awake(_resumeButton);
     }
 
     private void Start()
     {
-        _uiProcess.OnStrat();
-        _internalProcess.OnStart();
+        _uiProcess.Strat();
+        _internalProcess.Start();
     }
 
     void SwitchPauseProcess()//É|Å[ÉYèÛë‘êÿÇËë÷Ç¶

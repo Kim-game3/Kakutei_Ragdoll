@@ -15,8 +15,6 @@ public partial class PlayerDataManager
             {ESoundType.BGM,"BGMVolume"},//BGM音量のデータ名
     };
 
-    const float _errorVolume = 0f;//エラー時にとりあえず返す音量の値
-
     public static SoundVolumeData GetSoundVolume(ESoundType soundType)//音量データの取得(一度も書き換えたことがない場合はnullを返す)
     {
         if (!IsValidSoundType(soundType, out var volumeName)) return null;
