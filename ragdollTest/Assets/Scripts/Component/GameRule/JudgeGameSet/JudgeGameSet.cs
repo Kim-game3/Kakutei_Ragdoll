@@ -39,7 +39,7 @@ public class JudgeGameSet : MonoBehaviour
     private void Awake()
     {
         //ゲームオーバー条件
-        _gameTimer.TimeUpEvent += SwitchGameOver;
+        _gameTimer.OnTimeUp += SwitchGameOver;
     }
 
     void SwitchGameOver()
