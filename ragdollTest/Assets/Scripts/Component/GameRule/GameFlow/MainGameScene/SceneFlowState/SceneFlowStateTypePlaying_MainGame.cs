@@ -14,19 +14,18 @@ public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
     // --- ゲーム終了判定 --- //
     [SerializeField] JudgeGameSet _judgeGameSet;
 
-    // --- 制限時間タイマー --- //
-    [CustomLabel("制限時間用のタイマー")] [SerializeField]
-    Timer _gameTimer;
+    [CustomLabel("ストップウォッチ")] [SerializeField]
+    StopWatch _stopWatch;
 
     public override void OnEnter()
     {
         _finished = false;
         _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.Controllable);//プレイヤーを操作可能にする
-        _gameTimer.SwitchStartStop();//タイマー開始
+        _stopWatch.SwitchStartStop();//ストップウォッチ開始
     }
     public override void OnUpdate()
     {
-        if(_judgeGameSet.GameState!=EGameState.Playing)//ステートの終了
+        if(_judgeGameSet.IsGameSet)//ステートの終了
         {
             _finished = true;
         }
@@ -35,6 +34,6 @@ public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
     public override void OnExit()
     {
         _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.UnControllable);//プレイヤーを操作不可能にする
-        _gameTimer.SwitchStartStop();//タイマーストップ
+        _stopWatch.SwitchStartStop();//ストップウォッチ停止
     }
 }

@@ -9,7 +9,6 @@ using UnityEngine.SceneManagement;
 public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
 {
     // --- 次のシーン遷移 --- //
-    [SerializeField] SceneReference _gameOverScene;
     [SerializeField] SceneReference _gameClearScene;
     [SerializeField] JudgeGameSet _judgeGameSet;
 
@@ -18,9 +17,6 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     // --- ゲーム終了時に表示するUI ---//
     [CustomLabel("クリア時に表示するUI")] [SerializeField]
     GameObject _clearScreen;
-
-    [CustomLabel("ゲームオーバー時に表示するUI")] [SerializeField] 
-    GameObject _gameOverScreen;
 
     public override void OnEnter()
     {
@@ -46,27 +42,13 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     void ResultShow()//結果表示
     {
         //クリアかゲームオーバーによって表示するUIを変更
-        bool isClear = (_judgeGameSet.GameState == EGameState.Clear);
-        GameObject displayUI = isClear ? _clearScreen : _gameOverScreen;
-        displayUI.SetActive(true);
+        _clearScreen.SetActive(true);
     }
 
     void ChangeNextScene()//シーン遷移
     {
         //クリアかゲームオーバーによって遷移するシーンを変更
-        bool isClear = (_judgeGameSet.GameState == EGameState.Clear);
-        string nextScenePath = isClear ? _gameClearScene.ScenePath : _gameOverScene.ScenePath;
-        
-        //if(isClear)
-        //{
-        //    SceneManager.LoadScene("ClearScene");
-        //}
-        //else
-        //{
-        //    SceneManager.LoadScene("GameOverScene");
-        //}
-
-        SceneManager.LoadScene(nextScenePath);
+        SceneManager.LoadScene(_gameClearScene.ScenePath);
     }
 }
 

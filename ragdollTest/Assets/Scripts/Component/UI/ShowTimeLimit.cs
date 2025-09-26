@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-//タイマーの表示
+//作成者:杉山
+//ストップウォッチの表示
 
-public class ShowTimeLimit : MonoBehaviour
+public class ShowStopWatch : MonoBehaviour
 {
-    [SerializeField] Timer _timer;
+    [SerializeField] StopWatch _stopWatch;
     [SerializeField] TextMeshProUGUI _timerText;
 
     void Update()
     {
-        _timerText.text=_timer.RemainingTime.ToString("0");
+        _timerText.text = _stopWatch.ElapsedTime.ToString("0");
     }
 }
