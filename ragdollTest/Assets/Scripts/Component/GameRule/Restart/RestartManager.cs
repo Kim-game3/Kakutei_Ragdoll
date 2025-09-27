@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 
 //作成者:杉山
@@ -32,6 +32,8 @@ public partial class RestartManager : MonoBehaviour
     bool _isRestarting = false;//リスタート中か
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
+
+    public event Action OnRestrat;//水に落ちた瞬間に呼ぶ
 
     public bool IsRestarting { get { return _isRestarting; } }
 
@@ -65,6 +67,7 @@ public partial class RestartManager : MonoBehaviour
     {
         //落ちた瞬間
         _isRestarting=true;
+        OnRestrat?.Invoke();
         _finishedFadeOut=false;
         _finishedFadeIn=false;
         _inputControl.SetControllable(false);//操作不可能にする
