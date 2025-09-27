@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//このコンポーネントをつけたオブジェクトに指定した二点間を行き来させる
+//このコンポーネントをつけたオブジェクトに指定した二点間を行き来させる(慣性ありver)
 
-public class MoveTwoPoints_Object : MonoBehaviour
+public class InertialMoveTwoPoints_Objects : MonoBehaviour
 {
     [CustomLabel("周期(秒)")] [SerializeField]
     float _cycle;
@@ -16,7 +16,7 @@ public class MoveTwoPoints_Object : MonoBehaviour
     [CustomLabel("終点")] [SerializeField]
     Transform _end;
 
-    float _current=0;
+    float _current = 0;
 
     // Update is called once per frame
     void Update()
@@ -29,9 +29,10 @@ public class MoveTwoPoints_Object : MonoBehaviour
         _current += Time.deltaTime;
         _current %= _cycle;
 
-        float t = MathfExtension.TriangleWave01(_current, 0, _cycle);
-        
-        Vector3 newPosition=Vector3.Lerp(_start.position,_end.position,t);
+        float rate= _current / _cycle;
+        float t = MathfExtension.Cos01(rate*2*Mathf.PI);
+
+        Vector3 newPosition = Vector3.Lerp(_end.position, _start.position, t);
         transform.position = newPosition;
     }
 }

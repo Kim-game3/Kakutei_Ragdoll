@@ -27,7 +27,7 @@ public class MathfExtension : MonoBehaviour
         float halfRange = (max - min) * 0.5f;
         float middle = min + halfRange;
 
-        return 1f - Mathf.Abs(value - middle) / (max - min);//•ÏŠ·Ž®
+        return 1f - Mathf.Abs(value - middle) / halfRange;//•ÏŠ·Ž®
     }
 
     /// <summary>
@@ -41,7 +41,7 @@ public class MathfExtension : MonoBehaviour
         float halfRange = (max - min) * 0.5f;
         float middle = min + halfRange;
 
-        return Mathf.Abs(value - middle) / (max - min);//•ÏŠ·Ž®
+        return Mathf.Abs(value - middle) / halfRange;//•ÏŠ·Ž®
     }
 
     /// <summary>

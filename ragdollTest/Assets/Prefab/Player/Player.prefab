@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a168d0627a32754449024d8e33652b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _power: 200
+  _power: 300
   _judgeIsGround: {fileID: 8450295637375364907}
   _moveForceBody: {fileID: 7340308893461383714}
 --- !u!114 &2793759609883740784
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cccdd062a95e2441a0ecb78680afc60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebug_Speed: 1
+  _showDebug_Speed: 0
   _maxSpeed: 1
   _judgeIsGround: {fileID: 8450295637375364907}
   _move_ForceBody: {fileID: 7340308893461383714}
@@ -395,8 +395,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.34
-  m_Height: 0.9
+  m_Radius: 0.25
+  m_Height: 0.54
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1216005993848046278
