@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
 {
     // --- 次のシーン遷移 --- //
-    [SerializeField] SceneReference _gameClearScene;
+    [SerializeField] SceneReference _resultScene;
     [SerializeField] JudgeGameSet _judgeGameSet;
 
     [CustomLabel("シーン遷移するまでにかける時間")] [SerializeField] float _sceneChangeDuration;
@@ -18,16 +18,20 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     [CustomLabel("クリア時に表示するUI")] [SerializeField]
     GameObject _clearScreen;
 
+    [SerializeField]
+    SetResult _setResult;//結果を書き込むクラス
+
     public override void OnEnter()
     {
-        ResultShow();
+        _clearScreen.SetActive(true);
+        _setResult.Set();//結果書き込み
         StartCoroutine(StateFinishFlow());
         _finished = false;
     }
     public override void OnUpdate() { }
     public override void OnExit()
     {
-        ChangeNextScene();
+        SceneManager.LoadScene(_resultScene.ScenePath);
     }
 
 
@@ -37,18 +41,6 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
         yield return new WaitForSeconds(_sceneChangeDuration);
 
         _finished = true;
-    }
-
-    void ResultShow()//結果表示
-    {
-        //クリアかゲームオーバーによって表示するUIを変更
-        _clearScreen.SetActive(true);
-    }
-
-    void ChangeNextScene()//シーン遷移
-    {
-        //クリアかゲームオーバーによって遷移するシーンを変更
-        SceneManager.LoadScene(_gameClearScene.ScenePath);
     }
 }
 

@@ -21,7 +21,6 @@ public class MoveTwoPoints_Object : MonoBehaviour
 
     float _current=0;
 
-    // Update is called once per frame
     void Update()
     {
         Move();
