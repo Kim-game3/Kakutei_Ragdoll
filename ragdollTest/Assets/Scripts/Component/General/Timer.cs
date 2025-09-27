@@ -15,11 +15,11 @@ public class Timer : MonoBehaviour
 
     //public
 
-    public event Action ResetEvent;//タイマーのリセット時
-    public event Action TimeUpEvent;//残り時間が0になった時
-    public event Action StartEvent;//タイマーが開始された時
-    public event Action PauseEvent;//タイマーの一時停止時
-    public event Action ResumeEvent;//タイマーが再開した時
+    public event Action OnReset;//タイマーのリセット時
+    public event Action OnTimeUp;//残り時間が0になった時
+    public event Action OnStart;//タイマーが開始された時
+    public event Action OnPause;//タイマーの一時停止時
+    public event Action OnResume;//タイマーが再開した時
 
     public float RemainingTime { get { return _remainingTime; } }//タイマーの残り時間を返す
 
@@ -35,27 +35,26 @@ public class Timer : MonoBehaviour
     {
         _state=TimerState.Off;
         _remainingTime=_duration;
-        ResetEvent?.Invoke();
+        OnReset?.Invoke();
     }
 
-    public void SwitchStartStop()//タイマー開始、タイマーの停止、タイマーの再開操作が出来る
+    public void SwitchStartStop()//開始、停止、再開操作が出来る
     {
         switch(_state)
         {
             case TimerState.Off://オフ→オン
                 _state=TimerState.On;
-                _remainingTime = _duration;
-                StartEvent?.Invoke();
+                OnStart?.Invoke();
                 break;
 
             case TimerState.On://オン→一時停止
                 _state=TimerState.Stop;
-                PauseEvent?.Invoke();
+                OnPause?.Invoke();
                 break;
 
             case TimerState.Stop://一時停止→オン
                 _state = TimerState.On;
-                ResumeEvent?.Invoke();
+                OnResume?.Invoke();
                 break;
 
             default:
@@ -64,14 +63,18 @@ public class Timer : MonoBehaviour
         }
     }
 
-    
+
 
     //private
+    private void Awake()
+    {
+        //タイマーの状態をリセット
+        _state = TimerState.Off;
+        _remainingTime = _duration;
+    }
 
     private void Start()
     {
-        ResetTimer();//タイマーの状態をリセット
-        
         if (_startOnAwake) SwitchStartStop();//オンの状態になる
     }
 
@@ -92,6 +95,6 @@ public class Timer : MonoBehaviour
 
         //時間切れになった時の処理
         _state = TimerState.TimeUp;
-        TimeUpEvent?.Invoke();
+        OnTimeUp?.Invoke();
     }
 }
