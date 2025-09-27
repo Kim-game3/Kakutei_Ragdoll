@@ -16,6 +16,9 @@ public class InertialMoveTwoPoints_Objects : MonoBehaviour
     [CustomLabel("èIì_")] [SerializeField]
     Transform _end;
 
+    [CustomLabel("ìÆÇ©Ç∑ëŒè€")] [SerializeField]
+    Transform _target;
+
     float _current = 0;
 
     // Update is called once per frame
@@ -29,10 +32,9 @@ public class InertialMoveTwoPoints_Objects : MonoBehaviour
         _current += Time.deltaTime;
         _current %= _cycle;
 
-        float rate= _current / _cycle;
-        float t = MathfExtension.Cos01(rate*2*Mathf.PI);
+        float t = MathfExtension.Cos01(MathfExtension.ValueToRad(_current,0,_cycle));
 
         Vector3 newPosition = Vector3.Lerp(_end.position, _start.position, t);
-        transform.position = newPosition;
+        _target.position = newPosition;
     }
 }

@@ -16,6 +16,9 @@ public class MoveTwoPoints_Object : MonoBehaviour
     [CustomLabel("èIì_")] [SerializeField]
     Transform _end;
 
+    [CustomLabel("ìÆÇ©Ç∑ëŒè€")] [SerializeField]
+    Transform _target;
+
     float _current=0;
 
     // Update is called once per frame
@@ -32,6 +35,6 @@ public class MoveTwoPoints_Object : MonoBehaviour
         float t = MathfExtension.TriangleWave01(_current, 0, _cycle);
         
         Vector3 newPosition=Vector3.Lerp(_start.position,_end.position,t);
-        transform.position = newPosition;
+        _target.position = newPosition;
     }
 }
