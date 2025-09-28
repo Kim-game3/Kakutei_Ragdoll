@@ -58,6 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2649547871085570928}
   - component: {fileID: 2520468839933031432}
+  - component: {fileID: 5280501073054912427}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -92,12 +93,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee2e47250548f4b8b990943753ec4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameClearScene:
+  _resultScene:
     sceneAsset: {fileID: 102900000, guid: 9f37fd15d4d283f43b29748e5775c3f0, type: 3}
-    scenePath: Assets/Scenes/ClearScene.unity
+    scenePath: Assets/Scenes/ResultScene.unity
   _judgeGameSet: {fileID: 633477319824462739}
   _sceneChangeDuration: 2
   _clearScreen: {fileID: 0}
+  _setResult: {fileID: 5280501073054912427}
+--- !u!114 &5280501073054912427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3482611966864214233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db15b65e43c62bc4797bb31972c1402e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countDeath: {fileID: 0}
+  _stopWatch: {fileID: 0}
+  _resultData: {fileID: 11400000, guid: 84aeebdfe5c18fa4d942848ade1e3afb, type: 2}
 --- !u!1 &4173013922960026259
 GameObject:
   m_ObjectHideFlags: 0
