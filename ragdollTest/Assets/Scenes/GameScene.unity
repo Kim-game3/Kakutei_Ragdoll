@@ -5271,6 +5271,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6059501945379574525, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
   m_PrefabInstance: {fileID: 6084041446501906107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4064680034383877877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 823513986564365084, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+  m_PrefabInstance: {fileID: 6084041446501906107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd3f1275a60fb4846b425effae8f9940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6084041446501906107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5282,30 +5293,6 @@ PrefabInstance:
     - target: {fileID: 2165809435774053415, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_Name
       value: RestartManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 3204158353810549217, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783191938607227080, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7150633
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783191938607227080, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22545853
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783191938607227080, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6310789
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783191938607227080, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.19897836
-      objectReference: {fileID: 0}
-    - target: {fileID: 3783191938607227080, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 82.86
       objectReference: {fileID: 0}
     - target: {fileID: 4203677240734155177, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -5319,10 +5306,6 @@ PrefabInstance:
       propertyPath: _playerPosControl._body
       value: 
       objectReference: {fileID: 1109747393}
-    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: _playerPosControl._power
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _cameraControl._playCamera
       value: 
@@ -5456,6 +5439,14 @@ PrefabInstance:
       propertyPath: _playerInput
       value: 
       objectReference: {fileID: 1530644322}
+    - target: {fileID: 5280501073054912427, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: _stopWatch
+      value: 
+      objectReference: {fileID: 2606073565643782828}
+    - target: {fileID: 5280501073054912427, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: _countDeath
+      value: 
+      objectReference: {fileID: 4064680034383877877}
     - target: {fileID: 6211638258583366205, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_Name
       value: GameFlowManager
