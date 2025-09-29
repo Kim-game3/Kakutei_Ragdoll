@@ -17,5 +17,5 @@ public class ScoreData
     }
 
     public float ClearTime { get { return _clearTime; } }
-    public int Death {  get { return _deathCount; } }
+    public int DeathCount {  get { return _deathCount; } }
 }

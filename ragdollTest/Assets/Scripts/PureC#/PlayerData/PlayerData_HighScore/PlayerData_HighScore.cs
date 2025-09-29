@@ -30,12 +30,12 @@ public partial class PlayerDataManager
         return ret;
     }
 
-    public static void SetHighScore(int stageNum,float fastestClearTime,int deathCount)//ハイスコアの書き換え
+    public static void SetHighScore(int stageNum,ScoreData scoreData)//ハイスコアの書き換え
     {
         GetHighScoreKey(stageNum, out string fastestClearTimeKey, out string deathCountKey);
 
-        PlayerPrefs.SetFloat(fastestClearTimeKey, fastestClearTime);
-        PlayerPrefs.SetInt(deathCountKey, deathCount);
+        PlayerPrefs.SetFloat(fastestClearTimeKey, scoreData.ClearTime);
+        PlayerPrefs.SetInt(deathCountKey, scoreData.DeathCount);
     }
 
     //ハイスコアデータを取得するためのキーを取得(文字列)
