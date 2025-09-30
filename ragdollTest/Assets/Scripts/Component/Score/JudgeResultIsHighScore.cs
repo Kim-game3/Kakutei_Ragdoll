@@ -10,7 +10,8 @@ using UnityEngine;
 
 public class JudgeResultIsHighScore : MonoBehaviour
 {
-    [CustomLabel("ステージ番号")][SerializeField] int _stageNum;
+    [CustomLabel("ステージ番号")] [SerializeField] 
+    int _stageNum;
 
     bool _brokeRecord;//記録を更新したか
 
