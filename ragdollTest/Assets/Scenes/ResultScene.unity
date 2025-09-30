@@ -873,6 +873,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1020644287}
   - component: {fileID: 1020644288}
+  - component: {fileID: 1020644290}
+  - component: {fileID: 1020644289}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -991,6 +993,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1020644289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020644286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextScene:
+    sceneAsset: {fileID: 102900000, guid: 8157fc5a55623bd44a7384622107519d, type: 3}
+    scenePath: Assets/Scenes/TitleScene.unity
+  _targetButton: {fileID: 2055500125}
+  _canvasGroup: {fileID: 2110143212}
+--- !u!114 &1020644290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020644286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nextScene:
+    sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
+    scenePath: Assets/Scenes/GameScene.unity
+  _targetButton: {fileID: 1742051979}
+  _canvasGroup: {fileID: 2110143212}
 --- !u!1 &1274456668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1280,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4599202201962956064, guid: 5e4d8a0acb7b7814d8aa976403f86864, type: 3}
   m_PrefabInstance: {fileID: 1416837886}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1742051979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8284711350533944095, guid: 5e4d8a0acb7b7814d8aa976403f86864, type: 3}
+  m_PrefabInstance: {fileID: 1416837886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742051977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2055500125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8284711350533944095, guid: 5e4d8a0acb7b7814d8aa976403f86864, type: 3}
+  m_PrefabInstance: {fileID: 360621846}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2092257448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1385,6 +1443,7 @@ GameObject:
   - component: {fileID: 2110143210}
   - component: {fileID: 2110143209}
   - component: {fileID: 2110143208}
+  - component: {fileID: 2110143212}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1480,6 +1539,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &2110143212
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110143207}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
