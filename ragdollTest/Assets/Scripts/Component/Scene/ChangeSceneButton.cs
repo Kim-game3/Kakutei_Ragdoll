@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -23,6 +22,12 @@ public class ChangeSceneButton : MonoBehaviour
     CanvasGroup _canvas;
 
     float _loadProgress = 0;
+
+    public float DelayDuration//押されてからシーン遷移を始める時間
+    {
+        get { return _delayDuration; }
+        set { _delayDuration = value; }
+    }
 
     public float LoadProgress { get { return _loadProgress; } }//ロードの進行度(0～1)
 
@@ -47,9 +52,9 @@ public class ChangeSceneButton : MonoBehaviour
 
     private IEnumerator LoadSceneCoroutine()
     {
-        yield return new WaitForSeconds(_delayDuration);//少し遅延させる
-
         _canvas.interactable = false;
+        yield return new WaitForSeconds(_delayDuration);//少し遅延させる
+        
         OnStartLoad?.Invoke();
 
         // 非同期でシーンを読み込み開始

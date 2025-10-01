@@ -976,6 +976,17 @@ MonoBehaviour:
     scenePath: Assets/Scenes/StageSelect.unity
   _targetButton: {fileID: 1070390588}
   _canvas: {fileID: 1446808839}
+--- !u!114 &1690303192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4062479600715579361, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+  m_PrefabInstance: {fileID: 4928897655227910497}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1726905121
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1726905122}
+  - component: {fileID: 1726905123}
   m_Layer: 0
   m_Name: Quit
   m_TagString: Untagged
@@ -1007,6 +1019,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1467741819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1726905123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726905121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbf1a47c296b78468f67e5d010ed108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayDuration: 0.5
+  _targetButton: {fileID: 1690303192}
+  _canvas: {fileID: 1446808839}
 --- !u!224 &456197285522359041 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2695052373730950294, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
