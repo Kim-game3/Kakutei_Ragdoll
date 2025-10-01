@@ -176,43 +176,55 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
     /// </summary>
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
-            return;
-
-        var sceneAssetProperty = GetSceneAssetProperty(property);
-
-        // Draw the Box Background
-        position.height -= footerHeight;
-        GUI.Box(EditorGUI.IndentedRect(position), GUIContent.none, EditorStyles.helpBox);
-        position = boxPadding.Remove(position);
-        position.height = lineHeight;
-
-        // Draw the main Object field
-        label.tooltip = "The actual Scene Asset reference.\nOn serialize this is also stored as the asset's path.";
-
-        EditorGUI.BeginProperty(position, GUIContent.none, property);
-        EditorGUI.BeginChangeCheck();
-        int sceneControlID = GUIUtility.GetControlID(FocusType.Passive);
-        var selectedObject = EditorGUI.ObjectField(position, label, sceneAssetProperty.objectReferenceValue, typeof(SceneAsset), false);
-        BuildUtils.BuildScene buildScene = BuildUtils.GetBuildScene(selectedObject);
-
-        if (EditorGUI.EndChangeCheck())
+        try
         {
-            sceneAssetProperty.objectReferenceValue = selectedObject;
+            if (!IsValid(property))
+            {
+                // ñ≥å¯Ç»èÍçáÇÕãÛÉâÉxÉãÇ≈ 1 çsï`âÊÇµÇƒÇ®Ç≠
+                EditorGUI.LabelField(position, label);
+                return;
+            }
 
-            // If no valid scene asset was selected, reset the stored path accordingly
-            if (buildScene.scene == null)
-                GetScenePathProperty(property).stringValue = string.Empty;
+            var sceneAssetProperty = GetSceneAssetProperty(property);
+
+            // Draw the Box Background
+            position.height -= footerHeight;
+            GUI.Box(EditorGUI.IndentedRect(position), GUIContent.none, EditorStyles.helpBox);
+            position = boxPadding.Remove(position);
+            position.height = lineHeight;
+
+            // Draw the main Object field
+            label.tooltip = "The actual Scene Asset reference.\nOn serialize this is also stored as the asset's path.";
+
+            EditorGUI.BeginProperty(position, GUIContent.none, property);
+            EditorGUI.BeginChangeCheck();
+            int sceneControlID = GUIUtility.GetControlID(FocusType.Passive);
+            var selectedObject = EditorGUI.ObjectField(position, label, sceneAssetProperty.objectReferenceValue, typeof(SceneAsset), false);
+            BuildUtils.BuildScene buildScene = BuildUtils.GetBuildScene(selectedObject);
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                sceneAssetProperty.objectReferenceValue = selectedObject;
+
+                // If no valid scene asset was selected, reset the stored path accordingly
+                if (buildScene.scene == null)
+                    GetScenePathProperty(property).stringValue = string.Empty;
+            }
+            position.y += paddedLine;
+
+            if (buildScene.assetGUID.Empty() == false)
+            {
+                // Draw the Build Settings Info of the selected Scene
+                DrawSceneInfoGUI(position, buildScene, sceneControlID + 1);
+            }
+
+            EditorGUI.EndProperty();
         }
-        position.y += paddedLine;
-
-        if (buildScene.assetGUID.Empty() == false)
+        catch
         {
-            // Draw the Build Settings Info of the selected Scene
-            DrawSceneInfoGUI(position, buildScene, sceneControlID + 1);
+            Debug.Log("îjä¸");
         }
-
-        EditorGUI.EndProperty();
+        
     }
 
     /// <summary>
@@ -220,17 +232,31 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
     /// </summary>
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        try 
         {
+            if (!IsValid(property))
+            {
+                return EditorGUIUtility.singleLineHeight;
+            }
+
+            int lines = 2;
+            SerializedProperty sceneAssetProperty = GetSceneAssetProperty(property);
+            if (sceneAssetProperty == null || sceneAssetProperty.objectReferenceValue == null)
+                lines = 1;
+
+            return boxPadding.vertical + lineHeight * lines + padSize * (lines - 1) + footerHeight;
+        }
+        catch
+        {
+            Debug.Log("îjä¸");
             return EditorGUIUtility.singleLineHeight;
         }
+        
+    }
 
-        int lines = 2;
-        SerializedProperty sceneAssetProperty = GetSceneAssetProperty(property);
-        if (sceneAssetProperty == null || sceneAssetProperty.objectReferenceValue == null)
-            lines = 1;
-
-        return boxPadding.vertical + lineHeight * lines + padSize * (lines - 1) + footerHeight;
+    bool IsValid(SerializedProperty property)
+    {
+        return !SceneChangeWatcher.isChangingScene && property != null && property.serializedObject != null && property.serializedObject.targetObject != null && !property.serializedObject.targetObject.Equals(null);
     }
 
     /// <summary>

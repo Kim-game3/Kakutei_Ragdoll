@@ -26,31 +26,53 @@ public class CustomLabelAttribute : PropertyAttribute
 [CustomPropertyDrawer(typeof(CustomLabelAttribute))]
 public class CustomLabelAttributeDrawer : PropertyDrawer
 {
+
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        try
         {
-            // ñ≥å¯Ç»èÍçáÇÕãÛÉâÉxÉãÇ≈ 1 çsï`âÊÇµÇƒÇ®Ç≠
-            EditorGUI.LabelField(position, label);
-            return;
+            if (!IsValid(property))
+            {
+                // ñ≥å¯Ç»èÍçáÇÕãÛÉâÉxÉãÇ≈ 1 çsï`âÊÇµÇƒÇ®Ç≠
+                EditorGUI.LabelField(position, label);
+                return;
+            }
+
+            CustomLabelAttribute newLabel = attribute as CustomLabelAttribute;
+            if (newLabel != null) label = newLabel.Label;
+
+            EditorGUI.BeginProperty(position, label, property);
+            EditorGUI.PropertyField(position, property, label, true);
+            EditorGUI.EndProperty();
         }
-
-        CustomLabelAttribute newLabel = attribute as CustomLabelAttribute;
-        if (newLabel != null) label = newLabel.Label;
-
-        EditorGUI.BeginProperty(position, label, property);
-        EditorGUI.PropertyField(position, property, label, true);
-        EditorGUI.EndProperty();
+        catch
+        {
+            Debug.Log("îjä¸");
+        }
+        
     }
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        try
         {
+            if (!IsValid(property))
+            {
+                return EditorGUIUtility.singleLineHeight;
+            }
+
+            return EditorGUI.GetPropertyHeight(property, true);
+        }
+        catch
+        {
+            Debug.Log("îjä¸");
             return EditorGUIUtility.singleLineHeight;
         }
+    }
 
-        return EditorGUI.GetPropertyHeight(property, true);
+    bool IsValid(SerializedProperty property)
+    {
+        return !SceneChangeWatcher.isChangingScene && property != null && property.serializedObject != null && property.serializedObject.targetObject != null && !property.serializedObject.targetObject.Equals(null);
     }
 }
 #endif
