@@ -176,7 +176,7 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
     /// </summary>
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        if (SceneChangeWatcher.isChangingScene||property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
             return;
 
         var sceneAssetProperty = GetSceneAssetProperty(property);
@@ -220,7 +220,7 @@ public class SceneReferencePropertyDrawer : PropertyDrawer
     /// </summary>
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
     {
-        if (property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
+        if (SceneChangeWatcher.isChangingScene||property == null || property.serializedObject == null || property.serializedObject.targetObject == null)
         {
             return EditorGUIUtility.singleLineHeight;
         }
