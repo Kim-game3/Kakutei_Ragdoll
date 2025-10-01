@@ -852,11 +852,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delayDuration: 0.5
   _nextScene:
     sceneAsset: {fileID: 102900000, guid: 8157fc5a55623bd44a7384622107519d, type: 3}
     scenePath: Assets/Scenes/TitleScene.unity
   _targetButton: {fileID: 2055500125}
-  _canvasGroup: {fileID: 2110143212}
+  _canvas: {fileID: 2110143212}
 --- !u!1 &926123113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,11 +1414,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delayDuration: 0.5
   _nextScene:
     sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
     scenePath: Assets/Scenes/GameScene.unity
   _targetButton: {fileID: 1742051979}
-  _canvasGroup: {fileID: 2110143212}
+  _canvas: {fileID: 2110143212}
 --- !u!114 &2055500125 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8284711350533944095, guid: 5e4d8a0acb7b7814d8aa976403f86864, type: 3}

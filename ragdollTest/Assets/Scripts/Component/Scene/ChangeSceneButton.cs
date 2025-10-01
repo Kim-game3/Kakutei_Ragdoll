@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 public class ChangeSceneButton : MonoBehaviour
 {
+    [CustomLabel("遅延時間")] [SerializeField]
+    float _delayDuration;
+
     [Tooltip("次のシーン")] [SerializeField] 
     SceneReference _nextScene;
 
@@ -17,14 +20,11 @@ public class ChangeSceneButton : MonoBehaviour
     Button _targetButton;
 
     [SerializeField]
-    CanvasGroup _canvasGroup;
+    CanvasGroup _canvas;
 
     float _loadProgress = 0;
-    const float _completeLoadProgress = 100;
 
-    public float LoadProgress { get { return _loadProgress; } }//ロードの進行度
-
-    public float CompleteLoadProgress { get { return _completeLoadProgress; } }//ロード完了した時の進行度
+    public float LoadProgress { get { return _loadProgress; } }//ロードの進行度(0～1)
 
     public event Action OnStartLoad;
 
@@ -47,7 +47,9 @@ public class ChangeSceneButton : MonoBehaviour
 
     private IEnumerator LoadSceneCoroutine()
     {
-        _canvasGroup.interactable = false;
+        yield return new WaitForSeconds(_delayDuration);//少し遅延させる
+
+        _canvas.interactable = false;
         OnStartLoad?.Invoke();
 
         // 非同期でシーンを読み込み開始
@@ -56,7 +58,7 @@ public class ChangeSceneButton : MonoBehaviour
         // 読み込み完了まで待機
         while (!asyncLoad.isDone)
         {
-            _loadProgress = asyncLoad.progress * _completeLoadProgress;
+            _loadProgress = asyncLoad.progress;
             yield return null; // 1フレーム待つ
         }
     }
