@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 //作成者:杉山
-//メインゲームシーンの流れ
+//リザルトシーンの流れ
 
-public class MainGameSceneFlow : MonoBehaviour
+public class ResultGameSceneFlow : MonoBehaviour
 {
     [CustomLabel("シーン遷移直後にゲームを開始するか")] [SerializeField]
     bool _playOnAwake;
 
-    [Tooltip("開始処理のステート")] [SerializeField] SceneFlowStateTypeStart_MainGame _start;
-    [Tooltip("ゲーム中のステート")] [SerializeField] SceneFlowStateTypePlaying_MainGame _playing;
-    [Tooltip("終了処理のステート")] [SerializeField] SceneFlowStateTypeEnd_MainGame _end;
+    [Tooltip("ムービーシーンのステート")][SerializeField] SceneFlowStateTypeMovie_Result _movie;
+    [Tooltip("結果表示のステート")] [SerializeField] SceneFlowStateTypeShowScore_Result _showScore;
 
     SceneFlowStateTypeBase _currentState;//現在のステート
 
@@ -20,21 +20,17 @@ public class MainGameSceneFlow : MonoBehaviour
 
     void Start()
     {
-        if(_playOnAwake) StartCoroutine(GameFlow());
+        if (_playOnAwake) StartCoroutine(GameFlow());
     }
 
     IEnumerator GameFlow()
     {
-        //開始ステート
-        ChangeState(_start);
+        //ムービーステート
+        ChangeState(_movie);
         yield return CurrentStateUpdate();
 
-        //プレイ中ステート
-        ChangeState(_playing);
-        yield return CurrentStateUpdate();
-
-        //終了ステート
-        ChangeState(_end);
+        //結果表示ステート
+        ChangeState(_showScore);
         yield return CurrentStateUpdate();
 
         ChangeState(null);//終了にこれをしないと最後のステートのOnExitが呼ばれない
@@ -42,10 +38,10 @@ public class MainGameSceneFlow : MonoBehaviour
 
     IEnumerator CurrentStateUpdate()//現在のステートの更新処理
     {
-        while(!_currentState.Finished)
+        while (!_currentState.Finished)
         {
             yield return null;
-            if (_currentState!=null) _currentState.OnUpdate();
+            if (_currentState != null) _currentState.OnUpdate();
         }
     }
 
