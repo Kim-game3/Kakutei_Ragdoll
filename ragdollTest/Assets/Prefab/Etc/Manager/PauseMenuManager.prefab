@@ -51,7 +51,8 @@ MonoBehaviour:
   _closeOptionButton: {fileID: 0}
   _uiProcess:
     _eventSystem: {fileID: 0}
-    _optionMenu: {fileID: 0}
+    _openOption: {fileID: 0}
+    _closeOption: {fileID: 0}
 --- !u!114 &7715969948521827550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2511744323644065733}
+  - component: {fileID: 5758975586510080703}
   m_Layer: 0
   m_Name: BackToTitle
   m_TagString: Untagged
@@ -131,6 +133,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8783394797613734802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5758975586510080703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213965880369365237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayDuration: 0.5
+  _nextScene:
+    sceneAsset: {fileID: 102900000, guid: 8157fc5a55623bd44a7384622107519d, type: 3}
+    scenePath: Assets/Scenes/TitleScene.unity
+  _targetButton: {fileID: 0}
+  _canvas: {fileID: 0}
 --- !u!1 &5292473263051686706
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6774369384726672582}
+  - component: {fileID: 5012721436154618795}
   m_Layer: 0
   m_Name: RestartGame
   m_TagString: Untagged
@@ -162,6 +183,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8783394797613734802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5012721436154618795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5292473263051686706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayDuration: 0.5
+  _nextScene:
+    sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
+    scenePath: Assets/Scenes/GameScene.unity
+  _targetButton: {fileID: 0}
+  _canvas: {fileID: 0}
 --- !u!1 &5455596874312265742
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,8 +248,10 @@ MonoBehaviour:
   _resumeButton: {fileID: 0}
   _uiProcess:
     _eventSystem: {fileID: 0}
-    _inGameUI: {fileID: 0}
-    _pauseMenu: {fileID: 0}
+    _openInGameUI: {fileID: 0}
+    _closeInGameUI: {fileID: 0}
+    _openPauseMenu: {fileID: 0}
+    _closePauseMenu: {fileID: 0}
 --- !u!1 &7821388371662977215
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8783394797613734802}
+  - component: {fileID: 8661189033624386988}
   m_Layer: 0
   m_Name: PauseMenuManager
   m_TagString: Untagged
@@ -246,3 +288,15 @@ Transform:
   - {fileID: 2511744323644065733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8661189033624386988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7821388371662977215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90dd1641514014c4c95e159db898ac89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

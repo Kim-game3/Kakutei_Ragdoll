@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2649547871085570928}
   - component: {fileID: 2520468839933031432}
-  - component: {fileID: 5280501073054912427}
+  - component: {fileID: 7483211999626923022}
   m_Layer: 0
   m_Name: End
   m_TagString: Untagged
@@ -99,8 +99,8 @@ MonoBehaviour:
   _judgeGameSet: {fileID: 633477319824462739}
   _sceneChangeDuration: 2
   _clearScreen: {fileID: 0}
-  _setResult: {fileID: 5280501073054912427}
---- !u!114 &5280501073054912427
+  _result: {fileID: 7483211999626923022}
+--- !u!114 &7483211999626923022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,12 +109,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3482611966864214233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db15b65e43c62bc4797bb31972c1402e, type: 3}
+  m_Script: {fileID: 11500000, guid: bbd661ad8a7a78246ba21ea6b1b2fa5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _countDeath: {fileID: 0}
   _stopWatch: {fileID: 0}
-  _resultData: {fileID: 11400000, guid: 84aeebdfe5c18fa4d942848ade1e3afb, type: 2}
 --- !u!1 &4173013922960026259
 GameObject:
   m_ObjectHideFlags: 0

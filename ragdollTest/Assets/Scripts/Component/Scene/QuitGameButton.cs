@@ -30,7 +30,7 @@ public class QuitGameButton : MonoBehaviour
     private IEnumerator QuitGameCoroutine()
     {
         _canvas.interactable = false;
-        yield return new WaitForSeconds(_delayDuration);//­‚µ’x‰„‚³‚¹‚é
+        yield return new WaitForSecondsRealtime(_delayDuration);//­‚µ’x‰„‚³‚¹‚é
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;//ƒQ[ƒ€ƒvƒŒƒCI—¹
