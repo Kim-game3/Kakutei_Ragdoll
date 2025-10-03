@@ -72,7 +72,13 @@ public class CustomLabelAttributeDrawer : PropertyDrawer
 
     bool IsValid(SerializedProperty property)
     {
-        return !SceneChangeWatcher.isChangingScene && property != null && property.serializedObject != null && property.serializedObject.targetObject != null && !property.serializedObject.targetObject.Equals(null);
+        // targetObjectÇ™UnityEngine.ObjectÇ»ÇÁÅAUnityì¡óLÇÃnullîªíËÇégÇ§
+        var targetObj = property?.serializedObject?.targetObject;
+        return !SceneChangeWatcher.isChangingScene
+            && property != null
+            && property.serializedObject != null
+            && targetObj != null
+            && !(targetObj is UnityEngine.Object unityObj && !unityObj);
     }
 }
 #endif
