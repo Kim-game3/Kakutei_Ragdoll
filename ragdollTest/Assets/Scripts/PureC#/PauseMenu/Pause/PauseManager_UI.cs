@@ -44,24 +44,28 @@ public partial class PauseManager
 
         public void Start()
         {
-            //ゲーム開始時にポーズメニューが表示されてたり、ゲーム中のUIが出てこないということがないようにする
-            _openInGameUI.Show();
-            _closePauseMenu.Hide();
+            OnResume();
         }
 
         public void OnSwitchPause(bool isPausing)
         {
-            if (isPausing)
-            {
-                _closeInGameUI.Hide();
-                _openPauseMenu.Show();
-                _eventSystem.SetSelectedGameObject(_resumeButton.gameObject);//Resumeボタンを選択状態にする
-            }
-            else
-            {
-                _closePauseMenu.Hide();
-                _openInGameUI.Show();
-            }
+            if (isPausing) OnPause();
+
+            else OnResume();
+        }
+
+        void OnPause()
+        {
+            _closeInGameUI.Hide();
+            _openPauseMenu.Show();
+            _eventSystem.SetSelectedGameObject(_resumeButton.gameObject);//Resumeボタンを選択状態にする
+        }
+
+        void OnResume()
+        {
+            _closePauseMenu.Hide();
+            _openInGameUI.Show();
+            _eventSystem.SetSelectedGameObject(null);//どのボタンも選択状態にしない
         }
     }
 }

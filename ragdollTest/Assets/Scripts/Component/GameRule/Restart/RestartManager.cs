@@ -77,12 +77,12 @@ public partial class RestartManager : MonoBehaviour
 
         yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
-        _playerPosControl.StopPlayerMove();//プレイヤーの変な動きを抑える
+        _playerPosControl.BackToRestartPoint();//プレイヤーの変な動きを抑える
         _cameraControl.SetDefault_PlayeCamera();//操作カメラの向きを初期に戻す
 
 
         yield return new WaitUntil(() => _finishedFadeIn);//完全に明転するまで待つ
-        _playerPosControl.BackToRestartPoint();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
+        _playerPosControl.ThrowPlayer();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
 
 
         yield return new WaitForSeconds(_waitDuration_FromFinishFadeIn);//完全に明転してから数秒待つ
