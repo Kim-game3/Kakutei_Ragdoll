@@ -22,15 +22,14 @@ public partial class RestartManager
         [CustomLabel("かける力の大きさ")] [SerializeField]
         float _power;
 
-        public void StopPlayerMove()
+        public void BackToRestartPoint()//プレイヤーをリスタート地点に移動させる
         {
             _body.isKinematic = true;
+            _playerTrs.position = _restartPoint.position;
         }
 
-        public void BackToRestartPoint()//プレイヤーをリスタート地点に移動&初期地点に戻るように投げ飛ばす
+        public void ThrowPlayer()//初期地点に戻るように投げ飛ばす
         {
-            _playerTrs.position=_restartPoint.position;
-
             _body.isKinematic=false;
             Vector3 force = _restartPoint.forward * _power;
             _body.AddForce(force,ForceMode.VelocityChange);

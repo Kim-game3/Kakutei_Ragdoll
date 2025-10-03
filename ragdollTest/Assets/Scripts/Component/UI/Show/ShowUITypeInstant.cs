@@ -13,5 +13,6 @@ public class ShowUITypeInstant : ShowUITypeBase
     public override void Show()
     {
         _showUIGroup.alpha = _showAlpha;
+        _showUIGroup.blocksRaycasts = true;
     }
 }

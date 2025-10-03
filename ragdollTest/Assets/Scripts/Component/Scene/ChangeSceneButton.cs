@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -17,9 +18,6 @@ public class ChangeSceneButton : MonoBehaviour
 
     [Tooltip("ボタン")] [SerializeField]
     Button _targetButton;
-
-    [SerializeField]
-    CanvasGroup _canvas;
 
     float _loadProgress = 0;
 
@@ -52,9 +50,9 @@ public class ChangeSceneButton : MonoBehaviour
 
     private IEnumerator LoadSceneCoroutine()
     {
-        _canvas.interactable = false;
-        yield return new WaitForSeconds(_delayDuration);//少し遅延させる
-        
+        EventSystem.current.enabled = false;//UI操作を出来なくする
+        yield return new WaitForSecondsRealtime(_delayDuration);//少し遅延させる
+
         OnStartLoad?.Invoke();
 
         // 非同期でシーンを読み込み開始

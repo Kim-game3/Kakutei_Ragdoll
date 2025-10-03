@@ -19,12 +19,12 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     GameObject _clearScreen;
 
     [SerializeField]
-    SetResult _setResult;//結果を書き込むクラス
+    ResultManager _result;//結果を書き込むクラス
 
     public override void OnEnter()
     {
         _clearScreen.SetActive(true);
-        _setResult.Set();//結果書き込み
+        _result.ConfirmResult();//結果確定
         StartCoroutine(StateFinishFlow());
         _finished = false;
     }

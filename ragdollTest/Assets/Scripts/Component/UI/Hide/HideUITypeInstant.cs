@@ -13,5 +13,6 @@ public class HideUITypeInstant : HideUITypeBase
     public override void Hide()
     {
         _hideUIGroup.alpha = _hideAlpha;
+        _hideUIGroup.blocksRaycasts = false;
     }
 }

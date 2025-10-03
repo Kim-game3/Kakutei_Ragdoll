@@ -44,7 +44,7 @@ public partial class PauseManager : MonoBehaviour
 
     private void Start()
     {
-        _uiProcess.Strat();
+        _uiProcess.Start();
         _internalProcess.Start();
     }
 

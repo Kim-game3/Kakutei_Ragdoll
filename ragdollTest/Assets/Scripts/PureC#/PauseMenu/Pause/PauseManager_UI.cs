@@ -16,13 +16,24 @@ public partial class PauseManager
         [SerializeField] 
         EventSystem _eventSystem;
 
-        [CustomLabel("ゲーム中のUI")] [SerializeField]
-        GameObject _inGameUI;
+        [Header("ゲーム中のUI関連")]
 
-        [CustomLabel("ポーズメニュー")] [SerializeField]
-        GameObject _pauseMenu;
+        [CustomLabel("ゲーム中のUIを開く機能")] [SerializeField]
+        ShowUITypeBase _openInGameUI;
 
-        
+        [CustomLabel("ゲーム中のUIを閉じる機能")] [SerializeField]
+        HideUITypeBase _closeInGameUI;
+
+        [Header("ポーズメニュー関連")]
+
+        [CustomLabel("ポーズメニューを開く機能")] [SerializeField]
+        ShowUITypeBase _openPauseMenu;
+
+        [CustomLabel("ポーズメニューを閉じる機能")] [SerializeField]
+        HideUITypeBase _closePauseMenu;
+
+        [Tooltip("一番上の階層のCanvasGroup")] [SerializeField]
+        CanvasGroup _canvas;
 
         Button _resumeButton;
 
@@ -31,20 +42,30 @@ public partial class PauseManager
             _resumeButton = resumeButton;
         }
 
-        public void Strat()
+        public void Start()
         {
-            //ゲーム開始時にポーズメニューが表示されてたり、ゲーム中のUIが出てこないということがないようにする
-            if(!_inGameUI.activeSelf) _inGameUI.SetActive(true);
-            if(_pauseMenu.activeSelf) _pauseMenu.SetActive(false);
+            OnResume();
         }
 
         public void OnSwitchPause(bool isPausing)
         {
-            _inGameUI.SetActive(!isPausing);
-            _pauseMenu.SetActive(isPausing);
+            if (isPausing) OnPause();
 
-            //ポーズになったらResumeボタンを選択状態にする
-            if(isPausing) _eventSystem.SetSelectedGameObject(_resumeButton.gameObject);
+            else OnResume();
+        }
+
+        void OnPause()
+        {
+            _closeInGameUI.Hide();
+            _openPauseMenu.Show();
+            _eventSystem.SetSelectedGameObject(_resumeButton.gameObject);//Resumeボタンを選択状態にする
+        }
+
+        void OnResume()
+        {
+            _closePauseMenu.Hide();
+            _openInGameUI.Show();
+            _eventSystem.SetSelectedGameObject(null);//どのボタンも選択状態にしない
         }
     }
 }
