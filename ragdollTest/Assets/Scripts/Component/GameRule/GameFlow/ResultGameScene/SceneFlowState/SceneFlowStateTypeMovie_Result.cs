@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 //ì¬Ò:™R
@@ -9,9 +10,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
 {
+    [SerializeField]
+    HideUITypeBase[] _hideUIs;
+
+    [SerializeField] float _delayTime;
+
     public override void OnEnter()
     {
-        
+        HideUIs();
+        _finished = false;
+        StartCoroutine(Wait());//‚Æ‚è‚ ‚¦‚¸‚Í”•b’x‰„‚³‚¹‚Ä‚©‚çI‚í‚ç‚¹‚é
     }
 
     public override void OnUpdate() 
@@ -22,5 +30,20 @@ public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
     public override void OnExit()
     {
         
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(_delayTime);
+
+        _finished = true;
+    }
+
+    void HideUIs()
+    {
+        for(int i=0; i<_hideUIs.Length ;i++)
+        {
+            _hideUIs[i].Hide();
+        }
     }
 }

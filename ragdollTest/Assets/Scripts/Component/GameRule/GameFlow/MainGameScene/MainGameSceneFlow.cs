@@ -37,7 +37,7 @@ public class MainGameSceneFlow : MonoBehaviour
         ChangeState(_end);
         yield return CurrentStateUpdate();
 
-        ChangeState(null);//終了にこれをしないと最後のステートのOnExitが呼ばれない
+        _currentState.OnExit();
     }
 
     IEnumerator CurrentStateUpdate()//現在のステートの更新処理
