@@ -24,14 +24,16 @@ public class JudgeResultIsHighScore : MonoBehaviour
         //今回のスコアを取得
         ScoreData thisScoreData = ResultManager.Score;
 
-        //今までのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetHighScore(thisScoreData.StageID);
-
-        if (thisScoreData==null)//そもそもクリアしていない
+        if (thisScoreData == null)//そもそもクリアしていない
         {
             _brokeRecord = false;
+            return;
         }
-        else if (highScoreData == null)//初クリア
+
+        //今までのハイスコアを取得
+        ScoreData highScoreData = PlayerDataManager.GetHighScore(thisScoreData.StageID);
+        
+        if (highScoreData == null)//初クリア
         {
             UpdateHighScore(thisScoreData);
         }
