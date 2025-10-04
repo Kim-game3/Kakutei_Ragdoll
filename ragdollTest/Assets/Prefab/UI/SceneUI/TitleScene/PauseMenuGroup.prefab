@@ -47,7 +47,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525387685677664128}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -222,10 +222,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTION
+  m_text: "\u30AA\u30D7\u30B7\u30E7\u30F3"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
+  m_sharedMaterial: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -407,6 +407,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 'SE:'
       objectReference: {fileID: 0}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
     - target: {fileID: 8420966546724719830, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -570,6 +578,14 @@ PrefabInstance:
       propertyPath: m_text
       value: 'BGM:'
       objectReference: {fileID: 0}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
     - target: {fileID: 8420966546724719830, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -627,8 +643,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2026464454964507518, guid: d402648b5a245864a8f2509079ef2d49, type: 3}
       propertyPath: m_text
-      value: CLOSE
+      value: "\u9589\u3058\u308B"
       objectReference: {fileID: 0}
+    - target: {fileID: 2026464454964507518, guid: d402648b5a245864a8f2509079ef2d49, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
+    - target: {fileID: 2026464454964507518, guid: d402648b5a245864a8f2509079ef2d49, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026464454964507518, guid: d402648b5a245864a8f2509079ef2d49, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
     - target: {fileID: 3965077053887424355, guid: d402648b5a245864a8f2509079ef2d49, type: 3}
       propertyPath: m_Name
       value: CloseOptionButton
@@ -907,8 +935,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
       propertyPath: m_text
-      value: 'MASTER:'
+      value: "\u30DE\u30B9\u30BF\u30FC:"
       objectReference: {fileID: 0}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
+    - target: {fileID: 7277021309023092216, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
     - target: {fileID: 8420966546724719830, guid: 301dac908bf23ed4fbc0cea6283d6c10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

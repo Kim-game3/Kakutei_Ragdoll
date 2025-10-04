@@ -1,30 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 //作成者:杉山
-//オプションのUI処理
+//クレジットのUI処理
 
-public partial class OptionManager
+public partial class CreditManager
 {
     [System.Serializable]
-    class OptionManager_UI
+    class CreditManager_UI
     {
         [SerializeField]
         EventSystem _eventSystem;
 
-        [CustomLabel("オプションメニューを開く機能")] [SerializeField]
+        [CustomLabel("クレジットメニューを開く機能")] [SerializeField]
         ShowUITypeBase _openOption;
 
-        [CustomLabel("オプションメニューを閉じる機能")] [SerializeField]
+        [CustomLabel("クレジットメニューを閉じる機能")] [SerializeField]
         HideUITypeBase _closeOption;
 
-        Button _openButton;//オプションメニューを開くボタン
-        Button _closeButton;//オプションメニューを閉じるボタン
+        Button _openButton;//クレジットメニューを開くボタン
+        Button _closeButton;//クレジットメニューを閉じるボタン
 
-        public void Awake(Button openButton,Button closeButton)
+        public void Awake(Button openButton, Button closeButton)
         {
             _openButton = openButton;
             _closeButton = closeButton;
@@ -32,7 +30,7 @@ public partial class OptionManager
 
         public void Start()
         {
-            _closeOption.Hide();//ゲーム開始時にはオプションメニューは閉じておく
+            _closeOption.Hide();
         }
 
         public void OnOpen()
@@ -46,11 +44,5 @@ public partial class OptionManager
             _closeOption.Hide();
             _eventSystem?.SetSelectedGameObject(_openButton.gameObject);//選択ボタンを開くボタンに設定
         }
-
-        public void OnDisable()
-        {
-            if(_closeOption != null) _closeOption.Hide();
-        }
     }
-    
 }
