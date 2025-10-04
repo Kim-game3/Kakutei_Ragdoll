@@ -10,9 +10,6 @@ using UnityEngine;
 
 public class JudgeResultIsHighScore : MonoBehaviour
 {
-    [CustomLabel("ステージ番号")] [SerializeField] 
-    int _stageNum;
-
     bool _brokeRecord;//記録を更新したか
 
     public bool BrokeRecord {  get { return _brokeRecord; }}
@@ -24,13 +21,13 @@ public class JudgeResultIsHighScore : MonoBehaviour
 
     void Judge()
     {
-        //今までのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetHighScore(_stageNum);
-
         //今回のスコアを取得
         ScoreData thisScoreData = ResultManager.Score;
 
-        if(thisScoreData==null)//そもそもクリアしていない
+        //今までのハイスコアを取得
+        ScoreData highScoreData = PlayerDataManager.GetHighScore(thisScoreData.StageID);
+
+        if (thisScoreData==null)//そもそもクリアしていない
         {
             _brokeRecord = false;
         }
@@ -52,6 +49,6 @@ public class JudgeResultIsHighScore : MonoBehaviour
     {
         _brokeRecord = true;
 
-        PlayerDataManager.SetHighScore(_stageNum, thisScoreData);
+        PlayerDataManager.SetHighScore(thisScoreData);
     }
 }
