@@ -13,13 +13,14 @@ public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
     [SerializeField]
     HideUITypeBase[] _hideUIs;
 
-    [SerializeField] float _delayTime;
+    [SerializeField]
+    PlayableDirector _resultMovieTimeline;
 
     public override void OnEnter()
     {
+        _resultMovieTimeline.Play();
         HideUIs();
         _finished = false;
-        StartCoroutine(Wait());//Ç∆ÇËÇ†Ç¶Ç∏ÇÕêîïbíxâÑÇ≥ÇπÇƒÇ©ÇÁèIÇÌÇÁÇπÇÈ
     }
 
     public override void OnUpdate() 
@@ -32,10 +33,13 @@ public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
         
     }
 
-    IEnumerator Wait()
+    private void Awake()
     {
-        yield return new WaitForSeconds(_delayTime);
+        _resultMovieTimeline.stopped += SetFinishedTrue;
+    }
 
+    void SetFinishedTrue(PlayableDirector director)
+    {
         _finished = true;
     }
 
