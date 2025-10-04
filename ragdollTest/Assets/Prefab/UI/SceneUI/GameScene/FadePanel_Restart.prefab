@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5868508515904202221}
   - component: {fileID: 3492778377450303333}
   m_Layer: 5
-  m_Name: FadePanel
+  m_Name: FadePanel_Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -86,7 +86,7 @@ Animator:
   m_GameObject: {fileID: 3118604987103383620}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aae0ce844a9615f46a7e42d17488ab0d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2e8a09bf64bfbe64389c53f823098926, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
