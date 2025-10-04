@@ -9,6 +9,9 @@ using UnityEngine;
 public class ResultManager : MonoBehaviour
 {
     //--- スコアの算出に必要な機能 ---//
+    [CustomLabel("ステージ番号")] [Tooltip("他のステージと被らないようにしてください")] [SerializeField]
+    int _stageID;
+
     [Tooltip("水に落ちた回数を数える機能")] [SerializeField]
     CountDeath _countDeath;
 
@@ -28,6 +31,6 @@ public class ResultManager : MonoBehaviour
     //スコアの確定(書き込み)
     public void ConfirmResult()
     {
-        _score = new ScoreData(_stopWatch.ElapsedTime, _countDeath.Count);
+        _score = new ScoreData(_stageID,_stopWatch.ElapsedTime, _countDeath.Count);
     }
 }

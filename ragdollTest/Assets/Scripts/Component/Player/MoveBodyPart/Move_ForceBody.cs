@@ -34,7 +34,9 @@ public class Move_ForceBody : MonoBehaviour
 
         Vector2 getVec = context.ReadValue<Vector2>();
 
+#if UNITY_EDITOR
         Debug.Log(getVec);
+#endif
 
         Move(getVec);
     }

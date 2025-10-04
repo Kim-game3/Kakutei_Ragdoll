@@ -6,7 +6,7 @@ using UnityEngine;
 //作成者:杉山
 //リザルトシーンの流れ
 
-public class ResultGameSceneFlow : MonoBehaviour
+public class ResultSceneFlow : MonoBehaviour
 {
     [CustomLabel("シーン遷移直後にゲームを開始するか")] [SerializeField]
     bool _playOnAwake;
@@ -33,7 +33,7 @@ public class ResultGameSceneFlow : MonoBehaviour
         ChangeState(_showScore);
         yield return CurrentStateUpdate();
 
-        ChangeState(null);//終了にこれをしないと最後のステートのOnExitが呼ばれない
+        _currentState.OnExit();
     }
 
     IEnumerator CurrentStateUpdate()//現在のステートの更新処理

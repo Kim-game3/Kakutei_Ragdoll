@@ -12,10 +12,10 @@ public partial class PlayerDataManager
     const string _fastestClearTimeDataName = "FastestClearTime";//最速クリアタイムのデータ名
     const string _deathCountDataName = "DeathCount";//デス数のデータ名
 
-    public static ScoreData GetHighScore(int stageNum)//ハイスコアの取得(一度も書き換えたことがない場合はnullを返す)
+    public static ScoreData GetHighScore(int stageID)//ハイスコアの取得(一度も書き換えたことがない場合はnullを返す)
     {
         //ハイスコアデータを取得するのに必要なキー
-        GetHighScoreKey(stageNum, out string fastestClearTimeKey, out string deathCountKey);
+        GetHighScoreKey(stageID, out string fastestClearTimeKey, out string deathCountKey);
 
         ScoreData ret = null;
 
@@ -24,16 +24,17 @@ public partial class PlayerDataManager
             float clearTime=PlayerPrefs.GetFloat(fastestClearTimeKey);
             int deathCount = PlayerPrefs.GetInt(deathCountKey);
 
-            ret=new ScoreData(clearTime, deathCount);
+            ret=new ScoreData(stageID,clearTime, deathCount);
         }
 
         return ret;
     }
 
-    public static void SetHighScore(int stageNum,ScoreData scoreData)//ハイスコアの書き換え
+    public static void SetHighScore(ScoreData scoreData)//ハイスコアの書き換え
     {
-        GetHighScoreKey(stageNum, out string fastestClearTimeKey, out string deathCountKey);
+        GetHighScoreKey(scoreData.StageID, out string fastestClearTimeKey, out string deathCountKey);
 
+        //ハイスコアの書き換え処理
         PlayerPrefs.SetFloat(fastestClearTimeKey, scoreData.ClearTime);
         PlayerPrefs.SetInt(deathCountKey, scoreData.DeathCount);
     }

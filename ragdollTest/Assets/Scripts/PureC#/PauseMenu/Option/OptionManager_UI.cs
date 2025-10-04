@@ -24,7 +24,7 @@ public partial class OptionManager
         Button _openButton;//オプションメニューを開くボタン
         Button _closeButton;//オプションメニューを閉じるボタン
 
-        public void Awake(Button openButton,Button closeButton)//closeButton=閉じるボタン
+        public void Awake(Button openButton,Button closeButton)
         {
             _openButton = openButton;
             _closeButton = closeButton;
