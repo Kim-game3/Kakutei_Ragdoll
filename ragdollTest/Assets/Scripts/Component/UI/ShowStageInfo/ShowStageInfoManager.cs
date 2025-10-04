@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 //作成者:杉山
 //ステージごとの情報を表示する
 
-public class ShowStageInfo : MonoBehaviour
+public class ShowStageInfoManager : MonoBehaviour
 {
     [Tooltip("ステージの情報")] [SerializeField]
     StageInfoData _stageInfoData;
