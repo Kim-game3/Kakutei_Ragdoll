@@ -11494,6 +11494,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1316088847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1524954685 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4179902808427546938, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+  m_PrefabInstance: {fileID: 6846426153034808560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1524954687 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8722555800395006686, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
@@ -14164,7 +14169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].key
@@ -14174,6 +14179,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[4].key
       value: 
       objectReference: {fileID: -5977527305257706801, guid: d4a896812ef4e384ebf21977d6e396a0, type: 2}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: 4905600451619486687, guid: d4a896812ef4e384ebf21977d6e396a0, type: 2}
     - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -14190,6 +14199,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[4].value
       value: 
       objectReference: {fileID: 926103863}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].value
+      value: 
+      objectReference: {fileID: 1524954685}
     - target: {fileID: 2374324907616682494, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.01
