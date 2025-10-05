@@ -47,7 +47,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5525387685677664128}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5970497, b: 1, a: 1}
+  m_Color: {r: 0.4745098, g: 0.654902, b: 0.79607844, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -946,7 +946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -369.98
       objectReference: {fileID: 0}
     - target: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -959,6 +959,10 @@ PrefabInstance:
     - target: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132627033105311644, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
+      propertyPath: m_text
+      value: "\u9589\u3058\u308B"
       objectReference: {fileID: 0}
     - target: {fileID: 3132627033105311644, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_fontColor32.rgba

@@ -32,9 +32,6 @@ public partial class PauseManager
         [CustomLabel("ポーズメニューを閉じる機能")] [SerializeField]
         HideUITypeBase _closePauseMenu;
 
-        [Tooltip("一番上の階層のCanvasGroup")] [SerializeField]
-        CanvasGroup _canvas;
-
         Button _resumeButton;
 
         public void Awake(Button resumeButton)//resumeButton=ゲーム再開ボタン

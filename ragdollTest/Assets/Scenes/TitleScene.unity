@@ -1809,29 +1809,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1446808838}
     m_Modifications:
-    - target: {fileID: 624856297093359471, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1679412205983287967, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Navigation.m_SelectOnUp
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2272397476318306780, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999783613607883676, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Color.b
-      value: 0.79607844
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999783613607883676, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Color.g
-      value: 0.654902
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999783613607883676, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4745098
       objectReference: {fileID: 0}
     - target: {fileID: 3196381842831713627, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: _audioSource
@@ -1929,10 +1909,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionMenuGroup
       objectReference: {fileID: 0}
-    - target: {fileID: 5922904220181254789, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_Navigation.m_SelectOnDown
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6060819746760782333, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1953,10 +1929,6 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
-    - target: {fileID: 8467624862051557071, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -369.98
-      objectReference: {fileID: 0}
     - target: {fileID: 8972284771546496189, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: _audioSource
       value: 
@@ -1978,38 +1950,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1446808838}
     m_Modifications:
-    - target: {fileID: 548392647839222028, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1592528249378665975, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.g
-      value: 0.97374076
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.r
-      value: 0.76792455
-      objectReference: {fileID: 0}
     - target: {fileID: 2338718678104420029, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
-    - target: {fileID: 2383904331923214086, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Transition
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2695052373730950294, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2090,10 +2038,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3747382685714460169, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5327311659218587805, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
@@ -2114,10 +2058,6 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
-    - target: {fileID: 7928285536376977196, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8823467825719179160, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
