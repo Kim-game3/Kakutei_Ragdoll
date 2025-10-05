@@ -37,7 +37,6 @@ public class GameStartMovieSequence : MonoBehaviour
 
     IEnumerator MovieSequence()
     {
-        _playCamera.enabled = false;
         _hideInGameUI.Hide();
         _startMovieTimeline.Play();
 

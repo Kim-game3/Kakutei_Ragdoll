@@ -7132,7 +7132,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 11
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -7334,8 +7334,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16168995, y: 0, z: 0, w: 0.9868416}
-  m_LocalPosition: {x: 5.86, y: 2.9268153, z: -11.145768}
+  m_LocalRotation: {x: 0.16788724, y: 0, z: 0, w: 0.9858062}
+  m_LocalPosition: {x: 5.96389, y: 4.347308, z: 38.246113}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13924,6 +13924,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 198361667}
     m_Modifications:
     - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].key
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].key
+      value: 
+      objectReference: {fileID: -5977527305257706801, guid: d4a896812ef4e384ebf21977d6e396a0, type: 2}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
       objectReference: {fileID: 963194229}
@@ -13931,6 +13943,14 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 1663274598}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[3].value
+      value: 
+      objectReference: {fileID: 963194229}
+    - target: {fileID: 1694357410230386161, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].value
+      value: 
+      objectReference: {fileID: 926103863}
     - target: {fileID: 2374324907616682494, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.01
@@ -14015,6 +14035,10 @@ PrefabInstance:
       propertyPath: _showInGameUI
       value: 
       objectReference: {fileID: 8031030110121751573}
+    - target: {fileID: 8722555800395006686, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: _startMovieCamera
+      value: 
+      objectReference: {fileID: 926103865}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
