@@ -9,21 +9,17 @@ using UnityEngine.InputSystem;
 
 public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 {
-    [CustomLabel("最初の方に再生するタイムライン")] [SerializeField]
-    PlayableDirector _playableDirector;
+    [SerializeField]
+    GameStartMovieSequence _gameStartMovieSequence;
 
     [SerializeField]
     PlayerInput _playerInput;
 
-    [CustomLabel("開始演出が終わるまで待つ時間")] [SerializeField]
-    float _waitDuration;
-
     public override void OnEnter() 
     {
+        _gameStartMovieSequence.Play();//開始演出を再生
         _finished = false;
-        _playableDirector.Play();//タイムラインを再生
         _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.UnControllable);//操作不可能にする
-        StartCoroutine(Wait_FinishStartEvent());
     }
     public override void OnUpdate() { }
     public override void OnExit() 
@@ -31,10 +27,13 @@ public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 
     }
 
-    IEnumerator Wait_FinishStartEvent()//開始演出が終わるまで待つ
+    private void Awake()
     {
-        yield return new WaitForSeconds(_waitDuration);
+        _gameStartMovieSequence.OnMovieFinished += SetStateFinished;
+    }
 
+    void SetStateFinished()
+    {
         _finished = true;
     }
 }

@@ -41,7 +41,9 @@ public partial class PauseManager
 
         public void Start()
         {
-            OnResume();
+            //ポーズ画面だけは閉じておく
+            _closePauseMenu.Hide();
+            _eventSystem.SetSelectedGameObject(null);//どのボタンも選択状態にしない
         }
 
         public void OnSwitchPause(bool isPausing)
