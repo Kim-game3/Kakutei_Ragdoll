@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 //作成者:杉山
 //リスタート処理
+//enabledを切り替えることでリスタートが起こらないようにすることも可能
 
 public partial class RestartManager : MonoBehaviour
 {
@@ -54,11 +55,15 @@ public partial class RestartManager : MonoBehaviour
         _restartZoneTrigger.OnEnter += OnHit_RestartTrigger;
     }
 
+    private void Start() { }//enabledのチェックがインスペクターに出てくるようにわざと空のStartを定義してます
+
     private void OnHit_RestartTrigger(Collider other)
     {
         if (!other.CompareTag(ObjectTagNameDictionary.Player)) return;
 
         if (_isRestarting) return;
+
+        if (!enabled) return;
 
         StartCoroutine(OnRestart());
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 //作成者:杉山
@@ -9,23 +10,26 @@ using UnityEngine.SceneManagement;
 public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
 {
     // --- 次のシーン遷移 --- //
-    [SerializeField] SceneReference _resultScene;
-    [SerializeField] JudgeGameSet _judgeGameSet;
+    [Tooltip("リザルトシーン")] [SerializeField]
+    SceneReference _resultScene;
 
-    [CustomLabel("シーン遷移するまでにかける時間")] [SerializeField] float _sceneChangeDuration;
+    [Tooltip("ゲームクリア演出")] [SerializeField]
+    PlayableDirector _gameClearTimeline;
 
-    // --- ゲーム終了時に表示するUI ---//
-    [CustomLabel("クリア時に表示するUI")] [SerializeField]
-    GameObject _clearScreen;
+    [SerializeField]
+    JudgeGameSet _judgeGameSet;
+
+    [SerializeField] 
+    RestartManager _restartManager;
 
     [SerializeField]
     ResultManager _result;//結果を書き込むクラス
 
     public override void OnEnter()
     {
-        _clearScreen.SetActive(true);
+        _gameClearTimeline.Play();//演出開始
         _result.ConfirmResult();//結果確定
-        StartCoroutine(StateFinishFlow());
+        _restartManager.enabled = false;//リスタートが起こらないようにする
         _finished = false;
     }
     public override void OnUpdate() { }
@@ -34,12 +38,14 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
         SceneManager.LoadScene(_resultScene.ScenePath);
     }
 
-
-
-    IEnumerator StateFinishFlow()//とりあえず仮で書いたもの(後に削除予定)
+    private void Awake()
     {
-        yield return new WaitForSeconds(_sceneChangeDuration);
+        //演出が終わったらシーン遷移するようにする
+        _gameClearTimeline.stopped += SetStateFinished;
+    }
 
+    void SetStateFinished(PlayableDirector director)
+    {
         _finished = true;
     }
 }

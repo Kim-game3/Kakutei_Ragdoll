@@ -421,6 +421,34 @@
             ]
         },
         {
+            "name": "Movie",
+            "id": "d76fe0d2-04d8-4f18-a5f9-e4cbdf556a4a",
+            "actions": [
+                {
+                    "name": "Skip",
+                    "type": "Button",
+                    "id": "8faf25ab-8c41-4dfa-b756-35b8ad046561",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7f2c680d-5cf9-4108-bef9-c074de54a70e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Uncontrollable",
             "id": "9aa9bb72-0634-46ee-909e-a5b83eb9e8c2",
             "actions": [],

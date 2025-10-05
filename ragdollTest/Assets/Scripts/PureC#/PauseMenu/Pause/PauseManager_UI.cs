@@ -32,9 +32,6 @@ public partial class PauseManager
         [CustomLabel("ポーズメニューを閉じる機能")] [SerializeField]
         HideUITypeBase _closePauseMenu;
 
-        [Tooltip("一番上の階層のCanvasGroup")] [SerializeField]
-        CanvasGroup _canvas;
-
         Button _resumeButton;
 
         public void Awake(Button resumeButton)//resumeButton=ゲーム再開ボタン
@@ -44,7 +41,9 @@ public partial class PauseManager
 
         public void Start()
         {
-            OnResume();
+            //ポーズ画面だけは閉じておく
+            _closePauseMenu.Hide();
+            _eventSystem.SetSelectedGameObject(null);//どのボタンも選択状態にしない
         }
 
         public void OnSwitchPause(bool isPausing)
