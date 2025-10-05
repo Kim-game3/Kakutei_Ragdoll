@@ -17,9 +17,9 @@ public class SceneFlowStateTypeStart_MainGame : SceneFlowStateTypeBase
 
     public override void OnEnter() 
     {
-        _gameStartMovieSequence.Play();//開始演出を再生
         _finished = false;
-        _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.UnControllable);//操作不可能にする
+        _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.Movie);//操作不可能にする
+        _gameStartMovieSequence.Play();//開始演出を再生
     }
     public override void OnUpdate() { }
     public override void OnExit() 

@@ -21,4 +21,13 @@ public class ActionMapNameDictionary
     const string _uncontrollableActionMapName = "UnControllable";
 
     public static string UnControllable { get { return _uncontrollableActionMapName; } }
+
+
+
+    /// <summary>
+    ///ムービーシーン中のActionMap名
+    /// </summary>
+    const string _movieActionMapName = "Movie";
+
+    public static string Movie { get { return _movieActionMapName; } }
 }
