@@ -11818,11 +11818,6 @@ Transform:
   - {fileID: 1256052962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1619507713 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 644501266113817569, guid: 59e620834ecbe624596444ad4a6501d3, type: 3}
-  m_PrefabInstance: {fileID: 8031030110121751570}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1663274597 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 480854482495633090, guid: c0e28de2a98950f4995b8df5363eccce, type: 3}
@@ -13445,6 +13440,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd3f1275a60fb4846b425effae8f9940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4064680034383877878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+  m_PrefabInstance: {fileID: 6084041446501906107}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5154c11a87ffca14bacc5790351be2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6084041446501906107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13639,13 +13645,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2520468839933031432, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
-      propertyPath: _clearScreen
+      propertyPath: _restartManager
       value: 
-      objectReference: {fileID: 1619507713}
+      objectReference: {fileID: 4064680034383877878}
     - target: {fileID: 4006668553984151503, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: _playerInput
       value: 
       objectReference: {fileID: 1530644322}
+    - target: {fileID: 4786730658707223821, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 1663274598}
     - target: {fileID: 6211638258583366205, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: m_Name
       value: GameFlowManager
