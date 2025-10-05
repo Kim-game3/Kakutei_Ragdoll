@@ -14016,6 +14016,26 @@ PrefabInstance:
       propertyPath: _showDebug_Speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 816122113516172543, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841135080459310489, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490473505815956672, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2816732573931072731, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3086717301923238517, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4271090110795208420, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.86
@@ -14056,17 +14076,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4353217302924450972, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4642311134313234449, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_Height
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118237307312488462, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5131346140687767787, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5385555462075075583, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645752890223868458, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791690803741200173, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6019852611340923293, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _power
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475751201300374402, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7134686930152756172, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7340308893461383714, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _power
@@ -14088,6 +14136,14 @@ PrefabInstance:
       propertyPath: _showDebug_Speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8344215751935941896, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677481954390664523, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8911220710747000804, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -14095,6 +14151,10 @@ PrefabInstance:
     - target: {fileID: 8911220710747000804, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933351567003768665, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
