@@ -26,7 +26,9 @@ public class ShowResult_ResultScene : MonoBehaviour
 
         if (thisScore == null) return;
 
-        _clearTimeText.text=thisScore.ClearTime.ToString("0");
-        _deathCountText.text=thisScore.DeathCount.ToString("0");
+        MathfExtension.ConvertTime(thisScore.ClearTime, out float hour, out float min, out float second);
+
+        _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
+        _deathCountText.text = thisScore.DeathCount.ToString("0") + "‰ñ";
     }
 }

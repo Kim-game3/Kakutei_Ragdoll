@@ -53,8 +53,10 @@ public class ShowStageInfoManager : MonoBehaviour
         }
         else
         {
-            _clearTimeText.text = highScoreData.ClearTime.ToString("0");
-            _deathCountText.text = highScoreData.DeathCount.ToString("0");
+            MathfExtension.ConvertTime(highScoreData.ClearTime, out float hour, out float min, out float second);
+
+            _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
+            _deathCountText.text = highScoreData.DeathCount.ToString("0")+"‰ñ";
         }
     }
 }
