@@ -16,6 +16,6 @@ public partial class MathfExtension
 
         h = time.Hours;
         m=time.Minutes;
-        s = time.Seconds + (value % 1f);//•b‚¾‚¯¬”“_‚àŠÜ‚ß‚Ä•Ô‚·
+        s = time.Seconds;
     }
 }
