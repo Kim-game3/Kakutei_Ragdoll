@@ -30,6 +30,8 @@ public class DebugModeManager : MonoBehaviour
     const float _showAlpha = 1;
     const float _hideAlpha = 0;
 
+    const int _waitFrame = 10;
+
     public void DebugModeOn(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
@@ -80,7 +82,12 @@ public class DebugModeManager : MonoBehaviour
 
         _body.isKinematic = true;
         _playerTrs.position = warpPoint.position;
-        yield return null;
+
+        for(int i=0; i< _waitFrame; i++)
+        {
+            yield return null;
+        }
+        
         _body.isKinematic = false;
     }
 

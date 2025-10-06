@@ -11,6 +11,8 @@ public class ShowStopWatch : MonoBehaviour
 
     void Update()
     {
-        _timerText.text = _stopWatch.ElapsedTime.ToString("0");
+        MathfExtension.ConvertTime(_stopWatch.ElapsedTime, out float hour, out float min, out float second);
+
+        _timerText.text = $"{hour:00}:{min:00}:{second:00}";
     }
 }
