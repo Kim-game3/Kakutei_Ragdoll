@@ -16623,6 +16623,10 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5662221633306463096, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4fe5b631c021be24f8beb9541c957558, type: 2}
     - target: {fileID: 5791690803741200173, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_Interpolate
       value: 1
