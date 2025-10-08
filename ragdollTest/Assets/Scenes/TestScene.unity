@@ -15969,7 +15969,7 @@ GameObject:
   - component: {fileID: 2074067938}
   - component: {fileID: 2074067937}
   m_Layer: 0
-  m_Name: WaterSEManager
+  m_Name: WaterEffectManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16107,6 +16107,7 @@ MonoBehaviour:
   - {fileID: 775316509}
   - {fileID: 972857997}
   _restartManager: {fileID: 4064680034383877878}
+  _waterSplashParticle: {fileID: 3389894116151078676, guid: 359d9be8dab3d454e9a91dea44d9e338, type: 3}
 --- !u!1 &2126805072
 GameObject:
   m_ObjectHideFlags: 0
@@ -17511,6 +17512,10 @@ PrefabInstance:
     - target: {fileID: 7916390203707359593, guid: daf28d3c8dd67194e84f2fbe0bb08218, type: 3}
       propertyPath: m_Name
       value: Water
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916390203707359593, guid: daf28d3c8dd67194e84f2fbe0bb08218, type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8746224903673533915, guid: daf28d3c8dd67194e84f2fbe0bb08218, type: 3}
       propertyPath: m_LocalScale.y

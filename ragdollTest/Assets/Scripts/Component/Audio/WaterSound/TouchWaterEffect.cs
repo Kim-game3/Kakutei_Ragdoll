@@ -19,6 +19,9 @@ public class TouchWaterEffect : MonoBehaviour
     [SerializeField]
     RestartManager _restartManager;
 
+    [SerializeField]
+    ParticleSystem _waterSplashParticle;
+
     bool[] _isTouchingWaterBeforeFrame;
 
     private void Awake()
@@ -34,11 +37,20 @@ public class TouchWaterEffect : MonoBehaviour
 
     void Update()
     {
+        Transform foo=null;
+
         //前フレームで全ての部位で触れてないかつ今フレームでどこか一つでも触れている場合
         //リスタート中は流さない
-        if(isAllNoTouchingWaterBeforeFrame() && isAnyTouchingWaterNowFrame()&&!_restartManager.IsRestarting)
+        if(isAllNoTouchingWaterBeforeFrame() && isAnyTouchingWaterNowFrame(ref foo)&&!_restartManager.IsRestarting)
         {
             _audioSource.PlayOneShot(_clip);
+
+            if(foo!=null)
+            {
+                var ins= Instantiate(_waterSplashParticle, foo.position,Quaternion.identity);
+                ins.Play();
+                Destroy(ins.gameObject, 3);
+            }
         }
 
         //前フレームの状態を記録
@@ -66,7 +78,7 @@ public class TouchWaterEffect : MonoBehaviour
     }
 
     //今フレームで一つでも水に触れているか
-    bool isAnyTouchingWaterNowFrame()
+    bool isAnyTouchingWaterNowFrame(ref Transform _bodyTrs)
     {
         bool ret = false;
 
@@ -75,6 +87,7 @@ public class TouchWaterEffect : MonoBehaviour
             if (_detectTouchWaters[i].IsTouching == true)
             {
                 ret = true;
+                _bodyTrs= _detectTouchWaters[i].transform;
                 break;
             }
         }
