@@ -40,7 +40,7 @@ public class TouchWaterEffect : MonoBehaviour
         Transform foo=null;
 
         //前フレームで全ての部位で触れてないかつ今フレームでどこか一つでも触れている場合
-        //リスタート中は流さない
+        //リスタート中は流さない(後で修正予定)
         if(isAllNoTouchingWaterBeforeFrame() && isAnyTouchingWaterNowFrame(ref foo)&&!_restartManager.IsRestarting)
         {
             _audioSource.PlayOneShot(_clip);
@@ -77,7 +77,7 @@ public class TouchWaterEffect : MonoBehaviour
         return ret;
     }
 
-    //今フレームで一つでも水に触れているか
+    //今フレームで一つでも水に触れているか(後で修正予定)
     bool isAnyTouchingWaterNowFrame(ref Transform _bodyTrs)
     {
         bool ret = false;
