@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5154c11a87ffca14bacc5790351be2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _waitDuration_FromFinishFadeIn: 1
+  _waitDuration_FromFinishFadeIn: 0.7
   _waitDuration_FromCameraFollowPlayer: 1
   _restartTimeLine: {fileID: 4203677240734155177}
   _restartZoneTrigger: {fileID: 6159510962081510586}
@@ -56,7 +56,7 @@ MonoBehaviour:
     _restartPoint: {fileID: 3783191938607227080}
     _playerTrs: {fileID: 0}
     _body: {fileID: 0}
-    _power: 250
+    _power: 350
   _cameraControl:
     _playCamera: {fileID: 0}
     _restartPointCamera: {fileID: 0}
@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 5330393142824039535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -2.7, z: 0}
+  m_LocalPosition: {x: 5, y: -2, z: 0}
   m_LocalScale: {x: 47, y: 2, z: 400}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -417,10 +417,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7263148139235533572}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22545853, y: 0.6310789, z: 0.19897836, w: 0.7150633}
-  m_LocalPosition: {x: 0.5029, y: 0.44, z: -164.94368}
+  m_LocalRotation: {x: -0.19405335, y: 0.6391576, z: 0.17126173, w: 0.72421706}
+  m_LocalPosition: {x: -1.51, y: -0.49, z: -164.94368}
   m_LocalScale: {x: 303.84637, y: 44.296135, z: 88.2675}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6059501945379574525}
-  m_LocalEulerAnglesHint: {x: -35, y: 82.86, z: 0}
+  m_LocalEulerAnglesHint: {x: -30, y: 82.86, z: 0}
