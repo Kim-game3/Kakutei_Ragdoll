@@ -30,6 +30,9 @@ public partial class RestartManager : MonoBehaviour
     [SerializeField]//リスタート時の入力関係の処理をまとめたもの
     InputControl _inputControl;
 
+    [SerializeField]//リスタート時のプレイヤーの表示の処理をまとめたもの
+    PlayerMeshControl _playerMeshControl;
+
     bool _isRestarting = false;//リスタート中か
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
@@ -82,11 +85,13 @@ public partial class RestartManager : MonoBehaviour
 
         yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
-        _playerPosControl.BackToRestartPoint();//プレイヤーの変な動きを抑える
+        _playerPosControl.BackToRestartPoint();//プレイヤーをリスタート地点に戻す
+        _playerMeshControl.ChangeMeshEnabled(false);//プレイヤーを非表示にする
         _cameraControl.SetDefault_PlayeCamera();//操作カメラの向きを初期に戻す
 
 
         yield return new WaitUntil(() => _finishedFadeIn);//完全に明転するまで待つ
+        _playerMeshControl.ChangeMeshEnabled(true);//プレイヤーを表示する
         _playerPosControl.ThrowPlayer();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
 
 
