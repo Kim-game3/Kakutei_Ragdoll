@@ -1813,6 +1813,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1679412205983287967, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
+      propertyPath: m_Navigation.m_SelectOnUp
+      value: 
+      objectReference: {fileID: 782588062}
     - target: {fileID: 2272397476318306780, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1913,6 +1917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionMenuGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 5922904220181254789, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 782588062}
     - target: {fileID: 6060819746760782333, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
