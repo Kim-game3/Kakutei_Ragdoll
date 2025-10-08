@@ -13,4 +13,12 @@ public class ObjectTagNameDictionary
     const string _playerTagName = "Player";
 
     public static string Player { get { return _playerTagName; } }
+
+
+    /// <summary>
+    /// …‚Ìƒ^ƒO–¼
+    /// </summary>
+    const string _waterTagName = "Water";
+    
+    public static string Water { get { return _waterTagName; } }
 }
