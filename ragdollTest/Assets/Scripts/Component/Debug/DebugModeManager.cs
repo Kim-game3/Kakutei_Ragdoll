@@ -17,10 +17,10 @@ public class DebugModeManager : MonoBehaviour
 
     [Space]
     [CustomLabel("プレイヤーの位置情報")] [Tooltip("プレイヤーの一番上の階層のTransformを入れてください")] [SerializeField]
-    Transform _playerTrs;
+    TransformReference _playerTrs;
 
     [CustomLabel("プレイヤーのRigidbody")] [SerializeField]//プレイヤーをスタート地点に投げ飛ばす際に使う
-    Rigidbody _body;
+    RigidbodyReference _body;
 
     [SerializeField]
     CanvasGroup _debugWindow;
@@ -80,15 +80,15 @@ public class DebugModeManager : MonoBehaviour
             yield break;
         }
 
-        _body.isKinematic = true;
-        _playerTrs.position = warpPoint.position;
+        _body.Rigidbody.isKinematic = true;
+        _playerTrs.Transform.position = warpPoint.position;
 
         for(int i=0; i< _waitFrame; i++)
         {
             yield return null;
         }
         
-        _body.isKinematic = false;
+        _body.Rigidbody.isKinematic = false;
     }
 
     private void Start()

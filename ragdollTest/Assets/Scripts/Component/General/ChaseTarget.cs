@@ -7,11 +7,12 @@ using UnityEngine;
 
 public class ChaseTarget : MonoBehaviour
 {
-    [CustomLabel("’Ç‚¢‚©‚¯‚é‘ÎÛ")] [SerializeField] Transform _target;
+    [CustomLabel("’Ç‚¢‚©‚¯‚é‘ÎÛ")] [SerializeField] 
+    TransformReference _target;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = _target.position;
+        transform.position = _target.Transform.position;
     }
 }
