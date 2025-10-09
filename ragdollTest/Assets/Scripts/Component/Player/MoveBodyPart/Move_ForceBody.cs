@@ -11,7 +11,7 @@ using UnityEngine.InputSystem;
 public class Move_ForceBody : MonoBehaviour
 {
     [CustomLabel("動かすキャラの身体のパーツ")] [SerializeField]
-    Rigidbody _body;
+    RigidbodyReference _body;
 
     [CustomLabel("かける力")] [SerializeField]
     float _power;
@@ -26,7 +26,7 @@ public class Move_ForceBody : MonoBehaviour
     public event Action OnMove;
     public event Action<Vector3> OnMove_Vec;//引数に加速方向の3Dベクトルが入る
 
-    public Rigidbody Body { get { return _body; } }//動かす身体のパーツ
+    public Rigidbody Body { get { return _body.Rigidbody; } }//動かす身体のパーツ
 
     public void Input_Move(InputAction.CallbackContext context)//移動入力
     {
@@ -60,7 +60,7 @@ public class Move_ForceBody : MonoBehaviour
 
         Vector3 force = forceDirection * _power;
 
-        _body.AddForce(force,ForceMode.VelocityChange);
+        _body.Rigidbody.AddForce(force,ForceMode.VelocityChange);
 
         OnMove?.Invoke();
         OnMove_Vec?.Invoke(forceDirection);

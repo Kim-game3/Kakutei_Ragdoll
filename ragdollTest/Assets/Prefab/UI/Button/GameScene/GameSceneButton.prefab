@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1263282361747080039, guid: 6848be4ed4d162a4dae59f55942ccbd2, type: 3}
       propertyPath: m_Name
-      value: Button
+      value: GameSceneButton
       objectReference: {fileID: 0}
     - target: {fileID: 1886034045377716370, guid: 6848be4ed4d162a4dae59f55942ccbd2, type: 3}
       propertyPath: m_Pivot.x
@@ -38,11 +38,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1886034045377716370, guid: 6848be4ed4d162a4dae59f55942ccbd2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1886034045377716370, guid: 6848be4ed4d162a4dae59f55942ccbd2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 54.2
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1886034045377716370, guid: 6848be4ed4d162a4dae59f55942ccbd2, type: 3}
       propertyPath: m_LocalPosition.x

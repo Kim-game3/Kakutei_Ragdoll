@@ -14,25 +14,25 @@ public partial class RestartManager
         Transform _restartPoint;
 
         [CustomLabel("プレイヤーの位置情報")] [Tooltip("プレイヤーの一番上の階層のTransformを入れてください")] [SerializeField]
-        Transform _playerTrs;
+        TransformReference _playerTrs;
 
         [CustomLabel("プレイヤーのRigidbody")] [SerializeField]//プレイヤーをスタート地点に投げ飛ばす際に使う
-        Rigidbody _body;
+        RigidbodyReference _body;
 
         [CustomLabel("かける力の大きさ")] [SerializeField]
         float _power;
 
         public void BackToRestartPoint()//プレイヤーをリスタート地点に移動させる
         {
-            _body.isKinematic = true;
-            _playerTrs.position = _restartPoint.position;
+            _body.Rigidbody.isKinematic = true;
+            _playerTrs.Transform.position = _restartPoint.position;
         }
 
         public void ThrowPlayer()//初期地点に戻るように投げ飛ばす
         {
-            _body.isKinematic=false;
+            _body.Rigidbody.isKinematic=false;
             Vector3 force = _restartPoint.forward * _power;
-            _body.AddForce(force,ForceMode.VelocityChange);
+            _body.Rigidbody.AddForce(force,ForceMode.VelocityChange);
         }
     }
 }
