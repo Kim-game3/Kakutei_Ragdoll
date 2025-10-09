@@ -16848,6 +16848,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1862561237}
     m_Modifications:
+    - target: {fileID: 471775692562078002, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 471775692562078002, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 550550917392999386, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: _audioSource
       value: 
@@ -16856,6 +16864,14 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 909162211}
+    - target: {fileID: 1216379353354532853, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216379353354532853, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 1239346479301241860, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -16876,6 +16892,14 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 909162211}
+    - target: {fileID: 1648720357906905332, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648720357906905332, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 1884857220004476412, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: _audioSource
       value: 
@@ -16916,6 +16940,14 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 909162211}
+    - target: {fileID: 4253608266201463449, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253608266201463449, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5337568026747342489, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: _audioSource
       value: 
@@ -16951,6 +16983,14 @@ PrefabInstance:
     - target: {fileID: 7884910567624690034, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221047761854333755, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221047761854333755, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 8709449674550640946, guid: 2cf3310d974a34f4aaa77064e8560d6e, type: 3}
       propertyPath: _audioSource

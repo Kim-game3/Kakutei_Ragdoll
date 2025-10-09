@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
       propertyPath: m_LocalScale.x
@@ -1941,6 +1941,10 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
+    - target: {fileID: 8467624862051557071, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8972284771546496189, guid: 8ec79dc5cb206484da7bbc71e4cb67fc, type: 3}
       propertyPath: _audioSource
       value: 
@@ -1966,6 +1970,10 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
+    - target: {fileID: 2076411444695398398, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 2338718678104420029, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
@@ -2050,6 +2058,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5104663288390069979, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5327311659218587805, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
@@ -2066,10 +2078,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleFrontGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 6663177195599868982, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4288751921
+      objectReference: {fileID: 0}
     - target: {fileID: 7419379621304761136, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1242265705}
+    - target: {fileID: 7800172160605419833, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8451638777568725470, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8823467825719179160, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
