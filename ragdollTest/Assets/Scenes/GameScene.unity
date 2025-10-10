@@ -8631,8 +8631,24 @@ PrefabInstance:
       value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -159.3
       objectReference: {fileID: 0}
     - target: {fileID: 4203677240734155177, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_SceneBindings.Array.size
