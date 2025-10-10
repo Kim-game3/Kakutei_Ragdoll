@@ -24,6 +24,8 @@ public class RotateAxis_Object : MonoBehaviour
 
         float angle=MathfExtension.CircleAngle*rate;
 
-        _target.Rotate(transform.forward, angle);
+        Quaternion angleRot = Quaternion.AngleAxis(angle,transform.forward);
+
+        _target.rotation=angleRot*_target.rotation;
     }
 }
