@@ -8,6 +8,9 @@ using UnityEngine.InputSystem;
 
 public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
 {
+    [Tooltip("BGMを流すAudioSource")] [SerializeField]
+    AudioSource _bgmAudioSource;
+
     // --- 操作可能切り替え --- // 
     [SerializeField] PlayerInput _playerInput;
 
@@ -20,6 +23,7 @@ public class SceneFlowStateTypePlaying_MainGame : SceneFlowStateTypeBase
     public override void OnEnter()
     {
         _finished = false;
+        _bgmAudioSource.Play();//BGMを流し始める
         _playerInput.SwitchCurrentActionMap(ActionMapNameDictionary.Controllable);//プレイヤーを操作可能にする
         _stopWatch.SwitchStartStop();//ストップウォッチ開始
     }
