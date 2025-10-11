@@ -17,7 +17,7 @@ public class TouchWaterEffect : MonoBehaviour
     DetectTouchWater[] _detectTouchWaters;
 
     [SerializeField]
-    RestartManager _restartManager;
+    RestartProcess _restartManager;
 
     [SerializeField]
     ParticleSystem _waterSplashParticle;

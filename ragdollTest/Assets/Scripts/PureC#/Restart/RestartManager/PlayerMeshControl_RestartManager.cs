@@ -5,7 +5,7 @@ using UnityEngine;
 //作成者:杉山
 //リスタート時のプレイヤーのメッシュ表示の処理
 
-public partial class RestartManager
+public partial class RestartProcess
 {
     [System.Serializable]
     class PlayerMeshControl

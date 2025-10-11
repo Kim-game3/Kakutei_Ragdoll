@@ -4,7 +4,7 @@ using UnityEngine;
 //作成者:杉山
 //リスタート時のカメラ関係の処理
 
-public partial class RestartManager
+public partial class RestartProcess
 {
     [System.Serializable]
     class CameraControl
@@ -12,8 +12,7 @@ public partial class RestartManager
         [CustomLabel("ゲーム中に操作するカメラ")] [SerializeField]
         CinemachineVirtualCamera _playCamera;
 
-        [CustomLabel("リスタート地点のカメラ")] [SerializeField]
-        CinemachineVirtualCamera _restartPointCamera;
+        CinemachineVirtualCamera _restartPointCamera;//リスタート地点のカメラ
 
         //プレイヤーが操作するカメラの追従対象
         Transform _playCameraFollow;
@@ -43,6 +42,14 @@ public partial class RestartManager
 
             _defaultVerticalValue_PlayCamera = _pov.m_VerticalAxis.Value;
             _defaultHorizontalValue_PlayCamera = _pov.m_HorizontalAxis.Value;
+        }
+
+        //リスタートが始まった瞬間に呼ばれる
+        public void InitOnRestart(CinemachineVirtualCamera restartPointCamera, float defaultVerticalValue_PlayCamera, float defaultHorizontalValue_PlayCamera)
+        {
+            _restartPointCamera = restartPointCamera;
+            _defaultVerticalValue_PlayCamera= defaultVerticalValue_PlayCamera;
+            _defaultHorizontalValue_PlayCamera=defaultHorizontalValue_PlayCamera;
         }
 
         public void SetDefault_PlayeCamera()//プレイヤーが操作するカメラを初期の向きに戻す
