@@ -525,6 +525,10 @@ PrefabInstance:
       propertyPath: _uiProcess._closePauseMenu
       value: 
       objectReference: {fileID: 3937884857890162042}
+    - target: {fileID: 7508212423361458050, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
+      propertyPath: _internalProcess._playerInput
+      value: 
+      objectReference: {fileID: 1530644322}
     - target: {fileID: 7715969948521827550, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
       propertyPath: _slider
       value: 
@@ -17752,8 +17756,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20047946, y: 0, z: 0, w: 0.97969794}
-  m_LocalPosition: {x: 5.96389, y: 6.097308, z: 38.246113}
+  m_LocalRotation: {x: 0.20452653, y: 0.28455153, z: -0.062276416, w: 0.9345165}
+  m_LocalPosition: {x: 36.523888, y: 12.357309, z: 123.486115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23042,14 +23046,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400000169}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20047946, y: 0, z: 0, w: 0.97969794}
-  m_LocalPosition: {x: 3.24, y: 2.88, z: 25.16}
+  m_LocalRotation: {x: 0.20452653, y: 0.28455153, z: -0.062276416, w: 0.9345165}
+  m_LocalPosition: {x: 33.8, y: 9.14, z: 110.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1202199851}
   m_Father: {fileID: 926103864}
-  m_LocalEulerAnglesHint: {x: 23.13, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.69, y: 33.87, z: 0}
 --- !u!114 &1400000171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39620,7 +39624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1309899775359063063, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _minCoolTime
-      value: 0.5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1309899775359063063, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _moveSEs.Array.size
