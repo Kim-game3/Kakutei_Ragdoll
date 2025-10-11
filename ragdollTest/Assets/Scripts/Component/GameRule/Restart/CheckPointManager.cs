@@ -22,6 +22,8 @@ public class CheckPointManager : MonoBehaviour
     public void UpdateCheckPoint(int newCheckPointIndex)//チェックポイントの更新
     {
         if (newCheckPointIndex <= _currentCheckPointIndex) return;
+
+        _currentCheckPointIndex=newCheckPointIndex;
     }
 
     private void Awake()

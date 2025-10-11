@@ -32,6 +32,9 @@ public partial class RestartProcess : MonoBehaviour
     [SerializeField]//リスタート時のプレイヤーの表示の処理をまとめたもの
     PlayerMeshControl _playerMeshControl;
 
+    [SerializeField]//シャチの位置の処理をまとめたもの
+    OrcaPosControl _orcaPosControl;
+
     bool _isRestarting = false;//リスタート中か
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
@@ -84,6 +87,7 @@ public partial class RestartProcess : MonoBehaviour
         _playerPosControl.BackToRestartPoint();//プレイヤーをリスタート地点に戻す
         _playerMeshControl.ChangeMeshEnabled(false);//プレイヤーを非表示にする
         _cameraControl.SetDefault_PlayeCamera();//操作カメラの向きを初期に戻す
+        _orcaPosControl.ChangePos(_restartElements[checkPointIndex]._orcaSpawnPos);//シャチを指定位置に移動
 
 
         yield return new WaitUntil(() => _finishedFadeIn);//完全に明転するまで待つ

@@ -16,11 +16,17 @@ public struct RestartElement
     public float defaultHorizontalValue_PlayCamera;
     [Space]
 
+
     //--- リスタート関係 ---//
     [CustomLabel("リスタート地点&方向")] [Tooltip("プレイヤーがこの地点に出現＆この方向に向かって投げ飛ばされる")]
     public Transform restartPoint;
 
     [CustomLabel("かける力の大きさ")]
     public float power;
+
+
+    //--- シャチ関係 ---//
+    [Tooltip("シャチの出現位置・方向")]
+    public Transform _orcaSpawnPos;
 }
 

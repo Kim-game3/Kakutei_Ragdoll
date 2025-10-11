@@ -10,13 +10,13 @@ public partial class RestartProcess
     [System.Serializable]
     class PlayerPosControl
     {
-        Transform _restartPoint;//リスタート地点&方向
-
         [CustomLabel("プレイヤーの位置情報")] [Tooltip("プレイヤーの一番上の階層のTransformを入れてください")] [SerializeField]
         TransformReference _playerTrs;
 
         [CustomLabel("プレイヤーのRigidbody")] [SerializeField]//プレイヤーをスタート地点に投げ飛ばす際に使う
         RigidbodyReference _body;
+
+        Transform _restartPoint;//リスタート地点&方向
 
         float _power;//かける力の大きさ
 
