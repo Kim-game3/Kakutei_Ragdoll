@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //作成者:杉山
 //シーンの流れ(リザルトシーン)のムービーステート
@@ -10,8 +12,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
 {
+
+    [Tooltip("最初に選択状態になるボタン")] [SerializeField]
+    Button _defaultButton;
+
     [SerializeField]
-    HideUITypeBase[] _hideUIs;
+    EventSystem _eventSystem;
 
     [SerializeField]
     PlayableDirector _resultMovieTimeline;
@@ -19,7 +25,7 @@ public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
     public override void OnEnter()
     {
         _resultMovieTimeline.Play();
-        HideUIs();
+        _eventSystem.SetSelectedGameObject(_defaultButton.gameObject);
         _finished = false;
     }
 
@@ -41,13 +47,5 @@ public class SceneFlowStateTypeMovie_Result : SceneFlowStateTypeBase
     void SetFinishedTrue(PlayableDirector director)
     {
         _finished = true;
-    }
-
-    void HideUIs()
-    {
-        for(int i=0; i<_hideUIs.Length ;i++)
-        {
-            _hideUIs[i].Hide();
-        }
     }
 }
