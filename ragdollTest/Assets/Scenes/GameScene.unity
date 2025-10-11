@@ -17641,6 +17641,7 @@ Transform:
   m_Children:
   - {fileID: 1387919125}
   - {fileID: 1819502073}
+  - {fileID: 1125729103}
   m_Father: {fileID: 4064680034383877875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016918593
@@ -19235,6 +19236,37 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1125729102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125729103}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1125729103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125729102}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.6056746, z: -0, w: 0.7957125}
+  m_LocalPosition: {x: -8.33, y: -5.53, z: -31.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1012775890}
+  m_LocalEulerAnglesHint: {x: 0, y: 74.555, z: 0}
 --- !u!43 &1141107497
 Mesh:
   m_ObjectHideFlags: 0
@@ -39356,6 +39388,10 @@ PrefabInstance:
       propertyPath: _restartElements.Array.data[1]._orcaSpawnPos
       value: 
       objectReference: {fileID: 1819502073}
+    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: _restartElements.Array.data[2]._orcaSpawnPos
+      value: 
+      objectReference: {fileID: 1125729103}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _playerMeshControl._playerMeshs.Array.data[0]
       value: 
