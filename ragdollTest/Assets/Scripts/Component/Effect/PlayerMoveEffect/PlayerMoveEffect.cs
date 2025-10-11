@@ -8,10 +8,12 @@ using UnityEngine;
 public class PlayerMoveEffect : MonoBehaviour
 {
     [Tooltip("動く時の効果音")] [SerializeField]
-    AudioClip _moveSE;
+    AudioClip[] _moveSEs;
 
-    [Tooltip("効果音を鳴らした時のクールタイム\n連打しても音が鳴りすぎないようにすることが出来る")] [SerializeField]
-    float _coolTime;
+    [Tooltip("効果音を鳴らした時のクールタイム\n連打しても音が鳴りすぎないようにすることが出来る")] 
+    
+    [SerializeField] float _minCoolTime;
+    [SerializeField] float _maxCoolTime;
 
     [SerializeField]
     AudioSource _audioSource;
@@ -30,14 +32,17 @@ public class PlayerMoveEffect : MonoBehaviour
     {
         if (!_ableToPlay) return;
 
-        _audioSource.PlayOneShot(_moveSE);
+        //鳴らす音をランダムに決定
+        AudioClip clip = _moveSEs[MathfExtension.RandomRange(0, _moveSEs.Length)];
+
+        _audioSource.PlayOneShot(clip);
         StartCoroutine(PlaySoundCoolTime());
     }
 
     IEnumerator PlaySoundCoolTime()
     {
         _ableToPlay = false;
-        yield return new WaitForSecondsRealtime(_coolTime);
+        yield return new WaitForSecondsRealtime(MathfExtension.RandomRange(_minCoolTime,_maxCoolTime));
         _ableToPlay = true;
     }
 }
