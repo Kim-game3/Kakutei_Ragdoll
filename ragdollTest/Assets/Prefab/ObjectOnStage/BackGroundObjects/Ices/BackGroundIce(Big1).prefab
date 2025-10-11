@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1554373792291575626}
   - component: {fileID: 6053596803307168985}
   - component: {fileID: 2770815342254880604}
-  - component: {fileID: 6097597640840053849}
   m_Layer: 0
   m_Name: BackGroundIce(Big1)
   m_TagString: Untagged
@@ -703,26 +702,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687110875925235663}
-  m_Mesh: {fileID: 0}
---- !u!64 &6097597640840053849
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1687110875925235663}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
