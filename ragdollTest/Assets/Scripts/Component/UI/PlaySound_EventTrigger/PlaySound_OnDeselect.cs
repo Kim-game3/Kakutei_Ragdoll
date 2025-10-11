@@ -17,6 +17,7 @@ public class PlaySound_OnDeselect : MonoBehaviour, IDeselectHandler
 
     public void OnDeselect(BaseEventData eventData)
     {
+        if(_audioSource!=null&&_clip!=null)
         _audioSource.PlayOneShot(_clip);
     }
 }
