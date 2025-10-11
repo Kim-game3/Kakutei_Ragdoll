@@ -39473,25 +39473,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2322466549582021045, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2322466549582021045, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_HighTwistLimit.limit
-      value: 150.61136
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257613438615062121, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_SwingAxis.z
-      value: -21.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257613438615062121, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: -146.90736
-      objectReference: {fileID: 0}
-    - target: {fileID: 4257613438615062121, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_HighTwistLimit.limit
-      value: 7.4228516
+    - target: {fileID: 1309899775359063063, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: _moveSE
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a2cf17c65963bf479867b0080ed9722, type: 3}
+    - target: {fileID: 1309899775359063063, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: _coolTime
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4271090110795208420, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39537,69 +39525,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5614372649641434403, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883255345487391644, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_SwingAxis.z
-      value: -7.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883255345487391644, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: -153.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883255345487391644, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_HighTwistLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883255345487391644, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.161
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.2059
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7215664021224213668, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 7340308893461383714, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _baseDirection
       value: 
       objectReference: {fileID: 963194228}
-    - target: {fileID: 7542385269765226274, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_LowTwistLimit.limit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7542385269765226274, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_HighTwistLimit.limit
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757857371282844963, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_Axis.y
-      value: -2.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757857371282844963, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
-      propertyPath: m_SwingAxis.z
-      value: 5.78
+    - target: {fileID: 8432890306074835426, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Volume
+      value: 0.091
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
