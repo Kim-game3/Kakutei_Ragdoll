@@ -3646,26 +3646,6 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1252897169}
-    - target: {fileID: 2076411444695398398, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2076411444695398398, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 411.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2227539937518221803, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2338718678104420029, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
@@ -3750,34 +3730,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2933868095406228694, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_text
-      value: "\u30A2\u30B6\u30E9\u30B7\u3001\n\u5BB6\u306B\u5E30\u308B"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933868095406228694, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_fontColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933868095406228694, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_fontColor.g
-      value: 0.6239082
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933868095406228694, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_fontColor.r
-      value: 0.25471687
-      objectReference: {fileID: 0}
-    - target: {fileID: 2933868095406228694, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4294942529
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104663288390069979, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5104663288390069979, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 411.8
-      objectReference: {fileID: 0}
     - target: {fileID: 5327311659218587805, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
@@ -3794,46 +3746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleFrontGroup
       objectReference: {fileID: 0}
-    - target: {fileID: 6663177195599868982, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4288751921
-      objectReference: {fileID: 0}
     - target: {fileID: 7419379621304761136, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1252897169}
-    - target: {fileID: 7800172160605419833, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800172160605419833, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 411.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025821077082200388, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 420.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025821077082200388, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 303.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451638777568725470, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8451638777568725470, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 411.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706648633964908321, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8706648633964908321, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -577.4
-      objectReference: {fileID: 0}
     - target: {fileID: 8823467825719179160, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
       propertyPath: _audioSource
       value: 
