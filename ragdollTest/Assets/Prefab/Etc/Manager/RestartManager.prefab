@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &559340389470472767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4522057037524127112}
+  m_Layer: 0
+  m_Name: RestartPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4522057037524127112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559340389470472767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.02795322, y: 0.96008754, z: 0.25815293, w: 0.10395986}
+  m_LocalPosition: {x: 74.93, y: -0.49, z: -1}
+  m_LocalScale: {x: 303.84637, y: 44.296135, z: 88.26751}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5391970835028539369}
+  m_LocalEulerAnglesHint: {x: -30.1, y: 167.64, z: 0}
 --- !u!1 &1826657486939717002
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,6 +63,7 @@ Transform:
   - {fileID: 3783191938607227080}
   - {fileID: 1125285050156661413}
   - {fileID: 6245658869691011375}
+  - {fileID: 4522057037524127112}
   m_Father: {fileID: 6059501945379574525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2165809435774053415
@@ -69,6 +101,7 @@ Transform:
   - {fileID: 2251734395903860420}
   - {fileID: 4023941246104021566}
   - {fileID: 5391970835028539369}
+  - {fileID: 4383784677403224258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7351632747151387945
@@ -104,16 +137,25 @@ MonoBehaviour:
     defaultHorizontalValue_PlayCamera: 0
     restartPoint: {fileID: 3783191938607227080}
     power: 350
+    _orcaSpawnPos: {fileID: 2595476344676989633}
   - restartPointCamera: {fileID: 0}
     defaultVerticalValue_PlayCamera: 18.61
     defaultHorizontalValue_PlayCamera: 80
     restartPoint: {fileID: 1125285050156661413}
     power: 320
+    _orcaSpawnPos: {fileID: 3899716919383590736}
   - restartPointCamera: {fileID: 0}
     defaultVerticalValue_PlayCamera: 18.61
     defaultHorizontalValue_PlayCamera: 80
     restartPoint: {fileID: 6245658869691011375}
     power: 340
+    _orcaSpawnPos: {fileID: 7281410463985472971}
+  - restartPointCamera: {fileID: 0}
+    defaultVerticalValue_PlayCamera: 18.61
+    defaultHorizontalValue_PlayCamera: 80
+    restartPoint: {fileID: 6245658869691011375}
+    power: 340
+    _orcaSpawnPos: {fileID: 3600176666055916577}
   _waitDuration_FromFinishFadeIn: 0.7
   _waitDuration_FromCameraFollowPlayer: 1
   _restartTimeLine: {fileID: 4203677240734155177}
@@ -131,6 +173,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+  _orcaPosControl:
+    _orcaTrs: {fileID: 0}
 --- !u!114 &823513986564365084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +188,130 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _restartManager: {fileID: 7351632747151387945}
+--- !u!1 &2441815174039978679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7281410463985472971}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7281410463985472971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2441815174039978679}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.6056746, z: -0, w: 0.7957125}
+  m_LocalPosition: {x: -8.33, y: -5.53, z: -31.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4383784677403224258}
+  m_LocalEulerAnglesHint: {x: 0, y: 74.555, z: 0}
+--- !u!1 &3287749995674684304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2595476344676989633}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2595476344676989633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3287749995674684304}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1100001, y: -5.15, z: -164.66406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4383784677403224258}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3574502125034725824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3600176666055916577}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3600176666055916577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574502125034725824}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.6056746, z: -0, w: 0.7957125}
+  m_LocalPosition: {x: 74.45, y: -5.53, z: 2.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4383784677403224258}
+  m_LocalEulerAnglesHint: {x: 0, y: 74.555, z: 0}
+--- !u!1 &4976910148179488144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3899716919383590736}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3899716919383590736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4976910148179488144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 32.03, y: -6.29, z: -109.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4383784677403224258}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &5330393142824039535
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +666,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5391970835028539369}
   m_LocalEulerAnglesHint: {x: -30, y: 82.86, z: 0}
+--- !u!1 &7496856256656915962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4383784677403224258}
+  m_Layer: 0
+  m_Name: OrcaSpawnPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383784677403224258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496856256656915962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2595476344676989633}
+  - {fileID: 3899716919383590736}
+  - {fileID: 7281410463985472971}
+  - {fileID: 3600176666055916577}
+  m_Father: {fileID: 6059501945379574525}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7925298499337986140
 GameObject:
   m_ObjectHideFlags: 0
