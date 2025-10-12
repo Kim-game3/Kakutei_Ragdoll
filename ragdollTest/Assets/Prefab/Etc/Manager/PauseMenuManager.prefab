@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7715969948521827550}
   - component: {fileID: 7722057391470716513}
   - component: {fileID: 4078709255304891815}
+  - component: {fileID: 5124428706338025878}
+  - component: {fileID: 6508927597819672722}
   m_Layer: 0
   m_Name: Option
   m_TagString: Untagged
@@ -101,6 +103,38 @@ MonoBehaviour:
   _slider: {fileID: 0}
   _audioMixer: {fileID: 24100000, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
   _soundConfigs: {fileID: 11400000, guid: 118fe41b20d5d08419b555785f62db7a, type: 2}
+--- !u!114 &5124428706338025878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929c3c895af41a9438f529d9d3c1a162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _axis: 0
+  _toggle: {fileID: 0}
+  _setInvertCameraControl: {fileID: 0}
+  _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
+--- !u!114 &6508927597819672722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929c3c895af41a9438f529d9d3c1a162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _axis: 1
+  _toggle: {fileID: 0}
+  _setInvertCameraControl: {fileID: 0}
+  _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
 --- !u!1 &1213965880369365237
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +184,6 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 8157fc5a55623bd44a7384622107519d, type: 3}
     scenePath: Assets/Scenes/TitleScene.unity
   _targetButton: {fileID: 0}
-  _canvas: {fileID: 0}
 --- !u!1 &5292473263051686706
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +233,6 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
     scenePath: Assets/Scenes/GameScene.unity
   _targetButton: {fileID: 0}
-  _canvas: {fileID: 0}
 --- !u!1 &5455596874312265742
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,6 +278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _resumeButton: {fileID: 0}
+  _internalProcess:
+    _playerInput: {fileID: 0}
   _uiProcess:
     _eventSystem: {fileID: 0}
     _openInGameUI: {fileID: 0}

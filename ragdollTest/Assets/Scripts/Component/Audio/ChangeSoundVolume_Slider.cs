@@ -40,9 +40,8 @@ public class ChangeSoundVolume_Slider : MonoBehaviour
         _slider.maxValue = _soundConfigs.MaxVolume(_soundType);
         _slider.minValue= _soundConfigs.MinVolume(_soundType);
 
-        //スライダーの現在の値を設定
-        string soundName = AudioMixerName.SoundName(_soundType);
-        _audioMixer.GetFloat(soundName,out var value);
-        _slider.value = value;
+        //セーブデータから現在の音量を取ってきて、スライダーの現在の値を設定
+        SoundVolumeData soundVolumeSaveData = PlayerDataManager.GetSoundVolume(_soundType);
+        _slider.value = (soundVolumeSaveData != null) ? soundVolumeSaveData.Value : _soundConfigs.DefaultVolume(_soundType);
     }
 }
