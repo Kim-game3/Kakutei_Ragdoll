@@ -187,6 +187,8 @@ GameObject:
   - component: {fileID: 210101165}
   - component: {fileID: 210101164}
   - component: {fileID: 210101163}
+  - component: {fileID: 210101168}
+  - component: {fileID: 210101167}
   m_Layer: 0
   m_Name: Option
   m_TagString: Untagged
@@ -275,6 +277,38 @@ MonoBehaviour:
     _eventSystem: {fileID: 1442386751}
     _openOption: {fileID: 5646453011290720445}
     _closeOption: {fileID: 1376735855309430176}
+--- !u!114 &210101167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210101161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929c3c895af41a9438f529d9d3c1a162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _axis: 1
+  _toggle: {fileID: 903567527}
+  _setInvertCameraControl: {fileID: 0}
+  _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
+--- !u!114 &210101168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210101161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 929c3c895af41a9438f529d9d3c1a162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _axis: 0
+  _toggle: {fileID: 1843460466}
+  _setInvertCameraControl: {fileID: 0}
+  _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
 --- !u!1001 &270729440
 PrefabInstance:
   m_ObjectHideFlags: 0
