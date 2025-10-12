@@ -12,7 +12,7 @@ public class ResultSceneFlow : MonoBehaviour
     bool _playOnAwake;
 
     [Tooltip("ムービーシーンのステート")][SerializeField] SceneFlowStateTypeMovie_Result _movie;
-    [Tooltip("結果表示のステート")] [SerializeField] SceneFlowStateTypeShowScore_Result _showScore;
+    //[Tooltip("結果表示のステート")] [SerializeField] SceneFlowStateTypeShowScore_Result _showScore;
 
     SceneFlowStateTypeBase _currentState;//現在のステート
 
@@ -30,8 +30,8 @@ public class ResultSceneFlow : MonoBehaviour
         yield return CurrentStateUpdate();
 
         //結果表示ステート
-        ChangeState(_showScore);
-        yield return CurrentStateUpdate();
+        //ChangeState(_showScore);
+        //yield return CurrentStateUpdate();
 
         _currentState.OnExit();
     }
