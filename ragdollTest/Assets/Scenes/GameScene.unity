@@ -47802,8 +47802,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16168995, y: 0, z: 0, w: 0.9868416}
-  m_LocalPosition: {x: 5.86, y: 2.5328155, z: -10.944868}
+  m_LocalRotation: {x: 0, y: 0.66196626, z: 0, w: 0.7495337}
+  m_LocalPosition: {x: 160.6939, y: 70.56731, z: 161.74611}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -64758,6 +64758,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8faf25ab-8c41-4dfa-b756-35b8ad046561
     m_ActionName: Movie/Skip[/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 78903150}
+        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+        m_MethodName: SwitchPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c7fbd068-da06-47f2-8a50-aee84e71386f
+    m_ActionName: Restart/Pause[/Keyboard/escape,/Keyboard/p]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movie

@@ -79,8 +79,7 @@ public partial class RestartProcess : MonoBehaviour
         _finishedFadeIn=false;
         _inputControl.SetControllable(false);//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
-        _restartTimeLine.Play();//タイムラインを再生
-
+        PlayTimelineFromBeginning();
 
         yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
         _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
@@ -103,6 +102,13 @@ public partial class RestartProcess : MonoBehaviour
         yield return new WaitForSeconds(_waitDuration_FromCameraFollowPlayer);//さらに数秒待つ
         _inputControl.SetControllable(true);//操作可能にする
         _isRestarting = false;
+    }
+
+    void PlayTimelineFromBeginning()//タイムラインを最初から再生
+    {
+        _restartTimeLine.time = 0;
+        _restartTimeLine.Evaluate();
+        _restartTimeLine.Play();
     }
 
     void InitOnRestart(int checkPointIndex)//リスタート開始の度に呼ぶ初期化処理
