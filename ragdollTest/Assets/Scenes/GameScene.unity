@@ -47802,8 +47802,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.66196626, z: 0, w: 0.7495337}
-  m_LocalPosition: {x: 160.6939, y: 70.56731, z: 161.74611}
+  m_LocalRotation: {x: 0.16168995, y: 0, z: 0, w: 0.9868416}
+  m_LocalPosition: {x: 5.86, y: 2.5328155, z: -10.944868}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47887,11 +47887,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!4 &964217433 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-  m_PrefabInstance: {fileID: 6084041446501906107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &964494013
 Mesh:
   m_ObjectHideFlags: 0
@@ -86508,22 +86503,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RestartManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3204158353810549217, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023941246104021566, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4203677240734155177, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -86544,34 +86523,6 @@ PrefabInstance:
       propertyPath: m_ExposedReferences.m_References.Array.data[0].second
       value: 
       objectReference: {fileID: 1016918593}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.10178732
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.035048176
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.94002384
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.32367605
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522057037524127112, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -38
-      objectReference: {fileID: 0}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _playerPosControl._body
       value: 
@@ -86592,14 +86543,6 @@ PrefabInstance:
       propertyPath: _playerPosControl._playerTrs
       value: 
       objectReference: {fileID: 6934566165365889711}
-    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: _restartElements.Array.data[3].power
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
-      propertyPath: _restartElements.Array.data[3].restartPoint
-      value: 
-      objectReference: {fileID: 964217433}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _playerMeshControl._playerMeshs.Array.data[0]
       value: 

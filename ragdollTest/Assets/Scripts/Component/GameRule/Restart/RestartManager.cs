@@ -13,13 +13,16 @@ public class RestartManager : MonoBehaviour
     RestartProcess _restartProcess;
 
     [Tooltip("リスタートゾーンのトリガー")] [SerializeField] 
-    OnTriggerDetect _restartZoneTrigger;
+    OnTriggerDetect[] _restartZoneTriggers;
 
     public event Action OnRestrat;//水に落ちた瞬間に呼ぶ
 
     private void Awake()
     {
-        _restartZoneTrigger.OnEnter += OnHit_RestartTrigger;
+        for(int i=0; i<_restartZoneTriggers.Length ;i++)
+        {
+            _restartZoneTriggers[i].OnEnter += OnHit_RestartTrigger;
+        }
     }
 
     private void Start() { }//enabledのチェック欄を出すためにわざと空のStartを入れてます
