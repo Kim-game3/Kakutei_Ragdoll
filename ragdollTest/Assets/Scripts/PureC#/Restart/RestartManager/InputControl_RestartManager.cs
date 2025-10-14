@@ -14,7 +14,7 @@ public partial class RestartProcess
 
         public void SetControllable(bool isControllable)//‘€ì‰Â”\ó‘Ô‚ÌØ‚è‘Ö‚¦
         {
-            string newActionMapName = isControllable ? ActionMapNameDictionary.Controllable : ActionMapNameDictionary.UnControllable; 
+            string newActionMapName = isControllable ? ActionMapNameDictionary.Controllable : ActionMapNameDictionary.Restart; 
 
             _playerInput.SwitchCurrentActionMap(newActionMapName);
         }

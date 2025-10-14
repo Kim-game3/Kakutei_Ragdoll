@@ -25,6 +25,14 @@ public class ActionMapNameDictionary
 
 
     /// <summary>
+    ///リスタート中のActionMap名
+    /// </summary>
+    const string _restartActionMapName = "Restart";
+    public static string Restart { get { return _restartActionMapName; } }
+
+
+
+    /// <summary>
     ///ムービーシーン中のActionMap名
     /// </summary>
     const string _movieActionMapName = "Movie";
