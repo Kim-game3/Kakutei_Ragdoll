@@ -11,14 +11,11 @@ public class Wind : MonoBehaviour
     [Tooltip("風の強さ")] [SerializeField]
     float _windPower;
 
-    [Tooltip("風が見える距離限界\n(WindHitZoneのトリガーより)かなり広めにとることをおすすめする")] [SerializeField]
-    float _visibleDistanceLimit;
+    [Tooltip("カメラとの距離を測る機能\n距離は風が見える限界距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
+    JudgeIsNearFromMainCamera _judgeIsNearFromMainCamera;
 
     [Tooltip("風を出す周期")] [SerializeField]
     TimeSwitchBool _windCycle;
-
-    [Tooltip("自分の位置")] [SerializeField]
-    Transform _myTrs;
 
     [SerializeField]
     WindHitZone _windZone;
@@ -27,9 +24,6 @@ public class Wind : MonoBehaviour
     WindAffectBody _playerWindAffect;
 
     WindInfo _myWindInfo;
-    float _sqrtDistanceFromCamera;
-
-    public bool IsInRangeVisibleWind { get { return (_sqrtDistanceFromCamera <= _visibleDistanceLimit * _visibleDistanceLimit); } }
 
     private void Awake()
     {
@@ -51,26 +45,20 @@ public class Wind : MonoBehaviour
 
     private void OnBlowWind()//風が吹き始めた時
     {
-        if (!IsInRangeVisibleWind) return;
-
         Debug.Log("風が吹く");
     }
 
     private void OnStopWind()//風が止んだ時
     {
-        if (!IsInRangeVisibleWind) return;
-
         Debug.Log("風が止む");
     }
 
-    
-
     private void Update()
     {
-        _sqrtDistanceFromCamera = (Camera.main.transform.position-_myTrs.position).sqrMagnitude;
+        _judgeIsNearFromMainCamera.Update();
 
         //プレイヤーが近くに来た時だけ風全体の処理をする
-        if (!IsInRangeVisibleWind) return;
+        if (!_judgeIsNearFromMainCamera.IsClose) return;
 
         _windCycle.Update();
 
@@ -80,13 +68,7 @@ public class Wind : MonoBehaviour
 
         if(isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
         {
-            AffectWindToPlayer();
+            _playerWindAffect.AddWind(_myWindInfo);
         }
     }
-
-    void AffectWindToPlayer()
-    {
-        _playerWindAffect.AddWind(_myWindInfo);
-    }
-
 }

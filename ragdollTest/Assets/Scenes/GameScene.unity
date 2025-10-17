@@ -32417,14 +32417,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453229333}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 36.64, y: -2.04, z: 47.15}
+  m_LocalRotation: {x: -0.4210971, y: 0.32542503, z: 0.16502614, w: 0.8303868}
+  m_LocalPosition: {x: 10.1, y: -2, z: -5.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 464469904}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -53.78, y: 42.8, z: 0}
 --- !u!114 &453229336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32438,12 +32438,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _windPower: 500
-  _visibleDistanceLimit: 150
+  _judgeIsNearFromMainCamera:
+    _distanceLimit: 600
+    _myTrs: {fileID: 453229335}
   _windCycle:
     _activateTimeline:
     - isActive: 1
       time: 4
-  _myTrs: {fileID: 453229335}
   _windZone: {fileID: 464469905}
   _playerWindAffect: {fileID: 1380713638}
 --- !u!1 &464469903
@@ -32475,7 +32476,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.29, y: 13.33, z: 119.8}
+  m_LocalScale: {x: 7.29, y: 13.33, z: 288.76}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1239952394}
