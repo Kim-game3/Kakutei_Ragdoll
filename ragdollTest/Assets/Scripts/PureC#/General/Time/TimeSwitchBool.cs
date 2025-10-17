@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //作成者:杉山
 //時間ごとにtrue、falseを切り替える
@@ -15,36 +14,51 @@ public class TimeSwitchBool
         public float time;
     }
 
-
-
     [SerializeField]
     BoolAndTime[] _activateTimeline;
 
-    float _current;
+    float _currentTime;
     int _currentIndex;
 
     public bool IsActive { get { return _activateTimeline[_currentIndex].isActive; } }//現在がアクティブ(true)の状態か
 
+    public event Action<bool> OnSwitchIsActive;//IsActiveが変わった瞬間
+    public event Action OnTrue;//trueに変わった瞬間
+    public event Action OnFalse;//falseに変わった瞬間
+
+    BoolAndTime Current { get { return _activateTimeline[_currentIndex]; } }
+
     public TimeSwitchBool()
     {
-        _current = 0f;
+        _currentTime = 0f;
         _currentIndex = 0;
     }
 
     public void Update()
     {
-        _current += Time.deltaTime;
+        _currentTime += Time.deltaTime;
 
-        bool isOver = _current > _activateTimeline[_currentIndex].time;
+        bool isActiveBefore = Current.isActive;
+        bool isOver = _currentTime > Current.time;
 
         while(isOver)
         {
-            _current -= _activateTimeline[_currentIndex].time;
+            _currentTime -= Current.time;
 
             _currentIndex++;
             _currentIndex %= _activateTimeline.Length;
 
-            isOver = _current > _activateTimeline[_currentIndex].time;
+            isOver = _currentTime > Current.time;
         }
+
+        bool isActiveNew = Current.isActive;
+
+        //コールバックの呼び出し
+        if (isActiveNew == isActiveBefore) return;
+
+        OnSwitchIsActive?.Invoke(isActiveNew);
+
+        if (isActiveNew) OnTrue?.Invoke();
+        else OnFalse?.Invoke();
     }
 }
