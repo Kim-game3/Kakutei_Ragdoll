@@ -17,10 +17,13 @@ public class Wind : MonoBehaviour
     [Tooltip("風を出す周期")] [SerializeField]
     TimeSwitchBool _windCycle;
 
-    [SerializeField]
+    [Tooltip("エフェクト関係")] [SerializeField]
+    WindEffect _windEffect;
+
+    [Tooltip("風の当たり判定")] [SerializeField]
     WindHitZone _windZone;
 
-    [SerializeField]
+    [Tooltip("プレイヤーに風の影響を与える機能")] [SerializeField]
     WindAffectBody _playerWindAffect;
 
     WindInfo _myWindInfo;
@@ -32,7 +35,20 @@ public class Wind : MonoBehaviour
         _windCycle.OnTrue += OnBlowWind;
         _windCycle.OnFalse += OnStopWind;
 
+        _judgeIsNearFromMainCamera.OnClose += OnClose;
+        _judgeIsNearFromMainCamera.OnFar += OnFar;
+
         _myWindInfo = new WindInfo(_windZone.transform.forward,_windPower);
+    }
+
+    private void Start()
+    {
+        _judgeIsNearFromMainCamera.Update();
+
+        Debug.Log(_judgeIsNearFromMainCamera.IsClose);
+
+        if (_judgeIsNearFromMainCamera.IsClose) OnClose();
+        else OnFar();
     }
 
     private void OnValidate()
@@ -43,14 +59,27 @@ public class Wind : MonoBehaviour
         _myWindInfo.Power = _windPower;
     }
 
+    void OnClose()
+    {
+        _windEffect.Switchvisible(true);
+
+        if (_windCycle.IsActive) _windEffect.Play();
+        else _windEffect.Stop();
+    }
+
+    void OnFar()
+    {
+        _windEffect.Switchvisible(false);
+    }
+
     private void OnBlowWind()//風が吹き始めた時
     {
-        Debug.Log("風が吹く");
+        _windEffect.Play();
     }
 
     private void OnStopWind()//風が止んだ時
     {
-        Debug.Log("風が止む");
+        _windEffect.Stop();
     }
 
     private void Update()
