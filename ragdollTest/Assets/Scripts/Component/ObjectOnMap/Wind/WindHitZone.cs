@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 //作成者:杉山
 //風の範囲(当たり判定機能)
@@ -9,45 +10,51 @@ using UnityEngine;
 
 public class WindHitZone : MonoBehaviour
 {
-    [Tooltip("風の影響を受けるレイヤー")] [SerializeField]
-    LayerMask _affectableWindLayer;
-
-    [Tooltip("プレイヤーのレイヤー")] [SerializeField]
-    LayerMask _playerLayer;
-
     [Tooltip("プレイヤーが近づいてきたのを感知する機能\nこの範囲内にいないと、当たり判定をしないので十分に大きくすることをお勧めする")] [SerializeField]
     OnTriggerDetect _playerDetect;
 
-    const float _boxcastSizeZ = 0.01f;
+    [SerializeField]
+    WindCastHit _windCastHit;
+
     bool _isPlayer_InWindableZone = false;//プレイヤーが風の当たり判定をする範囲(この範囲外にいたら当たり判定もしない)
 
-    public bool IsHit(out Vector3 hitPos, out bool isHitPlayer)//何かに当たったか(衝突地点(hitPos)とプレイヤーに衝突したか(isHitPlayer)も教える)
+    public void IsHit(out bool isHitPlayer, out RaycastHit[] hits)//プレイヤーに衝突したか(isHitPlayer)、当たったコライダー(hits)
     {
-        hitPos = Vector3.zero;
         isHitPlayer = false;
+        hits = null;
 
-        if (!_isPlayer_InWindableZone) return false;
+        if (!_isPlayer_InWindableZone) return;
 
-        Vector3 boxcastSize = transform.localScale / 2;
-        boxcastSize.z = _boxcastSizeZ;
-
-        //平たい板状のレイを飛ばす
-        if (!Physics.BoxCast(transform.position, boxcastSize, transform.forward, out RaycastHit hit, transform.rotation, transform.localScale.z, _affectableWindLayer)) return false;
-
-        hitPos = hit.point;
-
-        //何かに当たった
-        if (!LayerExtension.IsInLayerMask(_playerLayer, hit.collider.gameObject)) return true;
-
-        //当たったのがプレイヤーであればプレイヤーがその風の影響を受けるようにする
-        isHitPlayer = true;
-        return true;
+        _windCastHit.IsHit(out isHitPlayer, out hits);//レイを飛ばす
     }
 
+    public void IsHit(out RaycastHit[] hits)//当たったコライダー(hits)
+    {
+        hits = null;
+
+        if (!_isPlayer_InWindableZone) return;
+
+        _windCastHit.IsHit(out bool isHitPlayer, out hits);//レイを飛ばす
+    }
+
+    public void IsHit(out bool isHitPlayer)//プレイヤーに衝突したか(isHitPlayer)
+    {
+        isHitPlayer = false;
+
+        if (!_isPlayer_InWindableZone) return;
+
+        _windCastHit.IsHit(out isHitPlayer, out RaycastHit[] hits);//レイを飛ばす
+    }
+
+
+
+    //private
     private void Awake()
     {
         _playerDetect.OnEnter += OnEnterPlayer;
         _playerDetect.OnExit += OnExitPlayer;
+
+        _windCastHit.Awake(transform);
     }
 
     void OnEnterPlayer(Collider other)

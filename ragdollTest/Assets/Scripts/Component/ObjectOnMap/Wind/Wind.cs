@@ -45,8 +45,6 @@ public class Wind : MonoBehaviour
     {
         _judgeIsNearFromMainCamera.Update();
 
-        Debug.Log(_judgeIsNearFromMainCamera.IsClose);
-
         if (_judgeIsNearFromMainCamera.IsClose) OnClose();
         else OnFar();
     }
@@ -93,9 +91,11 @@ public class Wind : MonoBehaviour
 
         if (!_windCycle.IsActive) return;//風が吹いてなければここで打ち切り
 
-        _windZone.IsHit(out Vector3 hitPos, out bool isHitPlayer);
+        _windZone.IsHit(out bool isHitPlayer);
 
-        if(isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
+        //Debug.Log(isHitPlayer);
+
+        if (isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
         {
             _playerWindAffect.AddWind(_myWindInfo);
         }
