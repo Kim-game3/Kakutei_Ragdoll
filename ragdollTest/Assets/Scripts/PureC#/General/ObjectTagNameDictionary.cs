@@ -21,4 +21,12 @@ public class ObjectTagNameDictionary
     const string _waterTagName = "Water";
     
     public static string Water { get { return _waterTagName; } }
+
+
+    /// <summary>
+    /// •—‚Ì‰e‹¿‚ðŽó‚¯‚éƒ^ƒO–¼
+    /// </summary>
+    const string _windAffectName = "WindAffect";
+
+    public static string WindAffect { get { return _windAffectName; } }
 }
