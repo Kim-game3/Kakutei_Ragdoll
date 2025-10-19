@@ -30,7 +30,7 @@ public class Wind : MonoBehaviour
 
     private void Awake()
     {
-        if (_playerWindAffect == null) _playerWindAffect = GameObject.FindWithTag(ObjectTagNameDictionary.WindAffect).GetComponent<WindAffectBody>();
+        GetWindAffectBody();
 
         _windCycle.OnTrue += OnBlowWind;
         _windCycle.OnFalse += OnStopWind;
@@ -50,6 +50,28 @@ public class Wind : MonoBehaviour
     }
 
     private void OnValidate()
+    {
+        GetWindAffectBody();
+
+        SetWindInfo();
+    }
+
+    void GetWindAffectBody()//プレイヤーのWindAffectBodyを取得
+    {
+        if (_playerWindAffect != null) return;
+
+        GameObject windAffect = GameObject.FindWithTag(ObjectTagNameDictionary.WindAffect);
+
+        if (windAffect == null) return;
+
+        WindAffectBody get = windAffect.GetComponent<WindAffectBody>();
+
+        if (get == null) return;
+
+        _playerWindAffect = get;
+    }
+
+    void SetWindInfo()
     {
         if (_myWindInfo == null) return;
 
@@ -92,8 +114,6 @@ public class Wind : MonoBehaviour
         if (!_windCycle.IsActive) return;//風が吹いてなければここで打ち切り
 
         _windZone.IsHit(out bool isHitPlayer);
-
-        //Debug.Log(isHitPlayer);
 
         if (isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
         {

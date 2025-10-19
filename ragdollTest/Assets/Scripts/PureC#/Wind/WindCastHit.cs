@@ -7,11 +7,14 @@ using UnityEngine;
 [System.Serializable]
 public class WindCastHit
 {
-    [Tooltip("風の影響を受けるレイヤー")] [SerializeField]
+    [Tooltip("風の影響を受けるレイヤー\n風が障害物に防がれるようにしたい場合は、対象のオブジェクトに設定されているレイヤーをここに登録する")] [SerializeField]
     LayerMask _affectableWindLayer;
 
     [Tooltip("プレイヤーのレイヤー")] [SerializeField]
     LayerMask _playerLayer;
+
+    [Header("判定の細かさ")]
+    [Tooltip("値が大きくなるほどプレイヤーと風の当たり判定の精度が増す\nしかし精度がそこまで必要ない場合は1、1に設定しておくのをオススメする")]
 
     [Min(1)] [SerializeField]
     int castNumX = 1;
@@ -49,9 +52,6 @@ public class WindCastHit
             for (int x = 0; x < castNumX; x++)
             {
                 Vector3 castPos = CastPos(origin, x, y);
-
-                Vector3 foo = _transform.TransformPoint(castPos);
-                Debug.DrawLine(foo, foo + _transform.forward * _transform.localScale.z, Color.red, 2);
 
                 //平たい板状のレイを飛ばす
                 if (!Physics.BoxCast(_transform.TransformPoint(castPos), boxcastSize, _transform.forward, out RaycastHit hit, _transform.rotation, _transform.localScale.z, _affectableWindLayer)) continue;
