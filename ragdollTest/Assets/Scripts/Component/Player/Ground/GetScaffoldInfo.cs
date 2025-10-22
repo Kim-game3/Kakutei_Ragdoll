@@ -34,7 +34,7 @@ public class GetScaffoldInfo : MonoBehaviour
         float radius = _judgeIsGround.Radius;
         LayerMask layer = _judgeIsGround.ScaffoldLayer;
 
-        Debug.DrawRay(origin, Vector3.down * _distance, Color.red);
+        //Debug.DrawRay(origin, Vector3.down * _distance, Color.red);
         _successToGet = Physics.SphereCast(origin, _radius, Vector3.down, out _scaffoldInfo, _distance, layer);
     }
 
