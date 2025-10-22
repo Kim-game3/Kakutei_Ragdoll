@@ -11,9 +11,11 @@ public class PlayerMoveEffect : MonoBehaviour
     AudioClip[] _moveSEs;
 
     [Tooltip("効果音を鳴らした時のクールタイム\n連打しても音が鳴りすぎないようにすることが出来る")] 
-    
     [SerializeField] float _minCoolTime;
     [SerializeField] float _maxCoolTime;
+
+    [Tooltip("設置判定機能")] [SerializeField]
+    JudgeIsGround _judgeIsGround;
 
     [SerializeField]
     AudioSource _audioSource;
@@ -30,6 +32,8 @@ public class PlayerMoveEffect : MonoBehaviour
 
     void PlaySound()
     {
+        if (!_judgeIsGround.IsGround) return;
+
         if (!_ableToPlay) return;
 
         //鳴らす音をランダムに決定

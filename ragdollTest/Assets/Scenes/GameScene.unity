@@ -16180,6 +16180,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1130964126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8450295637375364907, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+  m_PrefabInstance: {fileID: 6934566165365889709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094e08a2f18c43a4db430943bd9ebe23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1155726567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5543652648378082360, guid: 79f20545eb334e64c816332ae0bdc149, type: 3}
@@ -34127,6 +34138,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 447352702385268427, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309899775359063063, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: _judgeIsGround
+      value: 
+      objectReference: {fileID: 1130964126}
+    - target: {fileID: 1922693870012664047, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3495458371358190514, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4271090110795208420, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.86
@@ -34171,10 +34198,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5758799733184219503, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7077708516237140888, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7340308893461383714, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
       propertyPath: _baseDirection
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 7342134571482737052, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
