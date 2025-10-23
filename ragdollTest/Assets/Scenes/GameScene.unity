@@ -8081,6 +8081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4Area
       objectReference: {fileID: 0}
+    - target: {fileID: 2294905920539408833, guid: 446c5a6ffe51f3a44a992bc1e5f8350a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2320513168470495428, guid: 446c5a6ffe51f3a44a992bc1e5f8350a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -47307,9 +47311,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1530644322}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: _inputControl._inputProvider
+      value: 
+      objectReference: {fileID: 348643387}
+    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _playerPosControl._playerTrs
       value: 
       objectReference: {fileID: 6934566165365889711}
+    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: _waitDuration_FromCameraFollowPlayer
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _playerMeshControl._playerMeshs.Array.data[0]
       value: 
