@@ -56,7 +56,7 @@ public class JudgeIsGround : MonoBehaviour
 
     bool IsFoundScafford(Vector3 origin)//‘«ê‚ğŒ©‚Â‚¯‚½‚©(‘«ê‚ğŒ©‚Â‚¯‚½‚çÚ’n‚µ‚Ä‚¢‚é‚±‚Æ‚É‚µ‚Ätrue‚ğ•Ô‚·)
     {
-        Debug.DrawRay(origin, Vector3.down*_distance, Color.green);
+        //Debug.DrawRay(origin, Vector3.down*_distance, Color.green);
         if (!Physics.Raycast(origin, Vector3.down, _distance, _scaffoldLayer)) return false;
 
         //‘«ê‚ªŒ©‚Â‚©‚Á‚½
