@@ -39,6 +39,8 @@ public class Wind : MonoBehaviour
         _judgeIsNearFromMainCamera.OnFar += OnFar;
 
         _myWindInfo = new WindInfo(_windZone.transform.forward,_windPower);
+
+        _windEffect.Awake();
     }
 
     private void Start()
