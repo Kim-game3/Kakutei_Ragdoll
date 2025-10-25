@@ -81,7 +81,7 @@ public class Wind : MonoBehaviour
         _myWindInfo.Power = _windPower;
     }
 
-    void OnClose()
+    void OnClose()//‹ß‚­‚È‚Á‚½Žž
     {
         _windEffect.Switchvisible(true);
 
@@ -89,7 +89,7 @@ public class Wind : MonoBehaviour
         else _windEffect.Stop();
     }
 
-    void OnFar()
+    void OnFar()//‰“‚­‚È‚Á‚½Žž
     {
         _windEffect.Switchvisible(false);
     }
