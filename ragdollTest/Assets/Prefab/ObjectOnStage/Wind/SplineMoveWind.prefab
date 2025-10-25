@@ -62,23 +62,23 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0
-        y: 0
-        z: 0
+        x: -1.3991299
+        y: 0.0032482147
+        z: 0.7078705
       TangentIn:
         x: -0
         y: -0
-        z: -0.6011236
+        z: -0.46151665
       TangentOut:
         x: 0
         y: 0
-        z: 0.6011236
+        z: 0.46151665
       Rotation:
         value:
-          x: 0.465423
-          y: -0.4908397
-          z: -0.42240113
-          w: 0.6033532
+          x: 0.55441976
+          y: -0.4626091
+          z: -0.43604168
+          w: 0.5371027
     - Position:
         x: -5.924011
         y: -0.88344955
@@ -86,17 +86,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -1.9917653
+        z: -1.6462371
       TangentOut:
         x: 0
         y: 0
-        z: 2.049464
+        z: 1.9332261
       Rotation:
         value:
-          x: 0.5186975
-          y: -0.5369379
-          z: -0.38151082
-          w: 0.54506886
+          x: 0.5386366
+          y: -0.5466508
+          z: -0.36057135
+          w: 0.5301241
     - Position:
         x: -11.891096
         y: -1.891119
@@ -159,8 +159,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5374339993671244460}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4468249, y: -0.47202307, z: -0.437413, w: 0.6214593}
-  m_LocalPosition: {x: -0.7604542, y: -0.111242294, z: 0.11118698}
+  m_LocalRotation: {x: 0.5544181, y: -0.4626083, z: -0.43604326, w: 0.53710383}
+  m_LocalPosition: {x: -1.3991247, y: 0.0032482147, z: 0.70787126}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_LoopMode: 3
   m_Method: 0
   m_Duration: 3
-  m_MaxSpeed: 8.2709465
+  m_MaxSpeed: 7.3283105
   m_EasingMode: 3
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _judgeIsNearFromMainCamera:
-    _distanceLimit: 20
+    _distanceLimit: 40
     _myTrs: {fileID: 6660567422864276581}
   _behaviours:
   - {fileID: 5423675442027205034}
@@ -217,7 +217,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1572706434348139195, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3355813669003253235, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -243,21 +243,25 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _judgeIsNearFromMainCamera._distanceLimit
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6693669284208222825, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Name
       value: Wind
       objectReference: {fileID: 0}
     - target: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41
+      value: -0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.43999863
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -289,11 +293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8725390802037467401, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8725390802037467401, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8725390802037467401, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_LocalScale.z
