@@ -38,6 +38,13 @@ public class ActivateComponent_CameraDistance : MonoBehaviour
     void Start()
     {
         _judgeIsNearFromMainCamera.Update();
+
+        bool enabled = _judgeIsNearFromMainCamera.IsClose;
+
+        for (int i = 0; i < _behaviours.Length; i++)
+        {
+            _behaviours[i].enabled = enabled;
+        }
     }
 
     void Update()
