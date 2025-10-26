@@ -26,7 +26,7 @@ public class Wind : MonoBehaviour
     [Tooltip("プレイヤーに風の影響を与える機能")] [SerializeField]
     WindAffectBody _playerWindAffect;
 
-    WindInfo _myWindInfo;
+    WindInfo _myWindInfo=new WindInfo();
 
     private void Awake()
     {
@@ -35,10 +35,12 @@ public class Wind : MonoBehaviour
         _windCycle.OnTrue += OnBlowWind;
         _windCycle.OnFalse += OnStopWind;
 
+        _judgeIsNearFromMainCamera.Awake();
+
         _judgeIsNearFromMainCamera.OnClose += OnClose;
         _judgeIsNearFromMainCamera.OnFar += OnFar;
 
-        _myWindInfo = new WindInfo(_windZone.transform.forward,_windPower);
+        _windEffect.Awake();
     }
 
     private void Start()
@@ -52,8 +54,6 @@ public class Wind : MonoBehaviour
     private void OnValidate()
     {
         GetWindAffectBody();
-
-        SetWindInfo();
     }
 
     void GetWindAffectBody()//プレイヤーのWindAffectBodyを取得
@@ -73,13 +73,17 @@ public class Wind : MonoBehaviour
 
     void SetWindInfo()
     {
-        if (_myWindInfo == null) return;
+        if (_myWindInfo == null)
+        {
+            Debug.Log("風の情報がインスタンス化されていません！");
+            return;
+        }
 
         _myWindInfo.Direction = _windZone.transform.forward;
         _myWindInfo.Power = _windPower;
     }
 
-    void OnClose()
+    void OnClose()//近くなった時
     {
         _windEffect.Switchvisible(true);
 
@@ -87,7 +91,7 @@ public class Wind : MonoBehaviour
         else _windEffect.Stop();
     }
 
-    void OnFar()
+    void OnFar()//遠くなった時
     {
         _windEffect.Switchvisible(false);
     }
@@ -117,6 +121,7 @@ public class Wind : MonoBehaviour
 
         if (isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
         {
+            SetWindInfo();
             _playerWindAffect.AddWind(_myWindInfo);
         }
     }
