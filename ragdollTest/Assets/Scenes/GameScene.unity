@@ -25308,6 +25308,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 3061
       objectReference: {fileID: 0}
+    - target: {fileID: 307559824310484805, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 307559824310484805, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 324120138547995778, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -25372,6 +25380,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 267552168}
+    - target: {fileID: 3079028465919673866, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079028465919673866, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3235094435417520420, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -25383,6 +25399,14 @@ PrefabInstance:
     - target: {fileID: 3472803451103702639, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_VersionIndex
       value: 1571
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721928316175089334, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721928316175089334, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[1].time
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3827298241877199355, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
@@ -25400,6 +25424,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 72465288}
+    - target: {fileID: 4495727650199632633, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495727650199632633, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4609791825052888695, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -25572,6 +25604,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1053700293}
+    - target: {fileID: 9145986621729493222, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[0].time
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145986621729493222, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: _windCycle._activateTimeline.Array.data[1].time
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 9201889461470688808, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -29586,7 +29626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73d5ce7d09a502449af2821f65a3554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frameRate: 600
+  _frameRate: 60
 --- !u!43 &2017982330
 Mesh:
   m_ObjectHideFlags: 0
