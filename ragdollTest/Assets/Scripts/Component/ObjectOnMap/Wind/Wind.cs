@@ -35,6 +35,8 @@ public class Wind : MonoBehaviour
         _windCycle.OnTrue += OnBlowWind;
         _windCycle.OnFalse += OnStopWind;
 
+        _judgeIsNearFromMainCamera.Awake();
+
         _judgeIsNearFromMainCamera.OnClose += OnClose;
         _judgeIsNearFromMainCamera.OnFar += OnFar;
 
