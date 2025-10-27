@@ -63,12 +63,6 @@ public partial class RestartProcess : MonoBehaviour
         StartCoroutine(OnRestart(checkPointIndex));
     }
 
-    //private
-    private void Awake()
-    {
-        _cameraControl.Init();
-    }
-
     IEnumerator OnRestart(int checkPointIndex)
     {
         InitOnRestart(checkPointIndex);//初期化処理
@@ -82,10 +76,9 @@ public partial class RestartProcess : MonoBehaviour
         PlayTimelineFromBeginning();
 
         yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
-        _cameraControl.SwitchRestartPointCamera(true);//リスタート地点のカメラにする
+        _cameraControl.ProcessImmediatelyAfterDark();//暗転直後のカメラ処理
         _playerPosControl.BackToRestartPoint();//プレイヤーをリスタート地点に戻す
         _playerMeshControl.ChangeMeshEnabled(false);//プレイヤーを非表示にする
-        _cameraControl.SetDefault_PlayeCamera();//操作カメラの向きを初期に戻す
         _orcaPosControl.ChangePos(_restartElements[checkPointIndex]._orcaSpawnPos);//シャチを指定位置に移動
 
 
@@ -95,8 +88,7 @@ public partial class RestartProcess : MonoBehaviour
 
 
         yield return new WaitForSeconds(_waitDuration_FromFinishFadeIn);//完全に明転してから数秒待つ
-        _cameraControl.ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
-        _cameraControl.SwitchRestartPointCamera(false);//プレイカメラに戻す
+        _cameraControl.ProcessLaterAfterLight();//明転してからしばらくした後のカメラ処理
 
 
         yield return new WaitForSeconds(_waitDuration_FromCameraFollowPlayer);//さらに数秒待つ
