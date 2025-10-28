@@ -24682,8 +24682,9 @@ MonoBehaviour:
   - {fileID: 6934566165365889712}
   - {fileID: 6934566165365889715}
   - {fileID: 6934566165365889714}
-  _restartManager: {fileID: 4064680034383877878}
+  _restartProcess: {fileID: 4064680034383877878}
   _waterSplashParticle: {fileID: 3389894116151078676, guid: 359d9be8dab3d454e9a91dea44d9e338, type: 3}
+  _lifeTime: 3
 --- !u!4 &1687617202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2398401139474423759, guid: d357fcbd68e45334ab05f0aca9f1f7a4, type: 3}
@@ -30015,7 +30016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73d5ce7d09a502449af2821f65a3554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frameRate: 60
+  _frameRate: 600
 --- !u!43 &2017982330
 Mesh:
   m_ObjectHideFlags: 0

@@ -10,17 +10,20 @@ public class TouchWaterEffect : MonoBehaviour
     [SerializeField]
     AudioSource _audioSource;
 
-    [SerializeField]
+    [Tooltip("水に触れた時の効果音")] [SerializeField]
     AudioClip _clip;
 
-    [SerializeField]
+    [Tooltip("水に触れたことを感知する機能")] [SerializeField]
     DetectTouchWater[] _detectTouchWaters;
 
     [SerializeField]
-    RestartProcess _restartManager;
+    RestartProcess _restartProcess;
 
-    [SerializeField]
+    [Tooltip("水しぶきのエフェクト")] [SerializeField]
     ParticleSystem _waterSplashParticle;
+
+    [Tooltip("水しぶきの寿命\nこの時間を過ぎると自動的に破壊")] [SerializeField]
+    float _lifeTime=3;
 
     bool[] _isTouchingWaterBeforeFrame;
 
@@ -41,7 +44,7 @@ public class TouchWaterEffect : MonoBehaviour
 
         //前フレームで全ての部位で触れてないかつ今フレームでどこか一つでも触れている場合
         //リスタート中は流さない(後で修正予定)
-        if(isAllNoTouchingWaterBeforeFrame() && isAnyTouchingWaterNowFrame(ref foo)&&!_restartManager.IsRestarting)
+        if(isAllNoTouchingWaterBeforeFrame() && isAnyTouchingWaterNowFrame(ref foo)&&!_restartProcess.IsRestarting)
         {
             _audioSource.PlayOneShot(_clip);
 
@@ -49,7 +52,7 @@ public class TouchWaterEffect : MonoBehaviour
             {
                 var ins= Instantiate(_waterSplashParticle, foo.position,Quaternion.identity);
                 ins.Play();
-                Destroy(ins.gameObject, 3);
+                Destroy(ins.gameObject, _lifeTime);
             }
         }
 
