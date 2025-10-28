@@ -11,7 +11,7 @@ public class Wind : MonoBehaviour
     [Tooltip("風の強さ")] [SerializeField]
     float _windPower;
 
-    [Tooltip("カメラとの距離を測る機能\n距離は風が見える限界距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
+    [Tooltip("カメラとの距離を測る機能\n距離は風の描画距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
     JudgeIsNearFromMainCamera _judgeIsNearFromMainCamera;
 
     [Tooltip("風を出す周期")] [SerializeField]
@@ -109,9 +109,6 @@ public class Wind : MonoBehaviour
     private void Update()
     {
         _judgeIsNearFromMainCamera.Update();
-
-        //プレイヤーが近くに来た時だけ風全体の処理をする
-        if (!_judgeIsNearFromMainCamera.IsClose) return;
 
         _windCycle.Update();
 
