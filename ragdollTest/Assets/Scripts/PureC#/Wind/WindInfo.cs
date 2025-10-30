@@ -10,6 +10,12 @@ public class WindInfo
     Vector3 _direction;//ƒ[ƒ‹ƒhŠî€
     float _power;
 
+    public WindInfo()
+    {
+        _direction = Vector3.zero;
+        _power = 0;
+    }
+
     public WindInfo(Vector3 direction, float power)
     {
         _direction = direction;

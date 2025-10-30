@@ -36,7 +36,7 @@ public class MoveDollyCamera : MonoBehaviour
     void OnCameraChanged(ICinemachineCamera newCam, ICinemachineCamera oldCam)
     {
         //ドリー用のカメラに切り替わった瞬間に呼ぶ
-        if (!(newCam.VirtualCameraGameObject == _dollyCamera.gameObject)) return;
+        if (newCam.VirtualCameraGameObject != _dollyCamera.gameObject) return;
 
         _current = 0;
     }

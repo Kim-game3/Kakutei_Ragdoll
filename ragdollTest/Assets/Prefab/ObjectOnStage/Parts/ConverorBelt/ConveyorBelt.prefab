@@ -893,10 +893,40 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1040034966283734306, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
       insertIndex: -1
       addedObject: {fileID: 400040189281679632}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 243115035032947310, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4139946552700530733}
   m_SourcePrefab: {fileID: 100100000, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
 --- !u!4 &1294648906589824354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1040034966283734306, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
+  m_PrefabInstance: {fileID: 2276980934839478336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2073557771974058542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 243115035032947310, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
+  m_PrefabInstance: {fileID: 2276980934839478336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4139946552700530733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073557771974058542}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45742f4443beaa343a767aa90f5867f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _judgeIsNearFromMainCamera:
+    _distanceLimit: 80
+    _myTrs: {fileID: 1294648906589824354}
+  _renderers:
+  - {fileID: 9139296786133419876}
+--- !u!23 &9139296786133419876 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7011040403812757284, guid: dcb22449401dcf743b7b1810676d3bda, type: 3}
   m_PrefabInstance: {fileID: 2276980934839478336}
   m_PrefabAsset: {fileID: 0}

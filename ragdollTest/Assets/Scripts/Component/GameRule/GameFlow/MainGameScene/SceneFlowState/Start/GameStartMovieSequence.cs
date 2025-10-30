@@ -31,8 +31,8 @@ public class GameStartMovieSequence : MonoBehaviour
 
 
     [Space]
-    [SerializeField]
-    CinemachineVirtualCamera _playCamera;
+    [Tooltip("プレイ用のカメラをまとめたもの")] [SerializeField]
+    GameObject _playCameraObjects;
 
     [CustomLabel("ゲーム開始時に流すタイムライン")] [SerializeField]
     PlayableDirector _startMovieTimeline;
@@ -63,7 +63,7 @@ public class GameStartMovieSequence : MonoBehaviour
     {
         _hideMovieUI.Hide();
         _showInGameUI.Show();
-        _playCamera.enabled = true;
+        _playCameraObjects.SetActive(true);
     }
 
     IEnumerator MovieSequence()

@@ -11,7 +11,7 @@ public class Wind : MonoBehaviour
     [Tooltip("風の強さ")] [SerializeField]
     float _windPower;
 
-    [Tooltip("カメラとの距離を測る機能\n距離は風が見える限界距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
+    [Tooltip("カメラとの距離を測る機能\n距離は風の描画距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
     JudgeIsNearFromMainCamera _judgeIsNearFromMainCamera;
 
     [Tooltip("風を出す周期")] [SerializeField]
@@ -26,7 +26,7 @@ public class Wind : MonoBehaviour
     [Tooltip("プレイヤーに風の影響を与える機能")] [SerializeField]
     WindAffectBody _playerWindAffect;
 
-    WindInfo _myWindInfo;
+    WindInfo _myWindInfo=new WindInfo();
 
     private void Awake()
     {
@@ -35,10 +35,12 @@ public class Wind : MonoBehaviour
         _windCycle.OnTrue += OnBlowWind;
         _windCycle.OnFalse += OnStopWind;
 
+        _judgeIsNearFromMainCamera.Awake();
+
         _judgeIsNearFromMainCamera.OnClose += OnClose;
         _judgeIsNearFromMainCamera.OnFar += OnFar;
 
-        _myWindInfo = new WindInfo(_windZone.transform.forward,_windPower);
+        _windEffect.Awake();
     }
 
     private void Start()
@@ -52,8 +54,6 @@ public class Wind : MonoBehaviour
     private void OnValidate()
     {
         GetWindAffectBody();
-
-        SetWindInfo();
     }
 
     void GetWindAffectBody()//プレイヤーのWindAffectBodyを取得
@@ -73,13 +73,17 @@ public class Wind : MonoBehaviour
 
     void SetWindInfo()
     {
-        if (_myWindInfo == null) return;
+        if (_myWindInfo == null)
+        {
+            Debug.Log("風の情報がインスタンス化されていません！");
+            return;
+        }
 
         _myWindInfo.Direction = _windZone.transform.forward;
         _myWindInfo.Power = _windPower;
     }
 
-    void OnClose()
+    void OnClose()//近くなった時
     {
         _windEffect.Switchvisible(true);
 
@@ -87,7 +91,7 @@ public class Wind : MonoBehaviour
         else _windEffect.Stop();
     }
 
-    void OnFar()
+    void OnFar()//遠くなった時
     {
         _windEffect.Switchvisible(false);
     }
@@ -106,9 +110,6 @@ public class Wind : MonoBehaviour
     {
         _judgeIsNearFromMainCamera.Update();
 
-        //プレイヤーが近くに来た時だけ風全体の処理をする
-        if (!_judgeIsNearFromMainCamera.IsClose) return;
-
         _windCycle.Update();
 
         if (!_windCycle.IsActive) return;//風が吹いてなければここで打ち切り
@@ -117,6 +118,7 @@ public class Wind : MonoBehaviour
 
         if (isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
         {
+            SetWindInfo();
             _playerWindAffect.AddWind(_myWindInfo);
         }
     }
