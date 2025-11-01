@@ -54,6 +54,7 @@ public class Wind : MonoBehaviour
     private void OnValidate()
     {
         GetWindAffectBody();
+        _windEffect.OnValidate(_windZone.transform.localScale);
     }
 
     void GetWindAffectBody()//ƒvƒŒƒCƒ„[‚ÌWindAffectBody‚ğæ“¾
