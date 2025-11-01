@@ -53345,6 +53345,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.05882353
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -53352,6 +53364,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -53552,6 +53588,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -53559,6 +53607,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -53646,6 +53718,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7476427894931165663}
     m_Modifications:
+    - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.75422
@@ -53710,6 +53786,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6940075788346207857, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6958863356322526300, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: _windPower
       value: 1500
@@ -53741,6 +53821,10 @@ PrefabInstance:
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.41262984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8144899160140817173, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_Duration
@@ -53796,6 +53880,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -53803,6 +53899,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -53946,6 +54066,14 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.2
@@ -53953,6 +54081,22 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -54540,6 +54684,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.334
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.2
@@ -54547,6 +54703,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.334
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -54677,6 +54857,42 @@ PrefabInstance:
     - target: {fileID: 3355813669003253235, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -54830,6 +55046,42 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.10980392
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
@@ -54981,6 +55233,42 @@ PrefabInstance:
     - target: {fileID: 3355813669003253235, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.10980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -55184,6 +55472,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5843349526117788310}
     m_Modifications:
+    - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.616235
@@ -56348,6 +56648,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 162.89
       objectReference: {fileID: 0}
+    - target: {fileID: 6940075788346207857, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940075788346207857, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940075788346207857, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6958863356322526300, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: _windPower
       value: 2500
@@ -56380,6 +56692,18 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.6190638
       objectReference: {fileID: 0}
+    - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8144899160140817173, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_Duration
       value: 11
@@ -56406,6 +56730,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7476427894931165663}
     m_Modifications:
+    - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09039593
@@ -57034,6 +57362,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 169.713
       objectReference: {fileID: 0}
+    - target: {fileID: 6940075788346207857, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 6958863356322526300, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: _windPower
       value: 1500
@@ -57065,6 +57397,10 @@ PrefabInstance:
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0.62750936
+      objectReference: {fileID: 0}
+    - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8144899160140817173, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_Duration
@@ -57252,6 +57588,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 4.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 1.72
@@ -57259,6 +57607,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -57546,6 +57918,42 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.10980392
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
@@ -57698,6 +58106,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -57705,6 +58125,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -57848,6 +58292,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.4
@@ -57855,6 +58311,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -58002,6 +58482,18 @@ PrefabInstance:
       propertyPath: TrailModule.colorOverTrail.maxColor.a
       value: 0.12941177
       objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.2
@@ -58009,6 +58501,30 @@ PrefabInstance:
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Center.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
