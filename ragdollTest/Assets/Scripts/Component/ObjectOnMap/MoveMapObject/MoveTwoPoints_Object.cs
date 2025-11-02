@@ -16,10 +16,17 @@ public class MoveTwoPoints_Object : MonoBehaviour
     [CustomLabel("I“_")] [SerializeField]
     Transform _end;
 
-    [CustomLabel("“®‚©‚·‘ÎÛ")] [SerializeField]
+    [CustomLabel("“®‚©‚·‘ÎÛ\nRigidbody‚ª‚Â‚¢‚Ä‚¢‚ê‚Î©“®“I‚ÉRigidbody‚Ì•û‚Å“®‚©‚·‚æ‚¤‚É‚È‚é")] [SerializeField]
     Transform _target;
 
+    Rigidbody _targetRb;
+
     float _current=0;
+
+    private void Awake()
+    {
+        _targetRb=_target.GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -34,6 +41,13 @@ public class MoveTwoPoints_Object : MonoBehaviour
         float t = MathfExtension.TriangleWave01(_current, 0, _cycle);
         
         Vector3 newPosition=Vector3.Lerp(_start.position,_end.position,t);
+
+        if(_targetRb!=null)
+        {
+            _targetRb.MovePosition(newPosition);
+            return;
+        }
+
         _target.position = newPosition;
     }
 }
