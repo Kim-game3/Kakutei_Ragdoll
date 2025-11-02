@@ -173,13 +173,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931066628504643747}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.4027467, z: 0, w: 0.91531146}
-  m_LocalPosition: {x: 145.6, y: -5.53, z: 3.43}
+  m_LocalRotation: {x: -0, y: 0.4027467, z: -0, w: 0.91531146}
+  m_LocalPosition: {x: 145.63, y: -5.53, z: 2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4383784677403224258}
   m_LocalEulerAnglesHint: {x: 0, y: 47.5, z: 0}
+--- !u!1 &1637441249414812812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2357852598879407608}
+  m_Layer: 0
+  m_Name: RestartPoint5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2357852598879407608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637441249414812812}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.31767145, y: 0.20698318, z: 0.071270004, w: 0.9225852}
+  m_LocalPosition: {x: 146.4, y: -0.22000003, z: 87.86}
+  m_LocalScale: {x: 303.84637, y: 44.296135, z: 88.26751}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5391970835028539369}
+  m_LocalEulerAnglesHint: {x: -38, y: 25.29, z: 0}
 --- !u!1 &1826657486939717002
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +245,7 @@ Transform:
   - {fileID: 6245658869691011375}
   - {fileID: 4522057037524127112}
   - {fileID: 6173789273595969773}
+  - {fileID: 2357852598879407608}
   m_Father: {fileID: 6059501945379574525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2165809435774053415
@@ -311,10 +343,16 @@ MonoBehaviour:
     _orcaSpawnPos: {fileID: 3600176666055916577}
   - restartPointCamera: {fileID: 0}
     defaultVerticalValue_PlayCamera: 18.61
-    defaultHorizontalValue_PlayCamera: 90
+    defaultHorizontalValue_PlayCamera: 50
     restartPoint: {fileID: 6173789273595969773}
     power: 300
     _orcaSpawnPos: {fileID: 6777293339456594470}
+  - restartPointCamera: {fileID: 0}
+    defaultVerticalValue_PlayCamera: 15
+    defaultHorizontalValue_PlayCamera: -52
+    restartPoint: {fileID: 2357852598879407608}
+    power: 300
+    _orcaSpawnPos: {fileID: 418696880720871508}
   _waitDuration_FromFinishFadeIn: 0.7
   _waitDuration_FromCameraFollowPlayer: 1.3
   _restartTimeLine: {fileID: 4203677240734155177}
@@ -798,6 +836,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &6986330138336183256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418696880720871508}
+  m_Layer: 0
+  m_Name: OrcaSpawnPos5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418696880720871508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986330138336183256}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.5678437, z: 0, w: 0.82313645}
+  m_LocalPosition: {x: 146.04, y: -5.53, z: 87.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4383784677403224258}
+  m_LocalEulerAnglesHint: {x: 0, y: -69.2, z: 0}
 --- !u!1 &7077011773769948545
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +963,7 @@ Transform:
   - {fileID: 7281410463985472971}
   - {fileID: 3600176666055916577}
   - {fileID: 6777293339456594470}
+  - {fileID: 418696880720871508}
   m_Father: {fileID: 6059501945379574525}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7925298499337986140
