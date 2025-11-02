@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 1264930928691981197}
   - component: {fileID: 3587307315295998126}
   - component: {fileID: 5398720735437920884}
+  - component: {fileID: 8681802601804712300}
   m_Layer: 3
   m_Name: GearMesh
   m_TagString: Untagged
@@ -438,6 +439,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6437014539833716671}
   m_Mesh: {fileID: 4300000, guid: cfaa2a4df4e8cd9498f9ea76a05ac5dd, type: 2}
+--- !u!114 &8681802601804712300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6437014539833716671}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45742f4443beaa343a767aa90f5867f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _judgeIsNearFromMainCamera:
+    _distanceLimit: 300
+    _myTrs: {fileID: 1264930928691981197}
+  _renderers:
+  - {fileID: 3587307315295998126}
 --- !u!1 &6562561242129658690
 GameObject:
   m_ObjectHideFlags: 0
