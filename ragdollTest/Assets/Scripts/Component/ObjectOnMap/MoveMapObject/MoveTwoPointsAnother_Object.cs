@@ -29,70 +29,77 @@ public class MoveTwoPointsAnother_Object : MonoBehaviour
     [SerializeField]
     Transform _target;
 
-    float _current = 0f;
-    bool _isForward = true;
-    bool _isActive = false; // Playerが触れているかどうか
+    [SerializeField]
+    RestartProcess _restartProcess;
+
+    bool _isPlayerInRange=false;
+
+    const float _maxTime = 1f;
+    const float _minTime = 0f;
+    float _time = _minTime;
+
+    private void Awake()
+    {
+        _restartProcess.OnFadeOut += ResetPos;//フェードアウト中に位置を元に戻す
+    }
 
     void Update()
     {
-        if (_isActive)
-        {
-            Move();
-        }
-        else
-        {
-            // 非起動時はリセット
-            _current = 0f;
-            _isForward = true;
-            if (_target != null && _start != null)
-                _target.position = _start.position;
-        }
+        Move();
+    }
+
+    void ResetPos()
+    {
+        if (_target == null || _start == null) return;
+
+        _time = 0f;
+        _target.position = _start.position;
     }
 
     private void Move()
     {
         if (_target == null || _start == null || _end == null) return;
 
-        if (_isForward)
-        {
-            _current += Time.deltaTime;
-            float t = Mathf.Clamp01(_current / _cycleForward);
-            _target.position = Vector3.Lerp(_start.position, _end.position, t);
+        float t;
 
-            if (_current >= _cycleForward)
-            {
-                _current = 0f;
-                _isForward = false; // 折り返し
-            }
+        if(_isPlayerInRange)
+        {
+            if (_time >= _maxTime) return;
+
+            //_endに向かう
+            t = Time.deltaTime / _cycleForward;
         }
         else
         {
-            _current += Time.deltaTime;
-            float t = Mathf.Clamp01(_current / _cycleBackward);
-            _target.position = Vector3.Lerp(_end.position, _start.position, t);
+            if (_time <= _minTime) return;
 
-            if (_current >= _cycleBackward)
-            {
-                _current = 0f;
-                _isForward = true; // 再び行きへ
-            }
+            //_startに向かう
+            t = -Time.deltaTime / _cycleBackward;
         }
+
+        SetTime(t);
+        _target.position = Vector3.Lerp(_start.position, _end.position, _time);
+    }
+
+    void SetTime(float delta)
+    {
+        _time += delta;
+
+        Mathf.Clamp01(_time);
     }
 
     // Playerが触れている間のみ動作
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            _isActive = true;
-        }
+        if (!other.CompareTag("Player")) return;
+
+        _isPlayerInRange = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            _isActive = false;
-        }
+        if (!other.CompareTag("Player")) return;
+
+        _isPlayerInRange = false;
     }
 }
