@@ -30,7 +30,7 @@ public class ShowStageInfoManager : MonoBehaviour
     public void UpdateStageInfo(int stageID)//表示するステージの情報の更新
     {
         //指定ステージのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetHighScore(stageID);
+        ScoreData highScoreData = PlayerDataManager.GetScoreRecord(stageID);
 
         //指定ステージの情報を取得
         StageInfo stageInfo=_stageInfoData.GetStageInfo(stageID);

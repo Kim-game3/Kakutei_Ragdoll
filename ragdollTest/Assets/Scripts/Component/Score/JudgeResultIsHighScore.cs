@@ -24,14 +24,14 @@ public class JudgeResultIsHighScore : MonoBehaviour
         //今回のスコアを取得
         ScoreData thisScoreData = ResultManager.Score;
 
-        if (thisScoreData == null)//そもそもクリアしていない
+        if (thisScoreData == null)//そもそもクリアしていない(通常では起こりえない)
         {
             _brokeRecord = false;
             return;
         }
 
         //今までのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetHighScore(thisScoreData.StageID);
+        ScoreData highScoreData = PlayerDataManager.GetScoreRecord(thisScoreData.StageID);
         
         if (highScoreData == null)//初クリア
         {
@@ -43,14 +43,19 @@ public class JudgeResultIsHighScore : MonoBehaviour
         }
         else//クリアタイム更新ならず
         {
-            _brokeRecord = false;
+            UpdateClearCount(thisScoreData.StageID,thisScoreData.ClearCount);
         }
     }
 
     void UpdateHighScore(ScoreData thisScoreData)//ハイスコア更新処理
     {
         _brokeRecord = true;
+        PlayerDataManager.SetScoreRecord(thisScoreData);
+    }
 
-        PlayerDataManager.SetHighScore(thisScoreData);
+    void UpdateClearCount(int stageID,int clearCount)//クリア回数のみ更新(ハイスコア更新しなかった時)
+    {
+        _brokeRecord = false;
+        PlayerDataManager.SetScoreRecord(stageID,clearCount);
     }
 }
