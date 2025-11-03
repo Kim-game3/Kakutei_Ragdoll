@@ -7,7 +7,7 @@ using UnityEngine;
 // 行き・帰りの時間を個別設定可能
 
 [RequireComponent(typeof(Collider))]
-public class MoveTwoPointsAnother_Object : MonoBehaviour
+public class MoveTwoPoints_IsPlayerInRange_Object : MonoBehaviour
 {
     [CustomLabel("行きの周期(秒)")]
     [SerializeField]
