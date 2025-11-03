@@ -16,21 +16,21 @@ public class ShowStageInfoManager : MonoBehaviour
     [CustomLabel("ステージ名")] [SerializeField]
     TextMeshProUGUI _stageName;
 
-    [CustomLabel("ステージのイメージ画像")] [SerializeField]
-    Image _stageImage;
-
     [CustomLabel("クリアタイム")] [SerializeField]
     TextMeshProUGUI _clearTimeText;
 
     [CustomLabel("落ちた回数")] [SerializeField]
     TextMeshProUGUI _deathCountText;
 
+    [Tooltip("クリア回数")] [SerializeField]
+    TextMeshProUGUI _clearCountText;
+
     const string _noScore = "-";
 
     public void UpdateStageInfo(int stageID)//表示するステージの情報の更新
     {
-        //指定ステージのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetScoreRecord(stageID);
+        //指定ステージのスコアレコードを取得
+        ScoreData scoreRecordData = PlayerDataManager.GetScoreRecord(stageID);
 
         //指定ステージの情報を取得
         StageInfo stageInfo=_stageInfoData.GetStageInfo(stageID);
@@ -42,21 +42,22 @@ public class ShowStageInfoManager : MonoBehaviour
         }
 
         //情報を書き換え
-        _stageName.text = stageInfo.StageName;
-        _stageImage.sprite =stageInfo.StageSprite;
+        _stageName.text = "-" + stageInfo.StageName + "-";
 
         //未クリアの場合はスコアを表記しない
-        if(highScoreData==null)
+        if(scoreRecordData==null)
         {
             _clearTimeText.text = _noScore;
             _deathCountText.text = _noScore;
+            _clearCountText.text = _noScore;
         }
         else
         {
-            MathfExtension.ConvertTime(highScoreData.ClearTime, out float hour, out float min, out float second);
+            MathfExtension.ConvertTime(scoreRecordData.ClearTime, out float hour, out float min, out float second);
 
             _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
-            _deathCountText.text = highScoreData.DeathCount.ToString("0")+"回";
+            _deathCountText.text = scoreRecordData.DeathCount.ToString("0")+"回";
+            _clearCountText.text = scoreRecordData.ClearCount.ToString("0") + "回";
         }
     }
 }
