@@ -929,6 +929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 5960714143685149001, guid: d00e2af47755d1f479d40dcecb0ffc49, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7370502728444090087, guid: d00e2af47755d1f479d40dcecb0ffc49, type: 3}
     - {fileID: 243033671832074484, guid: d00e2af47755d1f479d40dcecb0ffc49, type: 3}

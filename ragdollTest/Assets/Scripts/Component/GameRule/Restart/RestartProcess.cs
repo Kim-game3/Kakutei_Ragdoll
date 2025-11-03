@@ -39,16 +39,21 @@ public partial class RestartProcess : MonoBehaviour
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
 
+    public event Action OnFadeOut;
+    public event Action OnFadeIn;
+
     public bool IsRestarting { get { return _isRestarting; } }
 
     public void SetFinish_FadeOut()
     {
         _finishedFadeOut = true;
+        OnFadeOut?.Invoke();
     }
 
     public void SetFinish_FadeIn()
     {
         _finishedFadeIn=true;
+        OnFadeIn?.Invoke();
     }
 
     public void RestartTrigger(int checkPointIndex)//リスタート処理を行う
