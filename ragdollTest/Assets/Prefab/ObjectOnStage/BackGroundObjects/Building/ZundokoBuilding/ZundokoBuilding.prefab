@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8877776277254233538}
   - component: {fileID: 5584327169862438147}
   - component: {fileID: 1102240664228913389}
+  - component: {fileID: 6190082008002044012}
   m_Layer: 3
   m_Name: ZundokoBuilding
   m_TagString: Untagged
@@ -84,3 +85,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5222915603427581587}
   m_Mesh: {fileID: 4300000, guid: d4221f49fe9c9134a94cef8344521be5, type: 2}
+--- !u!65 &6190082008002044012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5222915603427581587}
+  m_Material: {fileID: 13400000, guid: c4e8f5a58532030429f37edc3a790ead, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 30.050024, y: 45.249813, z: 30.135866}
+  m_Center: {x: -0.54500484, y: 22.624907, z: -14.61206}
