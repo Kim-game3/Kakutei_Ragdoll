@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8832215250612589410}
   - component: {fileID: 9210396390190245733}
   - component: {fileID: 4398280410288080506}
+  - component: {fileID: 5559773262521896242}
   m_Layer: 0
   m_Name: WindZone
   m_TagString: Untagged
@@ -175,6 +176,20 @@ CapsuleCollider:
   m_Height: 2.01
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.47}
+--- !u!114 &5559773262521896242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707767379751288148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 192fe8eecb507e747961910a9048755b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volume: 0.3
+  _priority: 1
 --- !u!1 &6693669284208222825
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,6 +247,7 @@ MonoBehaviour:
   _windEffect:
     _effect: {fileID: 5016220795699015093}
     _autoSize: 1
+  _windSound: {fileID: 5559773262521896242}
   _windZone: {fileID: 8832215250612589410}
   _playerWindAffect: {fileID: 0}
 --- !u!1001 &5662106079428189070

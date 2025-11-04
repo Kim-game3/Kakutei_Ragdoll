@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _priority
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 2

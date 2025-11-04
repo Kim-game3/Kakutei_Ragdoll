@@ -82,8 +82,6 @@ public class WindSE_Listener : MonoBehaviour
             return;
         }
 
-        Debug.Log(_windSoundList.Count);
-
         foreach (var windSound in _windSoundList)
         {
             if (windSound.enabled)
