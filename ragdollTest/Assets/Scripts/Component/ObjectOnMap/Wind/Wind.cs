@@ -20,7 +20,7 @@ public class Wind : MonoBehaviour
     [Tooltip("ƒGƒtƒFƒNƒgŠÖŒW")] [SerializeField]
     WindEffect _windEffect;
 
-    [Tooltip("Œø‰Ê‰¹ŠÖŒW")] [SerializeField] 
+    [Tooltip("Œø‰Ê‰¹ŠÖŒW\n‰½‚à“ü‚ê‚È‚¯‚ê‚Î‰¹‚ª–Â‚ç‚È‚­‚È‚é")] [SerializeField] 
     WindSound _windSound;
 
     [Tooltip("•—‚Ì“–‚½‚è”»’è")] [SerializeField]
@@ -94,32 +94,32 @@ public class Wind : MonoBehaviour
         if (_windCycle.IsActive)
         {
             _windEffect.Play();
-            _windSound.enabled = true;
+            if (_windSound != null) _windSound.enabled = true;
         }
 
         else
         {
             _windEffect.Stop();
-            _windSound.enabled = false;
+            if (_windSound != null) _windSound.enabled = false;
         }
     }
 
     void OnFar()//‰“‚­‚È‚Á‚½
     {
         _windEffect.Switchvisible(false);
-        _windSound.enabled = false;
+        if (_windSound != null) _windSound.enabled = false;
     }
 
     private void OnBlowWind()//•—‚ª‚«n‚ß‚½
     {
         _windEffect.Play();
-        _windSound.enabled = true;
+        if (_windSound != null) _windSound.enabled = true;
     }
 
     private void OnStopWind()//•—‚ª~‚ñ‚¾
     {
         _windEffect.Stop();
-        _windSound.enabled = false;
+        if (_windSound != null) _windSound.enabled = false;
     }
 
     private void Update()
