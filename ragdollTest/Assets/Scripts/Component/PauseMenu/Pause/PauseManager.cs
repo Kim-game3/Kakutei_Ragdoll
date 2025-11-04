@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System;
 
 //作成者:杉山
 //ポーズ時の処理
@@ -19,6 +20,9 @@ public partial class PauseManager : MonoBehaviour
     PauseManager_UI _uiProcess;
 
     bool _isPausing=false;
+
+    public event Action OnPause;
+    public event Action OnResume;
 
     //ポーズ状態の切り替え
     public void SwitchPause(InputAction.CallbackContext context)
@@ -54,6 +58,15 @@ public partial class PauseManager : MonoBehaviour
 
         _internalProcess.OnSwitchPause(_isPausing);
         _uiProcess.OnSwitchPause(_isPausing);
+
+        if (_isPausing)
+        {
+            OnPause?.Invoke();
+        }
+        else
+        {
+            OnResume?.Invoke();
+        }
     }
 
 }

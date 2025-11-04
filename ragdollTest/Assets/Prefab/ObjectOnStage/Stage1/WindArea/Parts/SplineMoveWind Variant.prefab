@@ -282,6 +282,10 @@ PrefabInstance:
       propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4761953743593514209, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: _priority
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5377475925396915302, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.8

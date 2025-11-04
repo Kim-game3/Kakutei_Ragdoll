@@ -21,7 +21,7 @@ public class ResultManager : MonoBehaviour
     //--- スコア ---//
     static ScoreData _score;
 
-    public static ScoreData Score { get { return _score; } }//スコアの取得(スコアが確定していない場合はnullが返されるので注意)
+    public static ScoreData Score { get { return _score; } }//スコアの取得(スコアが確定していない場合はnullが返されるので注意)、クリア回数は何回目のクリアかを入れる
 
     private void Awake()
     {
@@ -31,6 +31,11 @@ public class ResultManager : MonoBehaviour
     //スコアの確定(書き込み)
     public void ConfirmResult()
     {
-        _score = new ScoreData(_stageID,_stopWatch.ElapsedTime, _countDeath.Count);
+        ScoreData record = PlayerDataManager.GetScoreRecord(_stageID);
+
+        int clearCountRecord = (record != null) ? record.ClearCount : 0; //今までのクリア回数を取得
+        clearCountRecord++;//クリア回数を加算
+
+        _score = new ScoreData(_stageID,_stopWatch.ElapsedTime, _countDeath.Count,clearCountRecord);
     }
 }

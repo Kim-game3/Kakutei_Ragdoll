@@ -10,6 +10,8 @@ TagManager:
   - FxTemporaire
   - WindAffect
   - BootArea
+  - Wind
+  - WindSE_Listener
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - UI
   - Obstacle
   - Player
-  - 
+  - UIParticle
   - 
   - House
   - 

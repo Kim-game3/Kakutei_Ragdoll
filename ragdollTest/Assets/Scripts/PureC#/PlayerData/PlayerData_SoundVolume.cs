@@ -10,9 +10,9 @@ public partial class PlayerDataManager
     //---音量関係---//
     readonly static Dictionary<ESoundType, string> _soundTypeNameDic
         = new Dictionary<ESoundType, string>(){
-            { ESoundType.Master,"MasterVolume"},//マスター音量のデータ名
-            { ESoundType.SE,"SEVolume"},//SE音量のデータ名
-            { ESoundType.BGM,"BGMVolume"},//BGM音量のデータ名
+            { ESoundType.Master,"MASTER_VOLUME"},//マスター音量のデータ名
+            { ESoundType.SE,"SE_VOLUME"},//SE音量のデータ名
+            { ESoundType.BGM,"BGM_VOLUME"},//BGM音量のデータ名
     };
 
     public static SoundVolumeData GetSoundVolume(ESoundType soundType)//音量データの取得(一度も書き換えたことがない場合はnullを返す)

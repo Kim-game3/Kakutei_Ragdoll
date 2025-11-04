@@ -11,10 +11,11 @@ public class ShowBreakRecord : MonoBehaviour
     [SerializeField] HideUITypeBase _hideBreakRecord;
     [SerializeField] JudgeResultIsHighScore _judgeResultIsHighScore;
 
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        if(_judgeResultIsHighScore.BrokeRecord)
+        yield return null;//JudgeResultIsHighScoreのスコア更新処理を待つ
+
+        if (_judgeResultIsHighScore.BrokeRecord)
         {
             _showBreakRecord.Show();
         }

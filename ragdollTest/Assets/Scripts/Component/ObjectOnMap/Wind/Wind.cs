@@ -20,6 +20,9 @@ public class Wind : MonoBehaviour
     [Tooltip("エフェクト関係")] [SerializeField]
     WindEffect _windEffect;
 
+    [Tooltip("効果音関係\n何も入れなければ音が鳴らなくなる")] [SerializeField] 
+    WindSound _windSound;
+
     [Tooltip("風の当たり判定")] [SerializeField]
     WindHitZone _windZone;
 
@@ -88,23 +91,35 @@ public class Wind : MonoBehaviour
     {
         _windEffect.Switchvisible(true);
 
-        if (_windCycle.IsActive) _windEffect.Play();
-        else _windEffect.Stop();
+        if (_windCycle.IsActive)
+        {
+            _windEffect.Play();
+            if (_windSound != null) _windSound.enabled = true;
+        }
+
+        else
+        {
+            _windEffect.Stop();
+            if (_windSound != null) _windSound.enabled = false;
+        }
     }
 
     void OnFar()//遠くなった時
     {
         _windEffect.Switchvisible(false);
+        if (_windSound != null) _windSound.enabled = false;
     }
 
     private void OnBlowWind()//風が吹き始めた時
     {
         _windEffect.Play();
+        if (_windSound != null) _windSound.enabled = true;
     }
 
     private void OnStopWind()//風が止んだ時
     {
         _windEffect.Stop();
+        if (_windSound != null) _windSound.enabled = false;
     }
 
     private void Update()

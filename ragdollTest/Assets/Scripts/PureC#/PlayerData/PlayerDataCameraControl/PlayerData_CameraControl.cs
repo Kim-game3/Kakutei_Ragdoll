@@ -11,8 +11,8 @@ public partial class PlayerDataManager
 
     readonly static Dictionary<ECameraAxis, string> _cameraInvertDataNameDic
         = new Dictionary<ECameraAxis, string>(){
-            { ECameraAxis.X,"X_Invert"},//X軸操作の反転状態のデータ名
-            { ECameraAxis.Y,"Y_Invert"},//Y軸操作の反転状態のデータ名
+            { ECameraAxis.X,"X_INVERT"},//X軸操作の反転状態のデータ名
+            { ECameraAxis.Y,"Y_INVERT"},//Y軸操作の反転状態のデータ名
     };
 
     const int _trueNum = 1;//bool型とint型で変換する時、この値であればtrueとする
