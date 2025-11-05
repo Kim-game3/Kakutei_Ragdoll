@@ -11,6 +11,9 @@ public class StageInfo
     [CustomLabel("ステージ名")] [SerializeField]
     string _stageName;
 
+    [Tooltip("説明文")] [Multiline(5)] [SerializeField]
+    string _explanation;
+
     [Tooltip("シーン")] [SerializeField]
     SceneReference _scene;
 
