@@ -4015,6 +4015,7 @@ GameObject:
   - component: {fileID: 1963035127}
   - component: {fileID: 1963035128}
   - component: {fileID: 1963035130}
+  - component: {fileID: 1963035131}
   m_Layer: 0
   m_Name: ButtonManager
   m_TagString: Untagged
@@ -4070,7 +4071,22 @@ MonoBehaviour:
   _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
   _stageID: 0
   _targetButton: {fileID: 426489579}
-  _playingStageInfoManager: {fileID: 187394191827096969, guid: f191dfebebfa9ec4e908059163339e8c, type: 3}
+--- !u!114 &1963035131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963035126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da57a08c506373c4baa7f5937d46584e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delayDuration: 0.5
+  _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
+  _stageID: 1
+  _targetButton: {fileID: 2067510962}
 --- !u!1 &1983735010
 GameObject:
   m_ObjectHideFlags: 0
