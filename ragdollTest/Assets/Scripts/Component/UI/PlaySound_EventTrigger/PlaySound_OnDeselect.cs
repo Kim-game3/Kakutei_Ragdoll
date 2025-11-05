@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 //作成者:杉山
 //ボタン非選択化時に音を鳴らす
-
+//ボタン本体につける
 
 public class PlaySound_OnDeselect : MonoBehaviour, IDeselectHandler
 {

@@ -38,6 +38,8 @@ public class ChangeSceneButton : MonoBehaviour
 
     public void ChangeScene()
     {
+        if (!_targetButton.interactable) return;
+
         if (!string.IsNullOrEmpty(_nextScene.ScenePath))
         {
             StartCoroutine(LoadSceneCoroutine());
