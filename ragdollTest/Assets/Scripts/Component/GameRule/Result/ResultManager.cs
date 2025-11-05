@@ -9,8 +9,8 @@ using UnityEngine;
 public class ResultManager : MonoBehaviour
 {
     //--- スコアの算出に必要な機能 ---//
-    [CustomLabel("ステージ番号")] [Tooltip("他のステージと被らないようにしてください")] [SerializeField]
-    int _stageID;
+    [Tooltip("現在プレイしているステージの情報の取得に失敗した時に入れるステージID")] [SerializeField]
+    int _defaultStageID=0;
 
     [Tooltip("水に落ちた回数を数える機能")] [SerializeField]
     CountDeath _countDeath;
@@ -31,11 +31,31 @@ public class ResultManager : MonoBehaviour
     //スコアの確定(書き込み)
     public void ConfirmResult()
     {
-        ScoreData record = PlayerDataManager.GetScoreRecord(_stageID);
+        int stageID = GetStageID();
+
+        ScoreData record = PlayerDataManager.GetScoreRecord(stageID);
 
         int clearCountRecord = (record != null) ? record.ClearCount : 0; //今までのクリア回数を取得
         clearCountRecord++;//クリア回数を加算
 
-        _score = new ScoreData(_stageID,_stopWatch.ElapsedTime, _countDeath.Count,clearCountRecord);
+        _score = new ScoreData(stageID,_stopWatch.ElapsedTime, _countDeath.Count,clearCountRecord);
+    }
+
+    int GetStageID()
+    {
+        //プレイ中のステージの情報を管理するクラスの実体が無かったら今ここで作ってから、ステージIDを渡す
+        //既にあったらそのままステージIDを取得して渡す
+
+        if (PlayingStageInfoManager.Instance == null)
+        {
+            PlayingStageInfoManager.Instantiate();
+            PlayingStageInfoManager.Instance.SetData(_defaultStageID);
+        }
+        else if(PlayingStageInfoManager.Instance.Data == null)
+        {
+            PlayingStageInfoManager.Instance.SetData(_defaultStageID);
+        }
+
+        return PlayingStageInfoManager.Instance.Data.StageID;
     }
 }

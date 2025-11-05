@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stageInfos:
   - _stageName: "\u3044\u3064\u3082\u306E\u5E30\u5B85\u30E2\u30FC\u30C9"
+    _scene:
+      sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
+      scenePath: Assets/Scenes/GameScene.unity
   - _stageName: "\u7D76\u5BFE\u5E30\u3055\u306A\u3044\u30E2\u30FC\u30C9"
+    _scene:
+      sceneAsset: {fileID: 0}
+      scenePath: 
