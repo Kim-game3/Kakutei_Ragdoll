@@ -1,6 +1,9 @@
 using UnityEngine;
 using System;
 
+//作成者:杉山
+//チェックポイントを更新するトリガーのふるまい
+
 public class CheckPointUpdateTrigger
 {
     int _checkPointIndex;

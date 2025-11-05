@@ -21,12 +21,6 @@ public class ChangeSceneButton : MonoBehaviour
 
     float _loadProgress = 0;
 
-    public float DelayDuration//押されてからシーン遷移を始める時間
-    {
-        get { return _delayDuration; }
-        set { _delayDuration = value; }
-    }
-
     public float LoadProgress { get { return _loadProgress; } }//ロードの進行度(0～1)
 
     public event Action OnStartLoad;
@@ -38,6 +32,8 @@ public class ChangeSceneButton : MonoBehaviour
 
     public void ChangeScene()
     {
+        if (!_targetButton.interactable) return;
+
         if (!string.IsNullOrEmpty(_nextScene.ScenePath))
         {
             StartCoroutine(LoadSceneCoroutine());

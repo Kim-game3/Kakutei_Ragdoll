@@ -13364,13 +13364,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1928697243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Script: {fileID: 11500000, guid: bf13b94e9ba1a4c4a8c80f2cc23db784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _delayDuration: 0.5
-  _nextScene:
-    sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
-    scenePath: Assets/Scenes/GameScene.unity
+  _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
   _targetButton: {fileID: 1742051979}
 --- !u!224 &1936677548 stripped
 RectTransform:

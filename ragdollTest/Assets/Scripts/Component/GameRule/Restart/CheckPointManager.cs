@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//チェックポイントのマネージャー
+//どのチェックポイントまで行ったかを把握する
 //チェックポイントの数も把握
 
 public class CheckPointManager : MonoBehaviour
@@ -17,7 +17,7 @@ public class CheckPointManager : MonoBehaviour
 
     public int CurrentCheckPointIndex { get { return _currentCheckPointIndex; } }
 
-    public int CheckPointLength { get { return _checkPointZones.Length; } }
+    public int CheckPointLength { get { return _checkPointUpdateTriggers.Length; } }
 
     public void UpdateCheckPoint(int newCheckPointIndex)//チェックポイントの更新
     {

@@ -14,6 +14,7 @@ public class ScoreData
 
     public ScoreData(int stageID,float clearTime,int deathCount,int clearCount)
     {
+        _stageID = stageID;
         _clearTime = clearTime;
         _deathCount = deathCount;
         _clearCount = clearCount;

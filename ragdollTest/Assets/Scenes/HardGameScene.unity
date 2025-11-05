@@ -34411,6 +34411,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 40.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4014068853942216353, guid: b6e1db3f08ec6954f9d043ea522972bf, type: 3}
+      propertyPath: _checkPointZones.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6674773893132054566, guid: b6e1db3f08ec6954f9d043ea522972bf, type: 3}
       propertyPath: m_LocalScale.x
       value: 12
@@ -34898,6 +34902,10 @@ PrefabInstance:
       propertyPath: _countDeath
       value: 
       objectReference: {fileID: 4064680034383877877}
+    - target: {fileID: 7483211999626923022, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
+      propertyPath: _defaultStageID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8722555800395006686, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
       propertyPath: _playCamera
       value: 

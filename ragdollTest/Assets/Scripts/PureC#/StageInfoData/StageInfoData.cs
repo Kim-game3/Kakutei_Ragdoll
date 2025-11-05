@@ -13,13 +13,9 @@ public class StageInfoData : ScriptableObject
 
     public int StageLength { get { return _stageInfos.Length; } }//登録されているステージの数
 
-    public StageInfo GetStageInfo(int stageID)
+    public StageInfo GetStageInfo(int stageID)//存在しないIDの場合は、nullが返される
     {
-        if (!MathfExtension.IsInRange(stageID,0,_stageInfos.Length-1))
-        {
-            Debug.Log("範囲外の値です！");
-            return null;
-        }
+        if (!MathfExtension.IsInRange(stageID, 0, _stageInfos.Length - 1)) return null;
 
         return _stageInfos[stageID];
     }
