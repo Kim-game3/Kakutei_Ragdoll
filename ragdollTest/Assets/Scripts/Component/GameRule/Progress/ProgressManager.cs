@@ -24,6 +24,8 @@ public class ProgressManager : MonoBehaviour
 
     void UpdateProgress(int newProgressIndex)
     {
+        if (newProgressIndex == _currentProgressIndex) return;
+
         _currentProgressIndex=newProgressIndex;
         OnUpdateProgress(Progress);
     }
