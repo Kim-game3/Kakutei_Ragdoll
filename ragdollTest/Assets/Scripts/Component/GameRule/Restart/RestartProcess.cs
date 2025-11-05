@@ -39,6 +39,8 @@ public partial class RestartProcess : MonoBehaviour
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
 
+    int _checkPointIndex;
+
     public event Action OnFadeOut;
     public event Action OnFadeIn;
 
@@ -70,6 +72,8 @@ public partial class RestartProcess : MonoBehaviour
 
     IEnumerator OnRestart(int checkPointIndex)
     {
+        _checkPointIndex = checkPointIndex;
+
         InitOnRestart(checkPointIndex);//初期化処理
 
         //落ちた瞬間

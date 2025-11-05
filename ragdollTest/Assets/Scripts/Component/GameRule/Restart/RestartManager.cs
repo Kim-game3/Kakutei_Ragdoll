@@ -15,7 +15,9 @@ public class RestartManager : MonoBehaviour
     [Tooltip("リスタートゾーンのトリガー")] [SerializeField] 
     OnTriggerDetect[] _restartZoneTriggers;
 
-    public event Action OnRestrat;//水に落ちた瞬間に呼ぶ
+    //水に落ちた瞬間に呼ぶ
+    public event Action OnRestrat;
+
 
     private void Awake()
     {
