@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6774369384726672582}
-  - component: {fileID: 5012721436154618795}
+  - component: {fileID: 2133706873548967636}
   m_Layer: 0
   m_Name: RestartGame
   m_TagString: Untagged
@@ -216,7 +216,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8783394797613734802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5012721436154618795
+--- !u!114 &2133706873548967636
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,13 +225,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5292473263051686706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Script: {fileID: 11500000, guid: bf13b94e9ba1a4c4a8c80f2cc23db784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _delayDuration: 0.5
-  _nextScene:
-    sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
-    scenePath: Assets/Scenes/GameScene.unity
+  _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
   _targetButton: {fileID: 0}
 --- !u!1 &5455596874312265742
 GameObject:
