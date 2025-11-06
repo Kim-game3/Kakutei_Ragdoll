@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using System;
 using UnityEngine.UI;
 
 //作成者:杉山
@@ -23,7 +25,12 @@ public class StartGameStageButton : MonoBehaviour
     [Tooltip("ボタン")] [SerializeField]
     Button _targetButton;
 
+    [Tooltip("ボタンのテキスト")] [SerializeField]
+    TextMeshProUGUI _buttonText;
+
     float _loadProgress = 0;
+
+    StageInfo _stageInfo;
 
     public float LoadProgress { get { return _loadProgress; } }//ロードの進行度(0～1)
 
@@ -32,38 +39,37 @@ public class StartGameStageButton : MonoBehaviour
     private void Awake()
     {
         _targetButton.onClick.AddListener(ChangeScene);
+
+        //ステージのデータを取得
+        if (_stageInfoData == null)
+        {
+            Debug.Log("ステージのデータベースが設定されていません！");
+            return;
+        }
+
+        _stageInfo = _stageInfoData.GetStageInfo(_stageID);
+
+        if (_stageInfo == null)
+        {
+            Debug.Log("存在しないステージIDです！");
+            return;
+        }
     }
 
     private void Start()
     {
         PlayingStageInfoManager.Destroy();//プレイ中のステージの情報を管理するオブジェクトの削除処理
+
+        //ボタンの名前を設定
+
+        _buttonText.text = _stageInfo.StageName;
     }
 
     public void ChangeScene()
     {
         if (!_targetButton.interactable) return;
 
-        if(_stageInfoData==null)
-        {
-            Debug.Log("ステージのデータベースが設定されていません！");
-            return;
-        }
-
-        StageInfo stageInfo = _stageInfoData.GetStageInfo(_stageID);
-
-        if (stageInfo == null)
-        {
-            Debug.Log("存在しないステージIDです！");
-            return;
-        }
-
-        string scenePath = stageInfo.ScenePath;
-
-        if (string.IsNullOrEmpty(scenePath))
-        {
-            Debug.Log("シーンが正しく設定されていません！");
-            return;
-        }
+        string scenePath = _stageInfo.ScenePath;
 
         //シーン遷移処理開始
 
