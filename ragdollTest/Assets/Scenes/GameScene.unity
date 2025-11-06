@@ -21137,7 +21137,7 @@ Transform:
   m_GameObject: {fileID: 1662155689}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17828935, y: 0.24950795, z: -0.046793018, w: 0.95066774}
-  m_LocalPosition: {x: -64.21273, y: 44.759583, z: 159.49677}
+  m_LocalPosition: {x: 36.26494, y: 104.53432, z: 272.24338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21162,8 +21162,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 12
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1870173145}
+  m_Follow: {fileID: 1870173145}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
@@ -25038,6 +25038,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1870173145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3090422867672526171, guid: c14e3c9c21c3fc042b1b560fede34c4b, type: 3}
+  m_PrefabInstance: {fileID: 1457536375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1889821917
 Mesh:
   m_ObjectHideFlags: 0
@@ -29658,8 +29663,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 12
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 1870173145}
+  m_Follow: {fileID: 1870173145}
   m_Lens:
     FieldOfView: 60.000004
     OrthographicSize: 5
