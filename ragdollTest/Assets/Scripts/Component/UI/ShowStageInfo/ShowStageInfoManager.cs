@@ -16,6 +16,16 @@ public class ShowStageInfoManager : MonoBehaviour
     [CustomLabel("ステージ名")] [SerializeField]
     TextMeshProUGUI _stageName;
 
+    [Tooltip("イメージアイコン")] [SerializeField]
+    Image _imageIcon;
+
+    [Tooltip("キャラの名前")] [SerializeField]
+    TextMeshProUGUI _charaName;
+
+    [Tooltip("コメント")] [SerializeField]
+    TextMeshProUGUI _comment;
+
+    //ステージレコード関係
     [CustomLabel("クリアタイム")] [SerializeField]
     TextMeshProUGUI _clearTimeText;
 
@@ -42,7 +52,10 @@ public class ShowStageInfoManager : MonoBehaviour
         }
 
         //情報を書き換え
-        _stageName.text = "-" + stageInfo.StageName + "-";
+        _stageName.text = stageInfo.StageName;
+        _imageIcon.sprite = stageInfo.ImageIcon;
+        _charaName.text = stageInfo.CharaName;
+        _comment.text = stageInfo.Comment;
 
         //未クリアの場合はスコアを表記しない
         if(scoreRecordData==null)
