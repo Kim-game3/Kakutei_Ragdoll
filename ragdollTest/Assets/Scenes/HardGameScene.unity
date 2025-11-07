@@ -19504,7 +19504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452127645}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd0faf939e80bb04e85df3a8f37ccdff, type: 3}
   m_Name: 
@@ -28248,7 +28248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73d5ce7d09a502449af2821f65a3554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frameRate: 60
+  _frameRate: 600
 --- !u!114 &2011391351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31326,6 +31326,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 280425747}
+    - target: {fileID: 7781031557221495058, guid: c14e3c9c21c3fc042b1b560fede34c4b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 8458106311559130574, guid: c14e3c9c21c3fc042b1b560fede34c4b, type: 3}
       propertyPath: m_Mesh
       value: 
