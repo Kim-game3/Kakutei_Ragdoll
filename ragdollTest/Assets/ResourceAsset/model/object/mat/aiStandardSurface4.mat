@@ -21,23 +21,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: aiStandardSurface4
-  m_Shader: {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHAPREMULTIPLY_ON
-  - _EMISSIVE_SIMPLE
-  - _IS_ANGELRING_OFF
-  - _IS_CLIPPING_OFF
-  - _IS_OUTLINE_CLIPPING_NO
-  - _OUTLINE_NML
-  m_InvalidKeywords:
-  - _METALLICGLOSSMAP
-  - _SURFACE_TYPE_TRANSPARENT
+  - _METALLICSPECGLOSSMAP
+  m_InvalidKeywords: []
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IgnoreProjection: False
     RenderType: Opaque
@@ -75,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dd602c9a3fc51d640b1591084675b0fd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -333,7 +326,7 @@ Material:
     - _CoatMask: 0
     - _ColorShift_Speed: 0
     - _ComposerMaskMode: 0
-    - _Cull: 2
+    - _Cull: 0
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
@@ -364,7 +357,7 @@ Material:
     - _DistortionVectorScale: 2
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 1
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EMISSIVE: 0
     - _EmissiveColorMode: 1
@@ -510,7 +503,7 @@ Material:
     - _StepOffset: 0
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
-    - _Surface: 1
+    - _Surface: 0
     - _SurfaceType: 0
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -551,7 +544,7 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestModeDistortion: 8
     - _ZTestTransparent: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _ZWriteMode: 1
     - _isUnityToonshader: 1
     - _simpleUI: 0
