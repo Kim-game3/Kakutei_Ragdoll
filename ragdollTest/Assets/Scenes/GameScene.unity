@@ -19169,7 +19169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452127645}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd0faf939e80bb04e85df3a8f37ccdff, type: 3}
   m_Name: 
@@ -20324,7 +20324,7 @@ LightingSettings:
   m_PVRCulling: 0
   m_PVRSampling: 1
   m_PVRDirectSampleCount: 2
-  m_PVRSampleCount: 128
+  m_PVRSampleCount: 256
   m_PVREnvironmentSampleCount: 8
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
