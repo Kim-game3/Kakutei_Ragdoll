@@ -14,8 +14,11 @@ public class OpeningMovieManager : MonoBehaviour
     [Tooltip("オープニングのムービーのタイムライン")] [SerializeField]
     PlayableDirector _openingMovieTimeline;
 
-    [Tooltip("タイトルシーン")]
-    [SerializeField] SceneReference _titleScene;
+    [Tooltip("タイトルシーン")] [SerializeField] 
+    SceneReference _titleScene;
+
+    [Tooltip("現在のシーン")] [SerializeField]
+    SceneReference _currentScene;
 
     [Tooltip("スキップした際に何秒時点まで飛ばすか")] [SerializeField]
     float _skipDuration;
@@ -52,6 +55,7 @@ public class OpeningMovieManager : MonoBehaviour
 
         yield return new WaitUntil(() => _isFinishedMovie);//タイムラインのムービーが終わるまで待つ
 
+        BeforeSceneMemo.BeforeScenePath = _currentScene.ScenePath;
         SceneManager.LoadScene(_titleScene.ScenePath);//シーンを切り替え
     }
 
