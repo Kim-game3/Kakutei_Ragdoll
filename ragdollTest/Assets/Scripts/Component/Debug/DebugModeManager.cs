@@ -32,8 +32,11 @@ public class DebugModeManager : MonoBehaviour
 
     const int _waitFrame = 10;
 
+
     public void DebugModeOn(InputAction.CallbackContext context)
     {
+        if (!enabled) return;
+
         if (!context.performed) return;
         _debugWindow.alpha = _showAlpha;
 
