@@ -30369,8 +30369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 714.5, y: -451.2}
-  m_SizeDelta: {x: 491.17, y: 50}
+  m_AnchoredPosition: {x: 845.9, y: -520.9}
+  m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2126805074
 MonoBehaviour:
@@ -30392,7 +30392,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "S\u30AD\u30FC:\u30B9\u30AD\u30C3\u30D7"
+  m_text: SKIP:PRESS ANY KEY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 68f995d138eb31645b481288c5de9038, type: 2}
   m_sharedMaterial: {fileID: -1057147233637226601, guid: 68f995d138eb31645b481288c5de9038, type: 2}
@@ -30401,8 +30401,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 3525912102
+  m_fontColor: {r: 0.15008903, g: 0.14751694, b: 0.16037738, a: 0.8235294}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -30419,8 +30419,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 37
+  m_fontSizeBase: 37
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
