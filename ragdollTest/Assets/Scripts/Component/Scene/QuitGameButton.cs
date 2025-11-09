@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 //作成者:杉山
@@ -14,9 +15,6 @@ public class QuitGameButton : MonoBehaviour
     [Tooltip("ボタン")] [SerializeField]
     Button _targetButton;
 
-    [SerializeField]
-    CanvasGroup _canvas;
-
     private void Awake()
     {
         _targetButton.onClick.AddListener(QuitGame);
@@ -29,7 +27,7 @@ public class QuitGameButton : MonoBehaviour
 
     private IEnumerator QuitGameCoroutine()
     {
-        _canvas.interactable = false;
+        EventSystem.current.enabled = false;//UI操作を出来なくする
         yield return new WaitForSecondsRealtime(_delayDuration);//少し遅延させる
 
 #if UNITY_EDITOR

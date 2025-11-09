@@ -20,6 +20,8 @@ MonoBehaviour:
     _scene:
       sceneAsset: {fileID: 102900000, guid: 3a7d14b584e7b5a4bb1dfd3614316900, type: 3}
       scenePath: Assets/Scenes/GameScene.unity
+    _clearMessage: "\u30A2\u30B6\u30E9\u30B7\u3001\u5E30\u5B85\u6210\u529F"
+    _clearJingle: {fileID: 8300000, guid: a1dcf9abf75344b46ba2971b2d655dbb, type: 3}
   - _stageName: "180\u9023\u52E4\u660E\u3051\u30E2\u30FC\u30C9"
     _imageIcon: {fileID: 21300000, guid: 024e76ec6040f8d4184ccd541ebf12db, type: 3}
     _charaName: Orca_CEO
@@ -27,3 +29,5 @@ MonoBehaviour:
     _scene:
       sceneAsset: {fileID: 102900000, guid: 9ff501d77f4771d4c98ea7f31a45b414, type: 3}
       scenePath: Assets/Scenes/HardGameScene.unity
+    _clearMessage: "\u30A2\u30B6\u30E9\u30B7\u3001\u5B8C\u5168\u5E30\u5B85\u6210\u529F"
+    _clearJingle: {fileID: 8300000, guid: cac84d98cd96f2d45b2976e766006b35, type: 3}
