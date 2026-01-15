@@ -11,7 +11,7 @@ public class AutoAudioDistanceResizer_WindSound
     [Tooltip("©“®‘å‚«‚³’²®‹@”\‚ğƒIƒ“‚É‚·‚é‚©")] [SerializeField]
     bool _autoSize = true;
 
-    const float _minRate = 1f;
+    const float _minRate = 2f;
     const float _maxRate = 2.5f;
 
     public void OnValidate(Transform windZoneTrs,AudioSource windAudio)
