@@ -14,9 +14,6 @@ public class Wind : MonoBehaviour
     [Tooltip("カメラとの距離を測る機能\n距離は風の描画距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
     JudgeIsNearFromMainCamera _judgeIsNearFromMainCamera;
 
-    [Tooltip("風を出す周期")] [SerializeField]
-    TimeSwitchBool _windCycle;
-
     [Tooltip("エフェクト関係")] [SerializeField]
     WindEffect _windEffect;
 
@@ -34,9 +31,6 @@ public class Wind : MonoBehaviour
     private void Awake()
     {
         GetWindAffectBody();
-
-        _windCycle.OnTrue += OnBlowWind;
-        _windCycle.OnFalse += OnStopWind;
 
         _judgeIsNearFromMainCamera.Awake();
 
@@ -58,6 +52,18 @@ public class Wind : MonoBehaviour
     {
         GetWindAffectBody();
         _windEffect.OnValidate(_windZone.transform.localScale);
+    }
+
+    private void OnEnable()
+    {
+        _windEffect.Play();
+        if (_windSound != null) _windSound.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        _windEffect.Stop();
+        if (_windSound != null) _windSound.enabled = false;
     }
 
     void GetWindAffectBody()//プレイヤーのWindAffectBodyを取得
@@ -91,12 +97,11 @@ public class Wind : MonoBehaviour
     {
         _windEffect.Switchvisible(true);
 
-        if (_windCycle.IsActive)
+        if (enabled)
         {
             _windEffect.Play();
             if (_windSound != null) _windSound.enabled = true;
         }
-
         else
         {
             _windEffect.Stop();
@@ -110,25 +115,9 @@ public class Wind : MonoBehaviour
         if (_windSound != null) _windSound.enabled = false;
     }
 
-    private void OnBlowWind()//風が吹き始めた時
-    {
-        _windEffect.Play();
-        if (_windSound != null) _windSound.enabled = true;
-    }
-
-    private void OnStopWind()//風が止んだ時
-    {
-        _windEffect.Stop();
-        if (_windSound != null) _windSound.enabled = false;
-    }
-
     private void Update()
     {
         _judgeIsNearFromMainCamera.Update();
-
-        _windCycle.Update();
-
-        if (!_windCycle.IsActive) return;//風が吹いてなければここで打ち切り
 
         _windZone.IsHit(out bool isHitPlayer);
 
