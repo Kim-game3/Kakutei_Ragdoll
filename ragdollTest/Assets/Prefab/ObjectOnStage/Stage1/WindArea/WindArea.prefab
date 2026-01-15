@@ -54200,6 +54200,18 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 33.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 31.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -54243,6 +54255,10 @@ PrefabInstance:
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150958013032190600, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _isAutoToResize
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -54470,6 +54486,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 10.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.6
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -54771,6 +54795,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -54996,6 +55028,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 9.099999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -55681,6 +55721,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2.334
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.2
@@ -55922,6 +55970,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -56008,7 +56060,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56119,6 +56172,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -56205,7 +56262,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56316,6 +56374,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -56402,7 +56464,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56541,6 +56604,14 @@ PrefabInstance:
     - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: MaxDistance
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: MinDistance
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58746,6 +58817,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 4.6
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 10.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 1.72
@@ -59113,6 +59192,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -59199,7 +59282,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -59346,6 +59430,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59536,6 +59628,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.7999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59730,6 +59830,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height

@@ -17,7 +17,7 @@ public class Wind : MonoBehaviour
     [Tooltip("エフェクト関係")] [SerializeField]
     WindEffect _windEffect;
 
-    [Tooltip("効果音関係\n何も入れなければ音が鳴らなくなる")] [SerializeField] 
+    [Tooltip("効果音関係\n何も入れなければ音が鳴らなくなる")] [SerializeField]
     WindSound _windSound;
 
     [Tooltip("風の当たり判定")] [SerializeField]
@@ -26,7 +26,7 @@ public class Wind : MonoBehaviour
     [Tooltip("プレイヤーに風の影響を与える機能")] [SerializeField]
     WindAffectBody _playerWindAffect;
 
-    WindInfo _myWindInfo=new WindInfo();
+    readonly WindInfo _myWindInfo=new WindInfo();
 
     private void Awake()
     {
@@ -56,14 +56,14 @@ public class Wind : MonoBehaviour
 
     private void OnEnable()
     {
-        _windEffect.Play();
-        if (_windSound != null) _windSound.enabled = true;
+        SetWindEffect(true);
+        SetWindSound(true);
     }
 
     private void OnDisable()
     {
-        _windEffect.Stop();
-        if (_windSound != null) _windSound.enabled = false;
+        SetWindEffect(false);
+        SetWindSound(false);
     }
 
     void GetWindAffectBody()//プレイヤーのWindAffectBodyを取得
@@ -83,34 +83,31 @@ public class Wind : MonoBehaviour
 
     void SetWindInfo()
     {
-        if (_myWindInfo == null)
-        {
-            Debug.Log("風の情報がインスタンス化されていません！");
-            return;
-        }
-
         _myWindInfo.Direction = _windZone.transform.forward;
         _myWindInfo.Power = _windPower;
     }
 
     void OnClose()//近くなった時
     {
-        if (enabled)
-        {
-            _windEffect.Play();
-            if (_windSound != null) _windSound.enabled = true;
-        }
-        else
-        {
-            _windEffect.Stop();
-            if (_windSound != null) _windSound.enabled = false;
-        }
+        SetWindEffect(enabled);
+        SetWindSound(enabled);
     }
 
     void OnFar()//遠くなった時
     {
         _windEffect.ToInvisible();
-        if (_windSound != null) _windSound.enabled = false;
+        SetWindSound(false);
+    }
+
+    void SetWindEffect(bool play)
+    {
+        if (play) _windEffect.Play();
+        else _windEffect.Stop();
+    }
+
+    void SetWindSound(bool enable)
+    {
+        if (_windSound != null) _windSound.enabled = enable;
     }
 
     private void Update()
@@ -119,10 +116,9 @@ public class Wind : MonoBehaviour
 
         _windZone.IsHit(out bool isHitPlayer);
 
-        if (isHitPlayer)//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
-        {
-            SetWindInfo();
-            _playerWindAffect.AddWind(_myWindInfo);
-        }
+        if (!isHitPlayer) return;//プレイヤーに当たっていたら、プレイヤーを風で吹き飛ばす
+
+        SetWindInfo();
+        _playerWindAffect.AddWind(_myWindInfo);
     }
 }
