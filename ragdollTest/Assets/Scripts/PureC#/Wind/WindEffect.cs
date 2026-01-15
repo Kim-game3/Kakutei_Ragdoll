@@ -49,13 +49,11 @@ public class WindEffect
         }
     }
 
-    public void Switchvisible(bool isActive)//可視状態を切り替え
+    public void ToInvisible()//エフェクトを見えなくする
     {
         if (!_isActive) return;
 
-        if (_effect.gameObject.activeSelf == isActive) return;
-
-        _effect.gameObject.SetActive(isActive);
+        _effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 
     public void Stop()//エフェクトを止める

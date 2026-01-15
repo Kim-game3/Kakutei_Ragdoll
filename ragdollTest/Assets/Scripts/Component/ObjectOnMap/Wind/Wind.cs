@@ -95,8 +95,6 @@ public class Wind : MonoBehaviour
 
     void OnClose()//‹ß‚­‚È‚Á‚½Žž
     {
-        _windEffect.Switchvisible(true);
-
         if (enabled)
         {
             _windEffect.Play();
@@ -111,7 +109,7 @@ public class Wind : MonoBehaviour
 
     void OnFar()//‰“‚­‚È‚Á‚½Žž
     {
-        _windEffect.Switchvisible(false);
+        _windEffect.ToInvisible();
         if (_windSound != null) _windSound.enabled = false;
     }
 
