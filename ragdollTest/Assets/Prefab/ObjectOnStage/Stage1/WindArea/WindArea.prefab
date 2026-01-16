@@ -54844,6 +54844,10 @@ PrefabInstance:
       value: 820
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _delayDuration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
       value: 
       objectReference: {fileID: 0}
@@ -54974,7 +54978,7 @@ MonoBehaviour:
     - isActive: 0
       time: 2
     - isActive: 1
-      time: 8
+      time: 8.4
     - isActive: 0
       time: 4
   _wind: {fileID: 8943222074980055055}
@@ -55407,7 +55411,7 @@ MonoBehaviour:
   _windCycle:
     _activateTimeline:
     - isActive: 1
-      time: 5
+      time: 6
     - isActive: 0
       time: 5
   _wind: {fileID: 3094174653432342250}
@@ -55770,6 +55774,10 @@ PrefabInstance:
       value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _delayDuration
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
       value: 
       objectReference: {fileID: 0}
@@ -55881,7 +55889,7 @@ MonoBehaviour:
   _windCycle:
     _activateTimeline:
     - isActive: 1
-      time: 10
+      time: 10.4
     - isActive: 0
       time: 4
   _wind: {fileID: 1932208673286546271}
@@ -58660,7 +58668,7 @@ MonoBehaviour:
   _windCycle:
     _activateTimeline:
     - isActive: 1
-      time: 5
+      time: 6
     - isActive: 0
       time: 5
   _wind: {fileID: 5250003825542254031}
@@ -58764,7 +58772,7 @@ MonoBehaviour:
   _windCycle:
     _activateTimeline:
     - isActive: 1
-      time: 5
+      time: 6
     - isActive: 0
       time: 5
   _wind: {fileID: 5424226652601742123}
