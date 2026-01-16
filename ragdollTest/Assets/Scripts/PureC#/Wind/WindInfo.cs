@@ -18,6 +18,11 @@ public class WindInfo
 
     public WindInfo(Vector3 direction, float power)
     {
+        Set(direction, power);
+    }
+
+    public void Set(Vector3 direction, float power)
+    {
         _direction = direction;
         _power = power;
     }

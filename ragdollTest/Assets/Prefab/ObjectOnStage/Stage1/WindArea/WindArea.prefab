@@ -54200,6 +54200,18 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -54243,6 +54255,14 @@ PrefabInstance:
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150958013032190600, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _isAutoToResize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150958013032190600, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _autoAudioResizer._autoSize
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
@@ -54471,6 +54491,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 8.74132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 6.150846
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -54675,7 +54703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4026253
+      value: -1.4026295
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -54683,23 +54711,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.27075258
+      value: 0.27074856
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.58831817
+      value: 0.5883197
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5011605
+      value: 0.501161
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.48213834
+      value: -0.48213652
       objectReference: {fileID: 0}
     - target: {fileID: 7359915873131663066, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.41262898
+      value: -0.41262802
       objectReference: {fileID: 0}
     - target: {fileID: 8136908765105960665, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -54771,6 +54799,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2.4
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.534586
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.3041015
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2
@@ -54806,6 +54842,10 @@ PrefabInstance:
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 820
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _delayDuration
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
@@ -54906,13 +54946,53 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6693669284208222825, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6784328918211742562}
   m_SourcePrefab: {fileID: 100100000, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
 --- !u!4 &5410524647983012680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
   m_PrefabInstance: {fileID: 3026213443595015999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8438608429766063446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6693669284208222825, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+  m_PrefabInstance: {fileID: 3026213443595015999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6784328918211742562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438608429766063446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2064d8b9f8d8e68499447aa5843067e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windCycle:
+    _activateTimeline:
+    - isActive: 0
+      time: 2
+    - isActive: 1
+      time: 8.4
+    - isActive: 0
+      time: 4
+  _wind: {fileID: 8943222074980055055}
+--- !u!114 &8943222074980055055 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+  m_PrefabInstance: {fileID: 3026213443595015999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8438608429766063446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6047b593ae4442b4a7dc886d90ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3725991156291628058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54956,6 +55036,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 8.13303
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.7275877
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -55291,10 +55379,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
-      propertyPath: _playerWindAffect
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7098396050497382514, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
       propertyPath: m_Name
       value: SideWindArea (4)
@@ -55302,8 +55386,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3305639159747606775}
   m_SourcePrefab: {fileID: 100100000, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+--- !u!1 &2591812532072524723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 4601720268327724506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3305639159747606775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591812532072524723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2064d8b9f8d8e68499447aa5843067e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windCycle:
+    _activateTimeline:
+    - isActive: 1
+      time: 6
+    - isActive: 0
+      time: 5
+  _wind: {fileID: 3094174653432342250}
+--- !u!114 &3094174653432342250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 4601720268327724506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591812532072524723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6047b593ae4442b4a7dc886d90ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3474298393795119715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1147212602816720825, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
@@ -55607,6 +55729,14 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2.334
       objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 6.9339643
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 4.8784904
+      objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
       value: 2.2
@@ -55642,6 +55772,10 @@ PrefabInstance:
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _delayDuration
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
@@ -55730,8 +55864,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6693669284208222825, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6377158252810622980}
   m_SourcePrefab: {fileID: 100100000, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+--- !u!1 &1429845865276698118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6693669284208222825, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+  m_PrefabInstance: {fileID: 5707016766028008559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6377158252810622980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429845865276698118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2064d8b9f8d8e68499447aa5843067e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windCycle:
+    _activateTimeline:
+    - isActive: 1
+      time: 10.4
+    - isActive: 0
+      time: 4
+  _wind: {fileID: 1932208673286546271}
+--- !u!114 &1932208673286546271 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+  m_PrefabInstance: {fileID: 5707016766028008559}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429845865276698118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6047b593ae4442b4a7dc886d90ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3304000647270465560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7127314298631343223, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -55810,6 +55982,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -55819,6 +55995,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -55896,7 +56076,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56007,6 +56189,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -56016,6 +56202,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56093,7 +56283,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56204,6 +56396,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -56213,6 +56409,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56290,7 +56490,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56429,6 +56631,14 @@ PrefabInstance:
     - target: {fileID: 390274240888872385, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: MaxDistance
+      value: 5.3439684
+      objectReference: {fileID: 0}
+    - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
+      propertyPath: MinDistance
+      value: 3.7927194
       objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58422,10 +58632,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
-      propertyPath: _playerWindAffect
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6132987225930165947, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -58437,8 +58643,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3777776874419211085}
   m_SourcePrefab: {fileID: 100100000, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+--- !u!1 &4745811154762186902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 6771142172262190847}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3777776874419211085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745811154762186902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2064d8b9f8d8e68499447aa5843067e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windCycle:
+    _activateTimeline:
+    - isActive: 1
+      time: 6
+    - isActive: 0
+      time: 5
+  _wind: {fileID: 5250003825542254031}
+--- !u!114 &5250003825542254031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 6771142172262190847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4745811154762186902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6047b593ae4442b4a7dc886d90ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5916703131959763270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1147212602816720825, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
@@ -58493,10 +58737,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
-      propertyPath: _playerWindAffect
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
       propertyPath: _judgeIsNearFromMainCamera._distanceLimit
       value: 25
       objectReference: {fileID: 0}
@@ -58507,8 +58747,46 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1039317711781681859}
   m_SourcePrefab: {fileID: 100100000, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+--- !u!1 &4774371781429755506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2029839167733960297, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 6803415255678578715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1039317711781681859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774371781429755506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2064d8b9f8d8e68499447aa5843067e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _windCycle:
+    _activateTimeline:
+    - isActive: 1
+      time: 6
+    - isActive: 0
+      time: 5
+  _wind: {fileID: 5424226652601742123}
+--- !u!114 &5424226652601742123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1525646359514415920, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
+  m_PrefabInstance: {fileID: 6803415255678578715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4774371781429755506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d6047b593ae4442b4a7dc886d90ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5873012676875788194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1147212602816720825, guid: 48d1ba178ce2b3a418d44c78a3297cbc, type: 3}
@@ -58565,6 +58843,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 8.74132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 6.150846
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -58933,6 +59219,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windAudio
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windPower
       value: 700
       objectReference: {fileID: 0}
@@ -58942,6 +59232,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _playerWindAffect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -59019,7 +59313,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -59166,6 +59462,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.534586
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.3041015
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59356,6 +59660,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 7.534586
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 5.3041015
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59550,6 +59862,14 @@ PrefabInstance:
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MaxDistance
+      value: 10.035522
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: MinDistance
+      value: 7.004266
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height

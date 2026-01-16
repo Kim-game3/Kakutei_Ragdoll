@@ -3,43 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //作成者:杉山
-//風の効果音の設定
+//風の効果音
 //enabledをfalseにすると、その風の効果音は流れなくなる
-
 
 public class WindSound : MonoBehaviour
 {
-    [Range(0, 1)]
-    [Tooltip("音量、0～1の間で選択")]
     [SerializeField]
-    float _volume = 1;
+    AudioSource _windAudio;
 
     [SerializeField]
-    float _priority;
+    Transform _myTrs;
 
-    public float Volume { get { return _volume; } }
+    [SerializeField]
+    Transform _windZoneTrs;
 
-    public float Priority { get { return _priority; } }
+    [SerializeField]
+    AutoAudioDistanceResizer_WindSound _autoAudioResizer;
 
-    private void OnTriggerEnter(Collider other)
+    [SerializeField]
+    SetPosition_WindSound _setPos;
+
+    private void Awake()
     {
-        if (!other.CompareTag(ObjectTagNameDictionary.WindSE_Listener)) return;
-
-        WindSE_Listener listener = other.GetComponent<WindSE_Listener>();
-
-        if (listener == null) return;
-
-        listener.Add(this);
+        _setPos.Awake(_myTrs, _windZoneTrs);
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnValidate()
     {
-        if (!other.CompareTag(ObjectTagNameDictionary.WindSE_Listener)) return;
+        _autoAudioResizer.OnValidate(_windZoneTrs, _windAudio);
+    }
 
-        WindSE_Listener listener = other.GetComponent<WindSE_Listener>();
+    private void OnEnable()
+    {
+        if (_windAudio != null) _windAudio.Play();
+    }
 
-        if (listener == null) return;
+    private void OnDisable()
+    {
+        if (_windAudio != null) _windAudio.Stop();
+    }
 
-        listener.Remove(this);
+    private void Update()
+    {
+        _setPos.Update();
     }
 }
