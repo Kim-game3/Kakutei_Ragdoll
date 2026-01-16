@@ -11,17 +11,17 @@ public class AutoAudioDistanceResizer_WindSound
     [Tooltip("é©ìÆëÂÇ´Ç≥í≤êÆã@î\ÇÉIÉìÇ…Ç∑ÇÈÇ©")] [SerializeField]
     bool _autoSize = true;
 
-    const float _minRate = 2f;
-    const float _maxRate = 2.5f;
+    [SerializeField]
+    Wind3DSoundDistanceCurve _distanceCurve;
 
     public void OnValidate(Transform windZoneTrs,AudioSource windAudio)
     {
         if (!_autoSize) return;
-        if (windZoneTrs == null || windAudio == null) return;
+        if (windZoneTrs == null || windAudio == null || _distanceCurve == null) return;
 
         float size = Mathf.Max(windZoneTrs.localScale.x, windZoneTrs.localScale.y);
 
-        windAudio.minDistance = size * _minRate;
-        windAudio.maxDistance = size * _maxRate;
+        windAudio.minDistance = _distanceCurve.GetValueMinDistance(size);
+        windAudio.maxDistance = _distanceCurve.GetValueMaxDistance(size);
     }
 }

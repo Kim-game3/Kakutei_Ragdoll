@@ -8,21 +8,13 @@ using UnityEngine;
 [System.Serializable]
 public class WindEffect
 {
-    [SerializeField]
+    [Tooltip("特に何も入れなければエフェクトを表示しない")] [SerializeField]
     ParticleSystem _effect;
 
     [Tooltip("自動的にサイズを調整するか")] [SerializeField]
     bool _autoSize;
 
     const float _effectScaleZ = 0.2f;
-
-    bool _isActive=true;
-
-    public void Awake()
-    {
-        //最初に風のエフェクトが非アクティブになってたら表示しないようにする
-        _isActive=_effect.gameObject.activeSelf;
-    }
 
     public void OnValidate(Vector3 windZoneScale)
     {
@@ -51,23 +43,16 @@ public class WindEffect
 
     public void ToInvisible()//エフェクトを見えなくする
     {
-        if (!_isActive) return;
+        if (_effect == null) return;
 
         _effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
     }
 
-    public void Stop()//エフェクトを止める
+    public void EffectSwitchActive(bool active)
     {
-        if (!_isActive) return;
+        if (_effect == null) return;
 
-        _effect.Stop();
-    }
-
-
-    public void Play()//エフェクトを再生する
-    {
-        if (!_isActive) return;
-
-        _effect.Play();
+        if(active) _effect.Play();
+        else _effect.Stop();
     }
 }

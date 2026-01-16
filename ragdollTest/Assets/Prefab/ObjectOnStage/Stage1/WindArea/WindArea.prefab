@@ -54206,11 +54206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 112.5
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 90
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -54258,6 +54258,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150958013032190600, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _isAutoToResize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150958013032190600, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _autoAudioResizer._autoSize
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -54489,11 +54493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 20
+      value: 8.74132
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 16
+      value: 6.150846
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -54797,11 +54801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 7.534586
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 12
+      value: 5.3041015
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -55031,11 +55035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 17.5
+      value: 8.13303
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 14
+      value: 5.7275877
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -55723,11 +55727,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 12.5
+      value: 6.9339643
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 10
+      value: 4.8784904
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -55986,6 +55990,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _judgeIsNearFromMainCamera._distanceLimit
       value: 70
       objectReference: {fileID: 0}
@@ -56062,6 +56070,7 @@ PrefabInstance:
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56188,6 +56197,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _judgeIsNearFromMainCamera._distanceLimit
       value: 70
       objectReference: {fileID: 0}
@@ -56264,6 +56277,7 @@ PrefabInstance:
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56390,6 +56404,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _judgeIsNearFromMainCamera._distanceLimit
       value: 100
       objectReference: {fileID: 0}
@@ -56466,6 +56484,7 @@ PrefabInstance:
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -56607,11 +56626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: MaxDistance
-      value: 6.25
+      value: 5.3439684
       objectReference: {fileID: 0}
     - target: {fileID: 524817777930707377, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: MinDistance
-      value: 5
+      value: 3.7927194
       objectReference: {fileID: 0}
     - target: {fileID: 1816375340194826460, guid: 1db933180a822ef408e8817fe503ca9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58819,11 +58838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 20
+      value: 8.74132
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 16
+      value: 6.150846
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59208,6 +59227,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+      propertyPath: _windEffect._effect
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _judgeIsNearFromMainCamera._distanceLimit
       value: 70
       objectReference: {fileID: 0}
@@ -59284,6 +59307,7 @@ PrefabInstance:
     - {fileID: 5559773262521896242, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8538090199759913024, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
+    - {fileID: 1691711322940570203, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4707767379751288148, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
@@ -59433,11 +59457,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 7.534586
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 12
+      value: 5.3041015
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59631,11 +59655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 7.534586
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 12
+      value: 5.3041015
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height
@@ -59833,11 +59857,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 25
+      value: 10.035522
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 20
+      value: 7.004266
       objectReference: {fileID: 0}
     - target: {fileID: 4398280410288080506, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: m_Height

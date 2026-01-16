@@ -231,7 +231,9 @@ MonoBehaviour:
     _autoSize: 1
   _windSound: {fileID: 6150958013032190600}
   _windZone: {fileID: 8832215250612589410}
-  _playerWindAffect: {fileID: 0}
+  _getWindAffectBody:
+    _playerWindAffect: {fileID: 0}
+  _delayDuration: 1
 --- !u!1 &8538090199759913024
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,8 +287,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 20.16
-  MaxDistance: 25.2
+  MinDistance: 7.0387745
+  MaxDistance: 10.090188
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -378,6 +380,7 @@ MonoBehaviour:
   _windZoneTrs: {fileID: 8725390802037467401}
   _autoAudioResizer:
     _autoSize: 1
+    _distanceCurve: {fileID: 11400000, guid: e1ceb12a8ee5aeb49a4a73b88219fae2, type: 2}
   _setPos:
     _threshold: 0.01
 --- !u!1001 &5662106079428189070
