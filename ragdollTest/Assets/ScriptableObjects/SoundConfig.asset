@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: SoundConfig
   m_EditorClassIdentifier: 
   _masterVolumeConfig:
-    _minVolume: -80
-    _volumeRange: 80
+    _minVolume: -50
+    _volumeRange: 50
     _defaultVolume: 0
   _seVolumeConfig:
-    _minVolume: -80
-    _volumeRange: 80
+    _minVolume: -50
+    _volumeRange: 50
     _defaultVolume: 0
   _bgmVolumeConfig:
-    _minVolume: -80
-    _volumeRange: 80
+    _minVolume: -50
+    _volumeRange: 50
     _defaultVolume: 0

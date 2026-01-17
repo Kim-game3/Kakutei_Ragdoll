@@ -42,6 +42,7 @@ public class ChangeSoundVolume_Slider : MonoBehaviour
 
         //セーブデータから現在の音量を取ってきて、スライダーの現在の値を設定
         SoundVolumeData soundVolumeSaveData = PlayerDataManager.GetSoundVolume(_soundType);
-        _slider.value = (soundVolumeSaveData != null) ? soundVolumeSaveData.Value : _soundConfigs.DefaultVolume(_soundType);
+        float value = (soundVolumeSaveData != null) ? soundVolumeSaveData.Value : _soundConfigs.DefaultVolume(_soundType);
+        _slider.value = Mathf.Clamp(value, _slider.minValue, _slider.maxValue);
     }
 }
