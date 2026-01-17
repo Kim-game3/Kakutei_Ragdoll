@@ -5991,6 +5991,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &468106624 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7982063151000492308, guid: 2a27932273a80044c9ebe072cb25cfac, type: 3}
+  m_PrefabInstance: {fileID: 6934566165365889709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797e8239c805da947aac83ed15d27a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &473429567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1703255871139281535, guid: c256f0e49c5100549ba63a621f7ecc43, type: 3}
@@ -21079,6 +21090,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c7fbd068-da06-47f2-8a50-aee84e71386f
     m_ActionName: Restart/Pause[/Keyboard/escape,/Keyboard/p]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 468106624}
+        m_TargetAssemblyTypeName: Scream, Assembly-CSharp
+        m_MethodName: ScreamTrigger
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4cac463a-6004-4b9e-81de-b3af90ee2cb2
+    m_ActionName: Game/Scream[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movie
