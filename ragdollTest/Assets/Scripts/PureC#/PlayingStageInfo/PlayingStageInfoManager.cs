@@ -29,7 +29,7 @@ public class PlayingStageInfoManager
         _instance = null;
     }
 
-    public void SetData(int stageID)
+    public void SetData(EStageID stageID)
     {
         if (_data != null) return;//既にデータの実体があったら書き換え不可能
 

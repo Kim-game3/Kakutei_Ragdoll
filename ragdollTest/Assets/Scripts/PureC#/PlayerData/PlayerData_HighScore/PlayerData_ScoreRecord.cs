@@ -13,7 +13,7 @@ public partial class PlayerDataManager
     const string _deathCountDataName = "DEATHCOUNT";//デス数のデータ名
     const string _clearCountDataName = "CLEARCOUNT";//クリアタイムのデータ名
 
-    public static ScoreData GetScoreRecord(int stageID)//スコアレコードの取得(一度も書き換えたことがない場合はnullを返す)
+    public static ScoreData GetScoreRecord(EStageID stageID)//スコアレコードの取得(一度も書き換えたことがない場合はnullを返す)
     {
         //ハイスコアデータを取得するのに必要なキー
         GetScoreDataKey(stageID, out string fastestClearTimeKey, out string deathCountKey,out string clearCountKey);
@@ -42,7 +42,7 @@ public partial class PlayerDataManager
         PlayerPrefs.SetInt(clearCountKey, scoreData.ClearCount);
     }
 
-    public static void SetScoreRecord(int stageID, int newClearCount)//スコアレコード(クリア回数のみ)の書き換え、クリア回数はこっちで計算などはしないため、呼び出し側で行うこと
+    public static void SetScoreRecord(EStageID stageID, int newClearCount)//スコアレコード(クリア回数のみ)の書き換え、クリア回数はこっちで計算などはしないため、呼び出し側で行うこと
     {
         GetScoreDataKey(stageID, out string clearCountKey);
 
@@ -55,15 +55,19 @@ public partial class PlayerDataManager
 
 
     //スコアデータを取得するためのキーを取得(文字列)
-    static void GetScoreDataKey(int stageID, out string fastestClearTimeKey,out string deathCountKey,out string clearCountKey)
+    static void GetScoreDataKey(EStageID stageID, out string fastestClearTimeKey,out string deathCountKey,out string clearCountKey)
     {
-        fastestClearTimeKey = _fastestClearTimeDataName + stageID.ToString();
-        deathCountKey=_deathCountDataName + stageID.ToString();
-        clearCountKey=_clearCountDataName + stageID.ToString();
+        int stageIDNum = (int)stageID;
+
+        fastestClearTimeKey = _fastestClearTimeDataName + stageIDNum.ToString();
+        deathCountKey=_deathCountDataName + stageIDNum.ToString();
+        clearCountKey=_clearCountDataName + stageIDNum.ToString();
     }
 
-    static void GetScoreDataKey(int stageID,out string clearCountKey)
+    static void GetScoreDataKey(EStageID stageID, out string clearCountKey)
     {
-        clearCountKey = _clearCountDataName + stageID.ToString();
+        int stageIDNum = (int)stageID;
+
+        clearCountKey = _clearCountDataName + stageIDNum.ToString();
     }
 }

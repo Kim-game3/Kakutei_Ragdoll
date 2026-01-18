@@ -7,12 +7,12 @@ using UnityEngine;
 
 public class PlayingStageData
 {
-    int _stageID;
+    EStageID _stageID;
 
-    public PlayingStageData(int stageID)
+    public PlayingStageData(EStageID stageID)
     {
         _stageID = stageID;
     }
 
-    public int StageID { get { return _stageID; } }
+    public EStageID StageID { get { return _stageID; } }
 }

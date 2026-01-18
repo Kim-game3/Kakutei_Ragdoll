@@ -14,7 +14,7 @@ public class ShowStageInfoOnSelect : MonoBehaviour, ISelectHandler
     ShowStageInfoManager _showStageInfo;
 
     [SerializeField]
-    int _showStageID;
+    EStageID _showStageID;
 
     public void OnSelect(BaseEventData eventData)
     {

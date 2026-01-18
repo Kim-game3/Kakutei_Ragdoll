@@ -28,7 +28,7 @@ public class ResultManager : MonoBehaviour
     //スコアの確定(書き込み)
     public void ConfirmResult()
     {
-        int stageID = PlayingStageInfoManager.Instance.Data.StageID;
+        var stageID = PlayingStageInfoManager.Instance.Data.StageID;
 
         ScoreData record = PlayerDataManager.GetScoreRecord(stageID);
 

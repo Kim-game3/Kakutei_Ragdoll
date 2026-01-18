@@ -37,7 +37,7 @@ public class ShowStageInfoManager : MonoBehaviour
 
     const string _noScore = "-";
 
-    public void UpdateStageInfo(int stageID)//表示するステージの情報の更新
+    public void UpdateStageInfo(EStageID stageID)//表示するステージの情報の更新
     {
         //指定ステージのスコアレコードを取得
         ScoreData scoreRecordData = PlayerDataManager.GetScoreRecord(stageID);
