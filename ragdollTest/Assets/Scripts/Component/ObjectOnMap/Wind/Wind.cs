@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,9 @@ public partial class Wind : MonoBehaviour
 
     readonly WindInfo _myWindInfo=new WindInfo();
 
+    public event Action OnStartBlow;
+    public event Action OnStopBlow;
+
     private void Awake()
     {
         _getWindAffectBody.Get();
@@ -58,6 +62,8 @@ public partial class Wind : MonoBehaviour
 
         _judgeIsNearFromMainCamera.OnClose += OnClose;
         _judgeIsNearFromMainCamera.OnFar += OnFar;
+
+        OnStartBlow?.Invoke();
     }
 
     private void OnDisable()//•—‚Ì‚«I‚í‚è
@@ -70,6 +76,8 @@ public partial class Wind : MonoBehaviour
 
         SetWindEffect(false);
         SetWindSound(false);
+
+        OnStopBlow?.Invoke();
     }
 
     void OnClose()//ƒJƒƒ‰‚Æ‚Ì‹——£‚ª‹ß‚­‚È‚Á‚½
