@@ -8,7 +8,7 @@ using UnityEngine;
 public class ConfirmPlayingStageInfo : MonoBehaviour
 {
     [SerializeField]
-    int _stageID;
+    EStageID _stageID;
 
     
     void Awake()

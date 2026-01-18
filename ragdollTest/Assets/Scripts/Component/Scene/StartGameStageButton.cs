@@ -20,7 +20,7 @@ public class StartGameStageButton : MonoBehaviour
     StageInfoData _stageInfoData;
 
     [Tooltip("ステージID")] [SerializeField]
-    int _stageID;
+    EStageID _stageID;
 
     [Tooltip("ボタン")] [SerializeField]
     Button _targetButton;

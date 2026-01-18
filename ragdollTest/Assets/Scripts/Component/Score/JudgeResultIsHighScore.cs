@@ -53,7 +53,7 @@ public class JudgeResultIsHighScore : MonoBehaviour
         PlayerDataManager.SetScoreRecord(thisScoreData);
     }
 
-    void UpdateClearCount(int stageID,int clearCount)//クリア回数のみ更新(ハイスコア更新しなかった時)
+    void UpdateClearCount(EStageID stageID,int clearCount)//クリア回数のみ更新(ハイスコア更新しなかった時)
     {
         _brokeRecord = false;
         PlayerDataManager.SetScoreRecord(stageID,clearCount);
