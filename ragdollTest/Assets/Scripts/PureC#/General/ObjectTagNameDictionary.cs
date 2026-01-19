@@ -13,4 +13,5 @@ public static class ObjectTagNameDictionary
     public static string Wind = "Wind";//風のタグ名
     public static string WindSE_Listener = "WindSE_Listener";//風の音を聞くタグ名
     public static string AudioListener = "AudioListener";//AudioListenerのタグ名
+    public static string PlayerHipRef = "PlayerHipRef";//プレイヤーの腰の参照のタグ名
 }
