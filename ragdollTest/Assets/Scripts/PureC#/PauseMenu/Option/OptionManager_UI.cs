@@ -15,11 +15,17 @@ public partial class OptionManager
         [SerializeField]
         EventSystem _eventSystem;
 
-        [CustomLabel("オプションメニューを開く機能")] [SerializeField]
+        [Tooltip("オプションメニューを開く機能")] [SerializeField]
         ShowUITypeBase _openOption;
 
-        [CustomLabel("オプションメニューを閉じる機能")] [SerializeField]
+        [Tooltip("オプションメニューを閉じる機能")] [SerializeField]
         HideUITypeBase _closeOption;
+
+        [Tooltip("オプションを閉じる時に表示したいUI")] [SerializeField]
+        ShowUITypeBase _showUIOnOpenOption;
+
+        [Tooltip("オプションを開く時に非表示にしたいUI")] [SerializeField]
+        HideUITypeBase _hideUIOnOpenOption;
 
         Button _openButton;//オプションメニューを開くボタン
         Button _closeButton;//オプションメニューを閉じるボタン
@@ -37,12 +43,14 @@ public partial class OptionManager
 
         public void OnOpen()
         {
+            if (_hideUIOnOpenOption != null) _hideUIOnOpenOption.Hide();
             _openOption.Show();
             _eventSystem.SetSelectedGameObject(_closeButton.gameObject);//選択ボタンを閉じるボタンに設定
         }
 
         public void OnClose()
         {
+            if (_showUIOnOpenOption != null) _showUIOnOpenOption.Show();
             _closeOption.Hide();
             _eventSystem?.SetSelectedGameObject(_openButton.gameObject);//選択ボタンを開くボタンに設定
         }
