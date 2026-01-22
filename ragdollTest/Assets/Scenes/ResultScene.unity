@@ -983,33 +983,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1276198891716973298, guid: 608ab65addb2ef24bb4203575d8d07d0, type: 3}
   m_PrefabInstance: {fileID: 9061814750309175123}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &546770921 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6466463428740471748, guid: 608ab65addb2ef24bb4203575d8d07d0, type: 3}
-  m_PrefabInstance: {fileID: 9061814750309175123}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e749fd2a64621164892f20803b7493b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &656297332 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7086558202776991168, guid: f726ca55ba9150e48a0638117b84039f, type: 3}
   m_PrefabInstance: {fileID: 7811232756421267740}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &656297333 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3048942687954664694, guid: f726ca55ba9150e48a0638117b84039f, type: 3}
-  m_PrefabInstance: {fileID: 7811232756421267740}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e749fd2a64621164892f20803b7493b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &674588920 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3328699433296243205, guid: 608ab65addb2ef24bb4203575d8d07d0, type: 3}
@@ -6589,7 +6567,7 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1274456674}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ShowUITypeInstant, Assembly-CSharp
           m_MethodName: Show
           m_Mode: 1
@@ -6603,7 +6581,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 546770921}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ShowUITypeInstant, Assembly-CSharp
           m_MethodName: Show
           m_Mode: 1
@@ -6617,7 +6595,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 656297333}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: ShowUITypeInstant, Assembly-CSharp
           m_MethodName: Show
           m_Mode: 1
@@ -7248,9 +7226,9 @@ GameObject:
   - component: {fileID: 1274456669}
   - component: {fileID: 1274456671}
   - component: {fileID: 1274456670}
+  - component: {fileID: 1274456672}
   - component: {fileID: 1274456674}
   - component: {fileID: 1274456673}
-  - component: {fileID: 1274456672}
   m_Layer: 5
   m_Name: ClearText
   m_TagString: Untagged
@@ -7395,10 +7373,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1274456668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee000115f409f054ca1669fde6fe842b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0996c132a6e8345a04f37b5d112259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hideUIGroup: {fileID: 1274456672}
+  _hideUIObject: {fileID: 1274456668}
 --- !u!114 &1274456674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7408,10 +7386,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1274456668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e749fd2a64621164892f20803b7493b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 93ed35f17f4ea854fa591d9baf4fc87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showUIGroup: {fileID: 1274456672}
+  _showUIObject: {fileID: 1274456668}
 --- !u!1001 &1392161504
 PrefabInstance:
   m_ObjectHideFlags: 0
