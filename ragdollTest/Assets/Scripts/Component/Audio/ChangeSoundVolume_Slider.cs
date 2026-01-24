@@ -29,9 +29,15 @@ public class ChangeSoundVolume_Slider : MonoBehaviour
     }
 
     //private
-    private void Awake()
+
+    private void OnEnable()
     {
         _slider.onValueChanged.AddListener(Change);
+    }
+
+    private void OnDisable()
+    {
+        _slider.onValueChanged.RemoveListener(Change);
     }
 
     private void Start()

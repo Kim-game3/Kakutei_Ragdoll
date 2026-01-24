@@ -8,10 +8,10 @@ using UnityEngine.UI;
 
 public partial class CreditManager : MonoBehaviour
 {
-    [CustomLabel("クレジットを開く機能")] [SerializeField]
+    [Tooltip("クレジットを開くボタン")] [SerializeField]
     Button _openCreditButton;
 
-    [CustomLabel("クレジットを閉じる機能")] [SerializeField]
+    [Tooltip("クレジットを閉じるボタン")] [SerializeField]
     Button _closeCreditButton;
 
     [Tooltip("UI関係")] [SerializeField]

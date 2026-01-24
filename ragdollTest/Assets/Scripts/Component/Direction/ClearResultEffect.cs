@@ -20,7 +20,11 @@ public class ClearResultEffect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var data = PlayingStageInfoManager.Instance.Data;
+        var playingStateInstance = PlayingStageInfoManager.Instance;
+
+        if (playingStateInstance == null) return;
+
+        var data = playingStateInstance.Data;
 
         if (data == null) return;
 
