@@ -19,7 +19,7 @@ public class AutoAudioDistanceResizer_WindSound
         if (!_autoSize) return;
         if (windZoneTrs == null || windAudio == null || _distanceCurve == null) return;
 
-        float size = Mathf.Max(windZoneTrs.localScale.x, windZoneTrs.localScale.y);
+        float size = Mathf.Max(windZoneTrs.lossyScale.x, windZoneTrs.lossyScale.y);
 
         windAudio.minDistance = _distanceCurve.GetValueMinDistance(size);
         windAudio.maxDistance = _distanceCurve.GetValueMaxDistance(size);
