@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8f8751848867f46bc2b445c6dd1711, type: 3}
   m_Name: FPSSetiingData
   m_EditorClassIdentifier: 
-  _defaultFPSMode: 0
+  _defaultFPSMode: 1
   _fpsMode:
     _list:
-    - key: 0
-      value:
-        _fpsNum: 144
-        _fpsName: 144fps
     - key: 1
       value:
         _fpsNum: 60
         _fpsName: 60fps
+    - key: 0
+      value:
+        _fpsNum: 144
+        _fpsName: 144fps
