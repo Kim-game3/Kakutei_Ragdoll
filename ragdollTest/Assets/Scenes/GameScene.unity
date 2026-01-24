@@ -295,6 +295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 198361667}
     m_Modifications:
+    - target: {fileID: 229518155225741814, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
+      propertyPath: _dropDownUI
+      value: 
+      objectReference: {fileID: 98324737}
     - target: {fileID: 2133706873548967636, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
       propertyPath: _targetButton
       value: 
@@ -1609,6 +1613,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2374324907616682494, guid: b3a7a4a9d4e8b3744b0706f1f27d6c78, type: 3}
   m_PrefabInstance: {fileID: 6846426153034808560}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &98324737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7104883251910088639, guid: a4dcfa6dc6afe8048915c33194a3aa54, type: 3}
+  m_PrefabInstance: {fileID: 1028148189}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &109338942
 Mesh:
   m_ObjectHideFlags: 0
@@ -27968,8 +27983,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011391349}
-  - component: {fileID: 2011391350}
   - component: {fileID: 2011391351}
+  - component: {fileID: 2011391352}
   m_Layer: 0
   m_Name: SettingManager
   m_TagString: Untagged
@@ -27992,19 +28007,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 198361667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2011391350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011391348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73d5ce7d09a502449af2821f65a3554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _frameRate: 144
 --- !u!114 &2011391351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28018,6 +28020,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageID: 0
+--- !u!114 &2011391352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011391348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6400147b3e00a7a4988000ebef01f215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpsSettingData: {fileID: 11400000, guid: 8752fed646fdde94bae8b56a27ef29df, type: 2}
 --- !u!43 &2034364227
 Mesh:
   m_ObjectHideFlags: 0

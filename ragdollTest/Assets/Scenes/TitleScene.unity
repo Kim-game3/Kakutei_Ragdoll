@@ -122,6 +122,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &73034024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7104883251910088639, guid: a4dcfa6dc6afe8048915c33194a3aa54, type: 3}
+  m_PrefabInstance: {fileID: 802442816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &82367163 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1963227126676548243, guid: 3c49186f823aaa84f91a97b20059c3f3, type: 3}
@@ -190,6 +201,7 @@ GameObject:
   - component: {fileID: 210101163}
   - component: {fileID: 210101168}
   - component: {fileID: 210101167}
+  - component: {fileID: 210101169}
   m_Layer: 0
   m_Name: Option
   m_TagString: Untagged
@@ -312,6 +324,20 @@ MonoBehaviour:
   _toggle: {fileID: 493746937}
   _setInvertCameraControl: {fileID: 0}
   _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
+--- !u!114 &210101169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210101161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7736b53894d8f57479e40520d9ba854d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropDownUI: {fileID: 73034024}
+  _fpsSettingData: {fileID: 11400000, guid: 8752fed646fdde94bae8b56a27ef29df, type: 2}
 --- !u!1001 &270729440
 PrefabInstance:
   m_ObjectHideFlags: 0

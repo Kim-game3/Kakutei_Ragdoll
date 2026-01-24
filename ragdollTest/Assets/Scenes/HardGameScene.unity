@@ -295,6 +295,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 198361667}
     m_Modifications:
+    - target: {fileID: 229518155225741814, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
+      propertyPath: _dropDownUI
+      value: 
+      objectReference: {fileID: 1456141883}
     - target: {fileID: 2133706873548967636, guid: 84cd0173b9e9cd94c8d0bd2ebf9a01a0, type: 3}
       propertyPath: _targetButton
       value: 
@@ -19992,6 +19996,17 @@ MonoBehaviour:
   _playerTrs: {fileID: 6934566165365889711}
   _body: {fileID: 6934566165365889713}
   _debugWindow: {fileID: 951839539}
+--- !u!114 &1456141883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7104883251910088639, guid: a4dcfa6dc6afe8048915c33194a3aa54, type: 3}
+  m_PrefabInstance: {fileID: 1311171786}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1478380853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 371020251312276873, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
@@ -29375,8 +29390,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011391349}
-  - component: {fileID: 2011391350}
   - component: {fileID: 2011391351}
+  - component: {fileID: 2011391352}
   m_Layer: 0
   m_Name: SettingManager
   m_TagString: Untagged
@@ -29399,19 +29414,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 198361667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2011391350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2011391348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73d5ce7d09a502449af2821f65a3554, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _frameRate: 144
 --- !u!114 &2011391351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29425,6 +29427,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stageID: 1
+--- !u!114 &2011391352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011391348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6400147b3e00a7a4988000ebef01f215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpsSettingData: {fileID: 11400000, guid: 8752fed646fdde94bae8b56a27ef29df, type: 2}
 --- !u!43 &2034364227
 Mesh:
   m_ObjectHideFlags: 0

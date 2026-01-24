@@ -27,9 +27,14 @@ public class ChangeCameraInvert_Toggle : MonoBehaviour
         PlayerDataManager.SetInvertCameraSetting(_axis, value);//セーブデータにも保存
     }
 
-    private void Awake()
+    private void OnEnable()
     {
         _toggle.onValueChanged.AddListener(Change);
+    }
+
+    private void OnDisable()
+    {
+        _toggle.onValueChanged.RemoveListener(Change);
     }
 
 

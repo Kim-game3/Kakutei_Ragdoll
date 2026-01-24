@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4078709255304891815}
   - component: {fileID: 5124428706338025878}
   - component: {fileID: 6508927597819672722}
+  - component: {fileID: 229518155225741814}
   m_Layer: 0
   m_Name: Option
   m_TagString: Untagged
@@ -55,6 +56,8 @@ MonoBehaviour:
     _eventSystem: {fileID: 0}
     _openOption: {fileID: 0}
     _closeOption: {fileID: 0}
+    _showUIOnOpenOption: {fileID: 0}
+    _hideUIOnOpenOption: {fileID: 0}
 --- !u!114 &7715969948521827550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +138,20 @@ MonoBehaviour:
   _toggle: {fileID: 0}
   _setInvertCameraControl: {fileID: 0}
   _defaultCameraSettingData: {fileID: 11400000, guid: 1cb8a62637a08114aaef1de7b40402d6, type: 2}
+--- !u!114 &229518155225741814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21065091649962982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7736b53894d8f57479e40520d9ba854d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropDownUI: {fileID: 0}
+  _fpsSettingData: {fileID: 11400000, guid: 8752fed646fdde94bae8b56a27ef29df, type: 2}
 --- !u!1 &1213965880369365237
 GameObject:
   m_ObjectHideFlags: 0
