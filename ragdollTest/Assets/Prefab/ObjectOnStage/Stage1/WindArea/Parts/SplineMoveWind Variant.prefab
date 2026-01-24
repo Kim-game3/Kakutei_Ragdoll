@@ -262,9 +262,21 @@ PrefabInstance:
       propertyPath: m_Height
       value: 1.66
       objectReference: {fileID: 0}
+    - target: {fileID: 4396705419809395470, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: MinDistance
+      value: 3.5632448
+      objectReference: {fileID: 0}
     - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: CollisionModule.type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: CollisionModule.enabled
@@ -272,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.8
+      value: 1.8000005
       objectReference: {fileID: 0}
     - target: {fileID: 4550380477289213822, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
@@ -287,8 +299,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5377475925396915302, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377475925396915302, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377475925396915302, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.8
+      value: 1.8000005
       objectReference: {fileID: 0}
     - target: {fileID: 5423675442027205034, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: m_MaxSpeed
@@ -299,12 +319,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6493241359438355662, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 2.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493241359438355662, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493241359438355662, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: CollisionModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6493241359438355662, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.8
+      value: 1.8000005
       objectReference: {fileID: 0}
     - target: {fileID: 6493241359438355662, guid: e7f74003fe9a1b84595756f794959eb7, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
