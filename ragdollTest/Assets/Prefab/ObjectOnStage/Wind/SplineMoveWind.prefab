@@ -245,11 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 2
+      value: 2.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 2
+      value: 2.0000007
       objectReference: {fileID: 0}
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: VelocityModule.inWorldSpace
@@ -257,35 +257,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3466541424095037101, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.2
+      value: 1.2000003
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MaxDistance
-      value: 4.998783
+      value: 4.9987836
       objectReference: {fileID: 0}
     - target: {fileID: 3619116914781502173, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: MinDistance
-      value: 3.5632446
+      value: 3.563245
       objectReference: {fileID: 0}
     - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 2
+      value: 2.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 2
+      value: 2.0000007
       objectReference: {fileID: 0}
     - target: {fileID: 5016220795699015093, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.2
+      value: 1.2000003
       objectReference: {fileID: 0}
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 2
+      value: 2.0000005
       objectReference: {fileID: 0}
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 2
+      value: 2.0000007
       objectReference: {fileID: 0}
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: VelocityModule.inWorldSpace
@@ -293,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6134240781530838301, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1.2
+      value: 1.2000003
       objectReference: {fileID: 0}
     - target: {fileID: 6189054264067764016, guid: 89799326a04533c4ea4bcea53de400e8, type: 3}
       propertyPath: _windEffect._autoSize

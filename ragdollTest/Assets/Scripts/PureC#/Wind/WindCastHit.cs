@@ -54,7 +54,7 @@ public class WindCastHit
                 Vector3 castPos = CastPos(origin, x, y);
 
                 //平たい板状のレイを飛ばす
-                if (!Physics.BoxCast(_transform.TransformPoint(castPos), boxcastSize, _transform.forward, out RaycastHit hit, _transform.rotation, _transform.localScale.z, _affectableWindLayer)) continue;
+                if (!Physics.BoxCast(_transform.TransformPoint(castPos), boxcastSize, _transform.forward, out RaycastHit hit, _transform.rotation, _transform.lossyScale.z, _affectableWindLayer)) continue;
 
                 hitList.Add(hit);
 
@@ -72,7 +72,7 @@ public class WindCastHit
 
     Vector3 BoxCastSize()//飛ばす箱レイの大きさ
     {
-        Vector3 boxcastSize = _transform.localScale / 2;//BoxCastに渡す際は大きさの半分の値を入れなければならない
+        Vector3 boxcastSize = _transform.lossyScale / 2;//BoxCastに渡す際は大きさの半分の値を入れなければならない
         boxcastSize.x /= castNumX;
         boxcastSize.y /= castNumY;
         boxcastSize.z = _boxcastSizeZ;
