@@ -5,6 +5,7 @@ public enum E_FPSMode
 {
     FPS144,
     FPS60,
+    FPSUnLimit,
 
     Length,//’·‚³(‚±‚êˆÈ~‚É—v‘f‚ğ’Ç‰Á‚µ‚È‚¢‚Å‚­‚¾‚³‚¢)
 }
