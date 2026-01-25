@@ -14,10 +14,10 @@ public class ShowStageInfoOnSelect : MonoBehaviour, ISelectHandler
     ShowStageInfoManager _showStageInfo;
 
     [SerializeField]
-    EStageID _showStageID;
+    StartGameStageButton _stageButton;
 
     public void OnSelect(BaseEventData eventData)
     {
-        _showStageInfo.UpdateStageInfo(_showStageID);
+        _showStageInfo.UpdateStageInfo(_stageButton.StageID);
     }
 }
