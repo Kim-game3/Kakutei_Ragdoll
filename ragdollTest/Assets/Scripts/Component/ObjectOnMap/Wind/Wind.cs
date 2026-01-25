@@ -13,7 +13,7 @@ public partial class Wind : MonoBehaviour
     float _windPower;
 
     [Tooltip("カメラとの距離を測る機能\n距離は風の描画距離になるので、windHitZoneのトリガーよりも広めに取っておくとよい")] [SerializeField]
-    JudgeIsNearFromMainCamera _judgeIsNearFromMainCamera;
+    JudgeIsNearFromMainCamera_Wind _judgeIsNearFromMainCamera;
 
     [Tooltip("エフェクト関係")] [SerializeField]
     WindEffect _windEffect;
