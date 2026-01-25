@@ -32,6 +32,10 @@ public class StartGameStageButton : MonoBehaviour
 
     StageInfo _stageInfo;
 
+    public EStageID StageID { get { return _stageID; } }
+
+    public Button StageButton { get { return _targetButton; } }
+
     public float LoadProgress { get { return _loadProgress; } }//ロードの進行度(0～1)
 
     public event Action OnStartLoad;
@@ -61,7 +65,6 @@ public class StartGameStageButton : MonoBehaviour
         PlayingStageInfoManager.Destroy();//プレイ中のステージの情報を管理するオブジェクトの削除処理
 
         //ボタンの名前を設定
-
         _buttonText.text = _stageInfo.StageName;
     }
 

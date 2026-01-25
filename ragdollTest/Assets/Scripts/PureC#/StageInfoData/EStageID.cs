@@ -7,8 +7,9 @@ using UnityEngine;
 
 public enum EStageID
 {
-    NormalMode,
-    HardMode,
+    NormalMode,//ノーマルモード
+    HardMode,//ハードモード
+    EasyMode,//イージーモード
 
     Length//長さ(これ以降に要素を追加しないでください)
 }
