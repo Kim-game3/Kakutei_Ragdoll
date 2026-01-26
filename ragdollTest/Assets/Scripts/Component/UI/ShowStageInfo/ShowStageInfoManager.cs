@@ -37,10 +37,16 @@ public class ShowStageInfoManager : MonoBehaviour
 
     const string _noScore = "-";
 
+    Dictionary<EStageID,StageSaveData> _stageSaveDatas = new();
+
     public void UpdateStageInfo(EStageID stageID)//表示するステージの情報の更新
     {
-        //指定ステージのスコアレコードを取得
-        ScoreData scoreRecordData = PlayerDataManager.GetScoreRecord(stageID);
+        //指定ステージのセーブデータを取得
+        if(!_stageSaveDatas.TryGetValue(stageID,out var stageSaveData))
+        {
+            stageSaveData = PlayerDataManager.LoadStageData(stageID);
+            _stageSaveDatas.Add(stageID, stageSaveData);
+        }
 
         //指定ステージの情報を取得
         StageInfo stageInfo=_stageInfoData.GetStageInfo(stageID);
@@ -58,7 +64,7 @@ public class ShowStageInfoManager : MonoBehaviour
         _comment.text = stageInfo.Comment;
 
         //未クリアの場合はスコアを表記しない
-        if(scoreRecordData==null)
+        if(stageSaveData.clearCount == 0)
         {
             _clearTimeText.text = _noScore;
             _deathCountText.text = _noScore;
@@ -66,11 +72,11 @@ public class ShowStageInfoManager : MonoBehaviour
         }
         else
         {
-            MathfExtension.ConvertTime(scoreRecordData.ClearTime, out float hour, out float min, out float second);
+            MathfExtension.ConvertTime(stageSaveData.bestClearTime, out float hour, out float min, out float second);
 
             _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
-            _deathCountText.text = scoreRecordData.DeathCount.ToString("0")+"回";
-            _clearCountText.text = scoreRecordData.ClearCount.ToString("0") + "回";
+            _deathCountText.text = stageSaveData.totalDeathCount.ToString("0")+"回";
+            _clearCountText.text = stageSaveData.clearCount.ToString("0") + "回";
         }
     }
 }

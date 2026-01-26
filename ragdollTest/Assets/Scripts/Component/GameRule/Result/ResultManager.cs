@@ -30,11 +30,6 @@ public class ResultManager : MonoBehaviour
     {
         var stageID = PlayingStageInfoManager.Instance.Data.StageID;
 
-        ScoreData record = PlayerDataManager.GetScoreRecord(stageID);
-
-        int clearCountRecord = (record != null) ? record.ClearCount : 0; //今までのクリア回数を取得
-        clearCountRecord++;//クリア回数を加算
-
-        _score = new ScoreData(stageID,_stopWatch.ElapsedTime, _countDeath.Count,clearCountRecord);
+        _score = new ScoreData(stageID,_stopWatch.ElapsedTime, _countDeath.Count);
     }
 }
