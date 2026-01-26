@@ -11,6 +11,6 @@ public class StageUnlockConditionTypeHardMode : StageUnlockConditionTypeBase
     public override bool IsUnlock()
     {
         //イージーモードがクリア済みならプレイ可能
-        return PlayerDataManager.Load(EStageID.EasyMode).clearCount != 0;
+        return PlayerDataManager.LoadStageData(EStageID.EasyMode).clearCount != 0;
     }
 }

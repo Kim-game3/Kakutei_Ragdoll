@@ -17,11 +17,11 @@ public class SaveUtilityOnQuitNowPlaying : MonoBehaviour
     {
         var stageID = PlayingStageInfoManager.Instance.Data.StageID;
 
-        var stageSaveData = PlayerDataManager.Load(stageID);
+        var stageSaveData = PlayerDataManager.LoadStageData(stageID);
 
         stageSaveData.totalDeathCount += _countDeath.Count;
         stageSaveData.totalPlayTime += (long)_stopWatch.ElapsedTime;
 
-        PlayerDataManager.Save(stageSaveData);
+        PlayerDataManager.SaveStageData(stageSaveData);
     }
 }

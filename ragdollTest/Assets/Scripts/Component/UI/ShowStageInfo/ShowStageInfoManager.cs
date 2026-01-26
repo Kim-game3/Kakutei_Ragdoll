@@ -44,7 +44,7 @@ public class ShowStageInfoManager : MonoBehaviour
         //指定ステージのセーブデータを取得
         if(!_stageSaveDatas.TryGetValue(stageID,out var stageSaveData))
         {
-            stageSaveData = PlayerDataManager.Load(stageID);
+            stageSaveData = PlayerDataManager.LoadStageData(stageID);
             _stageSaveDatas.Add(stageID, stageSaveData);
         }
 

@@ -77,5 +77,6 @@ public class ClearPlayerDataCommand : MonoBehaviour
     {
         // ¬Œ÷‚Ìˆ—‚ğ‚±‚±‚É‘‚­
         PlayerPrefs.DeleteAll();
+        PlayerDataManager.DeleteStageData();
     }
 }

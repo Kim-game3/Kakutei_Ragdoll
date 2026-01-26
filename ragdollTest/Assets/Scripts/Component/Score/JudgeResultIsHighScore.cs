@@ -36,7 +36,7 @@ public class JudgeResultIsHighScore : MonoBehaviour
         }
 
         //ステージのセーブデータを取得
-        var stageSaveData = PlayerDataManager.Load(thisScoreData.StageID);
+        var stageSaveData = PlayerDataManager.LoadStageData(thisScoreData.StageID);
 
         if (stageSaveData.clearCount == 0)//初クリアか二度目以降のクリアでクリアタイム更新した時
         {
@@ -63,7 +63,7 @@ public class JudgeResultIsHighScore : MonoBehaviour
         stageSaveData.totalDeathCount += thisScoreData.DeathCount;
         stageSaveData.clearCount++;
 
-        PlayerDataManager.Save(stageSaveData);
+        PlayerDataManager.SaveStageData(stageSaveData);
     }
 
     void UpdateClear(ScoreData thisScoreData, StageSaveData stageSaveData)
@@ -72,6 +72,6 @@ public class JudgeResultIsHighScore : MonoBehaviour
         stageSaveData.totalDeathCount += thisScoreData.DeathCount;
         stageSaveData.clearCount++;
 
-        PlayerDataManager.Save(stageSaveData);
+        PlayerDataManager.SaveStageData(stageSaveData);
     }
 }

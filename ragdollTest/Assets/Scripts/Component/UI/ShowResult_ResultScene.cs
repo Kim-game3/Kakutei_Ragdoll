@@ -42,7 +42,7 @@ public class ShowResult_ResultScene : MonoBehaviour
         _deathCountText.text = thisScore.DeathCount.ToString("0") + "回";
 
         //クリア回数
-        var stageSaveData = PlayerDataManager.Load(thisScore.StageID);
+        var stageSaveData = PlayerDataManager.LoadStageData(thisScore.StageID);
         _clearCountText.text = stageSaveData.clearCount.ToString("0") + "回目の帰宅！";
     }
 }

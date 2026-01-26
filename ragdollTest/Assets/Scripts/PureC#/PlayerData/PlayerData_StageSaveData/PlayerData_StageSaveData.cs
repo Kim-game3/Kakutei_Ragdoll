@@ -9,7 +9,7 @@ public partial class PlayerDataManager
 {
     static string _path = Path.Combine(Application.persistentDataPath, "stageSaveData.json");
 
-    public static StageSaveData Load(EStageID stageID)//指定ステージのセーブデータのロード(取得)
+    public static StageSaveData LoadStageData(EStageID stageID)//指定ステージのセーブデータのロード(取得)
     {
         StageSaveDataList dataList = GetAllData();
 
@@ -25,7 +25,7 @@ public partial class PlayerDataManager
         return data;
     }
 
-    public static void Save(StageSaveData newData)//セーブ、クリア回数などの計算はこっちでしないため、呼び出し側で行うこと(newDataの中に入れる)
+    public static void SaveStageData(StageSaveData newData)//セーブ、クリア回数などの計算はこっちでしないため、呼び出し側で行うこと(newDataの中に入れる)
     {
         StageSaveDataList dataList = GetAllData();
 
@@ -43,6 +43,14 @@ public partial class PlayerDataManager
 
         string json = JsonUtility.ToJson(dataList, true);
         File.WriteAllText(_path, json);
+    }
+
+    public static void DeleteStageData()
+    {
+        if (File.Exists(_path))
+        {
+            File.Delete(_path);
+        }
     }
 
     static StageSaveDataList GetAllData()
