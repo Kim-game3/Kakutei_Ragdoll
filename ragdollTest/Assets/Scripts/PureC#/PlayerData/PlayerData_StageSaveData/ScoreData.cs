@@ -10,18 +10,15 @@ public class ScoreData
     EStageID _stageID;
     float _clearTime;
     int _deathCount;
-    int _clearCount;
 
-    public ScoreData(EStageID stageID,float clearTime,int deathCount,int clearCount)
+    public ScoreData(EStageID stageID,float clearTime,int deathCount)
     {
         _stageID = stageID;
         _clearTime = clearTime;
         _deathCount = deathCount;
-        _clearCount = clearCount;
     }
 
     public EStageID StageID { get { return _stageID; } }//ステージID
     public float ClearTime { get { return _clearTime; } }//クリアタイム
     public int DeathCount { get { return _deathCount; } }//落ちた回数
-    public int ClearCount { get { return _clearCount; } }//クリア回数
 }

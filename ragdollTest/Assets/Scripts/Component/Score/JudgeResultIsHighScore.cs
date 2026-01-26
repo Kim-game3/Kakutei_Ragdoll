@@ -11,8 +11,10 @@ using UnityEngine;
 public class JudgeResultIsHighScore : MonoBehaviour
 {
     bool _brokeRecord;//記録を更新したか
+    bool _isFirstClear;//初めてのクリアか
 
-    public bool BrokeRecord {  get { return _brokeRecord; }}
+    public bool BrokeRecord {  get { return _brokeRecord; } }
+    public bool IsFirstClear {  get{ return _isFirstClear; } }
 
     private void Awake()
     {
@@ -21,6 +23,9 @@ public class JudgeResultIsHighScore : MonoBehaviour
 
     void Judge()
     {
+        _brokeRecord = false;
+        _isFirstClear = false;
+
         //今回のスコアを取得
         ScoreData thisScoreData = ResultManager.Score;
 
@@ -30,32 +35,43 @@ public class JudgeResultIsHighScore : MonoBehaviour
             return;
         }
 
-        //今までのハイスコアを取得
-        ScoreData highScoreData = PlayerDataManager.GetScoreRecord(thisScoreData.StageID);
-        
-        if (highScoreData == null)//初クリア
+        //ステージのセーブデータを取得
+        var stageSaveData = PlayerDataManager.Load(thisScoreData.StageID);
+
+        if (stageSaveData.clearCount == 0)//初クリアか二度目以降のクリアでクリアタイム更新した時
         {
-            UpdateHighScore(thisScoreData);
+            _isFirstClear = true;
+            UpdateBestRecord(thisScoreData, stageSaveData);
         }
-        else if (thisScoreData.ClearTime < highScoreData.ClearTime)//二度目以降のクリアで、クリアタイム更新
+        else if (thisScoreData.ClearTime < stageSaveData.bestClearTime)//二度目以降のクリアで、クリアタイム更新
         {
-            UpdateHighScore(thisScoreData);
+            UpdateBestRecord(thisScoreData, stageSaveData);
         }
         else//クリアタイム更新ならず
         {
-            UpdateClearCount(thisScoreData.StageID,thisScoreData.ClearCount);
+            UpdateClear(thisScoreData, stageSaveData);
         }
     }
 
-    void UpdateHighScore(ScoreData thisScoreData)//ハイスコア更新処理
+    void UpdateBestRecord(ScoreData thisScoreData,StageSaveData stageSaveData)
     {
         _brokeRecord = true;
-        PlayerDataManager.SetScoreRecord(thisScoreData);
+
+        stageSaveData.bestClearTime = thisScoreData.ClearTime;
+
+        stageSaveData.totalPlayTime += (long)thisScoreData.ClearTime;
+        stageSaveData.totalDeathCount += thisScoreData.DeathCount;
+        stageSaveData.clearCount++;
+
+        PlayerDataManager.Save(stageSaveData);
     }
 
-    void UpdateClearCount(EStageID stageID,int clearCount)//クリア回数のみ更新(ハイスコア更新しなかった時)
+    void UpdateClear(ScoreData thisScoreData, StageSaveData stageSaveData)
     {
-        _brokeRecord = false;
-        PlayerDataManager.SetScoreRecord(stageID,clearCount);
+        stageSaveData.totalPlayTime += (long)thisScoreData.ClearTime;
+        stageSaveData.totalDeathCount += thisScoreData.DeathCount;
+        stageSaveData.clearCount++;
+
+        PlayerDataManager.Save(stageSaveData);
     }
 }

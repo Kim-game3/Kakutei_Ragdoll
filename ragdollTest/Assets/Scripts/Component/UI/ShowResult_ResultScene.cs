@@ -34,10 +34,15 @@ public class ShowResult_ResultScene : MonoBehaviour
 
         if (thisScore == null) yield break;
 
+        //クリアタイム
         MathfExtension.ConvertTime(thisScore.ClearTime, out float hour, out float min, out float second);
-
         _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
+
+        //死亡回数
         _deathCountText.text = thisScore.DeathCount.ToString("0") + "回";
-        _clearCountText.text = thisScore.ClearCount.ToString("0") + "回目の帰宅！";
+
+        //クリア回数
+        var stageSaveData = PlayerDataManager.Load(thisScore.StageID);
+        _clearCountText.text = stageSaveData.clearCount.ToString("0") + "回目の帰宅！";
     }
 }
