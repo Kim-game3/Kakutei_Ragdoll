@@ -10,11 +10,14 @@ public class ShowResult_ResultScene : MonoBehaviour
     [CustomLabel("クリアタイムを表示する文字")] [SerializeField]
     TextMeshProUGUI _clearTimeText;
 
-    [CustomLabel("落ちた回数を表示")] [SerializeField]
+    [CustomLabel("水に落ちた回数を表示")] [SerializeField]
     TextMeshProUGUI _deathCountText;
 
     [Tooltip("クリア回数を表示する文字")] [SerializeField]
     TextMeshProUGUI _clearCountText;
+
+    [Tooltip("鳴いた回数を表示する文字")] [SerializeField]
+    TextMeshProUGUI _screamCountText;
 
     [SerializeField]
     JudgeResultIsHighScore _judgeResultIsHighScore;
@@ -40,6 +43,9 @@ public class ShowResult_ResultScene : MonoBehaviour
 
         //死亡回数
         _deathCountText.text = thisScore.DeathCount.ToString("0") + "回";
+
+        //鳴いた回数
+        _screamCountText.text = thisScore.ScreamCount.ToString("0") + "回";
 
         //クリア回数
         var stageSaveData = PlayerDataManager.LoadStageData(thisScore.StageID);

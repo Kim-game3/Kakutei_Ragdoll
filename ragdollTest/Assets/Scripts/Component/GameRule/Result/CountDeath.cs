@@ -14,9 +14,14 @@ public class CountDeath : MonoBehaviour
 
     public int Count {  get { return _count; } }
 
-    private void Awake()
+    private void OnEnable()
     {
         _restartManager.OnRestrat += AddCount;
+    }
+
+    private void OnDisable()
+    {
+        _restartManager.OnRestrat -= AddCount;
     }
 
     void AddCount()

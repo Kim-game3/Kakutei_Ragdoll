@@ -61,6 +61,7 @@ public class JudgeResultIsHighScore : MonoBehaviour
 
         stageSaveData.totalPlayTime += (long)thisScoreData.ClearTime;
         stageSaveData.totalDeathCount += thisScoreData.DeathCount;
+        stageSaveData.totalScreamCount += thisScoreData.ScreamCount;
         stageSaveData.clearCount++;
 
         PlayerDataManager.SaveStageData(stageSaveData);
@@ -70,6 +71,7 @@ public class JudgeResultIsHighScore : MonoBehaviour
     {
         stageSaveData.totalPlayTime += (long)thisScoreData.ClearTime;
         stageSaveData.totalDeathCount += thisScoreData.DeathCount;
+        stageSaveData.totalScreamCount += thisScoreData.ScreamCount;
         stageSaveData.clearCount++;
 
         PlayerDataManager.SaveStageData(stageSaveData);
