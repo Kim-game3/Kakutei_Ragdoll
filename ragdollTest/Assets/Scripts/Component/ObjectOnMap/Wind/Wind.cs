@@ -112,12 +112,17 @@ public partial class Wind : MonoBehaviour
 
     void SetWindEffect(bool play)
     {
-        if (_windEffect != null) _windEffect.EffectSwitchActive(play);
+        if (_windEffect == null) return;
+        
+        _windEffect.EffectSwitchActive(play);
     }
 
     void SetWindSound(bool enable)
     {
-        if (_windSound != null) _windSound.enabled = enable;
+        if (_windSound == null) return;
+
+        if(enable) _windSound.Play();
+        else _windSound.Stop();
     }
 
     void JudgeWindHit()//•—‚Ì“–‚½‚è”»’èˆ—
