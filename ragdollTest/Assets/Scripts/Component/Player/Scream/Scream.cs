@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class Scream : MonoBehaviour
 
     bool _isCoolTime = false;
 
+    public event Action OnScream;
+
     public void ScreamTrigger(InputAction.CallbackContext context)
     {
         if(!context.performed) return;
@@ -42,6 +45,9 @@ public class Scream : MonoBehaviour
         var headRb = _head.Rigidbody;
         Vector3 force = headRb.transform.forward * _power;
         headRb.AddForce(force, ForceMode.VelocityChange);
+
+        //コールバック呼び出し
+        OnScream?.Invoke();
 
         //クールタイム開始
         StartCoroutine(CoolTimeCoroutine());

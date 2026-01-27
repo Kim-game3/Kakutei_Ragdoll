@@ -13,6 +13,9 @@ public class SaveUtilityOnQuitNowPlaying : MonoBehaviour
     [Tooltip("タイムを測る機能")] [SerializeField]
     StopWatch _stopWatch;
 
+    [Tooltip("鳴いた回数を数える機能")] [SerializeField]
+    CountScream _countScream;
+
     public void Save()
     {
         var stageID = PlayingStageInfoManager.Instance.Data.StageID;
@@ -21,6 +24,7 @@ public class SaveUtilityOnQuitNowPlaying : MonoBehaviour
 
         stageSaveData.totalDeathCount += _countDeath.Count;
         stageSaveData.totalPlayTime += (long)_stopWatch.ElapsedTime;
+        stageSaveData.totalScreamCount += _countScream.Count;
 
         PlayerDataManager.SaveStageData(stageSaveData);
     }

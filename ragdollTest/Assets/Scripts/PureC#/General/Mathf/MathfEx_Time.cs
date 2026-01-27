@@ -18,4 +18,15 @@ public partial class MathfExtension
         m=time.Minutes;
         s = time.Seconds;
     }
+
+    /// <summary>
+    /// 引数で与えられた時間(value秒)を
+    /// 時間(h)、分(m)、秒(s)に変換して返す（long版）
+    /// </summary>
+    public static void ConvertTime(long value, out long h, out long m, out long s)
+    {
+        h = value / 3600;
+        m = (value % 3600) / 60;
+        s = value % 60;
+    }
 }

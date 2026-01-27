@@ -13,7 +13,7 @@ public class ShowStageInfoManager : MonoBehaviour
     [Tooltip("ステージの情報")] [SerializeField]
     StageInfoData _stageInfoData;
 
-    [CustomLabel("ステージ名")] [SerializeField]
+    [Tooltip("ステージ名")] [SerializeField]
     TextMeshProUGUI _stageName;
 
     [Tooltip("イメージアイコン")] [SerializeField]
@@ -26,14 +26,20 @@ public class ShowStageInfoManager : MonoBehaviour
     TextMeshProUGUI _comment;
 
     //ステージレコード関係
-    [CustomLabel("クリアタイム")] [SerializeField]
-    TextMeshProUGUI _clearTimeText;
+    [Tooltip("クリアタイム")] [SerializeField]
+    TextMeshProUGUI _bestClearTimeText;
 
-    [CustomLabel("落ちた回数")] [SerializeField]
+    [Tooltip("プレイ時間")] [SerializeField]
+    TextMeshProUGUI _totalPlayTimeText;
+
+    [Tooltip("落ちた回数")] [SerializeField]
     TextMeshProUGUI _deathCountText;
 
     [Tooltip("クリア回数")] [SerializeField]
     TextMeshProUGUI _clearCountText;
+
+    [Tooltip("鳴いた回数")] [SerializeField]
+    TextMeshProUGUI _screamCountText;
 
     const string _noScore = "-";
 
@@ -63,20 +69,33 @@ public class ShowStageInfoManager : MonoBehaviour
         _charaName.text = stageInfo.CharaName;
         _comment.text = stageInfo.Comment;
 
-        //未クリアの場合はスコアを表記しない
+        //未クリアの場合は最速記録を表記しない
         if(stageSaveData.clearCount == 0)
         {
-            _clearTimeText.text = _noScore;
-            _deathCountText.text = _noScore;
-            _clearCountText.text = _noScore;
+            _bestClearTimeText.text = _noScore;
         }
         else
         {
-            MathfExtension.ConvertTime(stageSaveData.bestClearTime, out float hour, out float min, out float second);
-
-            _clearTimeText.text = $"{hour:00}:{min:00}:{second:00}";
-            _deathCountText.text = stageSaveData.totalDeathCount.ToString("0")+"回";
-            _clearCountText.text = stageSaveData.clearCount.ToString("0") + "回";
+            _bestClearTimeText.text = BestClearTimeText(stageSaveData.bestClearTime);
         }
+
+        _totalPlayTimeText.text = PlayTimeText(stageSaveData.totalPlayTime);
+        _deathCountText.text = stageSaveData.totalDeathCount.ToString("0") + "回";
+        _clearCountText.text = stageSaveData.clearCount.ToString("0") + "回";
+        _screamCountText.text = stageSaveData.totalScreamCount.ToString("0") + "回";
+    }
+
+    string BestClearTimeText(float bestClearTime)
+    {
+        MathfExtension.ConvertTime(bestClearTime, out float hour, out float min, out float second);
+
+        return $"{hour:00}:{min:00}:{second:00}";
+    }
+
+    string PlayTimeText(long playTime)
+    {
+        MathfExtension.ConvertTime(playTime, out float hour, out float min, out float second);
+
+        return $"{hour:00}:{min:00}:{second:00}";
     }
 }

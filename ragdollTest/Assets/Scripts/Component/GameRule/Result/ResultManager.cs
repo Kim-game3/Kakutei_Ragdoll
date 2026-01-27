@@ -15,6 +15,9 @@ public class ResultManager : MonoBehaviour
     [Tooltip("クリアタイムを測る機能")] [SerializeField]
     StopWatch _stopWatch;
 
+    [Tooltip("鳴いた回数を数える機能")] [SerializeField]
+    CountScream _countScream;
+
     //--- スコア ---//
     static ScoreData _score;
 
@@ -30,6 +33,6 @@ public class ResultManager : MonoBehaviour
     {
         var stageID = PlayingStageInfoManager.Instance.Data.StageID;
 
-        _score = new ScoreData(stageID,_stopWatch.ElapsedTime, _countDeath.Count);
+        _score = new ScoreData(stageID,_stopWatch.ElapsedTime, _countDeath.Count,_countScream.Count);
     }
 }
