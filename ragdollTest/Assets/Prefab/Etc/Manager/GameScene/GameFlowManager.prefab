@@ -161,9 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee2e47250548f4b8b990943753ec4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resultScene:
-    sceneAsset: {fileID: 102900000, guid: 9f37fd15d4d283f43b29748e5775c3f0, type: 3}
-    scenePath: Assets/Scenes/ResultScene.unity
+  _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
   _gameClearTimeline: {fileID: 4786730658707223821}
   _judgeGameSet: {fileID: 633477319824462739}
   _restartManager: {fileID: 0}
@@ -180,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd661ad8a7a78246ba21ea6b1b2fa5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stageID: 0
   _countDeath: {fileID: 0}
   _stopWatch: {fileID: 0}
+  _countScream: {fileID: 0}
 --- !u!320 &4786730658707223821
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -246,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f70a56112f68847b17e884f0b35edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bgmAudioSource: {fileID: 0}
   _playerInput: {fileID: 0}
   _judgeGameSet: {fileID: 633477319824462739}
   _stopWatch: {fileID: 0}
@@ -392,9 +391,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859e16ce7c64ed3478b73cc344a1d181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _skipDuration: 0
   _hideInGameUI: {fileID: 0}
   _showInGameUI: {fileID: 0}
-  _playCamera: {fileID: 0}
+  _hideMovieUI: {fileID: 0}
+  _showMovieUI: {fileID: 0}
+  _playCameraObjects: {fileID: 0}
   _startMovieTimeline: {fileID: 1694357410230386161}
 --- !u!114 &1662551060610693819
 MonoBehaviour:

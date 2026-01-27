@@ -21,7 +21,7 @@ public class StageInfo
     string _comment;
 
     [Tooltip("ステージのシーン")] [SerializeField]
-    SceneReference _scene;
+    SceneReference _gameScene;
 
     [Tooltip("アンロック条件テキスト")] [SerializeField]
     string _unlockConditionText;
@@ -29,19 +29,15 @@ public class StageInfo
     [Tooltip("アンロック条件")] [SerializeField]
     StageUnlockConditionTypeBase _stageUnlockCondition;
 
-    [Tooltip("クリア時の文言")] [SerializeField]
-    string _clearMessage;
-
-    [Tooltip("クリア時のジングル")] [SerializeField]
-    AudioClip _clearJingle;
+    [Tooltip("リザルトシーン")] [SerializeField]
+    SceneReference _resultScene;
 
     public string StageName { get { return _stageName; } }//ステージ名
     public Sprite ImageIcon { get { return _imageIcon; } }//アイコン
     public string CharaName { get { return _charaName; } }//キャラの名前
     public string Comment { get { return _comment; } }//説明文
-    public string ScenePath { get { return _scene != null ? _scene.ScenePath : null; } }//ステージのシーンのパス
+    public string GameScenePath { get { return _gameScene != null ? _gameScene.ScenePath : null; } }//ステージのシーンのパス
     public string UnlockConditionText { get { return _unlockConditionText; } }//アンロック条件テキスト
     public StageUnlockConditionTypeBase StageUnlockCondition { get { return _stageUnlockCondition; } }//アンロック条件
-    public string ClearMessage { get { return _clearMessage; } }//クリア時の文言
-    public AudioClip ClearJingle { get { return _clearJingle; } }//クリア時のジングル
+    public string ResultScenePath { get { return _resultScene != null ? _resultScene.ScenePath : null; } }//リザルトのシーンのパス
 }

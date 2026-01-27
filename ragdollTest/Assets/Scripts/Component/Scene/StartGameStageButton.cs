@@ -72,7 +72,7 @@ public class StartGameStageButton : MonoBehaviour
     {
         if (!_targetButton.interactable) return;
 
-        string scenePath = _stageInfo.ScenePath;
+        string scenePath = _stageInfo.GameScenePath;
 
         //シーン遷移処理開始
 
