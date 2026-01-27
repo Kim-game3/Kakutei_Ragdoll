@@ -23,9 +23,17 @@ public class WindSound : MonoBehaviour
     [SerializeField]
     SetPosition_WindSound _setPos;
 
+    [Tooltip("風が消える時の音のフェードアウトにかける時間")] [SerializeField]
+    float _fadeOutDuration = 1f;
+
+    float _maxVolume;
+
+    Coroutine _soundFadeOut;
+
     private void Awake()
     {
         _setPos.Awake(_myTrs, _windZoneTrs);
+        if (_windAudio != null) _maxVolume = _windAudio.volume;
     }
 
     private void OnValidate()
@@ -33,14 +41,45 @@ public class WindSound : MonoBehaviour
         _autoAudioResizer.OnValidate(_windZoneTrs, _windAudio);
     }
 
-    private void OnEnable()
+    public void Play()
     {
-        if (_windAudio != null) _windAudio.Play();
+        if(_soundFadeOut != null)
+        {
+            StopCoroutine(_soundFadeOut);
+        }
+
+        if (_windAudio != null)
+        {
+            _windAudio.volume = _maxVolume;
+            _windAudio.Play();
+        }
     }
 
-    private void OnDisable()
+    public void Stop()
     {
-        if (_windAudio != null) _windAudio.Stop();
+        if (!isActiveAndEnabled) return;
+        if (_windAudio != null)
+        {
+            _soundFadeOut = StartCoroutine(SoundFadeout());
+        }
+    }
+
+    IEnumerator SoundFadeout()
+    {
+        float current = 0;
+
+        while(current<_fadeOutDuration)
+        {
+            current += Time.deltaTime;
+            float rate = current / _fadeOutDuration;
+
+            //音量を変更
+            _windAudio.volume = Mathf.Lerp(_maxVolume, 0f, rate);
+
+            yield return null;
+        }
+
+        _soundFadeOut = null;
     }
 
     private void Update()
