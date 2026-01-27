@@ -10,8 +10,8 @@ using UnityEngine.SceneManagement;
 public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
 {
     // --- 次のシーン遷移 --- //
-    [Tooltip("リザルトシーン")] [SerializeField]
-    SceneReference _resultScene;
+    [SerializeField]
+    StageInfoData _stageInfoData;
 
     [Tooltip("ゲームクリア演出")] [SerializeField]
     PlayableDirector _gameClearTimeline;
@@ -35,7 +35,10 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     public override void OnUpdate() { }
     public override void OnExit()
     {
-        SceneManager.LoadScene(_resultScene.ScenePath);
+        string scenePath = GetScenePath();
+        if (scenePath == null) return;
+        
+        SceneManager.LoadScene(scenePath);
     }
 
     private void Awake()
@@ -47,6 +50,16 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     void SetStateFinished(PlayableDirector director)
     {
         _finished = true;
+    }
+
+    string GetScenePath()//次のシーンの取得
+    {
+        var stageID = PlayingStageInfoManager.Instance.Data.StageID;
+        var stageInfo = _stageInfoData.GetStageInfo(stageID);
+
+        if (stageInfo == null) return null;
+
+        return stageInfo.ResultScenePath;
     }
 }
 

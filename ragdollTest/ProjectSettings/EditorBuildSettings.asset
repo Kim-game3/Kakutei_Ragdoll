@@ -18,12 +18,18 @@ EditorBuildSettings:
     path: Assets/Scenes/EasyGameScene.unity
     guid: a19c9d7874445e248a904319e0c82f5e
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/NormalGameScene.unity
     guid: 3a7d14b584e7b5a4bb1dfd3614316900
   - enabled: 1
     path: Assets/Scenes/HardGameScene.unity
     guid: 9ff501d77f4771d4c98ea7f31a45b414
   - enabled: 1
-    path: Assets/Scenes/ResultScene.unity
+    path: Assets/Scenes/EasyResultScene.unity
     guid: 9f37fd15d4d283f43b29748e5775c3f0
+  - enabled: 1
+    path: Assets/Scenes/NormalResultScene.unity
+    guid: b450cab65923afc4d97c35c2ec0bf107
+  - enabled: 1
+    path: Assets/Scenes/HardResultScene.unity
+    guid: 1d8b6ea3c823b774696d92b064147954
   m_configObjects: {}

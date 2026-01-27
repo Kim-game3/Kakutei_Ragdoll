@@ -55,7 +55,7 @@ public class RetryGameStageButton : MonoBehaviour
             return;
         }
 
-        string scenePath = stageInfo.ScenePath;
+        string scenePath = stageInfo.GameScenePath;
 
         if (string.IsNullOrEmpty(scenePath))
         {
