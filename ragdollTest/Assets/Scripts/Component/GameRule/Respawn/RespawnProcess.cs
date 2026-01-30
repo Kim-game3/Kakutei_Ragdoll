@@ -6,10 +6,10 @@ using UnityEngine.Playables;
 //作成者:杉山
 //リスタートの処理
 
-public partial class RestartProcess : MonoBehaviour
+public partial class RespawnProcess : MonoBehaviour
 {
     [Tooltip("リスタートごとの要素")] [SerializeField]
-    RestartElement[] _restartElements;
+    RespawnElement[] _restartElements;
 
     [Tooltip("明転してから何秒後にカメラがプレイヤーをまた追跡するようになるか")] [SerializeField]
     float _waitDuration_FromFinishFadeIn;
@@ -114,7 +114,7 @@ public partial class RestartProcess : MonoBehaviour
 
     void InitOnRestart(int checkPointIndex)//リスタート開始の度に呼ぶ初期化処理
     {
-        RestartElement re=_restartElements[checkPointIndex];
+        RespawnElement re=_restartElements[checkPointIndex];
 
         _cameraControl.InitOnRestart(re.restartPointCamera, re.defaultVerticalValue_PlayCamera, re.defaultHorizontalValue_PlayCamera);
         _playerPosControl.InitOnRestart(re.restartPoint, re.power);

@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 4631521954263909846}
   - component: {fileID: 823513986564365084}
   m_Layer: 0
-  m_Name: RestartManager
+  m_Name: RespawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,12 +296,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2165809435774053415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e86b288bc23bd4887985877d0fd2a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 35ab5076d1536b84581713650eb4ab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _checkPointManager: {fileID: 0}
-  _restartProcess: {fileID: 4631521954263909846}
-  _restartZoneTriggers:
+  _respawnProcess: {fileID: 4631521954263909846}
+  _respawnZoneTriggers:
   - {fileID: 6159510962081510586}
   - {fileID: 6749714090151498497}
 --- !u!114 &4631521954263909846

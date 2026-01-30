@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 //作成者:杉山
 //リスタート時のプレイヤーの入力操作の切り替え処理
 
-public partial class RestartProcess
+public partial class RespawnProcess
 {
     [System.Serializable]
     class InputControl

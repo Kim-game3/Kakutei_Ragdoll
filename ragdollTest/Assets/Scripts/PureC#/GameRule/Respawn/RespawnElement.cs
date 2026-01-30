@@ -5,7 +5,7 @@ using UnityEngine;
 //チェックポイントごとのリスタートに必要な要素
 
 [System.Serializable]
-public struct RestartElement
+public struct RespawnElement
 {
     //--- カメラ関係 ---//
     [CustomLabel("リスタート地点のカメラ")]

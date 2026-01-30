@@ -24,7 +24,7 @@ public class SwitchPlayCamera : MonoBehaviour
     AreaPlayCamera[] _areaPlayCameras;
 
     [SerializeField]
-    RestartProcess _restartProcess;
+    RespawnProcess _restartProcess;
 
     CinemachineVirtualCamera[] _playCameras;
     CinemachinePOV[] _povs;

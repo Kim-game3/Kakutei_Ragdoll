@@ -20,7 +20,7 @@ public class SceneFlowStateTypeEnd_MainGame : SceneFlowStateTypeBase
     JudgeGameSet _judgeGameSet;
 
     [SerializeField] 
-    RestartProcess _restartManager;
+    RespawnProcess _restartManager;
 
     [SerializeField]
     ResultManager _result;//Œ‹‰Ê‚ğ‘‚«‚ŞƒNƒ‰ƒX

@@ -5,7 +5,7 @@ using UnityEngine;
 //作成者:杉山
 //シャチの場所を変更する
 
-public partial class RestartProcess
+public partial class RespawnProcess
 {
     [System.Serializable]
     class OrcaPosControl
