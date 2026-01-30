@@ -30,7 +30,7 @@ public class MoveTwoPoints_IsPlayerInRange_Object : MonoBehaviour
     Transform _target;
 
     [SerializeField]
-    RestartProcess _restartProcess;
+    RespawnProcess _restartProcess;
 
     bool _isPlayerInRange=false;
 

@@ -8,7 +8,7 @@ using UnityEngine;
 public class CountDeath : MonoBehaviour
 {
     [SerializeField]
-    RestartManager _restartManager;
+    RespawnManager _restartManager;
 
     int _count=0;
 

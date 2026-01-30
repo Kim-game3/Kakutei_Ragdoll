@@ -5,7 +5,7 @@ using UnityEngine;
 //作成者:杉山
 //リスタート時のプレイヤーの位置を初期地点に戻す処理
 
-public partial class RestartProcess
+public partial class RespawnProcess
 {
     [System.Serializable]
     class PlayerPosControl

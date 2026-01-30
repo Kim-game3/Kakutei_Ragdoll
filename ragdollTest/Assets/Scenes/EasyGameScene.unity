@@ -11920,7 +11920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971708728}
   m_Layer: 0
-  m_Name: RestartCameras
+  m_Name: RespawnCameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11957,7 +11957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972979271}
   m_Layer: 0
-  m_Name: Restart
+  m_Name: Respawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32905,7 +32905,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2165809435774053415, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_Name
-      value: RestartManager
+      value: RespawnManager
       objectReference: {fileID: 0}
     - target: {fileID: 4203677240734155177, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value

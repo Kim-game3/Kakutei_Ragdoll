@@ -4,7 +4,7 @@ using UnityEngine;
 //作成者:杉山
 //リスタート時のカメラ関係の処理
 
-public partial class RestartProcess
+public partial class RespawnProcess
 {
     [System.Serializable]
     class CameraControl

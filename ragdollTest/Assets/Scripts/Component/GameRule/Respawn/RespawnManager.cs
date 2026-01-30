@@ -4,16 +4,16 @@ using UnityEngine;
 //作成者:杉山
 //リスタートのマネージャー(リスタートをするか否か、どのチェックポイントにリスタートさせるかを判断)
 
-public class RestartManager : MonoBehaviour
+public class RespawnManager : MonoBehaviour
 {
     [Tooltip("現在のチェックポイントの番号を教える機能")] [SerializeField]
     CheckPointManager _checkPointManager;
 
     [Tooltip("リスタートの処理を行う機能")] [SerializeField]
-    RestartProcess _restartProcess;
+    RespawnProcess _respawnProcess;
 
     [Tooltip("リスタートゾーンのトリガー")] [SerializeField] 
-    OnTriggerDetect[] _restartZoneTriggers;
+    OnTriggerDetect[] _respawnZoneTriggers;
 
     //水に落ちた瞬間に呼ぶ
     public event Action OnRestrat;
@@ -21,9 +21,9 @@ public class RestartManager : MonoBehaviour
 
     private void Awake()
     {
-        for(int i=0; i<_restartZoneTriggers.Length ;i++)
+        for(int i=0; i<_respawnZoneTriggers.Length ;i++)
         {
-            _restartZoneTriggers[i].OnEnter += OnHit_RestartTrigger;
+            _respawnZoneTriggers[i].OnEnter += OnHit_RestartTrigger;
         }
     }
 
@@ -33,11 +33,11 @@ public class RestartManager : MonoBehaviour
     {
         if (!other.CompareTag(ObjectTagNameDictionary.Player)) return;
 
-        if (_restartProcess.IsRestarting) return;
+        if (_respawnProcess.IsRestarting) return;
 
         if (!enabled) return;
 
         OnRestrat?.Invoke();
-        _restartProcess.RestartTrigger(_checkPointManager.CurrentCheckPointIndex);
+        _respawnProcess.RestartTrigger(_checkPointManager.CurrentCheckPointIndex);
     }
 }
