@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //ì¬Ò:™R
-//•—‚ÌŒø‰Ê‰¹
-//enabled‚ğfalse‚É‚·‚é‚ÆA‚»‚Ì•—‚ÌŒø‰Ê‰¹‚Í—¬‚ê‚È‚­‚È‚é
+//•—‚ÌŒø‰Ê‰¹ŠÖŒW‚Ìˆ—
 
 public class WindSound : MonoBehaviour
 {
