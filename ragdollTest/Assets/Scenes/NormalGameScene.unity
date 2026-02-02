@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8b6e9f6cdd95f2d43b0efa9d4d89f5bf, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: b84e9a673f7bcfa42a4ab9541c73dd37, type: 2}
   m_LightingSettings: {fileID: 1508051880}
 --- !u!196 &4
 NavMeshSettings:
@@ -22783,6 +22783,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 847170317}
+    - target: {fileID: 451020103859569439, guid: 27e23a43d8e89444382be92917098680, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 599975624621970140, guid: 27e23a43d8e89444382be92917098680, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -22963,6 +22967,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1479511239}
+    - target: {fileID: 3057264917733838965, guid: 27e23a43d8e89444382be92917098680, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3115225636358114332, guid: 27e23a43d8e89444382be92917098680, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -23211,6 +23219,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 451312062}
+    - target: {fileID: 6255829400284857784, guid: 27e23a43d8e89444382be92917098680, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6272137158945332844, guid: 27e23a43d8e89444382be92917098680, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -24837,6 +24849,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 634324881}
+    - target: {fileID: 5348807901531209142, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5412312701172128287, guid: 4c61698ad04b8af458695eea3796e539, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -32047,6 +32063,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 2591
       objectReference: {fileID: 0}
+    - target: {fileID: 4863714304507514414, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5351700108425433958, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -32114,6 +32134,10 @@ PrefabInstance:
     - target: {fileID: 8574400620625316037, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
       propertyPath: m_Name
       value: RotateArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 8574400620625316037, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8899374151353830834, guid: 617ec25bcced9a54ea61bfd3de01a9af, type: 3}
       propertyPath: m_Mesh
@@ -33694,6 +33718,10 @@ PrefabInstance:
     - target: {fileID: 7506240138719363458, guid: 3569698ade42fa645b87b7201a143245, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1.8000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519275110797317325, guid: 3569698ade42fa645b87b7201a143245, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7748305891825488542, guid: 3569698ade42fa645b87b7201a143245, type: 3}
       propertyPath: ShapeModule.m_Scale.x
