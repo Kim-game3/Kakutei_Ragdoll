@@ -35637,6 +35637,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 724051763}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: _cameraControl._waitDurationToSwitch
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _restartElements.Array.data[2].power
       value: 300
       objectReference: {fileID: 0}

@@ -353,13 +353,12 @@ MonoBehaviour:
     restartPoint: {fileID: 2357852598879407608}
     power: 300
     _orcaSpawnPos: {fileID: 418696880720871508}
-  _waitDuration_FromFinishFadeIn: 0.7
-  _waitDuration_FromCameraFollowPlayer: 1.3
   _restartTimeLine: {fileID: 4203677240734155177}
   _playerPosControl:
     _playerTrs: {fileID: 0}
     _body: {fileID: 0}
   _cameraControl:
+    _waitDurationToSwitch: 0.3
     _switchPlayCamera: {fileID: 0}
     _playCameraObjects: {fileID: 0}
     _playCameraFollow: {fileID: 0}
@@ -367,6 +366,7 @@ MonoBehaviour:
   _inputControl:
     _playerInput: {fileID: 0}
     _inputProvider: {fileID: 0}
+    _waitDurationToSetControllable: 2
   _playerMeshControl:
     _playerMeshs:
     - {fileID: 0}

@@ -20,10 +20,10 @@ public class WindAffectBody : MonoBehaviour
         }
     }
 
-    [SerializeField] float
-    _affectingDuration;
+    [SerializeField]
+    float _affectingDuration;
 
-    [Tooltip("動かす体の部位")] [SerializeField]
+    [Tooltip("動かす体の部位")] [SerializeField]//ConstantForceを使用して、風に飛ばされるのを演出する
     ConstantForce _playerBody;
 
     List<WindInfoAndTime> _affectingWinds=new List<WindInfoAndTime>();//影響を受けてる風リスト
@@ -42,6 +42,12 @@ public class WindAffectBody : MonoBehaviour
         //見つからなかったら新たに追加
         WindInfoAndTime newWind= new WindInfoAndTime(windInfo,_affectingDuration);
         _affectingWinds.Add(newWind);
+    }
+
+    private void OnDisable()
+    {
+        _affectingWinds.Clear();
+        _playerBody.force = Vector3.zero;
     }
 
     private void Update()

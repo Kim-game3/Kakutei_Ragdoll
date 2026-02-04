@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//作成者:杉山
+//進行度の表示
+
 public class ShowProgress : MonoBehaviour
 {
     [SerializeField]

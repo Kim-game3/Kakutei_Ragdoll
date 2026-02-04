@@ -11,12 +11,6 @@ public partial class RespawnProcess : MonoBehaviour
     [Tooltip("リスタートごとの要素")] [SerializeField]
     RespawnElement[] _restartElements;
 
-    [Tooltip("明転してから何秒後にカメラがプレイヤーをまた追跡するようになるか")] [SerializeField]
-    float _waitDuration_FromFinishFadeIn;
-
-    [Tooltip("カメラがプレイヤーを追従するようになってから何秒後に操作が可能になるようにするか")] [SerializeField]
-    float _waitDuration_FromCameraFollowPlayer;
-
     [CustomLabel("リスタート時に再生するタイムライン")] [SerializeField]
     PlayableDirector _restartTimeLine;
 
@@ -38,8 +32,6 @@ public partial class RespawnProcess : MonoBehaviour
     bool _isRestarting = false;//リスタート中か
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
-
-    int _checkPointIndex;
 
     public event Action OnFadeOut;
     public event Action OnFadeIn;
@@ -72,20 +64,19 @@ public partial class RespawnProcess : MonoBehaviour
 
     IEnumerator OnRestart(int checkPointIndex)
     {
-        _checkPointIndex = checkPointIndex;
-
         InitOnRestart(checkPointIndex);//初期化処理
 
         //落ちた瞬間
         _isRestarting=true;
         _finishedFadeOut=false;
         _finishedFadeIn=false;
-        _inputControl.SetControllable(false);//操作不可能にする
+
+        _inputControl.ProcessOnFallToWater();//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
         PlayTimelineFromBeginning();
 
         yield return new WaitUntil(() => _finishedFadeOut);//完全に暗転するまで待つ
-        _cameraControl.ProcessImmediatelyAfterDark();//暗転直後のカメラ処理
+        _cameraControl.ProcessOnFinishFadeOut();//暗転直後のカメラ処理
         _playerPosControl.BackToRestartPoint();//プレイヤーをリスタート地点に戻す
         _playerMeshControl.ChangeMeshEnabled(false);//プレイヤーを非表示にする
         _orcaPosControl.ChangePos(_restartElements[checkPointIndex]._orcaSpawnPos);//シャチを指定位置に移動
@@ -94,15 +85,18 @@ public partial class RespawnProcess : MonoBehaviour
         yield return new WaitUntil(() => _finishedFadeIn);//完全に明転するまで待つ
         _playerMeshControl.ChangeMeshEnabled(true);//プレイヤーを表示する
         _playerPosControl.ThrowPlayer();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
+        StartCoroutine(_inputControl.CoroutineOnFinishFadeIn());//ちょっと待ってから操作可能にする
+        StartCoroutine(_cameraControl.CoroutineOnFinishFadeIn());//ちょっと待ってからカメラを切り替える
 
+        //全ての処理が終わるまで待つ
+        yield return new WaitUntil(() => IsFinishedProcess());
 
-        yield return new WaitForSeconds(_waitDuration_FromFinishFadeIn);//完全に明転してから数秒待つ
-        _cameraControl.ProcessLaterAfterLight();//明転してからしばらくした後のカメラ処理
-
-
-        yield return new WaitForSeconds(_waitDuration_FromCameraFollowPlayer);//さらに数秒待つ
-        _inputControl.SetControllable(true);//操作可能にする
         _isRestarting = false;
+    }
+
+    bool IsFinishedProcess()//全ての(コルーチン)処理が終わったか
+    {
+        return _cameraControl.IsFinished && _inputControl.IsFinished;
     }
 
     void PlayTimelineFromBeginning()//タイムラインを最初から再生

@@ -1,4 +1,5 @@
 using Cinemachine;
+using System.Collections;
 using UnityEngine;
 
 //作成者:杉山
@@ -9,10 +10,13 @@ public partial class RespawnProcess
     [System.Serializable]
     class CameraControl
     {
-        [Tooltip("プレイヤーのいる場所によってカメラを切り替える機能")] [SerializeField]
+        [Tooltip("明転直後に何秒待ってからカメラがプレイヤーをまた追跡するようにするか")] [SerializeField]
+        float _waitDurationToSwitch = 0.7f;
+
+        [Tooltip("プレイヤーのいる場所によってカメラを切り替える機能")][SerializeField]
         SwitchPlayCamera _switchPlayCamera;
 
-        [Tooltip("プレイ用のカメラをまとめたもの")] [SerializeField]
+        [Tooltip("プレイ用のカメラをまとめたもの")][SerializeField]
         GameObject _playCameraObjects;
 
         [Header("操作カメラの追従対象")]//プレイヤーを入れて問題ない
@@ -28,6 +32,10 @@ public partial class RespawnProcess
         float _defaultVerticalValue_PlayCamera;
         float _defaultHorizontalValue_PlayCamera;
 
+        bool _isFinished = true;//処理が終わったか
+
+        public bool IsFinished { get { return _isFinished; } }
+
         //リスタートが始まった瞬間に呼ばれる
         public void InitOnRestart(CinemachineVirtualCamera restartPointCamera, float defaultVerticalValue_PlayCamera, float defaultHorizontalValue_PlayCamera)
         {
@@ -37,18 +45,24 @@ public partial class RespawnProcess
         }
 
         //暗転直後に行う処理
-        public void ProcessImmediatelyAfterDark()
+        public void ProcessOnFinishFadeOut()
         {
             SwitchRestartPointCamera(true);//リスタート地点のカメラにする
             SetDefault_PlayeCamera();//操作カメラの向きを初期に戻す
         }
 
-        //明転してからしばらくの後に行う処理
-        public void ProcessLaterAfterLight()
+        //明転直後に呼ぶ処理
+        public IEnumerator CoroutineOnFinishFadeIn()
         {
+            _isFinished = false;
+
+            yield return new WaitForSeconds(_waitDurationToSwitch);
+
             ChangeFollow_PlayCamera(true);//カメラのプレイヤーの追跡を再開
             SwitchRestartPointCamera(false);//プレイカメラに戻す
             _switchPlayCamera.SwitchDefaultCamera();//デフォルトのカメラに戻す
+
+            _isFinished = true;
         }
 
         public void ChangeFollow_PlayCamera(bool followPlayer)//プレイヤーが操作するカメラの追従設定の変更、followPlayerはプレイヤーを追従するか
