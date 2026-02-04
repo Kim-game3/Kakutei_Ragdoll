@@ -35621,6 +35621,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6934566165365889711}
     - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
+      propertyPath: _windControl._windAffectBody
+      value: 
+      objectReference: {fileID: 1124566130}
+    - target: {fileID: 4631521954263909846, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
       propertyPath: _cameraControl._playCameraFollow
       value: 
       objectReference: {fileID: 6934566165365889710}

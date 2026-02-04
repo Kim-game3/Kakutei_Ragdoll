@@ -29,6 +29,9 @@ public partial class RespawnProcess : MonoBehaviour
     [SerializeField]//シャチの位置の処理をまとめたもの
     OrcaPosControl _orcaPosControl;
 
+    [SerializeField]//風の処理をまとめたもの
+    WindControl _windControl;
+
     bool _isRestarting = false;//リスタート中か
     bool _finishedFadeOut = true;//フェードアウトが終わったか
     bool _finishedFadeIn = true;//フェードインが終わったか
@@ -71,6 +74,7 @@ public partial class RespawnProcess : MonoBehaviour
         _finishedFadeOut=false;
         _finishedFadeIn=false;
 
+        _windControl.ProcessOnFallToWater();//プレイヤーが風の影響を受けないようにする
         _inputControl.ProcessOnFallToWater();//操作不可能にする
         _cameraControl.ChangeFollow_PlayCamera(false);//カメラのプレイヤーの追跡をやめる
         PlayTimelineFromBeginning();
@@ -87,6 +91,7 @@ public partial class RespawnProcess : MonoBehaviour
         _playerPosControl.ThrowPlayer();//プレイヤーをリスポーン地点に移動&スタート地点に向かってプレイヤーを投げる
         StartCoroutine(_inputControl.CoroutineOnFinishFadeIn());//ちょっと待ってから操作可能にする
         StartCoroutine(_cameraControl.CoroutineOnFinishFadeIn());//ちょっと待ってからカメラを切り替える
+        StartCoroutine(_windControl.CoroutineOnFinishFadeIn());//ちょっと待ってからプレイヤーが風を受けれるようにする
 
         //全ての処理が終わるまで待つ
         yield return new WaitUntil(() => IsFinishedProcess());
@@ -96,7 +101,7 @@ public partial class RespawnProcess : MonoBehaviour
 
     bool IsFinishedProcess()//全ての(コルーチン)処理が終わったか
     {
-        return _cameraControl.IsFinished && _inputControl.IsFinished;
+        return _cameraControl.IsFinished && _inputControl.IsFinished && _windControl.IsFinished;
     }
 
     void PlayTimelineFromBeginning()//タイムラインを最初から再生
