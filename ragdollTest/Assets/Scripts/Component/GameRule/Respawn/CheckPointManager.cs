@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 //作成者:杉山
@@ -15,6 +14,8 @@ public class CheckPointManager : MonoBehaviour
 
     int _currentCheckPointIndex = 0;//現在のチェックポイント番号
 
+    public event Action OnUpdateCheckPoint;
+
     public int CurrentCheckPointIndex { get { return _currentCheckPointIndex; } }
 
     public int CheckPointLength { get { return _checkPointUpdateTriggers.Length; } }
@@ -24,6 +25,7 @@ public class CheckPointManager : MonoBehaviour
         if (newCheckPointIndex <= _currentCheckPointIndex) return;
 
         _currentCheckPointIndex=newCheckPointIndex;
+        OnUpdateCheckPoint?.Invoke();
     }
 
     private void Awake()
