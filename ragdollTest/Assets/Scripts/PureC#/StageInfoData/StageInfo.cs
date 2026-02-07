@@ -32,6 +32,14 @@ public class StageInfo
     [Tooltip("リザルトシーン")] [SerializeField]
     SceneReference _resultScene;
 
+    [Header("ステージ選択のチェックポイント数")]
+
+    [Tooltip("ステージ選択のチェックポイント数のテキストの色")] [SerializeField]
+    Color _checkPointValueTextColor;
+
+    [Tooltip("ステージ選択のチェックポイント数のテキスト内容")] [SerializeField]
+    string _checkPointTextValue;
+
     public string StageName { get { return _stageName; } }//ステージ名
     public Sprite ImageIcon { get { return _imageIcon; } }//アイコン
     public string CharaName { get { return _charaName; } }//キャラの名前
@@ -40,4 +48,9 @@ public class StageInfo
     public string UnlockConditionText { get { return _unlockConditionText; } }//アンロック条件テキスト
     public StageUnlockConditionTypeBase StageUnlockCondition { get { return _stageUnlockCondition; } }//アンロック条件
     public string ResultScenePath { get { return _resultScene != null ? _resultScene.ScenePath : null; } }//リザルトのシーンのパス
+
+    //ステージ選択のチェックポイント数
+    public Color CheckPointValueTextColor { get { return _checkPointValueTextColor; } }//ステージ選択のチェックポイント数のテキストの色
+    public string CheckPointTextValue { get { return _checkPointTextValue; } }//ステージ選択のチェックポイント数のテキスト内容
+
 }
