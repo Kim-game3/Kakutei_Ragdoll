@@ -28,6 +28,8 @@ MonoBehaviour:
         _resultScene:
           sceneAsset: {fileID: 102900000, guid: b450cab65923afc4d97c35c2ec0bf107, type: 3}
           scenePath: Assets/Scenes/NormalResultScene.unity
+        _checkPointValueTextColor: {r: 0, g: 0, b: 0, a: 1}
+        _checkPointTextValue: "5\u500B"
     - key: 1
       value:
         _stageName: "365\u9023\u52E4\u660E\u3051\u30E2\u30FC\u30C9"
@@ -42,6 +44,8 @@ MonoBehaviour:
         _resultScene:
           sceneAsset: {fileID: 102900000, guid: 1d8b6ea3c823b774696d92b064147954, type: 3}
           scenePath: Assets/Scenes/HardResultScene.unity
+        _checkPointValueTextColor: {r: 1, g: 0, b: 0, a: 1}
+        _checkPointTextValue: "\u7121\u3057"
     - key: 2
       value:
         _stageName: "30\u9023\u52E4\u660E\u3051\u30E2\u30FC\u30C9"
@@ -56,3 +60,5 @@ MonoBehaviour:
         _resultScene:
           sceneAsset: {fileID: 102900000, guid: 9f37fd15d4d283f43b29748e5775c3f0, type: 3}
           scenePath: Assets/Scenes/EasyResultScene.unity
+        _checkPointValueTextColor: {r: 0, g: 0, b: 0, a: 1}
+        _checkPointTextValue: "11\u500B"

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 //作成者:杉山
 //ステージごとの情報を表示する
@@ -24,6 +25,10 @@ public class ShowStageInfoManager : MonoBehaviour
 
     [Tooltip("コメント")] [SerializeField]
     TextMeshProUGUI _comment;
+
+    //チェックポイント数
+    [Tooltip("チェックポイント数のテキスト")] [SerializeField]
+    TextMeshProUGUI _checkPointText;
 
     //ステージレコード関係
     [Tooltip("クリアタイム")] [SerializeField]
@@ -63,14 +68,27 @@ public class ShowStageInfoManager : MonoBehaviour
             return;
         }
 
-        //情報を書き換え
+        SetStageInfoText(stageInfo);
+
+        SetScoreRecordText(stageSaveData);
+    }
+
+    void SetStageInfoText(StageInfo stageInfo)//ステージの情報のテキストを書き換え
+    {
         _stageName.text = stageInfo.StageName;
         _imageIcon.sprite = stageInfo.ImageIcon;
         _charaName.text = stageInfo.CharaName;
         _comment.text = stageInfo.Comment;
 
+        //チェックポイント数のテキスト書き換え
+        _checkPointText.text = stageInfo.CheckPointTextValue;
+        _checkPointText.color = stageInfo.CheckPointValueTextColor;
+    }
+
+    void SetScoreRecordText(StageSaveData stageSaveData)//スコアレコード関係のテキスト書き換え
+    {
         //未クリアの場合は最速記録を表記しない
-        if(stageSaveData.clearCount == 0)
+        if (stageSaveData.clearCount == 0)
         {
             _bestClearTimeText.text = _noScore;
         }

@@ -699,7 +699,7 @@ MonoBehaviour:
   _audioSource: {fileID: 1679851655767493995}
   _screamClip: {fileID: 8300000, guid: 8531ff41d20ce8145aba74958d86dc54, type: 3}
   _head: {fileID: 5792598698163307765}
-  _power: 5
+  _power: 30
   _coolTime: 0
 --- !u!82 &1679851655767493995
 AudioSource:
@@ -713,7 +713,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -5292536797876179039, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
