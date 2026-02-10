@@ -8,43 +8,43 @@ using UnityEngine.InputSystem.Utilities;
 
 public class InputIdleChecker : MonoBehaviour
 {
-    [SerializeField] float idleTime = 30f;
+    [SerializeField] float _idleTime = 30f;
 
-    float lastInputTime;
-    bool isIdle = false;
+    float _lastInputTime;
+    bool _isIdle = false;
 
-    IDisposable disposable;
+    IDisposable _disposable;
 
     public event Action OnIdle;//無操作になった瞬間に呼ばれるイベント
 
     void OnEnable()
     {
-        lastInputTime = Time.time;
-        isIdle = false;
+        _lastInputTime = Time.time;
+        _isIdle = false;
 
-        disposable = InputSystem.onAnyButtonPress.Call(control => OnAnyInput(control));
+        _disposable = InputSystem.onAnyButtonPress.Call(control => OnAnyInput(control));
     }
 
     void OnDisable()
     {
-        disposable?.Dispose();
+        _disposable?.Dispose();
     }
 
     void OnAnyInput(InputControl control)
     {
-        lastInputTime = Time.time;
+        _lastInputTime = Time.time;
 
         // 入力があったら「無操作状態」を解除
-        isIdle = false;
+        _isIdle = false;
     }
 
     void Update()
     {
-        bool isOverIdleTime = Time.time - lastInputTime >= idleTime;
+        bool isOverIdleTime = Time.time - _lastInputTime >= _idleTime;
 
-        if (!isIdle && isOverIdleTime)
+        if (!_isIdle && isOverIdleTime)
         {
-            isIdle = true;
+            _isIdle = true;
 
             OnIdle?.Invoke(); //コールバック発火
         }
