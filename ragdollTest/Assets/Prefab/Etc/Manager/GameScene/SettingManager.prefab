@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4765351839099219385}
   - component: {fileID: 8570410120757863845}
+  - component: {fileID: 2660777893711676363}
   m_Layer: 0
   m_Name: SettingManager
   m_TagString: Untagged
@@ -45,3 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fpsSettingData: {fileID: 11400000, guid: 8752fed646fdde94bae8b56a27ef29df, type: 2}
+--- !u!114 &2660777893711676363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391835941311652834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd074cc090a636649a57b2b3d2961c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: fa3d6f0fa0c3acb49ae67e6a1da6dd13, type: 2}
+  _soundConfigs: {fileID: 11400000, guid: 118fe41b20d5d08419b555785f62db7a, type: 2}
