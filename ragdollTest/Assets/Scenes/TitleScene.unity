@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4b517404fa67e4ca7f9f4c72b1ea38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _idleTime: 5
+  _idleTime: 30
 --- !u!114 &73034024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7104883251910088639, guid: a4dcfa6dc6afe8048915c33194a3aa54, type: 3}
@@ -1555,7 +1555,7 @@ MonoBehaviour:
     sceneAsset: {fileID: 102900000, guid: 52ecc2f1563114f4196a5eebbebda706, type: 3}
     scenePath: Assets/Scenes/OpeningMovieScene.unity
   _inputIdleChecker: {fileID: 34417478}
-  _delayDurationStartLoad: 0.7
+  _delayDurationStartLoad: 1
 --- !u!1 &1242265703
 GameObject:
   m_ObjectHideFlags: 0
