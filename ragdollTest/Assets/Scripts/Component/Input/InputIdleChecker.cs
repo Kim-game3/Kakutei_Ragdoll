@@ -19,7 +19,7 @@ public class InputIdleChecker : MonoBehaviour
 
     void OnEnable()
     {
-        _lastInputTime = Time.time;
+        _lastInputTime = Time.timeSinceLevelLoad;
         _isIdle = false;
 
         _disposable = InputSystem.onAnyButtonPress.Call(control => OnAnyInput(control));
@@ -32,7 +32,7 @@ public class InputIdleChecker : MonoBehaviour
 
     void OnAnyInput(InputControl control)
     {
-        _lastInputTime = Time.time;
+        _lastInputTime = Time.timeSinceLevelLoad;
 
         // “ü—Í‚ª‚ ‚Á‚½‚çu–³‘€ìó‘Ôv‚ð‰ðœ
         _isIdle = false;
@@ -40,7 +40,7 @@ public class InputIdleChecker : MonoBehaviour
 
     void Update()
     {
-        bool isOverIdleTime = Time.time - _lastInputTime >= _idleTime;
+        bool isOverIdleTime = Time.timeSinceLevelLoad - _lastInputTime >= _idleTime;
 
         if (!_isIdle && isOverIdleTime)
         {
