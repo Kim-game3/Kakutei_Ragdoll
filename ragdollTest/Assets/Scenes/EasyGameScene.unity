@@ -22748,8 +22748,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1530644321}
   - component: {fileID: 1530644322}
-  - component: {fileID: 1530644323}
   - component: {fileID: 1530644324}
+  - component: {fileID: 1530644325}
   m_Layer: 0
   m_Name: ControllerManager
   m_TagString: Untagged
@@ -23018,19 +23018,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movie
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1530644323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530644320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4273165644b833a4db3f7993f5db562e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _move_ForceBody: {fileID: 1980951486}
 --- !u!114 &1530644324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23045,6 +23032,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableIMU: 1
   EnableLocalize: 1
+--- !u!114 &1530644325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530644320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb1d0e47568f774d89ef85351f5ac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540534056
 GameObject:
   m_ObjectHideFlags: 3

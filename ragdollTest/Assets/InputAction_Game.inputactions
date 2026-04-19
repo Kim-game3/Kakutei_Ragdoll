@@ -210,6 +210,17 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "cd1b3ecb-e5da-45f3-9037-360d3d252f8f",
+                    "path": "<VirtualSwitchJoyconDevice>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VJoycon",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "WASD",
                     "id": "338e43cf-25a8-437d-84d4-5307cf57a834",
                     "path": "2DVector(mode=1)",
@@ -260,6 +271,61 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "VSJButton",
+                    "id": "355ce5d4-5535-4939-ad29-c129dfcf9a8b",
+                    "path": "2DVector(mode=1)",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "135d47a8-3dba-4709-87ec-4cbd777833e4",
+                    "path": "<VirtualSwitchJoyconDevice>/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "4ede5e9a-1a5e-4bd3-a0b4-fd807afbde27",
+                    "path": "<VirtualSwitchJoyconDevice>/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "b3d1d619-8cf4-4c82-a52d-59b548729e7b",
+                    "path": "<VirtualSwitchJoyconDevice>/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "3f4b97a3-0e53-470d-bbb3-cf16d3c971dc",
+                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -1387,6 +1453,17 @@
             "devices": [
                 {
                     "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "VJoycon",
+            "bindingGroup": "VJoycon",
+            "devices": [
+                {
+                    "devicePath": "<VirtualSwitchJoyconDevice>",
                     "isOptional": false,
                     "isOR": false
                 }
