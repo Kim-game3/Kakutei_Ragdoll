@@ -36,6 +36,10 @@ public class JoyconInputBridge : MonoBehaviour
         if (jc.GetButton(Joycon.Button.DPAD_UP)) buttons |= (1 << 2);
         //‰E
         if (jc.GetButton(Joycon.Button.DPAD_DOWN)) buttons |= (1 << 3);
+        //{
+        if (jc.GetButton(Joycon.Button.PLUS)) buttons |= (1 << 4);
+        //ZƒgƒŠƒK[
+        if (jc.GetButton(Joycon.Button.SHOULDER_2)) buttons |= (1 << 5);
 
         state.buttons = buttons;
 
@@ -53,8 +57,6 @@ public class JoyconInputBridge : MonoBehaviour
 
             state.stick = stick;
         }
-
-        Debug.Log(PlayerInput.all[0].currentControlScheme);
 
         // --- ‘—M ---
         InputSystem.QueueStateEvent(device, state);

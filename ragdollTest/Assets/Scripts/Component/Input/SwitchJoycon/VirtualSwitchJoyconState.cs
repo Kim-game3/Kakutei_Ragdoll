@@ -19,6 +19,8 @@ public struct VirtualSwitchJoyconState : IInputStateTypeInfo
     [InputControl(name = "down", layout = "Button", bit = 1)]
     [InputControl(name = "left", layout = "Button", bit = 2)]
     [InputControl(name = "right", layout = "Button", bit = 3)]
+    [InputControl(name = "plus", layout = "Button", bit = 4)]
+    [InputControl(name = "zTrigger", layout = "Button", bit = 5)]
     public byte buttons;
 
     // --- スティック（Vector2） ---

@@ -11,20 +11,24 @@ using UnityEngine.InputSystem.Layouts;
 [InputControlLayout(displayName = "Virtual Switch Joycon Device", stateType = typeof(VirtualSwitchJoyconState))]
 public class VirtualSwitchJoyconDevice : InputDevice
 {
-    public ButtonControl up { get; private set; }
-    public ButtonControl down { get; private set; }
-    public ButtonControl left { get; private set; }
-    public ButtonControl right { get; private set; }
-    public StickControl stick { get; private set; }
+    public ButtonControl Up { get; private set; }
+    public ButtonControl Down { get; private set; }
+    public ButtonControl Left { get; private set; }
+    public ButtonControl Right { get; private set; }
+    public ButtonControl Plus { get; private set; }
+    public ButtonControl ZTrigger { get; private set; }
+    public StickControl Stick { get; private set; }
 
     protected override void FinishSetup()
     {
         base.FinishSetup();
 
-        up = GetChildControl<ButtonControl>("up");
-        down = GetChildControl<ButtonControl>("down");
-        left = GetChildControl<ButtonControl>("left");
-        right = GetChildControl<ButtonControl>("right");
-        stick = GetChildControl<StickControl>("stick");
+        Up = GetChildControl<ButtonControl>("up");
+        Down = GetChildControl<ButtonControl>("down");
+        Left = GetChildControl<ButtonControl>("left");
+        Right = GetChildControl<ButtonControl>("right");
+        Plus = GetChildControl<ButtonControl>("plus");
+        ZTrigger = GetChildControl<ButtonControl>("zTrigger");
+        Stick = GetChildControl<StickControl>("stick");
     }
 }

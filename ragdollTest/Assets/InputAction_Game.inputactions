@@ -420,6 +420,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a3a3fe08-603f-490b-9d1f-d2ff0482d3e6",
+                    "path": "<VirtualSwitchJoyconDevice>/plus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "134a35db-9cea-4289-b4ae-585389624045",
                     "path": "<Keyboard>/numpad5",
                     "interactions": "",
@@ -549,6 +560,17 @@
                     "action": "Scream",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a26f34c-7f88-439e-bc90-854dd8ec1d5c",
+                    "path": "<VirtualSwitchJoyconDevice>/zTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Scream",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -621,6 +643,61 @@
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7cf35921-53e0-4f97-86fa-a938251c1632",
+                    "path": "<VirtualSwitchJoyconDevice>/plus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3760511-a4f5-4329-b0ed-2018094d4b5c",
+                    "path": "<VirtualSwitchJoyconDevice>/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bb6c02fe-96f1-4406-b526-3d197188247e",
+                    "path": "<VirtualSwitchJoyconDevice>/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3985666e-d68a-4aad-a8e0-0ff1f0a5a0fd",
+                    "path": "<VirtualSwitchJoyconDevice>/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57fb6b50-4571-483c-a2b6-8409410e7550",
+                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -674,6 +751,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b288dc73-773f-4da9-ab48-92c94c207400",
+                    "path": "<VirtualSwitchJoyconDevice>/plus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -952,7 +1040,7 @@
                     "name": "Submit",
                     "type": "Button",
                     "id": "3b78e188-38d2-4567-806d-9227aa6083e2",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1242,11 +1330,33 @@
                 },
                 {
                     "name": "",
+                    "id": "9230c0aa-49b2-43ae-ac94-7fa8aed89b85",
+                    "path": "<VirtualSwitchJoyconDevice>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc",
                     "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7534b5e4-9656-462c-a34a-14f81e7ef9b8",
+                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
                     "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
