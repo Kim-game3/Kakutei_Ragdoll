@@ -2894,6 +2894,7 @@ Transform:
   - {fileID: 1422082940}
   - {fileID: 1384341496}
   - {fileID: 813959024}
+  - {fileID: 1453506507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205335237
@@ -21099,6 +21100,68 @@ MonoBehaviour:
   _playerTrs: {fileID: 6934566165365889711}
   _body: {fileID: 6934566165365889713}
   _debugWindow: {fileID: 951839539}
+--- !u!1001 &1453506506
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 198361667}
+    m_Modifications:
+    - target: {fileID: 6520855402928356341, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_Name
+      value: SwitchJoyconManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+--- !u!4 &1453506507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8701729131736619177, guid: 7334e46df680a83459903adbdcc2643f, type: 3}
+  m_PrefabInstance: {fileID: 1453506506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1457536375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22748,8 +22811,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1530644321}
   - component: {fileID: 1530644322}
-  - component: {fileID: 1530644324}
-  - component: {fileID: 1530644325}
   m_Layer: 0
   m_Name: ControllerManager
   m_TagString: Untagged
@@ -23018,32 +23079,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movie
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1530644324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530644320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 405bad29b2b998c408059182c189d9e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnableIMU: 1
-  EnableLocalize: 1
---- !u!114 &1530644325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530644320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb1d0e47568f774d89ef85351f5ac78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1540534056
 GameObject:
   m_ObjectHideFlags: 3
