@@ -28,7 +28,7 @@ public class Move_ForceBody : MonoBehaviour
 
     public Rigidbody Body { get { return _body.Rigidbody; } }//動かす身体のパーツ
 
-    public void Input_Move(InputAction.CallbackContext context)//移動入力
+    public void Input_Move(InputAction.CallbackContext context)//移動入力(InputSystem使用)
     {
         if (!context.performed) return;
 
@@ -38,6 +38,11 @@ public class Move_ForceBody : MonoBehaviour
         //Debug.Log(getVec);
 //#endif
 
+        Move(getVec);
+    }
+
+    public void Input_Move(Vector2 getVec)//移動入力(汎用)
+    {
         Move(getVec);
     }
 
