@@ -11,24 +11,43 @@ using UnityEngine.InputSystem.Layouts;
 [InputControlLayout(displayName = "Virtual Switch Joycon Device", stateType = typeof(VirtualSwitchJoyconState))]
 public class VirtualSwitchJoyconDevice : InputDevice
 {
-    public ButtonControl Up { get; private set; }
-    public ButtonControl Down { get; private set; }
-    public ButtonControl Left { get; private set; }
-    public ButtonControl Right { get; private set; }
+    //右ジョイコン
+    public ButtonControl Up_R { get; private set; }
+    public ButtonControl Down_R { get; private set; }
+    public ButtonControl Left_R { get; private set; }
+    public ButtonControl Right_R { get; private set; }
     public ButtonControl Plus { get; private set; }
-    public ButtonControl ZTrigger { get; private set; }
-    public StickControl Stick { get; private set; }
+    public ButtonControl ZRTrigger { get; private set; }
+    public StickControl Stick_R { get; private set; }
+    //左ジョイコン
+    public ButtonControl Up_L { get; private set; }
+    public ButtonControl Down_L { get; private set; }
+    public ButtonControl Left_L { get; private set; }
+    public ButtonControl Right_L { get; private set; }
+    public ButtonControl Minus { get; private set; }
+    public ButtonControl ZLTrigger { get; private set; }
+    public StickControl Stick_L { get; private set; }
 
     protected override void FinishSetup()
     {
         base.FinishSetup();
 
-        Up = GetChildControl<ButtonControl>("up");
-        Down = GetChildControl<ButtonControl>("down");
-        Left = GetChildControl<ButtonControl>("left");
-        Right = GetChildControl<ButtonControl>("right");
+        //右ジョイコン
+        Up_R = GetChildControl<ButtonControl>("up_R");
+        Down_R = GetChildControl<ButtonControl>("down_R");
+        Left_R = GetChildControl<ButtonControl>("left_R");
+        Right_R = GetChildControl<ButtonControl>("right_R");
         Plus = GetChildControl<ButtonControl>("plus");
-        ZTrigger = GetChildControl<ButtonControl>("zTrigger");
-        Stick = GetChildControl<StickControl>("stick");
+        ZRTrigger = GetChildControl<ButtonControl>("zrTrigger");
+        Stick_R = GetChildControl<StickControl>("stick_R");
+
+        //左ジョイコン
+        Up_L = GetChildControl<ButtonControl>("up_L");
+        Down_L = GetChildControl<ButtonControl>("down_L");
+        Left_L = GetChildControl<ButtonControl>("left_L");
+        Right_L = GetChildControl<ButtonControl>("right_L");
+        Minus = GetChildControl<ButtonControl>("minus");
+        ZLTrigger = GetChildControl<ButtonControl>("zlTrigger");
+        Stick_L = GetChildControl<StickControl>("stick_L");
     }
 }

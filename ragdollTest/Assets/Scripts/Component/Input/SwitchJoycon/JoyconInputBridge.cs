@@ -41,7 +41,7 @@ public class JoyconInputBridge : MonoBehaviour
         //Zトリガー
         if (jc.GetButton(Joycon.Button.SHOULDER_2)) buttons |= (1 << 5);
 
-        state.buttons = buttons;
+        state.buttons_R = buttons;
 
         // --- スティック ---
         float[] stickArray = jc.GetStick();
@@ -55,7 +55,7 @@ public class JoyconInputBridge : MonoBehaviour
             stick.x = Mathf.Clamp(stick.x, -1f, 1f);
             stick.y = Mathf.Clamp(stick.y, -1f, 1f);
 
-            state.stick = stick;
+            state.stick_R = stick;
         }
 
         // --- 送信 ---
