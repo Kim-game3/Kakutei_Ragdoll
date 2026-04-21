@@ -54,7 +54,7 @@
                     "name": "DebugDown",
                     "type": "Button",
                     "id": "63e11128-58c5-4b82-978b-7892413afd33",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -72,7 +72,7 @@
                     "name": "DebugRight",
                     "type": "Button",
                     "id": "dcac05ca-aa84-4e06-a6ed-68cf22be3197",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -212,10 +212,21 @@
                 {
                     "name": "",
                     "id": "cd1b3ecb-e5da-45f3-9037-360d3d252f8f",
-                    "path": "<VirtualSwitchJoyconDevice>/stick",
+                    "path": "<VirtualSwitchJoyconDevice>/stick_L",
                     "interactions": "",
                     "processors": "",
                     "groups": "VJoycon",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "93e1a574-0a85-4c89-b500-ea0f99b0d130",
+                    "path": "<VirtualSwitchJoyconDevice>/stick_R",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -276,7 +287,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "VSJButton",
+                    "name": "VSJButtonR",
                     "id": "355ce5d4-5535-4939-ad29-c129dfcf9a8b",
                     "path": "2DVector(mode=1)",
                     "interactions": "Press",
@@ -289,7 +300,7 @@
                 {
                     "name": "up",
                     "id": "135d47a8-3dba-4709-87ec-4cbd777833e4",
-                    "path": "<VirtualSwitchJoyconDevice>/up",
+                    "path": "<VirtualSwitchJoyconDevice>/right_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -300,7 +311,7 @@
                 {
                     "name": "down",
                     "id": "4ede5e9a-1a5e-4bd3-a0b4-fd807afbde27",
-                    "path": "<VirtualSwitchJoyconDevice>/down",
+                    "path": "<VirtualSwitchJoyconDevice>/left_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -311,7 +322,7 @@
                 {
                     "name": "left",
                     "id": "b3d1d619-8cf4-4c82-a52d-59b548729e7b",
-                    "path": "<VirtualSwitchJoyconDevice>/left",
+                    "path": "<VirtualSwitchJoyconDevice>/up_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -322,7 +333,62 @@
                 {
                     "name": "right",
                     "id": "3f4b97a3-0e53-470d-bbb3-cf16d3c971dc",
-                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "path": "<VirtualSwitchJoyconDevice>/down_R",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "VSJButtonL",
+                    "id": "d352525e-5061-4663-915b-afe8b73b3948",
+                    "path": "2DVector(mode=1)",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "8f1ed743-a6d2-448e-a989-fa6f2fa873ee",
+                    "path": "<VirtualSwitchJoyconDevice>/left_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "f1e485f9-4940-44fa-bb2c-26a0a370766a",
+                    "path": "<VirtualSwitchJoyconDevice>/right_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "fbd7d225-c04f-4485-911d-b6370741a93e",
+                    "path": "<VirtualSwitchJoyconDevice>/down_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "bcb6b056-ecea-41c8-aaf2-950e0a0bb901",
+                    "path": "<VirtualSwitchJoyconDevice>/up_L",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -422,6 +488,17 @@
                     "name": "",
                     "id": "a3a3fe08-603f-490b-9d1f-d2ff0482d3e6",
                     "path": "<VirtualSwitchJoyconDevice>/plus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ad91739-9c5b-4e6f-accb-3545a0ba4968",
+                    "path": "<VirtualSwitchJoyconDevice>/minus",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -564,7 +641,18 @@
                 {
                     "name": "",
                     "id": "2a26f34c-7f88-439e-bc90-854dd8ec1d5c",
-                    "path": "<VirtualSwitchJoyconDevice>/zTrigger",
+                    "path": "<VirtualSwitchJoyconDevice>/zrTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Scream",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8366378d-799f-455a-a1c9-ebe2a7fa06e0",
+                    "path": "<VirtualSwitchJoyconDevice>/zlTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -658,7 +746,7 @@
                 {
                     "name": "",
                     "id": "c3760511-a4f5-4329-b0ed-2018094d4b5c",
-                    "path": "<VirtualSwitchJoyconDevice>/up",
+                    "path": "<VirtualSwitchJoyconDevice>/up_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -669,7 +757,7 @@
                 {
                     "name": "",
                     "id": "bb6c02fe-96f1-4406-b526-3d197188247e",
-                    "path": "<VirtualSwitchJoyconDevice>/down",
+                    "path": "<VirtualSwitchJoyconDevice>/down_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -680,7 +768,7 @@
                 {
                     "name": "",
                     "id": "3985666e-d68a-4aad-a8e0-0ff1f0a5a0fd",
-                    "path": "<VirtualSwitchJoyconDevice>/left",
+                    "path": "<VirtualSwitchJoyconDevice>/left_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -691,10 +779,65 @@
                 {
                     "name": "",
                     "id": "57fb6b50-4571-483c-a2b6-8409410e7550",
-                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "path": "<VirtualSwitchJoyconDevice>/right_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "968111d6-696d-4538-bf94-03d897218448",
+                    "path": "<VirtualSwitchJoyconDevice>/minus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fd7bcfed-051c-4682-b887-538d41e5b5de",
+                    "path": "<VirtualSwitchJoyconDevice>/up_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c17ad676-6833-419a-95ad-d172959b4b3c",
+                    "path": "<VirtualSwitchJoyconDevice>/down_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06b47e4f-706d-4d61-8b15-8d00d7a27aa0",
+                    "path": "<VirtualSwitchJoyconDevice>/left_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Skip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b4b9f3e-5e54-4d68-b42b-c6e6a8ddc994",
+                    "path": "<VirtualSwitchJoyconDevice>/right_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Skip",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -759,6 +902,17 @@
                     "name": "",
                     "id": "b288dc73-773f-4da9-ab48-92c94c207400",
                     "path": "<VirtualSwitchJoyconDevice>/plus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "854c3fae-1900-4ab0-a1b3-c6ea28a5e45d",
+                    "path": "<VirtualSwitchJoyconDevice>/minus",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
@@ -1331,10 +1485,21 @@
                 {
                     "name": "",
                     "id": "9230c0aa-49b2-43ae-ac94-7fa8aed89b85",
-                    "path": "<VirtualSwitchJoyconDevice>/stick",
+                    "path": "<VirtualSwitchJoyconDevice>/stick_R",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b243d57a-540c-4448-90b5-94ba4d31c143",
+                    "path": "<VirtualSwitchJoyconDevice>/stick_L",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1353,7 +1518,18 @@
                 {
                     "name": "",
                     "id": "7534b5e4-9656-462c-a34a-14f81e7ef9b8",
-                    "path": "<VirtualSwitchJoyconDevice>/right",
+                    "path": "<VirtualSwitchJoyconDevice>/down_R",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";VJoycon",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce2b3aca-ec13-4bed-9e44-7326e3409747",
+                    "path": "<VirtualSwitchJoyconDevice>/up_L",
                     "interactions": "",
                     "processors": "",
                     "groups": ";VJoycon",
