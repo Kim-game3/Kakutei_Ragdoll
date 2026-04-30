@@ -2270,6 +2270,97 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &124301712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124301713}
+  - component: {fileID: 124301716}
+  - component: {fileID: 124301715}
+  - component: {fileID: 124301714}
+  m_Layer: 0
+  m_Name: TrialGoalZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124301713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124301712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.45787388, z: 0, w: 0.88901716}
+  m_LocalPosition: {x: -8.46, y: 1.54, z: 119.59}
+  m_LocalScale: {x: 9, y: 7, z: 9}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 239753183}
+  m_LocalEulerAnglesHint: {x: 0, y: 54.5, z: 0}
+--- !u!320 &124301714
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124301712}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 3bedf40eaee998648b552400634c3f22, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 3226359228284007582, guid: 3bedf40eaee998648b552400634c3f22, type: 2}
+    value: {fileID: 1663274598}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &124301715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124301712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cef63ad322e4549872f46e5782be43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameClearTimeline: {fileID: 124301714}
+  _trialFinishScene:
+    sceneAsset: {fileID: 102900000, guid: 683fc062a80fb734abaf87d0d1c8f45d, type: 3}
+    scenePath: Assets/Scenes/TiralFinishScene.unity
+  _restartManager: {fileID: 4064680034383877878}
+--- !u!65 &124301716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124301712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &135691294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 418696880720871508, guid: a85412408f64f8146ba6d433ca7cd649, type: 3}
@@ -3224,6 +3315,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 901149009}
+  - {fileID: 124301713}
   m_Father: {fileID: 198361667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &239753184
