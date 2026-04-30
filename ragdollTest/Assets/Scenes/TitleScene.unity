@@ -2571,14 +2571,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586871757}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 635614adcc38aef4b8756823720a49f8, type: 3}
+  m_Script: {fileID: 11500000, guid: da57a08c506373c4baa7f5937d46584e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _delayDuration: 0.5
-  _nextScene:
-    sceneAsset: {fileID: 102900000, guid: 8c9e53bdd199af14584aed6a153d91bb, type: 3}
-    scenePath: Assets/Scenes/StageSelect.unity
+  _stageInfoData: {fileID: 11400000, guid: 192e8f2d90cb9bf47a1f68cf2fe166a7, type: 2}
+  _stageID: 2
   _targetButton: {fileID: 1070390588}
+  _buttonText: {fileID: 0}
 --- !u!114 &1690303192 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4062479600715579361, guid: 7a3b3fb9154e5914db108579951baccb, type: 3}
